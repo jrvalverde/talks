@@ -1,0 +1,52 @@
+s
+
+Curso CABBIO de Bioinformática
+
+Programa
+
+
+Unidad 1 - Teoría
+Bioinformática: consideraciones generales. Vías de acceso a la información según la problemática. Bases de datos: características, acceso y principales herramientas para la búsqueda y el análisis de genes. Los proyectos genoma y el problema del análisis e interpretación de secuencias nucleotídicas y aminoacídicas. 
+Práctica: Acceso a las principales bases de datos. Búsqueda de genes, secuencias, estructuras y funciones.
+
+Unidad 2 - Teoría
+El camino analítico en la descripción de una secuencia novedosa. Estrategias básicas para la búsqueda de similitud entre dos o más secuencias, nucleotídicas o aminoacídicas. Principales algoritmos: métodos basados en matrices de puntos (Dot Plot), métodos basados en un análisis local (BLAST), búsqueda de similitud de ácidos nucleicos o proteínas (FASTA). 
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 3 - Teoría
+Ensamble de secuencias derivadas de secuenciaciones automáticas (PHRAP, CONSED). 
+Comparación y análisis de múltiples secuencias. Diferentes algoritmos empleados. Métodos basados en un análisis múltiple y global (Clustal, emma, pileup, needle, stretcher). 
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 4 - Teoría
+Búsqueda de patrones y motivos en secuencias nucleotídicas y aminoacídicas. Principales algoritmos. Bases de datos de motivos. Análisis basado en perfiles de búsqueda. Estimaciones probabilísticas y validez de los resultados.
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 5 - Teoría
+Una aproximación a la predicción de posibles funciones biológicas de una secuencia nucleotídica o aminoacídica (ENTREZ, SRS, COG). 
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 6 - Teoría
+La filogenia basada en secuencias nucleotídicas o aminoacídicas. El problema del análisis filogenético basado en segmentos de secuencias. PHYLIP (Phylogeny Inference Package), criterios para el análisis e interpretación de resultados. 
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 7 - Teoría
+
+La teoría de la información: conceptos básicos. La teoría de la información y el análisis de secuencias. Complejidad informativa (entropía) global y local. Análisis de secuencias basado en aspectos informativos. Herramientas para el análisis individual y múltiple. Aplicaciones prácticas: logos de secuencias, diseño de primers basado en complejidad informativa.
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 8 - Teoría
+La predicción de estructuras secundarias en ácidos nucleicos. Principales criterios y algoritmos (FOLD, MULFOLD, RNADraw). La predicción de estructuras óptimas y subóptimas. Análisis comparativo de patrones de plegamiento entre las formas óptimas y subóptimas. Validez de los resultados.
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 9 - Teoría
+El análisis de secuencias y la predicción de estructuras secundarias en proteínas. Análisis y predicción de propiedades fisicoquímicas relacionadas con la estructura. Principales criterios y algoritmos (hidropatía, anfipaticidad, etc.). Estructuras secundarias (GOR IV, SCOP, CATH, Jpred 2). Validez de los resultados.
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 10 - Teoría
+Genómica funcional: proteomas, transcriptomas, regulomas. Generación de datos. Bases de datos y herramientas de análisis.
+Práctica: Análisis de ejemplos específicos en servidores locales e internacionales.
+
+Unidad 11 
+Repaso, consultas y evaluación final.
+
