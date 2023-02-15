@@ -1,0 +1,114 @@
+1) Decisiones
+
+	- Elegir un tema
+		- anunciar intencion en foros
+			seqanswers
+			ccl
+			bioinformatics.org
+			etc...
+		- definir alcance
+
+	- Elegir un nombre
+
+	- Elegir una licencia
+	
+	- Preparar colaboracion
+		- usar heramientas FLOSS
+			- permite participar a todo el mundo
+			- no hacerlo limita la participacion a competidores
+			  comerciales
+		- comunicaciones
+			- foro
+		- documentacion
+			- wiki
+			- doxygen / javadoc / robodoc / doc++ / pydoc / pod / docbook
+		- codigo fuente
+			- control de versiones
+		- reglas del juego
+			- convenciones
+			- requisitos minimos
+			- quien es qien
+			- Catedral / Bazar
+			- control de calidad (tests)
+			- documentacion (ejemplos)
+	
+2)	- Praxis tecnica
+		- SourceForge
+		- Savannah
+		- Bioinformatics.Org
+		- otros
+		
+		- hosting propio
+		
+		- herramientas
+			- Documentacion
+				- phpDocumentor
+				- Doxygen
+				- Robodoc
+			- Codigo Fuente
+				- RCS
+				- CVS
+				- Subversion
+				- GIT
+				- otros
+			- Cross-Referencing
+				- LXR
+				- phpXref
+				- etc...
+			- Wiki
+				- Wikimedia
+				- Twiki
+				- Tikiwiki
+				- etc...
+			- Foros
+				- SMF
+				- PHP based
+				- etc...
+			- Interaccion
+				- IRC
+				- Skype
+				- chat
+				- otros
+			- Project Management
+				- dotProject
+				- phProject
+				- TUTOS
+				- otros
+			- Ticket system
+			- News, RSS feed (Agile programming)
+			- todo junto: CMS
+				- Tiki Wiki
+				- Drupal
+				- Joomla
+				- Wordpress
+				- otros
+3)	- Praxis diaria
+		- mantener el tono de respeto
+		- construccion periodica
+		- pruebas de test periodicos automaticos (GNAT)
+		- revisiones de codigo frecuentes
+		- releases frecuentes, noticias frecuentes
+		- brainstorming periodico
+		- Catedral vs Bazar
+		- Dictador benevolente
+		- Democracia de consenso
+		- Delegacion de responsabilidades
+		
+	- Dinero
+		- honestidad
+		- donaciones
+		- vender servicios
+		- Software as a Service
+		- anuncios a visitantes
+		- formacion (e.g. moodle, dotProject)
+		- meetings
+		- merchandising
+			- Print on demand
+			- Libros (e.g. php, postgresql, moodle)
+			- guias rapidas
+			- Camisetas, gorras, mousepads
+			- etc...
+
+		- marketing
+			Apple, Pentax, Chimera, Bioinformatics.org,...
+	
