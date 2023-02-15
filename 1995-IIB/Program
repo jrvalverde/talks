@@ -1,0 +1,137 @@
+José R. Valverde
+EMBL. The EBI Outstation.
+Jose.Valverde@EMBL-EBI.ac.uk
+
+
+
+	C U R S O   D E   A N A L I S I S   D E    S E C U E N C I A S
+	==============================================================
+
+				P R O G R A M A
+				---------------
+				
+				
+				
+
+Curso de Análisis de Secuencias: 20 horas (10+10)
+=================================================
+
+1) INTRODUCCION AL ANALISIS DE SECUENCIAS
+
+   Teoría. Tiempo sugerido: 1 hora
+	- Definición de secuencia
+	- Objetivos del análisis de secuencias
+	- Soporte informático: disponibilidad
+
+   Práctica. Tiempo sugerido: 0 horas
+
+2) INTRODUCCION INFORMATICA
+
+   Teoría. Tiempo sugerido: 2 horas (podria reducirse a 1 hora)
+	- Concepto de red y trabajo en red
+	- Definición de servidor
+	- Utilidades de trabajo en red
+	- Introducción a VMS: DCL
+	- Introducción a UNIX
+	
+   Práctica. Tiempo sugerido: 1-2 horas
+	- Conexión remota
+	- Noticias, Gopher, WWW
+	- Ejemplos básicos de VMS
+	- Ejemplos básicos de UNIX
+
+3) SOPORTE EXPERIMENTAL
+
+   Teoría. Tiempo sugerido: 2 horas
+	- Trabajo experimental: el ciclo obtención de datos + análisis
+	  de resultados
+	- Preparación de experimentos:   diseño de cebadores y sondas,
+	  fabricación de mapas de enzimas de restricción y peptídicos,
+	  ordenación de péptidos. Obtención de ayuda en línea
+	- Recopilación de datos: introducción de datos en el ordenador,
+	  ensamblado de datos, gestión de los datos del proyecto,
+	  eliminación de contaminaciones, ruido y redundancia
+
+   Práctica. Tiempo sugerido: 2 horas
+   	- Predicción de cebadores: primer, mapmaker, backtranslate
+   	- Realización de mapas: fingerprint, map, mapsort, peptidesort,
+   	  peptidemaps
+   	- Introducción de secuencias: SAP (Sequence Assembly Program)
+   	- Verificación de las secuencias
+   	- Ensamblado
+	  
+4) COMPARACION DE SECUENCIAS
+
+   Teoría. Tiempo sugerido: 3 horas (puede reducirse a 2)
+	- Introducción a los bancos de datos de secuencias
+	- Formato de datos: conversión
+	- Métodos de búsqueda: puntos fuertes y débiles de los
+	  principales métodos
+	- Comparación de pares de secuencias: alineamientos, información
+	  que se obtienes: indels, repeticiones, % de similitud, etc...
+	- Alineamientos múltiples de secuencias: métodos, interés,
+	  limitaciones
+	- Introducción al análisis evolutivo
+
+   Práctica. Tiempo sugerido: 2-3 horas
+   	- Realización de búsquedas locales: FASTA, BLAST
+   	- Realización de búsquedas remotas: FASTA, BLAST, BLITZ
+   	- Comparación de pares de secuencias: dotplot, compare, bestfit,
+   	  diverge, plotsimilarity
+   	- Alineamiento múltiple: pileup, clustalw, align, distances,
+   	  lineup
+   	- Obtención de un árbol evolutivo: growtree, align, bootstraps
+
+5) RECONOCIMIENTO DE PATRONES
+
+   Teoría. Tiempo sugerido: 1 hora
+	- Análisis composicional, localización de FLAs (Fases de Lectura
+	  abierta)
+	- Búsquedas de repeticiones u motivos. Traducción de proteínas
+	- Bases de datos de motivos. Búsqueda en las bases de datos,
+	  comparaciones: terminadores, factores de transcripción, etc...
+
+   Práctica. Tiempo sugerido: 1 hora
+   	- Análisis de composición, frecuencia de codones, localización
+   	  de FLAs y traducción: codonpreference, codonfrequency, 
+   	  composition, frames, translate
+   	- Búsqueda de motivos: motifs, prositesearch, signal, macpattern,
+   	  overseer
+
+6) ANALISIS ESTRUCTURAL
+
+   Teoría. Tiempo sugerido: 1 hora (podrian ser 2)
+	- Análisis de propiedades moleculares (PIE, propiedades de 
+	  péptidos, etc...)
+	- Predicción de estructura de proteínas: métodos y limitaciones
+	- Predicción de estructura de RNA: métodos y limitaciones
+
+   Práctica. Tiempo sugerido: 1 hora
+	- Predicción de estructura de proteínas: isoelectric, pepplot,
+	  peptidestructure, plot.a, plotstructure, moment, helicalwheel
+	- Predicción de estructura de RNA: fold, mfold, domes, mountains,
+	  squiggle
+
+7) ANALISIS DE DATOS AUXILIARES
+
+   Teoría. Tiempo sugerido: 1 hora
+	- Otras bases de datos. Relaciones entre las distintas bases
+	  de datos
+	- Obtención y correlación de información auxiliar
+	- Búsquedas avanzadas
+	- Presentación de datos
+
+   Práctica. Tiempo sugerido 1-2 horas
+   	- Búsquedas de información complementaria: SRS
+   	- Búsquedas en bases de datos genéticas
+   	- Relación de información entre bases de datos
+	- Presentación de resultados
+
+
+			March 1995. 
+			José R. Valverde
+			EMBL - The EBI Oustation
+			Hinxton Hall
+			Hinxton. 
+			Cambridge CB10 1RQ
+			United Kingdom

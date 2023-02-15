@@ -1,0 +1,177 @@
+-
+USING SRS (Sequence Retrieval System [1]) from Anonymous FTP
+------------------------------------------------------------
+(Jeroen Coppieters, 17-Mar-1995, srsftp version 1.1beta)
+
+This document describes SRSFTP as it is maintained at 
+EMBL Outstation, the European Bioinformatics Institute
+further referenced as "the EBI"
+
+The Anonymous FTP server of the EBI has a gateway to SRS,
+developped by Jeroen Coppieters and RJ White.
+This allows the retrieval of sequences from Swissprot and EMBL (as well as 
+all other databases that are maintained in SRS at the EBI [2]), using
+the power of SRS.
+A query can be executed from any directory, after connecting to the
+anonymous ftp server.
+
+All results of the query will be stored in the file you name.
+The sequences are stored in flat-file EMBL format by default
+
+In any query, the * wildcard can be used
+
+three formats of queries are available:
+ - simple sequence retrieval
+ - simple srs query
+ - full srs query
+
+1) SIMPLE SEQUENCE RETRIEVAL
+---------------------------
+FORMAT: 
+get DB:INDEX:QUERYSTRING FILENAME
+
+DB is one of the following:
+embl, emblnew, emblall, nuc
+swissprot, swissnew, swissall, pep
+if any of the xxall databases is specified, both the release and the
+updates are searched. If a sequence has been updated since the last
+release, both the old and new entry will be returned.
+
+INDEX  DATABASE SEARCHFIELD          QUERYSTRING
+acc      accession number            accession nr (e.g. X07888)
+id       identifier                  identifier (e.g. ATP6_YEAST)
+dat      date                        date (e.g. 20-NOV-1994)
+fts      feature                     feature name (e.g. intron)
+ref      reference                   Journal reference
+                                     (e.g. Plant Mol. Biol. 10:91-104(1987))
+sl       sequence length             number (e.g. 2400)
+                                     or range (e.g. 2300:5000)
+def      definition                  string
+aut      author                      string
+cc       comment                     string
+org      organism                    string
+tit      reference title             string
+all      all text fields             string
+
+EXAMPLES:
+get emblall:acc:x07888 x07888.seq
+retrieve sequence from embl/emnew with accession number x07888
+store in the file x07888.seq
+
+get swissprot:all:nitrate* nitrate.pep
+get all swissprot entries that have a word starting with nitrate
+in any of the text fields.
+Store in the file nitrate.pep
+
+
+2) SIMPLE SRS QUERY
+------------------
+FORMAT:
+get srs:QUERYSTRING
+
+This allows linking of several databases
+
+For more information on SRS queries, have a look at the SRS manual
+This however does not allow the complete functionality of SRS.
+Restrictions are: - NO SPACES are allowed in the query.
+                  - no command line parameters can be included
+
+EXAMPLES
+get srs:[embl-fts:intron]>parent&[embl-org:arabidopsis*] arain.seq
+retrieve all sequences from Arabidopsis spec. that contain an intron.
+
+get srs:[prosite-id:PROTEIN_KINASE_TYR]>swissprot kinase.pep
+retrieve all proteins, that contain a tyrosine kinase motif (PROSITE)
+
+get srs:[prosite-id:PROTEIN_KINASE_TYR]>swissprot>pdb kinase.pdb
+retrieve 3D structures (if known) from the above proteins
+
+3) FULL SRS QUERY
+-----------------
+If you want to have access to command line options (e.g. to change the
+output format), a full blown getz command is available.
+
+FORMAT:
+From UNIX, VMS+Multinet, MSDOS+NCSA ftp:
+get getz+commandline+options+querystring filename
+
+VMS+UCX:
+get "getz+commandline+options+querystring" filename
+
+- All spaces in the query should be replaced by plus (+)
+- If you want to include a + in a query, use a double plus (++)
+- do not put quotes round the querystring 
+- if you want to escape a character with a backslash (\), duplicate
+  the backslash (\\)
+- contrary to forms 1 and 2, there is no colon in the command
+
+- the getz program has a new command line option -pipe "string"
+  where string can be "/bin/compress" or "/bin/gzip"
+  this will compress the results before transmitting the data,
+  thus minimizing network traffic
+  Do not forget to use BINARY TRANSFER if you use this option
+
+- On UNIX systems, whenever ftp expects a filename,
+  this can be replaced by - (dash)
+  the retrieved file will be printed on stdout 
+
+EXAMPLES
+get getz+-help file
+retrieve help on the usage of getz
+
+get getz+-libs libs.lst
+get a list of all available databases
+
+get getz+-d+-sf+fasta+-pipe+"/bin/gzip"+[emnew-org:drosophila*] dro.seq.gz
+retrieve all Drosophila sp. sequences from emnew in fasta format. Gzip
+before transmitting
+
+get getz+-l+swissprot+-l+swissnew+[sq-id:*_ecoli] ecoli.lst
+generate a list of all ecoli proteins in swissprot and swissnew
+
+============================================================
+NOTES:
+-----
+[1] More information on SRS is available from the author: Thure Etzold
+Via WWW: http://www.embl-heidelberg.de/srs/srsman.html
+
+Refererences:
+Thure Etzold and Patrick Argos, SRS an indexing and retrieval tool for flat 
+file data libraries. Comput. Appl. Biosci. 9:49-57, 1993 
+
+Thure Etzold and Patrick Argos, Transforming a set of biological flat file 
+libraries to a fast access network. Appl. Biosci. 9:59-64, 1993 
+
+[2] on March 14th 1995, these database were:
+                 Library   Group              Entries    Index Date
+-------------------------------------------------------------------
+               SWISSPROT   Sequence             40292       2/28/95
+                SWISSNEW   Sequence              9036        3/8/95
+                     PIR   Sequence             71995       2/28/95
+                    EMBL   Sequence            234501       2/28/95
+                   EMNEW   Sequence            102576       3/14/95
+                   NRL3D   Sequence              4153        3/1/95
+                   NRSUB   Sequence               248        3/1/95
+                     PDB   ProteinStruct         3391        3/1/95
+                    HSSP   ProteinStruct         3070        3/4/95
+                    DSSP   ProteinStruct         2968        3/2/95
+                     ALI   ProteinStruct           84        3/1/95
+                    FSSP   ProteinStruct          436        3/4/95
+                 PROSITE   SeqRelated            1029        3/1/95
+              PROSITEDOC   SeqRelated             786        3/1/95
+                  BLOCKS   SeqRelated             770        3/1/95
+                     EPD   SeqRelated            1251        3/1/95
+                    ECDC   SeqRelated            3571        3/1/95
+                  ENZYME   SeqRelated            3546        3/1/95
+                  REBASE   SeqRelated            2454        3/1/95
+                  PRODOM   SeqRelated           23105        3/1/95
+                 FLYGENE   SeqRelated            7126       3/10/95
+                SWISSDOM   SeqRelated           28224        3/1/95
+                  PIRALN   SeqRelated            1183        3/1/95
+              SEQANALREF   Literature            2579        3/1/95
+                 MEDLINE   Literature          179262        3/1/95
+                    LIMB   Others                 120        3/1/95
+                  TFSITE   TransFac              4042       3/14/95
+                TFFACTOR   TransFac              1412       3/14/95
+                   DBEST   TaggedSites           3264        3/8/95
+
