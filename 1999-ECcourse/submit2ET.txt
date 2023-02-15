@@ -1,0 +1,133 @@
+A P P L I C A T I O N   F O R M    
+EMBnet EDUCATION AND TRAINING PROPOSALS
+_______________________________________________________________________________
+
+
+TITLE PAGE
+
+     1) title of proposal:
+    	Introduction to Bioinformatics
+	
+     2) applicants name:
+     	Jose R. Valverde
+	EMBnet/CNB
+    	Centro Nacional Biotecnologia
+    	Campus UAM, Cantoblanco
+    	Madrid-28049
+    	Spain
+	
+	jrvalverde@es.embnet.org
+	Phone: +34-915854505
+	Fax:   +34-915854506
+
+     3) short description (summary of motivations, major initiatives
+                           and main benefit of proposed activities)
+			   
+	This course will provide a general introduction
+    	to Bioinformatics for unexperienced users, including both,
+    	lecture presentations and practical tuition on the computer.
+	The course shall form new users in the basics and possibilities
+	of bioinformatics and will increase visibility of EMBnet and user
+	awareness of EMBnet services.
+
+
+TIME TABLE
+
+     1) planned starting date:
+     	05-oct-1999. Tentative, may vary if conflicts appear (with e.g. AGM)
+	
+     2) duration:
+     	five days, until 09-oct-1999
+	
+     3) planned reporting date:
+     	15-oct-1999
+	
+     4) detailed time table:
+     	The course will expan 8 hours every day with one lunch and
+    	two coffee breaks a day. The morning would be devoted to
+	lecture presentations and the afternoon to practical sessions.
+
+	The proposed schedule for the course is as follows:
+
+    	Program:    	    	    	Theory	    Practice
+    	========    	    	    	------	    --------
+    	Day 1:
+    	    Introduction    	    	    1h
+    	    UNIX, telnet, X-windows, WWW    3h	    	2h
+
+    	Day 2:
+    	    GCG 	    	    	    4h      	4h
+
+    	Day 3:
+    	    WWW interfaces to GCG   	    1h	    	1h
+    	    Seqlab  	    	    	    1h	    	1h
+    	    SRS usage 	    	    	    1h      	1h
+
+    	Day 4:
+    	    Other services  	    	    2h
+    	    Similarty searches      	    2h      	1h
+    	    Pattern search  	    	    1h	    	1h
+
+    	Day 5:
+    	    Phylip  	    	    	    4h	    	2h
+
+
+BUDGET ESTIMATE
+
+     1) amount of funding requested:
+     	4000 Euros
+	
+     2) amount of funding available from other sources
+     	The course will be partly funded by user fees of
+	    240.4 Euro (40000 ESP) academic and
+	    360.61 Euro (60000 ESP) commercial
+
+     3) detailed breakdown of costs
+                      + travel and subsistence
+                      + equipment
+                      + consumables
+                      + labour costs
+		      
+        Estimated costs are as follows:
+	Travel: 	    	300,000 ESP 	(1803.04 Euros)
+	Lodging: 	    	225,000 ESP 	(1352.28 Euros)
+	Salaries: 		400,000 ESP 	(2404.05 Euros)
+	Meals:	 	    	 90,000 ESP 	( 540.91 Euros)
+	Coffee Breaks:	    	140,000 ESP 	( 841.42 Euros)
+	Secretary:    	    	100,000 ESP 	( 601.01 Euros)
+	Materials: 	    	100,000 ESP 	( 601.01 Euros)
+	One year subscription:  300,000 ESP    	(1803.04 Euros)
+    	-------------------------------------------------------
+	Total:	    	      1.655,000 ESP 	(9946.75 Euros)
+
+
+DESCRIPTION   
+
+     Detailed description of 
+                      + Objectives, 
+                      + Workplan, 
+                      + Scientific information
+
+     a) in case of joint proposal:
+                 a) Participating nodes:
+                 b) Task of proposer 1:
+                    Task of proposer 2:
+                    ...................
+
+     b) in case of courses
+                 a) invited lecturers:
+    
+    	There will be 4 lecturers, three of them visiting lecturers from other 
+    	EMBnet nodes. 
+	Prospective speakers have not yet been contacted. Help and
+    	suggestions from E&T PC would be mosty welcome.
+    	Initially I would like to propose the following lecturers:
+	    	Jose R. Valverde
+	    	Jack Leunissen
+	    	Roberto Lopez
+	    	Rob Harper
+
+                 b) Task of lecturer 1:
+                    Task of lecturer 2:
+                    ...................
+

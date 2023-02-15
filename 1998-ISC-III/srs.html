@@ -1,0 +1,432 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<TITLE>SRS</TITLE>
+	<META NAME="AUTHOR" CONTENT="Valverde Carrillo">
+</HEAD>
+<BODY>
+
+<H1>B&uacute;squeda en bases de datos con SRS</H1>
+
+<P>SRS, <EM>Sequence
+Retrieval System</EM>, es un potente gestor de bases de datos
+desarrollado espec&iacute;ficamente para trabajar con bases de datos
+biol&oacute;gicas. El objetivo de SRS es proporcionar un acceso muy
+eficiente a las bases de datos de contenido biol&oacute;gico,
+permitiendo acceder a las mismas en cualquier formato en que est&eacute;n
+disponibles usando mecanismos complejos de b&uacute;squeda.</P>
+
+<P>SRS proporciona
+dos modos de trabajo b&aacute;sicos: uno con un interfaz gr&aacute;fico
+de usuario, sencillo de usar para el investigador interesado en un
+acceso c&oacute;modo a la informaci&oacute;n, y otro basado en la
+l&iacute;nea de &oacute;rdenes orientado al especialista y a su uso
+por programas auxiliares. En estas p&aacute;ginas vamos a revisar el
+funcionamiento del interfaz gr&aacute;fico por ser el m&aacute;s
+popular y &uacute;til para el experimentalista de laboratorio.</P>
+
+<H2>Conexi&oacute;n a SRS</H2>
+
+<P>Para acceder a SRS
+se utiliza com&uacute;nmente un navegador web dirigi&eacute;ndolo al
+servidor de red deseado. Por ejemplo, el servidor nacional est&aacute;
+en <A HREF="http://www.es.embnet.org/srs5/">http://www.es.embnet.org/srs5/</A>
+
+<P><CENTER>
+<IMG SRC="srs-entry.gif">
+</CENTER></P>
+
+<P>Tras establecer la
+conexi&oacute;n, el servidor presenta una pantalla inicial con
+varias opciones que proporcionan ayuda e informaci&oacute;n
+adicional, y un bot&oacute;n de entrada para iniciar una sesi&oacute;n
+de trabajo. Al pulsar este bot&oacute;n, etiquetado &quot;<B>Start</B>&quot;</P>
+se accede a una
+nueva pantalla, la llamada p&aacute;gina principal o &quot;superior&quot;
+(<B>Top Page</B>).</P>
+
+<H2>La p&aacute;gina principal</H2>
+
+<P>Esta p&aacute;gina
+constituye el punto de entrada principal a toda la funcionalidad de
+SRS. Como la gran mayor&iacute;a de las p&aacute;ginas que ofrece el
+servidor, est&aacute; dividida en dos partes separadas por una l&iacute;nea
+horizontal: la parte superior la forman unos botones que siempre son
+iguales y nos permiten movernos por las principales funciones de
+SRS: la <I>p&aacute;gina principal</I>, el</P>
+<I>formulario de
+b&uacute;squeda</I>, el <I>administrador de b&uacute;squedas</I>, el
+<I>gestor de presentaciones</I> y el listado de <I>bases de datos</I>.</P>
+
+<P>La segunda parte
+constituye la p&aacute;gina principal propiamente dicha y consiste
+en un listado de las bases de datos disponibles en el servidor y
+sobre las cuales podemos realizar b&uacute;squedas.  El listado est&aacute;
+organizdo por temas o categor&iacute;as con el f&iacute;n de
+facilitar la localizaci&oacute;n de la base de datos que m&aacute;s
+nos interesa. Adem&aacute;s, y con el f&iacute;n de no ocupar la
+pantalla con excesiva informaci&oacute;n que posiblemente no nos
+interese, las categor&iacute;as pueden estar &quot;desplegadas&quot;
+(mostrando las bases de datos que las componen) o &quot;recogidas&quot;
+para ocupar menos espacio. Podemos cambiar el estado de la categor&iacute;a
+que nos interese marcando el bot&oacute;n etiquetado [+] &oacute;
+[-] a su izquierda.</P>
+
+<P>Haciendo click
+sobre el nombre de cualquiera de las bases de datos podemos obtener
+informaci&oacute;n detallada sobre la misma, su estado, su
+disponibilidad actual, tama&ntilde;o, etc...</P>
+
+<P><CENTER>
+<IMG SRC="srs-top.gif">
+</CENTER></P>
+
+<P>Para iniciar una
+b&uacute;squeda es preciso indicar en qu&eacute; bases de datos
+deseamos realizarla. SRS permite buscar en m&aacute;s de una base de
+datos al mismo tiempo, es decir no hay porqu&eacute; buscar en las
+bases de datos una por una. Para ello basta con marcar el bot&oacute;n
+que hay junto a las bases de datos que nos interesen. Por ejemplo:
+si dese&aacute;ramos buscar en todas las secuencias disponibles de
+Swissprot, no solo en las de la &uacute;ltima edici&oacute;n,
+podr&iacute;amos marcar tanto SWISSPROT como SWISSNEW.</P>
+Una vez elegidas las
+bases de datos sobre las que queremos trabajar pasamos a la
+siguiente pantalla, el formulario de b&uacute;squeda, donde
+indicaremos qu&eacute; deseamos buscar. Para llegar a &eacute;l
+presionamos el bot&oacute;n etiquetado &quot;<B>Continue</B>&quot;.</P>
+
+<H2>El formulario de b&uacute;squeda</H2>
+
+<P>El siguiente paso es
+indicar a SRS qu&eacute; es lo que estamos buscando. Para ello nos
+ofrece un formulario donde podemos indicar los criterios de b&uacute;squeda
+que deseamos, c&oacute;mo deben de combinarse y de qu&eacute; modo
+deseamos ver los resultados:</P>
+<P><CENTER>
+	<IMG SRC="srs-queryf.gif">
+</CENTER></P>
+
+<P>Aparte de la secci&oacute;n
+inicial con los botones de navegaci&oacute;n entre las pantallas
+principales de SRS, esta p&aacute;gina nos ofrece una serie de
+posibilidades para detallar c&oacute;mo deseamos aplicar nuestros
+criterios:</P>
+
+<P>En primer lugar,
+nos permite indicar de qu&eacute; forma vamos a combinar los
+criterios seleccionados: usando un <B>Y</B> l&oacute;gico (AND), un
+<B>O</B> l&oacute;gico (OR) o una negaci&oacute;n (BUTNOT). El
+significado de estos t&eacute;rminos es el mismo que en teor&iacute;a
+de conjuntos, y viene a representar la <B>intersecci&oacute;n</B>
+(AND) de los conjuntos encontrados por cada criterio, la <B>uni&oacute;n</B>
+de los resultados hallados (OR) o la <B>exclusi&oacute;n</B> de
+entre los resultados hallados por el primer criterio de todos
+aquellos elementos que encajen con los dem&aacute;s (BUTNOT).</P>
+
+<P>Adem&aacute;s
+nos permite indicar si los criterios que usamos son exactos (es
+decir buscamos coincidencia exacta con las palabras indicadas) o no
+(es decir no estamos introduciendo palabras enteras, lo que es mucho
+m&aacute;s vers&aacute;til). En SRS la forma de indicar que un
+criterio no es exacto es mediante el uso del car&aacute;cter '*' que
+se emplea como en la l&iacute;nea de comandos de la mayor&iacute;a
+de sistemas. Por defecto, SRS presume que usamos palabras completas.</P>
+
+<P>Los criterios se
+indican a continuaci&oacute;n en l&iacute;neas separadas del
+formulario. Podemos facilitar y restringir la b&uacute;squeda
+indicando que estos criterios se deben aplicar solamente a un campo
+determinado de las entradas de la base de datos (por ejemplo si
+sabemos el c&oacute;digo de acceso no tiene sentido buscar en todo
+el texto, y podemos indicar que el t&eacute;rmino de b&uacute;squeda
+debe localizarse en el campo <I>AccNumber</I>). Para seleccionar los
+campos basta con elegirlos de entre el men&uacute; desplegable que
+aparece a la izquierda de cada criterio.</P>
+
+<P>La tercera parte
+del formulario nos permite elegir qu&eacute; vamos a ver y c&oacute;mo:
+podemos elegir qu&eacute; campos de cada entrada hallada nos
+interesa ver, cuantas entradas queremos que nos liste en cada
+p&aacute;gina, y qu&eacute; tipo de &quot;<B>presentaci&oacute;n</B>&quot;
+(vista) deseamos emplear para ver los resultados.</P>
+
+<P><B>La p&aacute;gina de resultados</H2>
+
+<P>Una vez establecidos
+los criterios, indicamos a SRS que deseamos proceder a realizar la
+b&uacute;squeda presionando el bot&oacute;n etiquetado &quot;<B>Do
+query</B>&quot;. El servidor realiza la b&uacute;squeda con los
+criterios indicados y nos muestra los resultados en una p&aacute;gina
+especial, presentando los datos como hemos solicitado en el
+formulario de b&uacute;squeda:</P>
+<P><CENTER>
+<IMG SRC="srs-result.gif">
+</CENTER></P>
+<P>Sobre estos
+resultados podemos seguir trabajando: para ello caben varias
+posibilidades:</DL>
+<OL>
+<LI>
+Pulsar sobre
+cualquier palabra resaltada: esto nos llevar&aacute; a una p&aacute;gina
+con la informaci&oacute;n relacionada con el t&eacute;rmino
+seleccionado.<LI>
+Marcar las entradas
+que nos interesen presionando los marcadores a su izquierda para
+seleccionarlas. Una vez seleccionadas podemos trabajar sobre &quot;todas
+menos las elegidas&quot; o &quot;todas las elegidas&quot; para
+aplicar a un conjunto de secuencias las operaciones siguientes:
+<OL><LI>
+	Guardar (Save): nos
+	permite salvar en nuestro disco un listado de las entradas
+	seleccionadas.<LI>
+	Ver (View): nos
+	permite ver un listado con esas secuencias. El nuevo listado puede
+	ser igual o distinto, seg&uacute;n elijamos en el men&uacute;
+	desplegable, y puede incluir s&oacute;lo parte de las entradas, las
+	entradas completas o incluso informaci&oacute;n nueva que no est&aacute;
+	en la base de datos y ha sido calculada a partir de propiedades de
+	las entradas.<LI>
+	Enlazar (Link):
+	consiste en localizar en otras bases de datos la informaci&oacute;n
+	que contengan relacionada con las entradas elegidas.</OL>
+</OL>
+<DL>
+<P>
+<P>Una propiedad
+interesante de SRS es que establece enlaces entre la informaci&oacute;n
+almacendada en todas las bases de datos. De este modo puede enlazar
+informaci&oacute;n contenida en una de ellas con la informaci&oacute;n
+relacionada existente en todas las dem&aacute;s. As&iacute; cuando
+vemos los resultados de una b&uacute;squeda podemos observar que hay
+t&eacute;rminos resaltados, a partir de los cuales se puede saltar a
+la entrada correspondiente en otra base de datos para acceder a
+informaci&oacute;n relacionada, sin necesidad de realizar nuevas
+b&uacute;squedas en aquellas.</P>
+
+<H2>El administrador de b&uacute;squedas</H2>
+
+<P>Las b&uacute;squedas,
+tal como nos permite realizarlas la p&aacute;gina de b&uacute;squedas
+est&aacute;ndar no son a menudo todo lo vers&aacute;tiles que
+desear&iacute;amos. Para ello existe una segunda p&aacute;gina de
+b&uacute;squeda, m&aacute;s vers&aacute;til, pero que requiere un
+conocimiento m&aacute;s detallado de la forma de funcionar de SRS.</P>
+
+<P>Sin embargo, no
+es preciso recurrir a &eacute;sta para realizar b&uacute;squedas
+complejas. Para ello est&aacute; el <B>administrador de b&uacute;squedas</B>,
+una p&aacute;gina que permite combinar distintas b&uacute;squedas
+para refinar a&uacute;n m&aacute;s los criterios. 
+<P>
+<P>Por ejemplo,
+supongamos que buscamos todas las secuencias de ATPasa mitocondrial
+animales (que no sean de plantas ni levaduras). Para ello deber&iacute;amos
+combinar una b&uacute;squeda de &quot;<I>ATPase</I>&quot; y
+&quot;<I>mitoch*</I>&quot; con un AND, y los resultados de esta
+combinarlos con una operaci&oacute;n &quot;BUTNOT&quot; con los
+resultados de la b&uacute;squeda de &quot;<I>planta</I>&quot; y
+&quot;<I>fungi</I>&quot; combinados con &quot;OR&quot;. El
+formulario sencillo s&oacute;lo nos permite usar un operador para
+combinar los criterios, y por tanto esta b&uacute;squeda no se
+podr&iacute;a hacer con &eacute;l. Para ello est&aacute; el
+administrador de b&uacute;squedas: as&iacute; podemos hacer dos
+b&uacute;squedas separadas, una por &quot;ATPase&quot; y &quot;mitoch*&quot;
+combinados con AND y otra por organismos &quot;planta&quot; y
+&quot;fungi&quot; combinada con &quot;OR&quot; empleando el
+formulario sencillo y, una vez hechas, usar administrador de
+b&uacute;squedas para combinarlas y refinar el resultado:</P>
+<P><CENTER>
+<IMG SRC="srs-querym.gif">
+</CENTER></P>
+
+<P>Lo &uacute;nico que
+precisamos es elegir las b&uacute;squedas que deseamos combinar,
+establecer el criterio y apretar el bot&oacute;n etiquetado
+&quot;<B>Combine</B>&quot;. El resultado ser&aacute; la combinaci&oacute;n
+de los criterios elegidos, en este caso 
+<P>
+<P>	((&quot;<I>ATPase</I>&quot;
+AND &quot;<I>mitoch*</I>&quot;) BUTNOT (&quot;Organism=<I>Planta</I>&quot;
+OR &quot;Organism=<I>Fungi</I>&quot; ))</P>
+
+<P>Como vemos en la
+figura, el administrador nos permite elegir otras operaciones a
+aplicar sobre las b&uacute;squedas que llevamos realizadas hasta el
+momento. Para ello simplemente marcamos las b&uacute;squedas con las
+que deseamos trabajar presionando el cuadro a su izquierda y luego
+elegimos la operaci&oacute;n a aplicar.</P>
+
+<P>Entre las
+operaciones que permite realizar incluye salvar, borrar (del
+listado) y ver los resultados. Por ejemplo, una vez realizada una
+b&uacute;squeda no es preciso repetirla si volvemos a estar
+interesados en ella m&aacute;s adelante, nos basta con acudir al
+administrador de b&uacute;squedas y elegirla para volver a ver los
+resultados que ya hab&iacute;amos obtenido.</P>
+
+<H2>El gestor de presentaciones</H2>
+
+<P>Hasta aqu&iacute;
+hemos trabajado de forma vers&aacute;til y potente con SRS, pero
+siempre empleando, para ver la informaci&oacute;n, los mecanismos de
+presentaci&oacute;n que el mismo nos ofrece, basados en diversas
+formas de ver los resultados de las base de datos sobre las que
+buscamos. Sin embargo, podemos crear nuevas combinaciones o formas
+de visualizar la informaci&oacute;n si lo deseamos, de manera que
+&eacute;sta aparezca de forma m&aacute;s adecuada a nuestras
+preferencias, a&uacute;n cuando nadie haya pensado antes en combinar
+los resultados de esa manera.</P>
+
+<P>Para ello se
+utiliza el gestor de presentaciones (<B>View Manager</B>): desde &eacute;l
+podemos crear nuevas presentaciones que combinen resultados de
+varias bases de datos y presenten los campos que nos interesan. Su
+uso requiere una cierta atenci&oacute;n, pero b&aacute;sicamente
+consiste en crear una nueva &quot;vista&quot; o presentaci&oacute;n,
+indicar de qu&eacute; bancos de datos va a extraer la informaci&oacute;n
+a presentar y a continuaci&oacute;n especificar qu&eacute; campos de
+cada uno  de ellos debe mostrar.</P>
+A modo de ejemplo,
+podemos crear una vista que enlace PROSITE y PROSITEDOC, de forma
+que al realizar una b&uacute;squeda en Prosite nos muestre a la vez
+la informaci&oacute;n detallada  contenida en PROSITEDOC para cada
+entrada hallada:</P>
+Para ello vamos al
+gestor de presentaciones presionando sobre &quot;<B>View Manager</B>&quot;
+y una vez en &eacute;l elegimos &quot;<B>Create</B>&quot; para crear
+una nueva presentaci&oacute;n.</P>
+
+<P>
+<IMG SRC="srs-view1.gif">
+<IMG SRC="srs-view2.gif">
+</P>
+
+<P>En la p&aacute;gina
+siguiente nos pregunta cual es el nombre de la nueva presentaci&oacute;n
+(por ejemplo &quot;PROSITE+DOC&quot;), cu&aacute;l es el banco de
+datos de partida (PROSITE) y de qu&eacute; otros bancos de datos
+queremos extraer informaci&oacute;n relacionada para a&ntilde;adirla
+al listado (PROSITEDOC en nuestro ejemplo). Una vez indicados,
+elegimos &quot;<B>Continue</B>&quot; y pasamos a la siguiente fase:
+elegir los campos que queremos visualizar, en nuestro ejemplo vamos
+a elegir &quot;<I>ID</I>&quot; y &quot;<I>Description</I>&quot; en
+PROSITE y &quot;<I>Description</I>&quot; en PROSITEDOC.</P>
+
+<P>Ahora podemos ya
+realizar b&uacute;squedas y obtener listados combinados. Para
+hacerlo volvamos a la p&aacute;gina principal (<B>Top Page</B>) y
+despleguemos la secci&oacute;n &quot;<B>Seq Related</B>&quot;
+haciendo click sobre el bot&oacute;n etiquetado <B>[+]</B> a su
+izquierda. Aparecen varias bases de datos, de las cuales elegimos
+<I>solamente</I> PROSITE. Ahora hacemos una b&uacute;squeda
+cualquiera, por ejemplo, buscamos &quot;Leu*&quot; en el campo
+&quot;<I>Description</I>&quot;, indicamos que los resultados deben
+mostrarse con la vista &quot;PROSITE+DOC&quot; y procedemos a
+realizar la b&uacute;squeda (<B>Do Query</B>). Como veremos, SRS
+busca en Prosite, y autom&aacute;ticamente, para cada entrada que
+encuentra, hace realiza b&uacute;squeda en PROSITEDOC de informaci&oacute;n
+relacionada, que incluye autom&aacute;ticamente en el listado sin
+necesidad de ning&uacute;n esfuerzo adicional de nuestra parte.</P>
+
+<H2>Explotando SRS: MIME</H2>
+
+<P>SRS puede integrarse
+con cualquier programa que tengamos en <I>nuestro</I> ordenador a
+trav&eacute;s de la facilidad para salvar los resultados en nuestro
+disco local. Para ello basta con realizar b&uacute;squedas y
+salvarlas. Eso es todo.</P>
+
+<P>No obstante,
+adem&aacute;s de la posibilidad de guardar los resultados en un
+fichero que luego podemos procesar nosotros con cualquier programa
+de nuestra elecci&oacute;n, SRS ofrece una forma mucho m&aacute;s
+eficiente provechando la capacidad para trabajar con tipos MIME de
+nuestro navegador.</P>
+
+<P>Un <I>tipo MIME</I>
+es una etiqueta aplicada originalmente en el correo electr&oacute;nico
+para indicar de qu&eacute; tipo era la informaci&oacute;n enviada en
+un mensaje multimedia. B&aacute;sicamente consiste en dos partes,
+una descripci&oacute;n general del contenido y una especificaci&oacute;n
+concreta del mismo. Viene a ser como la extensi&oacute;n de tres
+letras en los nombres de fichero de MSDOS o Windows, pero mucho
+mejor hecho.</P>
+
+<P>Los programas
+que aceptan descripciones de ficheros con tipos MIME no necesitan
+saber c&oacute;mo trabajar con todos los tipos posibles de
+informaci&oacute;n: cuando reciben un fichero que no saben manejar,
+analizan su tipo MIME y en base al mismo lo redirigen a un programa
+auxiliar que s&iacute; sepa c&oacute;mo manejarlo. Para ello, y dado
+que el n&uacute;mero de tipos y de programas es potencialmente
+infinito, lo que hacen es consultar una tabla en la que el usuario
+(nosotros) puede decirle qu&eacute; programas pos&eacute;e y cu&ccedil;al
+desea usar para cada tipo de informaci&oacute;n que reciba.</P>
+
+<P>Por ejemplo, un
+fichero de MS-Word posee tipo &quot;application/msword&quot;. Si
+poseemos el Word, nos basta con indicar que siempre que se reciba un
+fichero de este tipo debe abrirse con Word, pero si carecemos de &eacute;l
+y en su lugar tenemos WordPerfect igual podemos indicar que estos
+documentos deben abrirse con WordPerfect que es el que tenemos.</P>
+
+<P>Los navegadores
+Web incorporan un mecanismo de detecci&oacute;n y manejo de tipos
+MIME. Podemos aprovecharlo para hacer que siempre que SRS salve un
+resultado, &eacute;ste se procese autom&aacute;ticamente en nuestro
+ordenador con un programa de nuestra elecci&oacute;n.</P>
+
+<P>Para ello, SRS
+nos permite especificar un tipo MIME a la hora de salvar el
+resultado de una b&uacute;squeda. Para ello indicamos que salve la
+entrada completa y el tipo que deseamos usar (p. ej.
+&quot;chemical/x-pdb&quot;). Al guardar el resultado nuestro
+navegador ser&aacute; informado de que los datos que va a guardar
+son de ese tipo y el navegador podr&aacute; a su vez llamar al
+programa correspondiente de forma autom&aacute;tica.</P>
+
+<P>S&oacute;lo nos
+resta un detalle: c&oacute;mo decir al navegador qu&eacute; programa
+debe usar. Para ello debemos modificar las preferencias del mismo y
+cambiar las aplicaciones externas que usa como asistentes. En las
+preferencias de Netscape, por ejemplo, indicar&iacute;amos que
+deseamos modificar el listado de aplicaciones asistentes
+(&quot;Applications&quot; o &quot;Helpers&quot;). Dado que nuestro
+trabajo es especializado, los tipos que usamos no suelen ser
+conocidos por el navegador, as&iacute; que definiremos un nuevo
+tipo, el que vamos a usar. En el cuadro de di&aacute;logo
+correspondiente indicamos qu&eacute; tipo es (por ejemplo
+&quot;<I>chemical/x-pdb</I>&quot;) y qu&eacute; programa deseamos
+usar para procesar datos de &eacute;se tipo (por ejemplo <I>C:\Archivos
+de Programa\RasMol\rasmol</I>).</P>
+
+<P>A partir de este
+momento, el navegador sabe que siempre que reciba datos con el tipo
+MIME que hemos definido (chemical/x-pdb) deber&aacute; abrirlos con
+el programa elegido (rasmol2). Ahora basta con hacer una b&uacute;squeda
+y salvar los resultados. Por ejemplo, si hemos definifo el tipo
+&quot;chemical/x-pdb&quot; podemos buscar en la base de datos PDB,
+pongamos por ejemplo, el t&eacute;rmino &quot;<I>engrailed</I>&quot;.
+Eligiendo cualquiera de las estructuras que encuentre y marc&aacute;ndola
+en el listado, haremos click en &quot;<B>selected</B>&quot; y a
+continuaci&oacute;n en &quot;<B>save</B>&quot;. Ahora basta salvar
+la entrada completa (&quot;<B>Complete Entry</B>&quot;) como tipo
+MIME  &quot;chemical/x-pdb&quot;. El navegador copiar&aacute; la
+entrada, llamar&aacute; al programa elegido (&quot;Rasmol2&quot;) y
+le pasar&aacute; la estructura molecular para que este,
+autom&aacute;ticamente, nos la muestre a nosotros.</P>
+
+<P>Lo mismo que
+podemos ver una estructura, podr&iacute;amos usar un programa de
+an&aacute;lisis estructural, o procesar secuencias con programas de
+an&aacute;lisis de secuencias en nuestro ordenador personal, o
+procesar bibliograf&iacute;a con un programa gestor de citas, etc...
+todo ello de forma autom&aacute;tica con s&oacute;lo salvar los
+resultados de la b&uacute;squeda:</P>
+<P><CENTER>
+<IMG SRC="srs-mime.gif">
+</CENTER></P>
+</BODY>
+</HTML>

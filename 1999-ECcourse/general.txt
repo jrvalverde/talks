@@ -1,0 +1,57 @@
+EMBnet Bioinformatics Course
+Madrid 1999
+
+Schedule:Monday/Tuesday to Saturday. September/October
+
+Assistants: up to 20-30 people.
+
+Estimated costs:    9946.75 Euros 	(1655000 Pts)
+
+The course is to be funded partly by user contribution and partly by EMBnet:
+    Estimated income:
+	Fees: 240.40 Euros academic, 360.61 Euros commercial. 
+	Includes one year personal subscription to EMBnet/CNB services:
+	20 x 240.40 Euros:  	    4808 Euros	(800000 ESP)
+	
+    Amount requested from EMBnet:   4000 Euros	(665544 ESP)
+
+detailed breakdown of costs:
+        Estimated costs are as follows:
+	Travel: 	    	300,000 ESP 	(1803.04 Euros)
+	Lodging: 	    	225,000 ESP 	(1352.28 Euros)
+	Salaries: 		400,000 ESP 	(2404.05 Euros)
+	Meals:	 	    	 90,000 ESP 	( 540.91 Euros)
+	Coffee Breaks:	    	140,000 ESP 	( 841.42 Euros)
+	Secretary:    	    	100,000 ESP 	( 601.01 Euros)
+	Materials: 	    	100,000 ESP 	( 601.01 Euros)
+	One year subscription:  300,000 ESP    	(1803.04 Euros)
+    	-----------------------------------------------------------------------
+	Total:	    	      1.655,000 ESP 	(9946.75 Euros)
+
+There will be 4 lecturers, three of them visiting lecturers from other 
+EMBnet nodes.
+
+Program:    	    	    	Theory	    Practice
+========    	    	    	------	    --------
+Day 1:
+    Introduction    	    	    1h
+    UNIX, telnet, X-windows, WWW    3h	    	2h
+
+Day 2:
+    GCG 	    	    	    4h      	4h
+
+Day 3:
+    WWW interfaces to GCG   	    1h	    	1h
+    Seqlab  	    	    	    1h	    	1h
+    SRS usage 	    	    	    1h      	1h
+
+Day 4:
+    Other services  	    	    2h
+    Similarty searches      	    2h      	1h
+    Pattern search  	    	    1h	    	1h
+
+Day 5:
+    Phylip  	    	    	    4h	    	2h
+
+
+

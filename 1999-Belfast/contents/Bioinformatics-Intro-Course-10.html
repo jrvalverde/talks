@@ -1,0 +1,103 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>10	APPENDIX II: GCG LIST FILES</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:41
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-10.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-9.html"><img SRC="prev.gif" ALT="10APPENDIX II: GCG LIST FILES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-11.html"><img SRC="next.gif" ALT="11APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr><a NAME="_Toc416084263"></a><a NAME="_Toc425907930"></a><a NAME="_Toc445633648"></a><a NAME="_Toc448034890"></a><a NAME="_Toc448039534"></a><a NAME="_Toc448039656"></a><a NAME="_Ref448221605"></a><a NAME="_Ref448221615"></a><a NAME="_Ref448221689"></a><a NAME="_Toc448300576"></a><a NAME="_Toc448315177"></a><a NAME="_Toc448315481"></a><a NAME="_Toc451227835"></a><a NAME="Heading188"></a>
+<h1>
+10 APPENDIX II: GCG LIST FILES</h1>
+<font face="Garamond">A list file is a text file of sequence file names
+or database references. It is an excellent and flexible way for you to
+produce a specific mini-database, e.g. to do <b><i>fasta</i></b> searches
+against or look for patterns in.</font><font face="Garamond">Each entry
+is on a separate line. These can be sequences either in your Unix account,
+in a GCG database or even in another list file. e.g. a trivial example:</font><font size=-1>initial
+comments</font><tt><font face="Courier"><font size=-1>.. ! A GCG format
+thing (anything above this is a comment)</font></font></tt><tt><font face="Courier"><font size=-1>em:hsfau
+! an entry in the embl database</font></font></tt><tt><font face="Courier"><font size=-1>rabbit.seq
+! a file in your directory</font></font></tt><tt><font face="Courier"><font size=-1>em_rodent:mm*
+! all rodent entries in the EMBL full release.</font></font></tt><tt><font face="Courier"><font size=-1>!
+em:hsaug this entry is commented out.</font></font></tt><tt><font face="Courier"><font size=-1>rodent:*
+! the GCG rodent taxonomic category</font></font></tt><tt><font face="Courier"><font size=-1>@hedgehog.list
+! abother list file called “hedgehog.list”</font></font></tt>Many GCG
+programs can generate list files e.g. :
+<ul>
+<li>
+<font face="Garamond"><b><i>lookup</i></b> (searches for keywords)</font></li>
+
+<li>
+<b><i>fasta -names
+</i></b>(search sequence against sequence databases)</li>
+
+<li>
+<b><i>findpatterns-names</i></b> (searches for a pattern in the databases)</li>
+</ul>
+<font face="Garamond">You can use a text editor like <b><i>pico</i></b>
+or <b><i>xemacs</i></b>, to create and edit your list file. You can make
+use of simple Unix commands to add the sequences in your directory to a
+list file:</font>
+<ul>
+<li>
+<font face="Garamond">Create a list file: <b><i>ls *.seq > new.list</i></b></font></li>
+
+<li>
+Add sequences to an existing file: <b><i>ls ins*.seq >> insulin.list</i></b></li>
+
+<li>
+Or from another directory: <b><i>ls /people/nobel/*.seq > prize.list</i></b></li>
+</ul>
+<font face="Garamond">The
+<b>@</b> symbol in front of your list file tells
+GCG programs that the file is a file of filenames and not a sequence. e.g.</font>
+<ul>
+<li>
+<font face="Garamond">Search your query sequence against: <b><i>fasta query.seq
+@insulin.list</i></b></font></li>
+
+<li>
+Multiply align your sequences: <b><i>pileup @insulin.list</i></b></li>
+
+<li>
+Compare all sequences: <b><i>polydot @insulin.list</i></b></li>
+
+<li>
+Select sequences with patterns: <b><i>findpatterns @insulin.list</i></b></li>
+</ul>
+&nbsp;
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-9.html"><img SRC="prev.gif" ALT="10APPENDIX II: GCG LIST FILES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-11.html"><img SRC="next.gif" ALT="11APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

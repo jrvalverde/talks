@@ -1,0 +1,345 @@
+From ralonso@cnb.uam.es  Thu Sep 16 16:01:25 1999
+Received: from cnb.uam.es (can-can.cnb.uam.es [150.244.23.11])
+	by EMBnet.cnb.uam.es (8.8.7/8.8.7) with ESMTP id QAA1271750;
+	Thu, 16 Sep 1999 16:01:23 +0200 (DST)
+Message-ID: <37E0F96E.FE65A56F@cnb.uam.es>
+Date: Thu, 16 Sep 1999 16:06:49 +0200
+From: =?iso-8859-1?Q?Ram=F3n?= Alonso Allende <ralonso@cnb.uam.es>
+Reply-To: ralonso@cnb.uam.es
+Organization: CNB
+X-Mailer: Mozilla 4.5 (Macintosh; I; PPC)
+X-Accept-Language: en
+MIME-Version: 1.0
+To: training@cnb.uam.es
+CC: imarques@igc.gulbenkian.pt
+Subject: Systems Managers course EMBnet/CNB
+Content-Type: multipart/mixed;
+ boundary="------------2005FA9F567375676AAA67B9"
+X-Status: 
+X-UID: 1527
+Status: OR
+
+This is a multi-part message in MIME format.
+--------------2005FA9F567375676AAA67B9
+Content-Type: text/plain; charset=us-ascii; x-mac-type="54455854"; x-mac-creator="4D4F5353"
+Content-Transfer-Encoding: 7bit
+
+Dear friend,
+
+        we are contacting you now with further details about the course
+on Bioinformatics for System Managers to be held in Madrid, Spain from
+5th to 9th October 1999. In this message you will find financial details
+
+as well as an overall schedule of the course and some travel planning
+tips. Please read all through it and let us know if you have any doubts.
+
+
+
+
+APPLICABLE COSTS
+
+        As you already know, you have been admitted to this course. The
+costs are as already advertised:
+
+        - 300 Euro (50000 ESP) for academic students
+        - 601 Euro (100000 ESP) for commercial students
+
+        You qualify as an academic student if you are a student (e.g.
+you are getting a PhD degree) or you work for an academic institution
+(e.g. University or public research center). In this case you should
+apply the 300 Euro fee.
+
+        If you work for a commercial company, then you are considered to
+
+be a "commercial student" and you should pay the second fee (610 Euro).
+In case of doubt, please, do not hesitate to contact us.
+
+
+PAYMENT
+
+        Payment may be done by almost any means, being preferable a
+fund transfer to the Bank account of our Center, stating clearly in
+your order that it is to pay the EMBnet Bioinformatics course:
+
+        Acc. No.: 0085 - 0568 - 76 - 0000001719
+        Acc. Holder: CENTRO NACIONAL DE BIOTECNOLOGIA
+        Bank address:
+                Banco de Santander
+                C/ Literatos, 41
+                Tres Cantos, 28760 Madrid - Spain
+
+        Please REMEMBER to state in the transfer description
+
+                "EMBnet Bioinformatics Course Payment"
+
+Alternately, you may issue a check for the cost of the course, made
+payable to
+
+        CENTRO NACIONAL DE BIOTECNOLOGIA
+
+
+INVOICE
+
+        Please, do contact us as soon as possible if you need an invoice
+
+order to make the payment so we may ask our financial department to
+produce
+and send it. In this case, do tell us to whom should the invoice be
+addressed and if we need to include any reference number on it.
+
+
+COURSE SCHEDULE
+
+        The course is to begin on October the 5th, and end on October
+the
+9th.
+
+        You may find details on how to come to our Center on our WWW
+pages
+
+                http://www.es.embnet.org/Services/training/smc99/
+
+        Getting to the CNB may be a bit complex the first time. The
+campus
+of the University Autonoma de Madrid is big and finding us may take some
+
+questioning the first time. For this reason, we have reserved the
+morning
+of the first day for receptions. Plan on expending half an hour at the
+"metro", another half on the train/bus, and another half in finding us
+to
+be on the safe side.
+
+        We will wait for you all along the morning of October the 5th,
+and expect you all to be here no later than 12 o'clock noon. On arrival
+you must check at the counter at the entry of the building where we
+shall
+be waiting for you. We will have a little introductory talk and go
+for lunch by 13:00. On the afternoon we'll start straight ahead with the
+
+course.
+
+        The course will last "four days". Since we start the lectures on
+
+the 5th afternoon, this means that we shall finish on the morning of
+October 9th, by noon or lunch time.
+
+
+WHAT TO BRING
+
+        We'll provide you with a CD-ROM containing all the course
+materials,
+some training and tutorial information and some software packages.
+
+        In addition we'll provide you with printed material for the
+tutorials and exercises. You may wish to take some notes during the
+lectures.
+
+        Weather in Spain in October is usually mild. It is normally warm
+
+during the day and may get a bit cold during the nights. Temperatures
+usually range from 15 to 25 degrees Celsius, and might occasionally get
+chilly (10 C). While not common, we might also have some odd rainfall,
+so
+bringing a raincoat may not be a bad idea at all.
+
+        Electricity in Spain goes at 220 Volts, 50 Hz AC, using
+continental
+plugs. You may need an adapter if coming for other countries.
+
+        Credit cards: all major credit cards are accepted almost
+anywhere
+in Spain (Visa, MC, AmEx, etc...) plus you will find lots of ATMs
+everywhere. Traveler Checks may easily be cashed in any bank, and
+opening hours are usually 8:00-13:00h
+
+        Of course, you may also bring along somebody with you. Besides
+lots of museums and cultural interest places, Madrid provides in these
+dates a broad range of activities in its Fall Festival: theater,
+concerts,
+etc... take place during all the Autumn. And of course, there is a
+flourishing night life constantly going on.
+
+        We may provide details on the cultural and leisure activities
+available if you (or your company) are interested in them. Just let us
+know.
+
+        We are also planning on a get together party one day during the
+course. At this stage we still haven't decided on the details, and will
+probably postpose it until you are all together here.
+
+
+LOCAL EXPENSES
+
+        If you want to plan on your travel expenses, here are a few tips
+
+(note: 1 Euro = 166.386ESP ~= 1 USD):
+
+        - Travelling in Madrid: the most comfortable way is to use the
+tube (Metro). You only need to buy one ticket for any travel and this
+allows you to switch trains as many times as you want until you go to
+your destination. Taking the bus you must purchase a ticket for each
+trip.
+
+        Since you will be here several days, it is advisable to purchase
+
+a
+10-trip metrobus bonus. Costing 680 ESP (~4 Euros) it allows you to
+travel
+ten times by metro (with any amount of switching) or bus (no switching
+included).
+
+        - Arriving in Madrid: if you come by plane, you may go from the
+airport to your accommodation by various means:
+                - taxi: costs around 2000-3000 ESP (12-18 Euros)
+                - bus downtown: leaves you at centric Plaza de Colon,
+costs
+        about 600 ESP (~3.6 Euros). From there you would have to take
+        further buses, the metro or a taxi.
+                - metro (underground): recently opened, will take you
+        anywhere from the airport at a minimal cost. I'm not sure if it
+        might have any special fare, in principle it should cost 160 ESP
+
+        (~1 Euro) unless you buy a 10-trip bonus. Is the fastest and
+cheapest
+        way.
+
+        - Getting to the campus: you may come by bus or train. Bus is
+more
+expensive and can only be taken at "Plaza de Castilla" or by the
+Hospital
+"Ramon y Cajal". It is better if you come by train, which you can take
+at a number of stations (see map in the course web pages) and will cost
+you 135 ESP (~0.8 Euro) one-way. You may purchase two-way tickets
+(cheaper)
+and 10-trip bonus (even cheaper). It usually takes 15-30 minutes from
+downtown.
+
+        - Breakfast: if you don't have it included in your accommodation
+
+costs, we'd advise to have it here, where it's 125 ESP (0.75Euro) cheap.
+
+Coffee breaks are also planned during the course.
+
+        - Lunch: we'll have lunch at the campus everyday. Cost of lunch
+at the CNB is 500 ESP (~3 Euros). There is a problem with lunch the last
+
+day, since being a Saturday our canteen is closed. You may consider
+going back downtown (there is plenty of time, lunch hours in Spain are
+normally 13:00 - 16:00). Nevertheless, we are looking for feasible
+possibilities. Let us know if you have any special food requirements so
+we can check with our canteen staff.
+
+        - Dinner: dining in Madrid may be from very cheap to rather
+expensive.
+If you go to a restaurant for a regular dinner it may cost you easily
+between
+1000-3000 ESP (~6-18 Euros). However, getting out for tapas, or being a
+bit
+careful in your selection of sites may possibly cost you less and be
+more
+fun. We'll try to give more advice once you are here. Dining time
+usually
+starts at 20:00-21:00 in Spain.
+
+        - Others: getting out in Madrid may be cheap or expensive
+depending
+on where you go and what you do. We'll be pleased on giving you advice
+once
+you are here. Museums normally cost about 500 ESP, cinemas 750 ESP,
+concerts
+2000 ESP, a drink in trendy, fashionable places usually starts at
+500ESP.
+Going out for "tapas" several people gathers and asks for a few dishes
+to
+share, a glass of beer/wine (small "tapa" included) usually costs
+125ESP, a
+good wine (e.g. Rioja) 250 ESP, and a "racion" (big "tapa") 500-1000ESP.
+
+        Service should always be included by law in all prices at public
+
+places,  (unless clearly advertised, which rarely happens, look for
+"Servicio
+10% no incluido" in the menu). Taxes like IVA (VAT) are usually included
+
+in
+prices too, but sometimes aren't, look for tags like "IVA 12% no
+incluido".
+
+        TIPPING is just a matter of taste: around here, you normally
+leave
+nothing or just small change unless you feel very satisfied with the
+service
+(then you leave a small amount) or exceptionally happy: 1-5% is normally
+
+plenty in this case.
+
+        Bargaining is rarely done in Spain, prices are fixed in most
+places
+except perhaps some hotels and markets.
+
+
+SECURITY
+
+        Madrid is in general a very safe place, but like in any big city
+
+you
+may encounter the odd pickpocket, more specially if you clearly look
+like
+a tourist with lots of money and a careless attitude.
+
+        No special precautions are needed in general, but like anywhere
+in the World, please look after your luggage, do not carry big amounts
+of
+money clearly visible on the back pocket of your trouser hanging half
+way
+out with a sticky note saying "pick me", nor leave your valuables
+uncared
+of everywhere yo go while you look to the oppsite side. Be careful
+retiring
+money from ATMs at night. You get the idea.
+
+        Only take official taxis. They are white, with a red stripe on
+the
+side and a box on top with a green light on one side, a yellow light on
+the
+other, "taxi" on writing and a display of zone fares in application (A,
+B,
+C...). Drivers must carry their license at sight, as well as official
+fares,
+and a "taximeter" must clearly display the running cost of the trip.
+
+
+WE WAIT FOR YOU
+
+        Nothing more for now. We will be waiting for you here on the 5th
+
+October in the morning. Please, try to be here before noon. We wish you
+a nice trip and an enjoyable estance in Madrid.
+
+
+
+
+--------------2005FA9F567375676AAA67B9
+Content-Type: text/x-vcard; charset=us-ascii;
+ name="ralonso.vcf"
+Content-Transfer-Encoding: 7bit
+Content-Description: Card for Ram—n Alonso Allende
+Content-Disposition: attachment;
+ filename="ralonso.vcf"
+
+begin:vcard 
+n:Alonso-Allende;Ramón 
+x-mozilla-html:FALSE
+url:http://www.es.embnet.org/Services/training/courses.html
+org:EMBnet/CNB;Bioinformatics
+adr:;;;;;;Spain
+version:2.1
+email;internet:ralonso@es.embnet.org
+x-mozilla-cpt:;3
+fn:Ramón Alonso-Allende
+end:vcard
+
+--------------2005FA9F567375676AAA67B9--
+
+

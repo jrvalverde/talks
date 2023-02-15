@@ -1,0 +1,234 @@
+A P P L I C A T I O N   F O R M    
+EMBnet EDUCATION AND TRAINING PROPOSALS
+_______________________________________________________________________________
+
+
+TITLE PAGE
+
+     1) title of proposal:
+    	Bioinformatics for System Managers
+
+     2) applicant's name:
+     	Jose R. Valverde
+	EMBnet/CNB
+    	Centro Nacional Biotecnologia
+    	Campus UAM, Cantoblanco
+    	Madrid-28049
+    	Spain
+	
+	jrvalverde@es.embnet.org
+	Phone: +34-915854505
+	Fax:   +34-915854506
+
+     3) short description (summary of motivations, major initiatives
+                           and main benefit of proposed activities)
+			   
+	The goal of this course is to form system managers in the
+	basic concepts of Bioinformatics, the most commonly used
+	tools and databases and their installation and maintenance, so
+	they can better assist users in their respective institutions 
+	and provide them with the basic tools for Sequence Analysis.
+
+
+TIME TABLE
+
+     1) planned starting date:
+     	15-sept-1999. Tentative, may vary if conflicts appear (with e.g. AGM)
+	In any case, it should take place around september - october 1999.
+	
+     2) duration:
+     	four days, until 18-sept-1999
+	
+     3) planned reporting date:
+     	30-sept-1999
+	
+     4) detailed time table:
+     	The course will expan 8 hours every day with one lunch and
+    	one coffee break a day. Lectures and practical sessions will
+	be interleaved so assistants can test everything presented 
+	by themselves.
+
+	The proposed schedule for the course is as follows:
+
+    	Program: 
+    	======== 
+    	Day 1:
+    	    Introduction to Bioinformatics 
+	    	Stringology, evolution, molecular modelling.
+		
+	    Sources of help and documentation
+	    	Existing user docs. EMBnet tutorials. Mirroring of WWW pages.
+
+    	Day 2:
+    	    System Maintenance 	issues in Bioinformatics
+	    	Disk layout. Multidisk file systems. RAID. Logical volumes.
+		Disk quotas. Security. WWW access control.
+		
+	    Common Molecular Biology packages
+	    	GCG. Staden. Phylip. ACeDB. SRS. CLustal. Other common 
+		packages. What they are, installation.
+
+    	Day 3:
+	    WWW interfaces
+	    	W2H. WWW2GCG. What they are. Installation. Usage basics.
+		Access control.
+		
+	    Databases and indexing with SRS
+	    	Which databases exist. How to get and mirror them. Installation.
+		Nightly updates. SRS indexing.
+
+    	Day 4:
+    	    Similarity searches
+	    	Blast/FASTA: what they are, how are they used and interpreted.
+		Installation. WWW interfaces. Queues.
+	    Writing CGIs and web services
+	    	General concepts on writing WWW forms and CGIs. MIME types.
+	    Questions.
+
+
+
+BUDGET ESTIMATE
+
+     1) amount of funding requested:
+     	4500 Euros
+	
+     2) amount of funding available from other sources
+     	The course will be partly funded by user fees of
+	    - 601.01 Euro (100,000 ESP) academic  applicants
+	    - 1202.02 Euro (200,000 ESP) commercial applicants
+	We expect to be able to cover expenses for up to half the total
+	cost of the course.
+
+     3) detailed breakdown of costs
+                      + travel and subsistence
+                      + equipment
+                      + consumables
+                      + labour costs
+		      
+        Estimated costs are as follows:
+	Travel: 	    	300,000 ESP 	(1803.04 Euros)
+	Lodging: 	    	225,000 ESP 	(1352.28 Euros)
+	Salaries: 		400,000 ESP 	(2404.05 Euros)
+	Meals:	 	    	118,000 ESP 	( 709.19 Euros)
+	Coffee Breaks:	    	 21,000 ESP 	( 126.21 Euros)
+	Secretary:    	    	200,000 ESP 	(1202.02 Euros)
+	Materials: 	    	200,000 ESP 	(1202.02 Euros)
+    	-------------------------------------------------------
+	Total:	    	      1,464,000 ESP 	(8798.82 Euros)
+
+    NOTE: Cost estimation in Euros has been calculated using the fixed
+    official exchange rate of 1 Euro = 166.386 ESP
+
+
+DESCRIPTION   
+
+     Detailed description of 
+                      + Objectives, 
+	
+	The goal is to enhance user assistance in their institutions
+	for scientific researchers who have a local computing facility
+	but no staff trained in Biology or Bioinformatics.
+	
+	As such the course is addressed to Computer Scientists who are
+	in charge of the computing facilities at a research institution
+	and need to offer their users access to bioinformatics tools.
+	
+	The course should include a practical application of all the
+	concepts shown. After completion, assistants should have achieved
+	and be able to reproduce the following tasks:
+	    - installation of major sequence analysis packages (GCG or
+	    Staden, Phylip, SRS, AceDB,...)
+	    - installation of WWW interfaces (W2H, WWW2GCG)
+	    - knowledge of existing databases and their interest
+	    - mirroring and updating of databases
+	    - SRS indexing
+	    - installation of a Blast or Fasta server
+	    - installation of basic documentation on bioinformatics
+	    - knowledge of basic problems of system maintenance on
+	    Bioinformatics.
+		
+	Most examples given will try to use EMBnet material, services and
+	sources to increase awareness of EMBnet.
+
+	
+                      + Workplan, 
+
+	The course should be publicly announced by April, with advertising
+	material being distributed by May to research centers, universities
+	and scientific societies.
+
+	Applications will be accepted until mid June, and then we'll
+	start the selection process, notifying accepted assistants by
+	end of June, beginning of July.
+
+	The course will accept about 10-15 assistants, which will be
+	selected among the applicants. Applications will be accepted from
+	all of Spain and EMBnet countries and selection will be made
+	based on interest and utility of the course contents for the
+	applicants and the impact on their institutions.
+
+	Speakers should also have been selected and compromised by then.
+	We have some suggestions as to proposed speakers, but kindly
+	request the E&T PC assistance and suggestions on the selection
+	of speakers.
+
+	Arrival of speakers is expected the night before the start of the
+	course and they will stay through the course until its end. 
+	Theoretical lectures will take place at CNB show room and
+	practical sessions will take place on facilities of the
+	University Autonoma de Madrid.
+
+
+                      + Scientific information
+
+	Students will be exposed to a broad introduction to Bioinformatics,
+	with a short introduction to the algorithms employed and the
+	interpretation of the results obtained. 
+	
+    	A description of the strains induced by the special nature of
+	Bioinformatics on computer systems and of the special system
+	management techniques required to efficently manage a Biocomputing
+	site will be central to the lectures.
+	
+	Assistants will learn about scientific sources of data, such as
+	databases, and documentation like tutorials of interest to their
+	users. They will learn how to install and maintain these data and
+	how it is structured.
+	
+	Specific tasks include the installation of program packages. This
+	requires some undertanding of available software and development 
+	of minimum critical abilities to select packages of interest which
+	should be soundly founded on a good grasp of the core concepts of
+	Bioinformatics.
+	
+
+     a) in case of joint proposal:
+                 a) Participating nodes:
+                 b) Task of proposer 1:
+                    Task of proposer 2:
+                    ...................
+
+     b) in case of courses
+                 a) invited lecturers:
+    
+    	There will be 4 lecturers, three of them visiting lecturers from other 
+    	EMBnet nodes. 
+	Prospective speakers have yet to be contacted. Help and
+    	suggestions from E&T PC would be mosty welcome.
+    	Initially we would like to propose the following lecturers:
+	    	Jose R. Valverde
+	    	Martin Bishop
+	    	Marc Colet
+	    	Peter Rice
+
+                 b) Task of lecturer 1:
+                    Task of lecturer 2:
+                    ...................
+
+    	Depending on election and approval of lecturers, we will assign 
+	teaching tasks to each acccording to their expertise for the
+	morning theoretical lectures. In the evening lecturers will divide
+	in two groups of two each that should take care of a student
+	group in a separate computer room to guide them in the practical
+	sessions.
+

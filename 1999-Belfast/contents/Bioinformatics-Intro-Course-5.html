@@ -1,0 +1,897 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>5	DATABASES</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:13
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-5.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-4.html"><img SRC="prev.gif" ALT="5DATABASES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-6.html"><img SRC="next.gif" ALT="6ADVANCED SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr>
+<ul>
+<li>
+<a href="#Heading66">5.1 WHAT DATABASES ARE THERE?</a></li>
+
+<ul>
+<li>
+<a href="#Heading67">5.1.1 Navigating</a></li>
+
+<li>
+<a href="#Heading68">5.1.2 Sequence &amp; Bibliographic</a></li>
+
+<ul>
+<li>
+<a href="#Heading69">Entrez</a></li>
+
+<li>
+<a href="#Heading70">SRS</a></li>
+</ul>
+
+<li>
+<a href="#Heading71">5.1.3 Genomic</a></li>
+
+<ul>
+<li>
+<a href="#Heading72">GDB</a></li>
+
+<li>
+<a href="#Heading73">ACeDB</a></li>
+</ul>
+
+<li>
+<a href="#Heading74">5.1.4 Clinical &amp; Mutation</a></li>
+
+<ul>
+<li>
+<a href="#Heading75">OMIM</a></li>
+
+<li>
+<a href="#Heading76">HGMD</a></li>
+</ul>
+
+<li>
+<a href="#Heading77">5.1.5 Homologies</a></li>
+
+<ul>
+<li>
+<a href="#Heading78">MGI</a></li>
+</ul>
+
+<li>
+<a href="#Heading79">5.1.6 Integrated</a></li>
+
+<ul>
+<li>
+<a href="#Heading80">GeneCards</a></li>
+
+<li>
+<a href="#Heading81">KEGG</a></li>
+
+<li>
+<a href="#Heading82">WIT</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading83">5.2 HOW TO ACCESS THE DATABASES</a></li>
+
+<li>
+<a href="#Heading84">5.3 HOW DO THEY INTERLINK?</a></li>
+
+<li>
+<a href="#Heading85">5.4 WHAT IS A GOOD PLACE TO START?</a></li>
+
+<li>
+<a href="#Heading86">5.5 PRACTICALS</a></li>
+
+<li>
+<a href="#Heading87">5.6 GDB</a></li>
+
+<ul>
+<li>
+<a href="#Heading88">5.6.1 Nomenclature in GDB</a></li>
+
+<li>
+<a href="#Heading89">5.6.2 What GDB contains</a></li>
+
+<li>
+<a href="#Heading90">5.6.3 Simple Search</a></li>
+
+<ul>
+<li>
+<a href="#Heading91">Section of the database to search in</a></li>
+
+<li>
+<a href="#Heading92">The type of search</a></li>
+
+<li>
+<a href="#Heading93">Other Search Options</a></li>
+
+<li>
+<a href="#Heading94">Back to PAX-6 ... in GDB</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading95">5.7 CLINICAL &amp; MUTATION</a></li>
+
+<li>
+<a href="#Heading96">5.8 INTEGRATED</a></li>
+
+<li>
+<a href="#Heading97">5.9 PRACTICAL PROJECTS</a></li>
+</ul>
+<a NAME="_Toc415911189"></a><a NAME="_Toc416084165"></a><a NAME="_Toc425907868"></a><a NAME="_Toc445633569"></a><a NAME="_Toc448034807"></a><a NAME="_Toc448039466"></a><a NAME="_Toc448039588"></a><a NAME="_Toc448300513"></a><a NAME="_Toc448315031"></a><a NAME="_Toc448315335"></a><a NAME="_Toc451227770"></a><a NAME="Heading65"></a>
+<h1>
+5 DATABASES<a NAME="_Toc448034808"></a><a NAME="_Toc448039467"></a><a NAME="_Toc448039589"></a><a NAME="_Toc448300514"></a><a NAME="_Toc448315032"></a><a NAME="_Toc448315336"></a><a NAME="_Toc451227771"></a></h1>
+<a NAME="Heading66"></a>
+<h2>
+5.1 WHAT DATABASES ARE THERE?</h2>
+<font face="Garamond">Because there is often a substantial overlap between
+the types of data that different database systems contain, no hard and
+fast division of the types of database can be made. We are going to look
+at the a number of groups.</font><font face="Garamond">Some of these are
+very complex and we do not have time to go into all of their capabilities,
+but we hope to give you a good feel for the uses of these databases.</font><a NAME="_Toc451227772"></a><a NAME="Heading67"></a>
+<h3>
+5.1.1 Navigating</h3>
+<font face="Garamond">There are several ways to reach the database pages.
+All of the databases that are not local to the HGMP (like most of the databases
+discussed in this section), there is a link provided on the GenomeWeb.
+The GenomeWeb is a collection of links that are organized in a menu system.
+For some of the most frequently used ones we have provided direct links
+from the WWW Menu page. A third way of finding the correct link is to use
+the search the HGMP pages, by using the search box present on almost every
+HGMP web page.</font><a NAME="_Toc415911190"></a><a NAME="_Toc416084166"></a><a NAME="_Toc425907869"></a><a NAME="_Toc445633570"></a><a NAME="_Toc448034809"></a><a NAME="_Toc448039468"></a><a NAME="_Toc448039590"></a><a NAME="_Toc448300515"></a><a NAME="_Toc448315033"></a><a NAME="_Toc448315337"></a><a NAME="_Toc451227773"></a><a NAME="Heading68"></a>
+<h3>
+5.1.2 Sequence &amp; Bibliographic</h3>
+<font face="Garamond">There are two main nucleic acid sequence databases
+and one main protein sequence database in widespread general use amongst
+the biological community. The nucleic ones are EMBL and GenBank and the
+protein one is SWISS-PROT.</font><font face="Garamond">Shortcuts to all
+these databases can be found on the Genome Web (accessed from the HGMP
+main page).</font><a NAME="_Toc415911191"></a><a NAME="_Toc416084167"></a><a NAME="Heading69"></a>
+<h4>
+Entrez</h4>
+<font face="Garamond">Entrez is a set of tightly linked databases, including
+nucleic sequences, protein sequences and MEDLINE. It has a very nice interface
+and is a very powerful and useful system. If you do nothing else today,
+learn how to use Entrez.</font><font face="Garamond">It has links to itself!
+In other words when you find an interesting nucleic sequence entry, you
+can quickly find others like it, the corresponding protein entry and abstracts
+of papers describing it (see figure 1).</font><b><tt><font face="Courier New"><font size=-1><a href="http://www3.ncbi.nlm.nih.gov/Entrez/">http://www3.ncbi.nlm.nih.gov/Entrez/</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to Entrez from the WWW Menu page (at the bottom).</font></font></tt></b><a NAME="_Toc415911192"></a><a NAME="_Toc416084168"></a><img SRC="Bioinformatics-Intro-Course02.gif" height=407 width=481><a NAME="_Toc448034810"></a><a NAME="_Toc445633571"></a><a NAME="_Toc448039469"></a><a NAME="_Toc448039591"></a><i><font face="Garamond">Figure
+1: Entrez data searching</font></i><a NAME="_Toc448039470"></a><a NAME="_Toc448039592"></a><a NAME="Heading70"></a>
+<h4>
+SRS</h4>
+<font face="Garamond">SRS is a system that holds sequence databases and
+other databases and allows you to search them for words in the annotation.
+It holds each type of database individually, unlike Entrez which lumps
+all (for example) nucleic acid databases into one non-redundant nucleic
+database.</font><b><tt><font face="Courier New"><font size=-1><a href="http://srs5.hgmp.mrc.ac.uk">http://srs5.hgmp.mrc.ac.uk</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to SRS from the WWW Menu page (bottom row).</font></font></tt></b><a NAME="_Toc445633572"></a><a NAME="_Toc415911194"></a><a NAME="_Toc416084170"></a><a NAME="_Toc448034811"></a><a NAME="_Toc448039471"></a><a NAME="_Toc448039593"></a><a NAME="_Toc448300516"></a><a NAME="_Toc448315034"></a><a NAME="_Toc448315338"></a><a NAME="_Toc451227774"></a><a NAME="Heading71"></a>
+<h3>
+5.1.3 Genomic</h3>
+<a NAME="Heading72"></a>
+<h4>
+GDB</h4>
+<font face="Garamond">GDB was devised as the ultimate repository of human
+mapping and genomic data. It has several ways it can be searched and some
+very powerful searches can be made. Simple searches for information on
+genes, clones etc. can be made simply. It has links to Entrez, Sequence
+databases, MGI, other genome databases, OMIM, GeneCards, HGMD, etc.</font><b><tt><font face="Courier New"><font size=-1><a href="http://www.hgmp.mrc.ac.uk/gdb/gdbtop.html">http://www.hgmp.mrc.ac.uk/gdb/gdbtop.html</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to GDB from the WWW Menu page (bottom row).</font></font></tt></b><a NAME="_Toc415911195"></a><a NAME="_Toc416084171"></a><a NAME="Heading73"></a>
+<h4>
+ACeDB</h4>
+<font face="Garamond">ACeDB started life as the repository for mapping
+and genomic data for the nematode <i>C. elegans
+</i>. Data on several human
+chromosomes and other organisms' genomes are held in ACeDB-style databases.
+To access all of this you currently need X-Windows (and an HGMP account),
+although these databases should increasingly be available on the WWW.</font>
+<ul>
+<li>
+<font face="Garamond">Follow the link from the WWW Menu page :</font></li>
+</ul>
+<tt><font face="Courier New"><font size=-1><b>Genomes -> Human Genome Databases
+</b>or<b> Nematode Genome Databases</b></font></font></tt><a NAME="_Toc415911196"></a><a NAME="_Toc416084172"></a><a NAME="_Toc425907871"></a><a NAME="_Toc445633573"></a><a NAME="_Toc448034812"></a><a NAME="_Toc448039472"></a><a NAME="_Toc448039594"></a><a NAME="_Toc448300517"></a><a NAME="_Toc448315035"></a><a NAME="_Toc448315339"></a><a NAME="_Toc451227775"></a><a NAME="Heading74"></a>
+<h3>
+5.1.4 Clinical &amp; Mutation<a NAME="_Toc415911197"></a><a NAME="_Toc416084173"></a></h3>
+<a NAME="Heading75"></a>
+<h4>
+OMIM</h4>
+<font face="Garamond">A very simple and very useful database of phenotypes
+of diseases in humans with a substantial genetic component. It has links
+to MEDLINE, Entrez, HGMD, GDB, Coriell and other databases</font><b><tt><font face="Courier New"><font size=-1><a href="http://www.hgmp.mrc.ac.uk/omim/">http://www.hgmp.mrc.ac.uk/omim/</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to OMIM from the WWW Menu page.</font></font></tt></b><a NAME="_Toc415911198"></a><a NAME="_Toc416084174"></a><a NAME="Heading76"></a>
+<h4>
+HGMD</h4>
+<font face="Garamond">A database of sequences and phenotypes of human disease-causing
+mutations. It has links to OMIM, GDB and to databases specific for a locus.</font><a NAME="_Hlt451161450"></a><b><tt><font face="Courier New"><font size=-1><a href="http://www.uwcm.ac.uk/uwcm/mg/hgmd0.html">http://www.uwcm.ac.uk/uwcm/mg/hgmd0.html</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>Follow
+the link from the HGMP main page :</font></font></tt></b><b><tt><font face="Courier New"><font size=-1>Genome
+Web -> Genome Databases -> Human Mutation Databases -> The Human Gene Mutation
+Database - HGMD (Cardiff)</font></font></tt></b><font face="Garamond">Note
+that there are also an increasing number of disease specific mutation databases
+(not covered in this course).</font><a NAME="_Toc415911199"></a><a NAME="_Toc416084175"></a><a NAME="_Toc425907872"></a><a NAME="_Toc445633574"></a><a NAME="_Toc448034813"></a><a NAME="_Toc448039473"></a><a NAME="_Toc448039595"></a><a NAME="_Toc448300518"></a><a NAME="_Toc448315036"></a><a NAME="_Toc448315340"></a><a NAME="_Toc451227776"></a><a NAME="Heading77"></a>
+<h3>
+5.1.5 Homologies<a NAME="_Toc415911200"></a><a NAME="_Toc416084176"></a></h3>
+<a NAME="Heading78"></a>
+<h4>
+MGI</h4>
+<font face="Garamond">MGI is the repository for mouse mapping gene expression
+and genomic data with human homologies. It has links to GDB and Entrez.</font><b><tt><font face="Courier New"><font size=-1><a href="http://mgd.hgmp.mrc.ac.uk/">http://mgd.hgmp.mrc.ac.uk/</a></font></font></tt></b><a NAME="_Toc415911201"></a><a NAME="_Toc416084177"></a><a NAME="_Toc425907873"></a><a NAME="_Toc445633575"></a><a NAME="_Toc448034814"></a><a NAME="_Toc448039474"></a><a NAME="_Toc448039596"></a><a NAME="_Toc448300519"></a><a NAME="_Toc448315037"></a><a NAME="_Toc448315341"></a><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to MGI from the WWW Menu page.</font></font></tt></b><a NAME="_Toc451227777"></a><a NAME="Heading79"></a>
+<h3>
+5.1.6 Integrated<a NAME="_Toc415911202"></a><a NAME="_Toc416084178"></a></h3>
+<a NAME="Heading80"></a>
+<h4>
+GeneCards</h4>
+<font face="Garamond">GeneCards is a database that intends to address some
+of the problems of information overload and time-consuming data-mining
+by integrating biomedical information taken from several sources (GDB,
+MGD, OMIM, SWISS-PROT, HGMD, Doctor's Guide to the Internet, etc.), and
+by presenting them concisely.</font><font face="Garamond">This is your
+best starting point when searching for human genomic information. It has
+links to many, many other databases.</font><b><tt><font face="Courier New"><font size=-1><a href="http://bioinformatics.weizmann.ac.il/cards/">http://bioinformatics.weizmann.ac.il/cards/</a></font></font></tt></b><b><tt><font face="Courier New"><font size=-1>There
+is a direct link to Genecards from the WWW Menu page.</font></font></tt></b><a NAME="Heading81"></a>
+<h4>
+KEGG</h4>
+<font face="Garamond">The primary objective of KEGG is to computerize the
+current knowledge of molecular interactions; namely, metabolic pathways,
+regulatory pathways, and molecular assemblies. At the same time, KEGG maintains
+gene catalogs for all the organisms that have been sequenced and links
+each gene product to a component on the pathway. KEGG also organizes a
+database of all chemical compounds in living cells and links each compound
+to a pathway component.</font><b><tt><font face="Courier New"><font size=-1><a href="http://www.genome.ad.jp/kegg/kegg.html">http://www.genome.ad.jp/kegg/kegg.html</a></font></font></tt></b><a NAME="Heading82"></a>
+<h4>
+WIT</h4>
+<font face="Garamond">WIT is short for What Is There. It’s similar to
+the KEGG database, in that it tries to integrate all the knowledge there
+is about an organism. WIT includes a set of over 2900 diagrams depicting
+metabolic pathways. This collection is from the <b><i>Metabolic Pathway
+Database
+</i></b>constructed by Evgeni Selkov and his team. Each pathway
+diagram includes a set of <i>functional roles
+</i>. The goal of producing
+a metabolic reconstruction is to identify which pathways are present in
+an organism and which genes implement the functional roles.</font><b><tt><font face="Courier New"><font size=-1><a href="http://wit.mcs.anl.gov/WIT2/">http://wit.mcs.anl.gov/WIT2/</a></font></font></tt></b><a NAME="_Toc415911203"></a><a NAME="_Toc416084179"></a><a NAME="_Toc425907874"></a><a NAME="_Toc445633576"></a><a NAME="_Toc448034815"></a><a NAME="_Toc448039475"></a><a NAME="_Toc448039597"></a><a NAME="_Toc448300520"></a><a NAME="_Toc448315038"></a><a NAME="_Toc448315342"></a><a NAME="_Toc451227778"></a><a NAME="Heading83"></a>
+<h2>
+5.2 HOW TO ACCESS THE DATABASES</h2>
+<font face="Garamond">Most of these databases are available via the WWW.</font><font face="Garamond">Some,
+especially certain ACeDB-style databases require an X-Windows environment
+and most of the important ones can be accessed from the HGMP-RC - try searching
+for them in the HGMP's WWW menu if you are stuck.</font><a NAME="_Toc415911204"></a><a NAME="_Toc416084180"></a><a NAME="_Toc425907875"></a><a NAME="_Toc445633577"></a><a NAME="_Toc448034816"></a><a NAME="_Toc448039476"></a><a NAME="_Toc448039598"></a><a NAME="_Toc448300521"></a><a NAME="_Toc448315039"></a><a NAME="_Toc448315343"></a><a NAME="_Toc451227779"></a><a NAME="Heading84"></a>
+<h2>
+5.3 HOW DO THEY INTERLINK?</h2>
+<font face="Garamond">Most of the WWW-based databases will have links to
+related data in other databases and these links should be followed as it
+will save you much time.</font><font face="Garamond">Be aware that sometimes
+the links between databases are incorrect and you will arrive at an inappropriate
+entry. Keep your wits about you.</font><a NAME="_Toc415911205"></a><a NAME="_Toc416084181"></a><a NAME="_Toc425907876"></a><a NAME="_Toc445633578"></a><a NAME="_Toc448034817"></a><a NAME="_Toc448039477"></a><a NAME="_Toc448039599"></a><a NAME="_Toc448300522"></a><a NAME="_Toc448315040"></a><a NAME="_Toc448315344"></a><a NAME="_Toc451227780"></a><a NAME="Heading85"></a>
+<h2>
+5.4 WHAT IS A GOOD PLACE TO START?</h2>
+<font face="Garamond">If you want to:</font>
+<ul>
+<li>
+<font face="Garamond">find a gene location - GDB, GeneCards</font></li>
+
+<li>
+find a sequence or bibliographic reference - Entrez, SRS</li>
+
+<li>
+most other things – GeneCards<a NAME="_Toc451227781"></a></li>
+</ul>
+<a NAME="Heading86"></a>
+<h2>
+5.5 PRACTICALS</h2>
+<font face="Garamond">We will use the sequence we used in chapter 4 as
+a starting point again, to see what we can learn from it, using some of
+the database search engines.</font><sup><font face="Arial Black">Entrez</font></sup>
+<ul>
+<li>
+<font face="Garamond">What can we find out about cardiac actin in <i>Xenopus
+leavis
+</i>using the databases? Let's start by finding the protein sequence,
+so we start up Entrez. Entrez is available from the NCBI in the States
+(network connections to the USA can be very slow).</font></li>
+
+<li>
+Use the <b>Entrez</b> link at the bottom of the WWW Menu or use the full
+URL pathname:<a NAME="_Toc448315041"></a><a NAME="_Toc448315345"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1><a href="http://www.ncbi.nlm.nih.gov/Entrez/">http://www.ncbi.nlm.nih.gov/Entrez/</a></font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">It links together MEDLINE, DNA sequences, protein
+sequences. And it links together similar DNA sequences, similar protein
+sequences, similar MEDLINE documents. (Neighbouring). It gives the abstracts
+of the Medline papers.</font></li>
+
+<li>
+Click on <b>Nucleotides</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Enter
+what you want to search for :</li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>cardiac actin xenopus leavis</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">and click on 'Search'.</font></li>
+
+<li>
+Click on the Retrieve 2 Documents button.</li>
+
+<li>
+At the top of the list of hits is the entry in the database we used for
+the alignment easrlier in chapter 4, with locus name <b>XLACTCAG</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>From here
+on you can choose several links.</li>
+
+<li>
+Click on:</li>
+
+<li>
+<b>GenBank Report
+</b>- to see the sequence and annotation in GenBAnk format</li>
+
+<li>
+<b>FASTA report
+</b>- to see just the sequence in FASTA format</li>
+
+<li>
+<b>ASN.1 report
+</b>- don't bother with this</li>
+
+<li>
+<b>Graphical view
+</b>- to see the sequence features in colour</li>
+
+<li>
+<b>protein links
+</b>- to see the protein sequences</li>
+
+<li>
+<b>nucleotide neighbours
+</b>- to see other nucleotides similar to this
+one.</li>
+
+<li>
+<b>MEDLINE links
+</b>- to see the abstracts of papers describing the sequence</li>
+
+<li>
+Lets find more papers like the ones we have found:</li>
+
+<li>
+Click on the <b>See Related Articles
+</b>link.</li>
+
+<li>
+You have just done a very wonderful thing. You have pulled out a set of
+papers on the same, or similar topic. You can quickly educate yourself
+about a topic this way!</li>
+</ul>
+<font face="Garamond">An alternative to Entrez is SRS, or the Sequence
+Retrieval System. The SRS systems runs on the HGMP computers and is therefore
+much faster then the USA based entrez, albeit not as pretty and interconnected.</font><sup><font face="Arial Black">SRS</font></sup>
+<ul>
+<li>
+<font face="Garamond">Choose SRS from our WWW pages and Click on <b>Start</b>.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+on the check buttons besides the databases you wish to search in. We want
+a nucleotide sequence, so we check <b>EMBL
+</b>and
+<b>EMBLNEW</b> checkbox.</li>
+
+<li>
+Click on <b>Continue</b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>In the
+first search field, enter the phrase</li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>cardiac actin</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">The dropdown menu shows <b>All text
+</b>. This means
+SRS will search all fields of the database entries that contain some kind
+of text.</font></li>
+
+<li>
+In the second search field we type</li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Xenopus laevis</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Choose
+<b>Organism</b> from the second dropdown menu.
+This will restrict the search to those database entries that come from
+the organism <i>Xenopus laevis
+</i>.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+on
+<b>Do Query</b></li>
+
+<li>
+The next web page will show you all the entries that match your query and
+if nothing much has changed since we last updated this manual, you should
+be presented with only one link, called EMBL:XLACTCAG. Clicking this will
+take you to the entry of our well known cardiac actin gene.</li>
+
+<li>
+The database entry for actin has numerous hyperlinks (underlined words).
+These links are links to other databases or to a subset of the information.
+Clicking on on of the links labeled <u>exon,</u> will take you to a page
+that shows the sequence of this exon only. Clinking on the link <u>CDS</u>
+(which is short for CoDing Sequence) will take you to a page that shows
+all the exons spliced together.</li>
+
+<li>
+There are also links to other databases that share some information with
+this entry. The DR fields are the Database Reference fields. These DR fields
+contain of two or more fields. The first is the name of the database where
+there is a entry, and the second field (seperated by a semicolon) is the
+entry ID in that database. A possible third field will show the locus name
+(if present) of that entry. Locus names are usualy more readible forms
+of the entry ID. In the case of the SwissProt entry, the ID for the actin
+protein is P04751 and the locus name is ACT1_XENLA, the second one is much
+easier to remember than the first one, since it conveys some of the information
+about the name of the protein and the organism it came from. But the locus
+name is not always unique, and the ID is.</li>
+
+<li>
+Clinking on the ID numer of the SWISSPROT entry will take you to the entry
+for actin in SwissProt, which has some information about the function of
+actin.<a NAME="_Toc415911206"></a><a NAME="_Toc416084182"></a><a NAME="_Toc425907877"></a><a NAME="_Toc445633579"></a><a NAME="_Toc448034818"></a><a NAME="_Toc448039478"></a><a NAME="_Toc448039600"></a><a NAME="_Toc448300523"></a><a NAME="_Toc448315046"></a><a NAME="_Toc448315350"></a><a NAME="_Toc451227782"></a></li>
+</ul>
+<a NAME="Heading87"></a>
+<h2>
+5.6 GDB</h2>
+<font face="Garamond">For the next practical we will leave the actin gene
+for a while and look at some disease related gene in humans. Aniridia is
+a disease of the eyes, some of the symptoms include : Aniridia; Decreased
+vision; Cataract; Glaucoma; Nystagmus; Atypical colobomata; Slitlike iris
+stromal defects; Corneal pannus; Foveal hypoplasia; Optic nerve hypoplasia;
+Thinned iris. Now I’m not a medical doctor, but this sounds bad to me
+! It has been known to be caused by a gene called PAX6 and this is the
+gene we are going to concentrate on.</font><font face="Garamond">OK, so
+let's try to see if we can find information on where in the genome PAX-6
+is mapped, what markers are near it and what available materials(clones
+etc.) contain it, so we start: GDB (from the link at the bottom of the
+WWW Menu).</font><font face="Garamond">GDB holds mapping information on
+the Human genome project. It holds information on anything useful in describing
+the location of points on the genome. It holds no information on gene products
+e.g. proteins.</font><a NAME="_Toc415911207"></a><a NAME="_Toc416084183"></a><a NAME="_Toc425907878"></a><a NAME="_Toc445633580"></a><a NAME="_Toc448034819"></a><a NAME="_Toc448039479"></a><a NAME="_Toc448039601"></a><a NAME="_Toc448300524"></a><a NAME="_Toc448315047"></a><a NAME="_Toc448315351"></a><a NAME="_Toc451227783"></a><a NAME="Heading88"></a>
+<h3>
+5.6.1 Nomenclature in GDB</h3>
+<font face="Garamond">GDB uses some terms that are not found in the general
+literature:</font>
+<ul>
+<li>
+<font face="Garamond">Genomic Segment - a region of the genome, including</font></li>
+
+<li>
+<font face="Garamond">loci</font></li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>probes</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>sequences</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>genes</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>gene elements</li>
+
+<li>
+amplimers</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>breakpoint</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>clones</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>cytogenetic markers</li>
+
+<li>
+fragile sites</li>
+
+<li>
+ESTs</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>contigs</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font>repeats.</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font><font face="Garamond">Amplimer
+- a pair of PCR primers.</font><a NAME="_Toc415911208"></a><a NAME="_Toc416084184"></a><a NAME="_Toc425907879"></a><a NAME="_Toc445633581"></a><a NAME="_Toc448034820"></a><a NAME="_Toc448039480"></a><a NAME="_Toc448039602"></a><a NAME="_Toc448300525"></a><a NAME="_Toc448315048"></a><a NAME="_Toc448315352"></a><a NAME="_Toc451227784"></a></li>
+</ul>
+<a NAME="Heading89"></a>
+<h3>
+5.6.2 What GDB contains</h3>
+
+<ul>
+<li>
+<font face="Garamond">Genomic Segments</font></li>
+
+<li>
+Maps - from a variety of sources, including:</li>
+
+<li>
+Cytogenetic maps</li>
+
+<li>
+Linkage maps</li>
+
+<li>
+Radiation hybrid maps</li>
+
+<li>
+Contig maps</li>
+
+<li>
+Integrated maps, including RH Consortium Transcript maps and chromosome
+committee maps.</li>
+
+<li>
+Variations - polymorphisms including Genethon and CHLC microsatellite repeats<a NAME="_Toc415911209"></a><a NAME="_Toc416084185"></a><a NAME="_Toc425907880"></a><a NAME="_Toc445633582"></a><a NAME="_Toc448034821"></a><a NAME="_Toc448039481"></a><a NAME="_Toc448039603"></a><a NAME="_Toc448300526"></a><a NAME="_Toc448315049"></a><a NAME="_Toc448315353"></a><a NAME="_Toc451227785"></a></li>
+</ul>
+<a NAME="Heading90"></a>
+<h3>
+5.6.3 Simple Search</h3>
+<font face="Garamond">This is the small form on the GDB main page:</font><img SRC="Bioinformatics-Intro-Course03.gif" height=228 width=534><b><i><font face="Garamond">Figure
+1
+GDB simple search form</font></i></b><font face="Garamond">It has 4 parts:</font>
+<ol>
+<li>
+<font face="Garamond">Section of the database to search in.</font></li>
+
+<li>
+The type of search - "Name/GDB ID", "Keyword" or "DNA Sequence ID"</li>
+
+<li>
+A field for you to type the thing to search for.</li>
+
+<li>
+The submit button<a NAME="_Toc415911210"></a><a NAME="_Toc416084186"></a></li>
+</ol>
+<a NAME="Heading91"></a>
+<h4>
+Section of the database to search in</h4>
+
+<ul>
+<li>
+<font face="Garamond">Genomic Segments - all biological data except for
+maps and gene products</font></li>
+
+<li>
+All Biological Data - what it says</li>
+
+<li>
+People - a directory of people interested in human genomics</li>
+
+<li>
+Citations - references to papers on the biological data<a NAME="_Toc415911211"></a><a NAME="_Toc416084187"></a></li>
+</ul>
+<a NAME="Heading92"></a>
+<h4>
+The type of search</h4>
+
+<ul>
+<li>
+<font face="Garamond">Name/GDB ID - search for the formal name of a thing
+e.g. "CFTR" or a wildcard: "AB O*"</font></li>
+
+<li>
+Keyword - search for free text. This is slow. Use the Booleans "OR" and
+"AND " between words and "*" for wildcards.</li>
+
+<li>
+DNA Sequence ID - the ID number of that DNA object in the GDB database.</li>
+</ul>
+<font face="Garamond">You usually won't know this.</font><a NAME="_Toc415911212"></a><a NAME="_Toc416084188"></a><a NAME="Heading93"></a>
+<h4>
+Other Search Options</h4>
+<font face="Garamond">This gives some simple and some complex means of
+searching for things. It also gives some very useful example searches.</font><a NAME="_Toc415911213"></a><a NAME="_Toc416084189"></a><a NAME="Heading94"></a>
+<h4>
+Back to PAX-6 ... in GDB</h4>
+<font face="Garamond">OK - so we want to find mapping information on PAX-6.
+I happen to know that the format name of the PAX-6 locus in GDB is PAX6,
+so I can do a quick search using the Name/GDB ID option, otherwise I would
+have to do a slow Keyword search to find it.</font><font face="Garamond">So,
+I click on Name/GDB ID and enter PAX6 and click on the "submit" button.
+We get information on a couple of Amplimers and the gene itself. Clicking
+on the link to the Gene we get a page of links to further information about
+it. We see from the Cytogenetic Localization table that it maps to 11p13.
+In the Related Segments table we have a list of amplimers and clones that
+it overlaps. Clicking on these gives further information on obtaining them.</font><font face="Garamond">In
+“Nucleic Acid Sequences and Protein Sequences” there are links to Entrez
+or SRS. In Homologies there are links to MGI (MGD) amongst other species'
+databases. In Phenotypes there are links to OMIM. There are also links
+to HGMD, GeneCards and a Pax6 mutation database.</font><font face="Garamond">Let's
+have a look at the mouse homologies by clicking directly on the MGD link
+at the bottom of the GDB PAX6 page. This sends us to the copy of MGD in
+the States, rather than the local mirror of MGI We see information on mouse
+genes, DNA segments, cytogenetic markers and QTLs. Each record may include
+marker symbol, name, other lunofficialn names or symbols, nomenclature
+history, alleles, aliases, chromosomal assignment, centimorgan location,
+cytogenetic band, EC number (for enzymes), phenotypic classifications,
+MGI accession numbers and supporting references.</font><sup><font face="Arial Black">GDB
+Practical</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find a list of articles by "Vogelstein". Which of
+his papers, co-authored by Fearon is called "Clonal analysis using recombinant
+DNA probes from the X-chromosome"? What section of the genome is discussed?</font></li>
+</ul>
+<a NAME="_Toc448315050"></a><a NAME="_Toc448315354"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+Use Simple Search to find all the journal articles authored by Vogelstein.</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Find a list of the HPV genes. Study the HPV6AI1 gene.
+What does HPV stand for? Where is HPV6AI1 located?</font></li>
+</ul>
+<a NAME="_Toc448315051"></a><a NAME="_Toc448315355"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+These are all named HPVsomething. Use wildcards in the Simple Search with
+Name/ID.</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">How many genes have been identified on chromosome
+11?</font></li>
+</ul>
+<a NAME="_Toc448315052"></a><a NAME="_Toc448315356"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+Look at the "Reports and Statistics" link at the bottom of the main page.</font></font></tt></b><a NAME="_Toc416084190"></a><a NAME="_Toc425907881"></a><a NAME="_Toc445633583"></a><a NAME="_Toc448034822"></a><a NAME="_Toc448039482"></a><a NAME="_Toc448039604"></a><a NAME="_Toc448300527"></a><a NAME="_Toc448315053"></a><a NAME="_Toc448315357"></a><a NAME="_Toc451227786"></a><a NAME="Heading95"></a>
+<h2>
+5.7 CLINICAL &amp; MUTATION</h2>
+<font face="Garamond">Go back to the GDB PAX6 page. There is a link from
+there to OMIM. You don't see it? It is cleverly disguised as a link to:
+Phenotypes: Aniridia-2</font><font face="Garamond">Once again this takes
+us to the OMIM in the States rather than the local mirror of OMIM so it
+may take a bit of time. OMIM stands for Online Mendelian Inheritance in
+Man.</font><font face="Garamond">OMIM is an on-line version of Dr Victor
+McKusick's Mendelian Inheritance in Man (MIM). It's a catalogue of human
+genes and genetic disorders, with over 8650 entries. This is the database
+to go to search for human genetic diseases by their phenotype. Let us go
+back to the GDB PAX6 page. We are now going to look at the Human Gene Mutation
+Database (HGMD). If you click on: Human Gene Mutation Database: PAX6, this
+takes us into the entry in HGMD describing the mutations that have been
+found and characterised in PAX-6.</font><font face="Garamond">Note that
+at the bottom of the page is a link to a database that is solely devoted
+to PAX-6 mutations, as well as links back to GDB and OMIM.</font><sup><font face="Arial Black">OMIM
+Practical</font></sup><a NAME="_Toc448315054"></a><a NAME="_Toc448315358"></a><b><tt><font face="Courier New"><font size=-1>1)
+Marfan Syndrome</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">News reports have discussed the possibility of cloning
+samples of Abraham Lincoln's DNA from preserved hair or blood to determine
+whether he had Marfan Syndrome. What are the clinical characteristics of
+this disease? Has a map assignment been made?</font><a NAME="_Toc448315055"></a><a NAME="_Toc448315359"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>2) Low Birth Weight</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Is low birth weight associated with any Mendelian
+disorders?</font><a NAME="_Toc448315056"></a><a NAME="_Toc448315360"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>3) Duchenne Muscular Dystrophy</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Find the entry for Duchenne muscular dystrophy.</font><a NAME="_Toc448315057"></a><a NAME="_Toc448315361"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>4) Sneezing</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">What name is given to light induced sneezing?</font><a NAME="_Toc448315058"></a><a NAME="_Toc448315362"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>5) p53/TP53</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">In connection with how many disorders/traits are
+both p53 and TP53 mentioned? How would you find the number of entries that
+just contained p53 or TP53, but not both. Would a search on *p53 be a good
+way to do this search?</font><a NAME="_Toc448315059"></a><a NAME="_Toc448315363"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>6) Hemoglobin Beta</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">How many allelic variants have been identified at
+the hemoglobin beta locus (Ignore the last of these)? Look at the first
+five of them.</font></li>
+
+<li>
+<a NAME="_Toc448315060"></a><a NAME="_Toc448315364"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>7) Retinitis Pigmentosa-5</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Find documents with "retinitis pigmentosa 5" in their
+titles.</font><a NAME="_Toc416084191"></a><a NAME="_Toc425907882"></a><a NAME="_Toc445633584"></a><a NAME="_Toc448034823"></a><a NAME="_Toc448039483"></a><a NAME="_Toc448039605"></a><a NAME="_Toc448300528"></a><a NAME="_Toc448315061"></a><a NAME="_Toc448315365"></a><a NAME="_Toc451227787"></a></li>
+</ul>
+<a NAME="Heading96"></a>
+<h2>
+5.8 INTEGRATED</h2>
+<font face="Garamond">OK - so we have seen that GDB is a pretty good starting
+point if you have searched for a gene or some other human genomic location.
+Let us now look at GeneCards. We have saved what is possibly the best database
+for last.</font><sup><font face="Arial Black">Integrated databases</font></sup>
+<ul>
+<li>
+<font face="Garamond">Start up GeneCards from the WWW site:</font></li>
+</ul>
+<a NAME="_Hlt451227414"></a><b><tt><font face="Courier New"><font size=-1><a href="http://bioinfo.weizmann.ac.il/cards/">http://bioinfo.weizmann.ac.il/cards/</a></font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Type pax-6 into the search field.(Keywords to search
+for may be a human or mouse gene, protein, disease, cell type, tissue,
+chromosome or a related word. Use '*' as a wild card to extend the number
+of matches to the keyword.)</font></li>
+
+<li>
+Click on the Display link to see the results.</li>
+
+<li>
+Oh wow! Look at all these goodies!</li>
+
+<li>
+Unfortunately, the GDB, OMIM, etc. databases being pointed to are in the
+States, so the links are a bit slow, but everything is there waiting for
+you!</li>
+
+<li>
+Clicking on the More like this (previous page, under the Display link)
+gives you a set of hits to HOX genes and to genes with names like misspellings
+of PAX, and to other genes on chromosome arm 11p, and....<a NAME="_Toc415911214"></a><a NAME="_Toc416084192"></a><a NAME="_Toc425907883"></a><a NAME="_Toc445633585"></a><a NAME="_Toc448034824"></a><a NAME="_Toc448039484"></a><a NAME="_Toc448039606"></a><a NAME="_Toc448300529"></a><a NAME="_Toc448315062"></a><a NAME="_Toc448315366"></a><a NAME="_Toc451227788"></a></li>
+</ul>
+<a NAME="Heading97"></a>
+<h2>
+5.9 PRACTICAL PROJECTS</h2>
+<font face="Garamond">There is probably far more work here than you can
+fit into the remaining course time. We have just included lots of projects
+in case you feel you need to do more practicals in your free time.</font><font face="Garamond">GeneCards
+is an excellent starting point for finding information on human genes,
+but it tends to be slow. If you do not have the patience to wait for GeneCards,
+or if you are not searching for a human gene, then the next best place
+to start is often Entrez.</font><font face="Garamond">Finding information
+in databases often involves some lateral thinking and detective work. Now,
+make like Sherlock Holmes!</font><sup><font face="Arial Black">Migraine</font></sup><a NAME="_Toc448315063"></a><a NAME="_Toc448315367"></a><b><tt><font face="Courier New"><font size=-1>About
+20% of women and 12% of men get migraines. There have been reports recently
+that susceptibility to having migraines (Familial Hemiplegic Migraine)
+has a genetic component and a gene may have been found.</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Can you find the gene sequence?</font></li>
+
+<li>
+Can you find papers in Medline describing the action of this gene?</li>
+
+<li>
+Can you find the location of this gene on its chromosome?</li>
+
+<li>
+What clones or primers contain this gene?</li>
+
+<li>
+Can you find any information on mutations in this gene?</li>
+
+<li>
+Can you find descriptions of the disorder?</li>
+
+<li>
+Are the figures given above for the percentage of men and women getting
+migraines correct?</li>
+</ul>
+<sup><font face="Arial Black">Blue Mountains Funnel Web Spider</font></sup>
+<ul>
+<li>
+<font face="Garamond">You have just been stung by a Blue Mountains Funnel
+Web Spider. What can you find out about about the nature and action of
+its venom before you die?</font><a NAME="_Toc448315064"></a><a NAME="_Toc448315368"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>(Hint: work quickly)</font></font></tt></b><sup><font face="Arial Black">Activator
+of liver function 1</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find out more about this gene, it is also described
+as hepatic phenotype restoration inducing sequence.</font></li>
+
+<li>
+Where is it mapped to?</li>
+
+<li>
+What is its nucleic acid sequence?</li>
+</ul>
+<a NAME="_Toc448315065"></a><a NAME="_Toc448315369"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+Are you sure?</font></font></tt></b><a NAME="_Toc448315066"></a><a NAME="_Toc448315370"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+It is NOT a histone.</font></font></tt></b><a NAME="_Toc448315067"></a><a NAME="_Toc448315371"></a><b><tt><font face="Courier New"><font size=-1>Hint:
+The GDB database could be wrong!</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Who has worked on this gene?</font></li>
+
+<li>
+Who can you obtain a clone containing this gene from?</li>
+</ul>
+<sup><font face="Arial Black">Oriental fire-bellied toad</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find the protein sequence of the Phe13 bombesin receptor
+of the Oriental fire-bellied toad</font></li>
+
+<li>
+Look at the MEDLINE abstract of the paper describing it.</li>
+
+<li>
+Find other papers on related topics</li>
+
+<li>
+Look at the abstract of the first related article that you haven't read.</li>
+
+<li>
+Look at the protein sequence described in this paper</li>
+
+<li>
+Look at related sequences.</li>
+
+<li>
+Look at the MEDLINE article.</li>
+
+<li>
+Repeat until boredom sets in. You are now a world expert on Bombina orientalis
+gastrin-releasing peptides :-)</li>
+</ul>
+<sup><font face="Arial Black">Prion</font></sup>
+<ul>
+<li>
+<font face="Garamond">Can you find a succinct and complete description
+of the current state of knowledge of the molecular biology of prion diseases?</font></li>
+</ul>
+&nbsp;
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-4.html"><img SRC="prev.gif" ALT="5DATABASES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-6.html"><img SRC="next.gif" ALT="6ADVANCED SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

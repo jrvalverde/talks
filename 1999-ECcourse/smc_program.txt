@@ -1,0 +1,38 @@
+Bioinformatics for System Managers
+==================================
+
+    	Program: 
+    	======== 
+    	Day 1:
+    	    Introduction to Bioinformatics 
+	    	Stringology, evolution, molecular modelling.
+		
+	    Sources of help and documentation
+	    	Existing user docs. EMBnet tutorials. Mirroring of WWW pages.
+
+    	Day 2:
+    	    System Maintenance 	issues in Bioinformatics
+	    	Disk layout. Multidisk file systems. RAID. Logical volumes.
+		Disk quotas. Security. WWW access control.
+		
+	    Common Molecular Biology packages
+	    	GCG. Staden. Phylip. ACeDB. SRS. CLustal. Other common 
+		packages. What they are, installation.
+
+    	Day 3:
+	    WWW interfaces
+	    	W2H. WWW2GCG. What they are. Installation. Usage basics.
+		Access control.
+		
+	    Databases and indexing with SRS
+	    	Which databases exist. How to get and mirror them. Installation.
+		Nightly updates. SRS indexing.
+
+    	Day 4:
+    	    Similarity searches
+	    	Blast/FASTA: what they are, how are they used and interpreted.
+		Installation. WWW interfaces. Queues.
+	    Writing CGIs and web services
+	    	General concepts on writing WWW forms and CGIs. MIME types.
+	    Questions.
+

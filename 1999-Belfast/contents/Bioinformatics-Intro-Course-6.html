@@ -1,0 +1,1448 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>6	ADVANCED SEQUENCE ANALYSIS</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:18
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-6.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-5.html"><img SRC="prev.gif" ALT="6ADVANCED SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-7.html"><img SRC="next.gif" ALT="7PROTEIN ANALYSIS AND IDENTIFICATION" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr>
+<ul>
+<li>
+<a href="#Heading99">6.1 SEQUENCE ALIGNMENT SCORES</a></li>
+
+<li>
+<a href="#Heading100">6.2 SCORING MATRICES</a></li>
+
+<ul>
+<li>
+<a href="#Heading101">6.2.1 Introduction</a></li>
+
+<li>
+<a href="#Heading102">6.2.2 Scoring Schemes</a></li>
+
+<ul>
+<li>
+<a href="#Heading103">Genetic code scoring</a></li>
+
+<li>
+<a href="#Heading104">Chemical similarity scoring</a></li>
+
+<li>
+<a href="#Heading105">Observed substitutions</a></li>
+
+<li>
+<a href="#Heading106">The Dayhoff mutation data matrix</a></li>
+
+<li>
+<a href="#Heading107">PAM250 amino acid substitution matrix.</a></li>
+
+<li>
+<a href="#Heading108">BLOSUM - matrix from ungapped alignments.</a></li>
+
+<li>
+<a href="#Heading109">Matrices derived from tertiary structure alignments</a></li>
+</ul>
+
+<li>
+<a href="#Heading110">6.2.3 Which matrix should I use?</a></li>
+
+<li>
+<a href="#Heading111">6.2.4 References</a></li>
+</ul>
+
+<li>
+<a href="#Heading112">6.3 DATABASE MINING</a></li>
+
+<ul>
+<li>
+<a href="#Heading113">6.3.1 Introduction</a></li>
+
+<ul>
+<li>
+<a href="#Heading114">Searching for sequence similarities in databases</a></li>
+</ul>
+
+<li>
+<a href="#Heading115">6.3.2 A sensitive search engine (FASTA)</a></li>
+
+<ul>
+<li>
+<a href="#Heading116">How do I Interpret Fasta Results?</a></li>
+
+<li>
+<a href="#Heading117">Histogram</a></li>
+
+<li>
+<a href="#Heading118">Best Scores Summary</a></li>
+
+<li>
+<a href="#Heading119">Alignments</a></li>
+</ul>
+
+<li>
+<a href="#Heading120">6.3.3 A faster alternative (BLAST)</a></li>
+
+<ul>
+<li>
+<a href="#Heading121">Blast Family of Programs</a></li>
+
+<li>
+<a href="#Heading122">How do I Interpret Blast Results?</a></li>
+
+<li>
+<a href="#Heading123">Header</a></li>
+
+<li>
+<a href="#Heading124">List</a></li>
+
+<li>
+<a href="#Heading125">Alignments</a></li>
+
+<li>
+<a href="#Heading126">Summary</a></li>
+
+<li>
+<a href="#Heading127">Blast Statistics and Scores</a></li>
+
+<li>
+<a href="#Heading128">Practical</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading129">6.4 NIX: AN INTEGRATED AUTOMATED DNA SEQUENCE ANALYSIS
+TOOL</a></li>
+
+<ul>
+<li>
+<a href="#Heading130">6.4.1 Launching NIX</a></li>
+
+<ul>
+<li>
+<a href="#Heading131">Problems with this approach</a></li>
+
+<li>
+<a href="#Heading132">What NIX does For Transcribed Sequences:</a></li>
+
+<li>
+<a href="#Heading133">What NIX does for Genomic Sequences:</a></li>
+
+<li>
+<a href="#Heading134">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading135">6.4.2 Interpreting the Nix output</a></li>
+</ul>
+
+<li>
+<a href="#Heading136">6.5 ADVANCED SEQUENCE COMPARISONS</a></li>
+
+<ul>
+<li>
+<a href="#Heading137">6.5.1 Two dimensional matrix dot plots (DOTTER)</a></li>
+
+<ul>
+<li>
+<a href="#Heading138">Practical</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading139">6.6 GENE IDENTIFICATION SOFTWARE</a></li>
+
+<ul>
+<li>
+<a href="#Heading140">6.6.1 Gene identification in silico</a></li>
+
+<li>
+<a href="#Heading141">6.6.2 Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading142">6.7 CONCLUSION</a></li>
+</ul>
+<a NAME="_Toc415911215"></a><a NAME="_Toc416084193"></a><a NAME="_Toc425907884"></a><a NAME="_Toc445633586"></a><a NAME="_Toc448034826"></a><a NAME="_Toc448039485"></a><a NAME="_Toc448039607"></a><a NAME="_Toc448300530"></a><a NAME="_Toc448315068"></a><a NAME="_Toc448315372"></a><a NAME="_Toc451227789"></a><a NAME="Heading98"></a>
+<h1>
+6 ADVANCED SEQUENCE ANALYSIS</h1>
+<font face="Garamond">The aim of this module is to explore more complex
+bioinformatics tools for the analysis of nucleic acid sequences, i.e. more
+demanding on either the user or the computer hardware, or both! These include
+database mining software, in depth sequence comparisons, and an integrated
+comprehensive interface to general DNA analysis.</font><a NAME="_Toc425907885"></a><a NAME="_Toc445633587"></a><a NAME="_Toc416084194"></a><a NAME="_Toc415911216"></a><a NAME="_Toc448034827"></a><a NAME="_Toc448039486"></a><a NAME="_Toc448039608"></a><a NAME="_Toc448300531"></a><a NAME="_Toc448315069"></a><a NAME="_Toc448315373"></a><a NAME="_Toc451227790"></a><a NAME="Heading99"></a>
+<h2>
+6.1 SEQUENCE ALIGNMENT SCORES</h2>
+<font face="Garamond">Most computer programs for sequence alignments go
+for a scoring approach, to answer the question: “Which alignment will
+give me the highest score(s)?”. The score is a number that the program
+assigns to how good an alignment is. Some sequence alignments do a rigorous
+approach(e.g. the Smith-Waterman algorithm) and look for every possible
+alignment and will find the most statistically likely, whilst others compromise
+for CPU speed or biological significance.</font><font face="Garamond">Concepts
+of sequence aligning and scoring:</font>
+<ol>
+<li>
+Find an area of similarity.</li>
+
+<li>
+Extend the alignment, whilst the score keeps increasing(and even if it
+does not try looking ahead to see if the score can be increased further
+down the sequence).</li>
+
+<li>
+Homologous sequences often contain gaps relative to each other. Give penalty
+scores for inserting and extending gaps.</li>
+</ol>
+The scores are better interpreted as statistics and we will come onto that
+later.<a NAME="_Toc425907886"></a><a NAME="_Toc445633588"></a><a NAME="_Toc448034828"></a><a NAME="_Toc448039487"></a><a NAME="_Toc448039609"></a><a NAME="_Toc448300532"></a><a NAME="_Toc448315070"></a><a NAME="_Toc448315374"></a><a NAME="_Toc451227791"></a><a NAME="Heading100"></a>
+<h2>
+6.2 SCORING MATRICES</h2>
+<font face="Garamond">Scoring matrices are used internally by all sequence
+alignment programs. Nucleic acid scoring matrices are rather trivial (in
+most cases, nucleotide similarity is meaningless and only identity scores
+in nucleotide sequence comparisons). However, amino acid matrices are central
+to polypeptide comparisons. Understanding how these are built and how they
+are used can help in making judicious use of sequence alignment software
+and database mining tools.</font><font face="Garamond">A preprint of Geoff
+Barton's “Protein Sequence Alignment and Database Scanning” article
+[17] is the basis for much of the content of this chapter. Please see the
+printed book for his refined work.</font><a NAME="_Toc416084195"></a><a NAME="_Toc425907887"></a><a NAME="_Toc445633589"></a><a NAME="_Toc448034829"></a><a NAME="_Toc448039488"></a><a NAME="_Toc448039610"></a><a NAME="_Toc448300533"></a><a NAME="_Toc448315071"></a><a NAME="_Toc448315375"></a><a NAME="_Toc451227792"></a><a NAME="Heading101"></a>
+<h3>
+6.2.1 Introduction</h3>
+<font face="Garamond">Aligning protein sequences on identity scores alone
+may cause you to miss alignments where residues have been changed, over
+time, to biochemically similar residues.</font><font face="Garamond">All
+algorithms to compare protein sequences rely on some scheme to score the
+equivalencing of each of the 210 possible pairs of amino acids. (i.e. 190
+pairs of different amino acids + 20 pairs of identical amino acids). Most
+scoring schemes represent the 210 pairs of scores as a matrix of similarities
+where identical amino acids and those of similar character (e.g. I, L)
+give higher scores compared to those of different character (e.g. I, D).
+Since the first protein sequences were obtained, many different types of
+scoring scheme have been devised. The most commonly used are those based
+on observed substitution and of these, the 1976 Dayhoff matrix for 250
+PAMS [1] has until recently dominated.</font><font face="Garamond">It is
+essential that when you are comparing two sequences, either as a single
+pairwise sequence comparison or as a database sequence similarity search,
+that you have some idea of the evolutionary distance divergence of the
+two sequences. Obviously for very similar sequences the matrix used would
+matter less to find alignments, than for when you want to do very sensitive
+database searches. When comparing similar sequences, scoring based on identity
+could be sufficient. There is a trade off between sensitivity, computational
+time and your personal result analysis time.</font><a NAME="_Toc416084196"></a><a NAME="_Toc425907888"></a><a NAME="_Toc445633590"></a><a NAME="_Toc448034830"></a><a NAME="_Toc448039489"></a><a NAME="_Toc448039611"></a><a NAME="_Toc448300534"></a><a NAME="_Toc448315072"></a><a NAME="_Toc448315376"></a><a NAME="_Toc451227793"></a><a NAME="Heading102"></a>
+<h3>
+6.2.2 Scoring Schemes<a NAME="_Toc416084197"></a></h3>
+<a NAME="Heading103"></a>
+<h4>
+Genetic code scoring</h4>
+<font face="Garamond">Whereas the identity scoring scheme considers all
+amino acid transitions with equal weight, genetic code scoring as introduced
+by Fitch [4] considers the minimum number of DNA/RNA base changes (0, 1
+,2 or 3) that would be required to interconvert the codons for the two
+amino acids. The scheme has been used both in the construction of phylogenetic
+trees and in the determination of homology between protein sequences having
+similar three dimensional structures [5]. However, today it is rarely the
+first choice for scoring alignments of protein sequences.</font><a NAME="_Toc416084198"></a><a NAME="Heading104"></a>
+<h4>
+Chemical similarity scoring</h4>
+<font face="Garamond">The aim with chemical similarity scoring schemes
+is to give greater weight to the alignment of amino acids with similar
+physico-chemical properties. This is desirable since major changes in amino
+acid type could reduce the ability of the protein to perform its biological
+role and hence the protein would be selected against during the course
+of evolution. The intuitive scheme developed by McLachlan [6] classified
+amino acids on the basis of polar or non-polar character, size, shape and
+charge and gives a score of 6 to interconversions between identical rare
+amino acids (eg F, F) reducing to 0 for substitutions between amino acids
+of quite different character (eg. F, E). Feng et al. [3] encode features
+similar to McLachlan by combining information from the structural features
+of the amino acids and the redundancy of the genetic code.</font><a NAME="_Toc416084199"></a><a NAME="Heading105"></a>
+<h4>
+Observed substitutions</h4>
+<font face="Garamond">Scoring schemes based on observed substitutions are
+derived by analysing the substitution frequencies seen in alignments of
+sequences. This is something of a chicken and egg problem, since in order
+to generate the alignments, one really needs a scoring scheme but in order
+to derive the scoring scheme one needs the alignments!</font><font face="Garamond">Early
+schemes based on observed substitutions worked from closely related sequences
+that could easily be aligned by eye. More recent schemes have had the benefit
+of the earlier substitution matrices to generate alignments on which to
+build. Long experience with scoring schemes based on observed substitutions
+suggests that they are superior to simple identity, genetic code, or intuitive
+physico-chemical property schemes.</font><a NAME="_Toc416084200"></a><a NAME="Heading106"></a>
+<h4>
+The Dayhoff mutation data matrix</h4>
+<font face="Garamond">Possibly the most widely used scheme for scoring
+amino acid pairs is that developed by Dayhoff and co-workers [1]. The system
+arose out of a general model for the evolution of proteins. Dayhoff <i>et.
+al.
+</i>examined alignments of closely similar sequences where the likelihood
+of a particular mutation (e.g. A-D) being the result of a set of successive
+mutations (e.g. A-x-y-D) was low. Since relatively few families were considered,
+the resulting matrix of accepted point mutations included a large number
+of entries equal to 0 or 1. A complete picture of the mutation process
+including those amino acids which did not change was determined by calculating
+the average ratio of the number of changes a particular amino acid type
+underwent to the total number of amino acids of that type present in the
+database. This was combined with the point mutation data to give the mutation
+probability matrix (
+<b>M</b>) where each element <b>Mij</b> gives the
+probability of the amino acid in column <b>j</b> mutating to the amino
+acid in row <b>i</b> after a particular evolutionary time, for example
+after 2 PAM (Percentage of Acceptable point Mutations per 10^8 years).</font><a NAME="_Toc416084201"></a><a NAME="Heading107"></a>
+<h4>
+PAM250 amino acid substitution matrix.</h4>
+
+<pre>&nbsp;&nbsp; A&nbsp; B&nbsp; C&nbsp; D&nbsp; E&nbsp; F&nbsp; G&nbsp; H&nbsp; I&nbsp; K&nbsp; L&nbsp; M&nbsp; N&nbsp; P&nbsp; Q&nbsp; R&nbsp; S&nbsp; T&nbsp; V&nbsp; W&nbsp; Y&nbsp; Z&nbsp;
+
+A&nbsp; 2&nbsp; 0 -2&nbsp; 0&nbsp; 0 -4&nbsp; 1 -1 -1 -1 -2 -1&nbsp; 0&nbsp; 1&nbsp; 0 -2&nbsp; 1&nbsp; 1&nbsp; 0 -6 -3&nbsp; 0&nbsp;
+B&nbsp; 0&nbsp; 2 -4&nbsp; 3&nbsp; 2 -5&nbsp; 0&nbsp; 1 -2&nbsp; 1 -3 -2&nbsp; 2 -1&nbsp; 1 -1&nbsp; 0&nbsp; 0 -2 -5 -3&nbsp; 2&nbsp;
+C -2 -4 12 -5 -5 -4 -3 -3 -2 -5 -6 -5 -4 -3 -5 -4&nbsp; 0 -2 -2 -8&nbsp; 0 -5&nbsp;
+D&nbsp; 0&nbsp; 3 -5&nbsp; 4&nbsp; 3 -6&nbsp; 1&nbsp; 1 -2&nbsp; 0 -4 -3&nbsp; 2 -1&nbsp; 2 -1&nbsp; 0&nbsp; 0 -2 -7 -4&nbsp; 3&nbsp;
+E&nbsp; 0&nbsp; 2 -5&nbsp; 3&nbsp; 4 -5&nbsp; 0&nbsp; 1 -2&nbsp; 0 -3 -2&nbsp; 1 -1&nbsp; 2 -1&nbsp; 0&nbsp; 0 -2 -7 -4&nbsp; 3&nbsp;
+&nbsp;
+F -4 -5 -4 -6 -5&nbsp; 9 -5 -2&nbsp; 1 -5&nbsp; 2&nbsp; 0 -4 -5 -5 -4 -3 -3 -1&nbsp; 0&nbsp; 7 -5&nbsp;
+G&nbsp; 1&nbsp; 0 -3&nbsp; 1&nbsp; 0 -5&nbsp; 5 -2 -3 -2 -4 -3&nbsp; 0 -1 -1 -3&nbsp; 1&nbsp; 0 -1 -7 -5 -1&nbsp;
+H -1&nbsp; 1 -3&nbsp; 1&nbsp; 1 -2 -2&nbsp; 6 -2&nbsp; 0 -2 -2&nbsp; 2&nbsp; 0&nbsp; 3&nbsp; 2 -1 -1 -2 -3&nbsp; 0&nbsp; 2&nbsp;
+I -1 -2 -2 -2 -2&nbsp; 1 -3 -2&nbsp; 5 -2&nbsp; 2&nbsp; 2 -2 -2 -2 -2 -1&nbsp; 0&nbsp; 4 -5 -1 -2&nbsp;
+K -1&nbsp; 1 -5&nbsp; 0&nbsp; 0 -5 -2&nbsp; 0 -2&nbsp; 5 -3&nbsp; 0&nbsp; 1 -1&nbsp; 1&nbsp; 3&nbsp; 0&nbsp; 0 -2 -3 -4&nbsp; 0&nbsp;
+&nbsp;
+L -2 -3 -6 -4 -3&nbsp; 2 -4 -2&nbsp; 2 -3&nbsp; 6&nbsp; 4 -3 -3 -2 -3 -3 -2&nbsp; 2 -2 -1 -3&nbsp;
+M -1 -2 -5 -3 -2&nbsp; 0 -3 -2&nbsp; 2&nbsp; 0&nbsp; 4&nbsp; 6 -2 -2 -1&nbsp; 0 -2 -1&nbsp; 2 -4 -2 -2&nbsp;
+N&nbsp; 0&nbsp; 2 -4&nbsp; 2&nbsp; 1 -4&nbsp; 0&nbsp; 2 -2&nbsp; 1 -3 -2&nbsp; 2 -1&nbsp; 1&nbsp; 0&nbsp; 1&nbsp; 0 -2 -4 -2&nbsp; 1&nbsp;
+P&nbsp; 1 -1 -3 -1 -1 -5 -1&nbsp; 0 -2 -1 -3 -2 -1&nbsp; 6&nbsp; 0&nbsp; 0&nbsp; 1&nbsp; 0 -1 -6 -5&nbsp; 0&nbsp;
+Q&nbsp; 0&nbsp; 1 -5&nbsp; 2&nbsp; 2 -5 -1&nbsp; 3 -2&nbsp; 1 -2 -1&nbsp; 1&nbsp; 0&nbsp; 4&nbsp; 1 -1 -1 -2 -5 -4&nbsp; 3&nbsp;
+&nbsp;
+R -2 -1 -4 -1 -1 -4 -3&nbsp; 2 -2&nbsp; 3 -3&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 1&nbsp; 6&nbsp; 0 -1 -2&nbsp; 2 -4&nbsp; 0&nbsp;
+S&nbsp; 1&nbsp; 0&nbsp; 0&nbsp; 0&nbsp; 0 -3&nbsp; 1 -1 -1&nbsp; 0 -3 -2&nbsp; 1&nbsp; 1 -1&nbsp; 0&nbsp; 2&nbsp; 1 -1 -2 -3&nbsp; 0&nbsp;
+T&nbsp; 1&nbsp; 0 -2&nbsp; 0&nbsp; 0 -3&nbsp; 0 -1&nbsp; 0&nbsp; 0 -2 -1&nbsp; 0&nbsp; 0 -1 -1&nbsp; 1&nbsp; 3&nbsp; 0 -5 -3 -1&nbsp;
+V&nbsp; 0 -2 -2 -2 -2 -1 -1 -2&nbsp; 4 -2&nbsp; 2&nbsp; 2 -2 -1 -2 -2 -1&nbsp; 0&nbsp; 4 -6 -2 -2&nbsp;
+W -6 -5 -8 -7 -7&nbsp; 0 -7 -3 -5 -3 -2 -4 -4 -6 -5&nbsp; 2 -2 -5 -6 17&nbsp; 0 -6&nbsp;
+&nbsp;
+Y -3 -3&nbsp; 0 -4 -4&nbsp; 7 -5&nbsp; 0 -1 -4 -1 -2 -2 -5 -4 -4 -3 -3 -2&nbsp; 0 10 -4&nbsp;
+Z&nbsp; 0&nbsp; 2 -5&nbsp; 3&nbsp; 3 -5 -1&nbsp; 2 -2&nbsp; 0 -3 -2&nbsp; 1&nbsp; 0&nbsp; 3&nbsp; 0&nbsp; 0 -1 -2 -6 -4&nbsp; 3</pre>
+<font face="Garamond">The mutation probability matrix is specific for a
+particular evolutionary distance, but may be used to generate matrices
+for greater evolutionary distances by multiplying it repeatedly by itself.
+At the level of 2,000 PAM Schwartz and Dayhoff suggest that all the information
+present in the matrix has degenerated except that the matrix element for
+Cys-Cys is 10% higher than would be expected by chance. At the evolutionary
+distance of 256 PAMs one amino acid in five remains unchanged but the amino
+acids vary in their mutability; 48% of the tryptophans, 41% of the cysteines
+and 20% of the histidines would be unchanged, but only 7% of serines would
+remain.</font><font face="Garamond">When used for the comparison of protein
+sequences, the mutation probability matrix is usually normalised by dividing
+each element <b>Mij</b> by the relative frequency of exposure to mutation
+of the amino acid . This operation results in the symmetrical “relatedness
+odds matrix” with each element giving the probability of amino acid replacement
+per occurrence of <b>i</b>, per occurrence of <b>j</b>. The logarithm of
+each element is taken to allow probabilities to be summed over a series
+of amino acids rather than requiring multiplication. The resulting matrix
+is the “log-odds matrix” which is frequently referred to as “Dayhoff's
+matrix” and often used at a distance of close to 256 PAM since this lies
+near to the limit of detection of distant relationships where approximately
+80% of the amino acid positions are observed to have changed [2].</font><a NAME="_Toc416084203"></a><a NAME="Heading108"></a>
+<h4>
+BLOSUM - matrix from ungapped alignments.</h4>
+<font face="Garamond">Dayhoff-like matrices derive their initial substitution
+frequencies from global alignments of very similar sequences. An alternative
+approach has been developed by Henikoff and Henikoff using multiple local
+alignments of more distantly related sequences [7]. First a database of
+multiple alignments without gaps for short regions of related sequences
+was derived. Within each alignment in the database, the sequences were
+clustered into groups where the sequences are similar at some threshold
+value of percentage identity. Substitution frequencies for all pairs of
+amino acids were then calculated between the groups and this used to calculate
+a log odds BLOSUM (blocks substitution matrix) matrix. Different matrices
+are obtained by varying the clustering threshold. For example, the BLOSUM
+80 matrix was derived using a threshold of 80% identity.</font><a NAME="_Toc416084204"></a><a NAME="Heading109"></a>
+<h4>
+Matrices derived from tertiary structure alignments</h4>
+<font face="Garamond">The most reliable protein sequence alignments may
+be obtained when all the proteins have had their tertiary structures experimentally
+determined. Comparison of three dimensional structures also allows much
+more distantly related proteins to be aligned accurately. Analysis of such
+alignments should therefore give the best substitution matrices. Accordingly,
+Risler et al. [8] derived substitution frequencies from 32 proteins structurally
+aligned in 11 groups. On similar lines, Overington et al. [9] aligned 7
+families for which 3 or more proteins of known three dimensional structure
+were known and derived a series of substitution matrices. Overington et
+al. also subdivided the substitution data by the secondary structure and
+environment of each amino acid; however this led to rather sparse matrices
+due to the shortage of examples. Bowie et al. [10] have also derived substitution
+tables specific for different amino acid environments and secondary structures.</font><a NAME="_Toc416084205"></a><a NAME="_Toc425907889"></a><a NAME="_Toc445633591"></a><a NAME="_Toc448034831"></a><a NAME="_Toc448039490"></a><a NAME="_Toc448039612"></a><a NAME="_Toc448300535"></a><a NAME="_Toc448315073"></a><a NAME="_Toc448315377"></a><a NAME="_Toc451227794"></a><a NAME="Heading110"></a>
+<h3>
+6.2.3 Which matrix should I use?</h3>
+<font face="Garamond">The general consensus is that matrices derived from
+observed substitution data (e.g. the Dayhoff or BLOSUM matrices) are superior
+to identity, genetic code or physical property matrices (e.g. see [3]).
+However, there are Dayhoff matrices of different PAM values and BLOSUM
+matrices of different percentage identity. So the question now is which
+of these should be used.</font><font face="Garamond">Schwartz and Dayhoff
+[2] recommended a mutation data matrix for the distance of 250 PAMs as
+a result of a study using a dynamic programming procedure [11] to compare
+a variety of proteins known to be distantly related. The 250 PAM matrix
+was selected since in Monte Carlo studies (see Section 4.1) matrices reflecting
+this evolutionary distance gave a consistently higher significance score
+than other matrices in the range 0-750 PAM. The matrix also gave better
+scores when compared to McLachlan's substitution matrix [6], the genetic
+code matrix and identity scoring. Recently, Altschul [12] has examined
+Dayhoff style mutation data matrices from an information theory perspective.
+For alignments that do not include gaps he concluded, in broad agreement
+with Schwarz and Dayhoff, that a matrix of 200 PAMS was most appropriate
+when the sequences to be compared were thought to be related. However,
+when comparing sequences that were not known in advance to be related,
+for example when database scanning, a 120 PAM matrix was the best compromise.
+When using a local alignment method, Altschul suggests that three matrices
+should ideally be used: PAM40, PAM120 and PAM250. The lower PAM matrices
+will tend to find short alignments of highly similar sequences, while higher
+PAM matrices will find longer, weaker local alignments. Similar conclusions
+were reached by Collins and Coulson [13] who advocate using a compromise
+PAM100 matrix, but also suggest the use of multiple PAM matrices to allow
+detection of local similarities of all types.</font><font face="Garamond">Henikoff
+and Henikoff [14] have compared the BLOSUM matrices to PAM, PET, Overington,
+Gonnet [15] and multiple PAM matrices by evaluating how effectively the
+matrices can detect known members of a protein family from a database when
+searching with the ungapped local alignment program BLAST [16]. They conclude
+that overall the BLOSUM 62 matrix is the most effective. However, all the
+substitution matrices investigated perform better than BLOSUM 62 for a
+proportion of the families. This suggests that no single matrix is the
+complete answer for all sequence comparisons. It is probably best to complement
+the BLOSUM 62 matrix with comparisons using PET91 at 250 PAMS, and Overington
+structurally derived matrices. It seems likely that as more protein three
+dimensional structures are determined, substitution tables derived from
+structure comparison will give the most reliable data.</font><font face="Garamond">A
+good strategy may be to use one matrix to find ´´similar'' sequences
+and produce an initial alignment, then view the results and do more rigorous
+pairwise alignments with <b>appropriate</b> matrices.</font><font face="Garamond">Alignments
+will also depend upon the sensitivity of the algorithm you have used, the
+gene model if chosen and parameters. You should always use your biological
+common sense when analysing computational results.</font><sup><font face="Arial Black">Recommended
+search approach</font></sup>
+<ul>
+<li>
+<font face="Garamond">Blast search of your protein sequence against a protein
+database using the default matrix BLOSUM 62 or PAM250.</font></li>
+
+<li>
+If you get very few hits, repeat the search with higher scoring matrices
+(i.e. BLOSUM 30 or PAM400).</li>
+
+<li>
+If the sequences are very similar, try realigning with lower scoring matrices
+(i.e BLOSUM 80 or PAM 40)<a NAME="_Toc416084206"></a><a NAME="_Toc425907890"></a><a NAME="_Toc445633592"></a><a NAME="_Toc448034832"></a><a NAME="_Toc448039491"></a><a NAME="_Toc448039613"></a><a NAME="_Toc448300536"></a><a NAME="_Toc448315074"></a><a NAME="_Toc448315378"></a><a NAME="_Toc451227795"></a></li>
+</ul>
+<a NAME="Heading111"></a>
+<h3>
+6.2.4 References</h3>
+<font face="Garamond"><font size=-1>1 Dayhoff, M. O., Schwartz, R. M.,
+and Orcutt, B. C. (1978) A model of evolutionary change in proteins. matrices
+for detecting distant relationships In M. O. Dayhoff, (ed.), Atlas of protein
+sequence and structure, volume 5, pp. 345-358 National biomedical research
+foundation Washington DC.</font></font><font face="Garamond"><font size=-1>2
+Schwartz, R. M. and Dayhoff, M. O. (1978) In M. O. Dayhoff, (ed.), Atlas
+of protein sequence and structure, volume 5, pp. 353-362 National biomedical
+research foundation Washington DC.</font></font><font face="Garamond"><font size=-1>3
+Feng, D. F., Johnson, M. S., and Doolittle, R. F. (1985) J. Mol. Evol.
+21, 112-125.</font></font><font face="Garamond"><font size=-1>4 Fitch,
+W. M. (1966) J. Mol. Biol. 16, 9-16.</font></font><font face="Garamond"><font size=-1>5
+Cohen, F. E., Novotny, J., Sternberg, M. J. E., Campbell, D. G., and Williams,
+A. F. (1981) Biochem. J. 195, 31-40.</font></font><font face="Garamond"><font size=-1>6
+D., M. A. (1972) J. Mol. Biol. 64, 417-37.</font></font><font face="Garamond"><font size=-1>7
+Henikoff, S. and Henikoff, J. G. (1992) Proc. Nat. Acad. Sci. 89, 10915-10919.</font></font><font face="Garamond"><font size=-1>8
+Risler, J. L., Delorme, M. O., Delacroix, H., and Henaut, A. (1988) J.
+Mol. Biol. 204, 1019-1029.</font></font><font face="Garamond"><font size=-1>9
+Overington, J., Johnson, M. S., Sali, A., and Blundell, T. L. (1990) Proc.
+R. Soc. Lond. B. 241, 132-145.</font></font><font face="Garamond"><font size=-1>10
+Bowie, J. U., Luthy, R., and Eisenberg, D. (1991) Science 253, 164-170.</font></font><font face="Garamond"><font size=-1>11
+Needleman, S. B. and Wunsch, C. D. (1970) J. Mol. Biol. 48, 443-453.</font></font><font face="Garamond"><font size=-1>12
+Altschul, S. (1991) J. Mol. Biol. 1991, 555-565.</font></font><font face="Garamond"><font size=-1>13
+Collins, J. F., Coulson, A. F. W., and Lyall, A. (1988) Comp. App. Biosci.
+4, 67-71.</font></font><font face="Garamond"><font size=-1>14 Henikoff,
+S. and Henikoff, J. G. (1993) Proteins 17, 49-61.</font></font><font face="Garamond"><font size=-1>15
+Gonnet, G. H., Cohen, M. A., and Benner, S. A. (1992) Science 256, 1443-1444.</font></font><font face="Garamond"><font size=-1>16
+Altschul, S. F., Gish, W., Miller, W., Myers, E. W., and Lipman, D. J.
+(1990) J. Mol. Biol .215, 403-410.</font></font><font face="Garamond"><font size=-1>17
+Sternberg 1996, Protein Structure prediction - a practical approach, Edited
+by M. J. E.</font></font><font face="Garamond"><font size=-1>Sternberg,
+IRL Press at Oxford University Press, 1996, ISBN 0 19 963496 3.</font></font><a NAME="_Toc416084207"></a><a NAME="_Toc425907891"></a><a NAME="_Toc445633593"></a><a NAME="_Toc448034833"></a><a NAME="_Toc448039492"></a><a NAME="_Toc448039614"></a><a NAME="_Toc448300537"></a><a NAME="_Toc448315075"></a><a NAME="_Toc448315379"></a><a NAME="_Toc451227796"></a><a NAME="Heading112"></a>
+<h2>
+6.3 DATABASE MINING<a NAME="_Toc415911217"></a><a NAME="_Toc416084208"></a><a NAME="_Toc425907892"></a><a NAME="_Toc445633594"></a><a NAME="_Toc448034834"></a><a NAME="_Toc448039493"></a><a NAME="_Toc448039615"></a><a NAME="_Toc448300538"></a><a NAME="_Toc448315076"></a><a NAME="_Toc448315380"></a><a NAME="_Toc451227797"></a></h2>
+<a NAME="Heading113"></a>
+<h3>
+6.3.1 Introduction<a NAME="_Toc416084209"></a></h3>
+<a NAME="Heading114"></a>
+<h4>
+Searching for sequence similarities in databases</h4>
+<font face="Garamond">The growing size and diversity of the public sequence
+databases makes them invaluable resources for molecular biologists. When
+investigating a novel DNA sequence, a fast, cheap and potentially very
+rewarding analysis involves scanning EMBL or GenBank for sequences with
+significant homologies with your own sequence. You might discover that:</font>
+<ol>
+<li>
+<font face="Garamond">you've been scooped: your sequence has already been
+cloned and sequenced!</font></li>
+
+<li>
+you've discovered a new member of a gene family: short cut to identifying
+the function!</li>
+
+<li>
+your sequence shares just some domains/motifs with known genes: immediate
+hints for some targeted experiments!</li>
+
+<li>
+your sequence is completely novel: guaranteed months of blind wet lab to
+home in on the function... Hire a post graduate student!</li>
+</ol>
+<font face="Garamond">Several efficient 'search engines' have been developed
+to answer the question :</font>
+<ul>
+<li>
+<i>"which sequences in the database are most similar (or contain the most
+similar regions) to my query sequence?".</i></li>
+</ul>
+<font face="Garamond">Programs differ in their core algorithm methodology,
+affecting their speed and sensitivity. We will look at the two most popular
+programs: FASTA (thorough but slow) and BLAST (very fast but less sensitive).
+When scanning a database for similarities to a new sequence, first try
+submitting your query to BLAST. If on analysis of your BLAST results you
+think that you might be missing some weak similarities, you might resort
+to FASTA. If the protein sequence of the gene product is available, you
+should really use that instead of the DNA sequence as protein searches
+with BLAST or FASTA are far more sensitive (you can also use a third software
+package called BLITZ which is extremely sensitive). More on protein analysis
+tomorrow...</font><font face="Garamond">It is often a good idea to mask
+out repeats or low complexity regions from your database search, so that
+you tend to get fewer statistically significant, but biologically less
+interesting hits. Masking means replace letters with N’s if n.a. or X’s
+if a.a. residues. If you get too few hits, remove the masking and do the
+searches again.</font><font face="Garamond">Note : For more information
+on database searching, you can check out our 'Searching Sequence Databases
+FAQ' from the HGMP www menu.</font><a NAME="_Toc415911218"></a><a NAME="_Toc416084210"></a><a NAME="_Toc425907893"></a><a NAME="_Toc445633595"></a><a NAME="_Toc448034835"></a><a NAME="_Toc448039494"></a><a NAME="_Toc448039616"></a><a NAME="_Toc448300539"></a><a NAME="_Toc448315077"></a><a NAME="_Toc448315381"></a><a NAME="_Toc451227798"></a><a NAME="Heading115"></a>
+<h3>
+6.3.2 A sensitive search engine (FASTA)</h3>
+<font face="Garamond">The early personal computers had insufficient memory
+and were too slow to carry out a database scan using a rigorous searching
+method (dynamic programming). Accordingly, Wilbur and Lipman [(1983) Proc.
+Nat. Acad. Sci. 80, 726-730] developed a fast procedure for DNA scans that
+in concept searches for the most significant diagonals in a dot plot. FASTA
+only shows the top scoring region, it does not locate all high scoring
+alignments between two sequences. As a consequence, FASTA may not directly
+identify repeats or multiple domains that are shared between two proteins.</font><img SRC="Bioinformatics-Intro-Course04.gif" height=573 width=475><font face="Garamond">For
+more information on the FASTA algorithm, read our FASTA FAQ, or the preprint
+from the "Protein Sequence Alignment and Database Scanning" chapter in:
+Protein Structure prediction - a practical approach, edited by M. J. E.
+Sternberg, IRL Press at Oxford University Press, 1996, ISBN 0 19 963496
+3. Please see the book for the final version!</font><font face="Garamond">Because
+a FASTA calculation is slow, we can not carry out a 'live' practical.</font><a NAME="_Toc415911219"></a><a NAME="_Toc416084211"></a><a NAME="Heading116"></a>
+<h4>
+How do I Interpret Fasta Results?</h4>
+<a NAME="Heading117"></a>
+<h4>
+Histogram</h4>
+<font face="Garamond">The first part of the output file optionally contains
+a histogram showing the number of overlapping regions between the query
+and search set sequences that were observed for each score.</font>
+<pre>!!SEQUENCE_LIST 1.0
+
+(Peptide) FASTA of: unknown.pep&nbsp; from: 1 to: 171&nbsp; March 3, 1999 10:08
+
+TRANSLATE of: unknown.gcg check: 2624 from: 16 to: 528
+generated symbols 1 to: 171.
+unknown
+
+&nbsp;TO: swissprot:*&nbsp; Sequences:&nbsp;&nbsp;&nbsp;&nbsp; 80,780&nbsp; Symbols: 29,256,406&nbsp; Word Size: 2
+
+&nbsp;Databases searched:
+&nbsp;&nbsp; SWISSPROT, Release 37.0, Released on 21Jan1999, Formatted on 26Jan1999
+
+&nbsp;Scoring matrix: GenRunData:blosum50.cmp
+&nbsp;Variable pamfactor used
+&nbsp;Gap creation penalty: 12&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Gap extension penalty: 2
+
+Histogram Key:
+&nbsp;Each histogram symbol represents 111 search set sequences
+&nbsp;Each inset symbol represents 3 search set sequences
+&nbsp;z-scores computed from opt scores
+
+z-score obs&nbsp;&nbsp;&nbsp; exp
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (=)&nbsp;&nbsp;&nbsp; (*)
+
+&lt; 20&nbsp;&nbsp;&nbsp; 169&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 :*=
+&nbsp; 22&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 :*
+&nbsp; 24&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0 :*
+&nbsp; 26&nbsp;&nbsp;&nbsp;&nbsp; 14&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 :*
+&nbsp; 28&nbsp;&nbsp;&nbsp;&nbsp; 42&nbsp;&nbsp;&nbsp;&nbsp; 18 :*
+&nbsp; 30&nbsp;&nbsp;&nbsp; 164&nbsp;&nbsp;&nbsp; 111 :*=
+&nbsp; 32&nbsp;&nbsp;&nbsp; 502&nbsp;&nbsp;&nbsp; 429 :===*=
+&nbsp; 34&nbsp;&nbsp; 1495&nbsp;&nbsp; 1163 :==========*===
+&nbsp; 36&nbsp;&nbsp; 2696&nbsp;&nbsp; 2389 :=====================*===
+&nbsp; 38&nbsp;&nbsp; 4221&nbsp;&nbsp; 3949 :===================================*===
+&nbsp; 40&nbsp;&nbsp; 5419&nbsp;&nbsp; 5508 :=================================================*
+&nbsp; 42&nbsp;&nbsp; 6438&nbsp;&nbsp; 6733 :========================================================== *
+&nbsp; 44&nbsp;&nbsp; 6634&nbsp;&nbsp; 7427 :===========================================================*
+&nbsp; 46&nbsp;&nbsp; 6301&nbsp;&nbsp; 7565 :=========================================================&nbsp; *
+&nbsp; 48&nbsp;&nbsp; 5887&nbsp;&nbsp; 7242 :======================================================&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp; 50&nbsp;&nbsp; 5655&nbsp;&nbsp; 6609 :===================================================&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp; 52&nbsp;&nbsp; 5215&nbsp;&nbsp; 5810 :===============================================&nbsp;&nbsp;&nbsp;&nbsp; *
+&nbsp; 54&nbsp;&nbsp; 4619&nbsp;&nbsp; 4963 :==========================================&nbsp; *
+&nbsp; 56&nbsp;&nbsp; 4084&nbsp;&nbsp; 4146 :=====================================*
+&nbsp; 58&nbsp;&nbsp; 3499&nbsp;&nbsp; 3403 :==============================*=
+&nbsp; 60&nbsp;&nbsp; 2971&nbsp;&nbsp; 2757 :========================*==
+&nbsp; 62&nbsp;&nbsp; 2653&nbsp;&nbsp; 2210 :===================*====
+&nbsp; 64&nbsp;&nbsp; 2499&nbsp;&nbsp; 1758 :===============*=======
+&nbsp; 66&nbsp;&nbsp; 1814&nbsp;&nbsp; 1389 :============*====
+&nbsp; 68&nbsp;&nbsp; 1507&nbsp;&nbsp; 1093 :=========*====
+&nbsp; 70&nbsp;&nbsp; 1230&nbsp;&nbsp;&nbsp; 856 :=======*====
+&nbsp; 72&nbsp;&nbsp;&nbsp; 992&nbsp;&nbsp;&nbsp; 669 :======*==
+&nbsp; 74&nbsp;&nbsp;&nbsp; 798&nbsp;&nbsp;&nbsp; 522 :====*===
+&nbsp; 76&nbsp;&nbsp;&nbsp; 613&nbsp;&nbsp;&nbsp; 406 :===*==
+&nbsp; 78&nbsp;&nbsp;&nbsp; 494&nbsp;&nbsp;&nbsp; 316 :==*==
+&nbsp; 80&nbsp;&nbsp;&nbsp; 421&nbsp;&nbsp;&nbsp; 245 :==*=
+&nbsp; 82&nbsp;&nbsp;&nbsp; 338&nbsp;&nbsp;&nbsp; 187 :=*==
+&nbsp; 84&nbsp;&nbsp;&nbsp; 241&nbsp;&nbsp;&nbsp; 149 :=*=
+&nbsp; 86&nbsp;&nbsp;&nbsp; 199&nbsp;&nbsp;&nbsp; 115 :=*
+&nbsp; 88&nbsp;&nbsp;&nbsp; 206&nbsp;&nbsp;&nbsp;&nbsp; 89 :*=
+&nbsp; 90&nbsp;&nbsp;&nbsp; 150&nbsp;&nbsp;&nbsp;&nbsp; 69 :*=
+&nbsp; 92&nbsp;&nbsp;&nbsp; 115&nbsp;&nbsp;&nbsp;&nbsp; 53 :*=&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :=================*=====================
+&nbsp; 94&nbsp;&nbsp;&nbsp;&nbsp; 98&nbsp;&nbsp;&nbsp;&nbsp; 41 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :=============*===================
+&nbsp; 96&nbsp;&nbsp;&nbsp;&nbsp; 67&nbsp;&nbsp;&nbsp;&nbsp; 32 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :==========*============
+&nbsp; 98&nbsp;&nbsp;&nbsp;&nbsp; 78&nbsp;&nbsp;&nbsp;&nbsp; 25 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :========*=================
+&nbsp;100&nbsp;&nbsp;&nbsp;&nbsp; 36&nbsp;&nbsp;&nbsp;&nbsp; 19 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :======*=====
+&nbsp;102&nbsp;&nbsp;&nbsp;&nbsp; 26&nbsp;&nbsp;&nbsp;&nbsp; 15 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :====*====
+&nbsp;104&nbsp;&nbsp;&nbsp;&nbsp; 17&nbsp;&nbsp;&nbsp;&nbsp; 11 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :===*==
+&nbsp;106&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :==*====
+&nbsp;108&nbsp;&nbsp;&nbsp;&nbsp; 16&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 7 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :==*===
+&nbsp;110&nbsp;&nbsp;&nbsp;&nbsp; 11&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 5 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :=*==
+&nbsp;112&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :=*==
+&nbsp;114&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 3 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :*==
+&nbsp;116&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :*===
+&nbsp;118&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 2 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :*=
+>120&nbsp;&nbsp;&nbsp;&nbsp; 53&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1 :*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :*=================
+
+&nbsp;Results sorted and z-values calculated from opt score
+&nbsp;1909 scores saved that exceeded 80
+&nbsp;60154 optimizations performed
+&nbsp;Joining threshold: 36, optimization threshold: 24, opt. width: 16</pre>
+&nbsp;<font face="Garamond">The z-score is listed in the leftmost column
+of the histogram. The second and third columns list the number of observed
+and expected alignments with that score, respectively.</font><a NAME="Heading118"></a>
+<h4>
+Best Scores Summary</h4>
+<font face="Garamond">Below the histogram, Fasta displays a listing of
+the best scores.</font>
+<ul>
+<li>
+Init1: Smith-Waterman style highest initial score</li>
+
+<li>
+Initn: Smith-Waterman style highest score after allowing diagonals to be
+joined together (gaps).</li>
+
+<li>
+Opt: Smith-Waterman style optimal alignment score (after rearanging gaps).</li>
+
+<li>
+The z-score of an item, indicates how far and in what direction, that item
+deviates from its distribution's mean, expressed in units of its distribution's
+standard deviation. The mathematics of the z score transformation are such
+that if every item in a distribution is converted to its z score, the transformed
+scores will necessarily have a mean of zero and a standard deviation of
+one. Fasta uses a simple linear regression against the natural log of the
+search set sequence length to calculate a normalised z- score for the sequence
+pair.</li>
+</ul>
+In plain english that means that the z-score is independent of the actual
+Smith-Waterman style score, since that score is dependent on the scoring
+matrix used. It also negates the length effect, since the length of the
+sequence influences the Smith-Waterman style score.
+<ul>
+<li>
+Expect (E) value: Number of alignments you would expect to see in a database
+of this size with this z-score.</li>
+</ul>
+
+<pre>The best scores are:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; init1 initn&nbsp;&nbsp; opt&nbsp;&nbsp;&nbsp; z-sc E(80533)..
+
+sw_release:FLAV_ANASP&nbsp;&nbsp;&nbsp; Begin: 1&nbsp; End:&nbsp; 169
+! P11241 anabaena sp. (strain pcc 712... 1126&nbsp; 1126&nbsp; 1128&nbsp; 1483.2&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+sw_release:FLAV_SYNP7&nbsp;&nbsp;&nbsp; Begin: 2&nbsp; End:&nbsp; 169
+! P10340 synechococcus sp. (strain pc...&nbsp; 699&nbsp;&nbsp; 804&nbsp;&nbsp; 844&nbsp; 1112.6&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+sw_release:FLAV_SYNY3&nbsp;&nbsp;&nbsp; Begin: 3&nbsp; End:&nbsp; 165
+! P27319 synechocystis sp. (strain pc...&nbsp; 705&nbsp;&nbsp; 705&nbsp;&nbsp; 823&nbsp; 1085.1&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+sw_release:FLAV_SYNP2&nbsp;&nbsp;&nbsp; Begin: 2&nbsp; End:&nbsp; 169
+! P31158 synechococcus sp. (strain pc...&nbsp; 682&nbsp;&nbsp; 773&nbsp;&nbsp; 796&nbsp; 1049.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+sw_release:FLAV_TRIER&nbsp;&nbsp;&nbsp; Begin: 1&nbsp; End:&nbsp; 144
+! O52659 trichodesmium erythraeum. fl...&nbsp; 385&nbsp;&nbsp; 477&nbsp;&nbsp; 697&nbsp;&nbsp; 921.9&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+sw_release:FLAW_ECOLI&nbsp;&nbsp;&nbsp; Begin: 3&nbsp; End:&nbsp; 167
+! P41050 escherichia coli. flavodoxin...&nbsp; 434&nbsp;&nbsp; 540&nbsp;&nbsp; 570&nbsp;&nbsp; 754.8&nbsp; 2.5e-35
+sw_release:FLAV_ECOLI&nbsp;&nbsp;&nbsp; Begin: 4&nbsp; End:&nbsp; 169
+! P23243 escherichia coli. flavodoxin...&nbsp; 415&nbsp;&nbsp; 505&nbsp;&nbsp; 555&nbsp;&nbsp; 735.2&nbsp; 3.1e-34
+.
+.(Removed bunch of similar lines)
+.
+\\End of List</pre>
+<font face="Garamond">If the Fasta search was initiated from within GCG
+(as the example was), the list of best scores can be used as a GCG list
+file (See <a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-10.html#_Ref448221605">10</a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-10.html#_Ref448221689">Appendix
+II: GCG list files</a>). The list file could be the starting file for another
+analysis, like multiple sequence alignment.</font><a NAME="Heading119"></a>
+<h4>
+Alignments</h4>
+<font face="Garamond">Fasta displays the alignments of the regions of best
+overlap between the query and search sequences. A “/rev” following
+the query sequence name indicates that the search sequence is aligned with
+the bottom strand of the query sequence (in DNA searches).</font><font face="Garamond">This
+program by default displays only the region of overlap between the two
+aligned sequences. The display of identities and conservative replacements
+between the aligned sequences depends on the options selected, the pipe
+character (|) is used to denote identities and the colon (:) to denote
+conservative replacements. Note at the end of the summary the CPU time
+is indicated. This would amount to even more real time since the CPUs are
+shared between all the different processes running at any one time on the
+computer.</font>
+<pre>unknown.pep
+sw_release:FLAV_SYNP7
+
+ID&nbsp;&nbsp; FLAV_SYNP7&nbsp;&nbsp;&nbsp;&nbsp; STANDARD;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PRT;&nbsp;&nbsp; 169 AA.
+AC&nbsp;&nbsp; P10340;
+DT&nbsp;&nbsp; 01-MAR-1989 (REL. 10, CREATED)
+DT&nbsp;&nbsp; 01-JAN-1990 (REL. 13, LAST SEQUENCE UPDATE)
+DT&nbsp;&nbsp; 15-DEC-1998 (REL. 37, LAST ANNOTATION UPDATE)
+DE&nbsp;&nbsp; FLAVODOXIN. . . .&nbsp;
+
+
+SCORES&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Init1:&nbsp;&nbsp; 699&nbsp; Initn:&nbsp;&nbsp; 804&nbsp; Opt:&nbsp;&nbsp; 844 z-score: 1112.6 E():&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 0
+Smith-Waterman score: 844;&nbsp;&nbsp;&nbsp; 70.2% identity in 168 aa overlap
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59
+unknown.pep&nbsp; MTKKIGLFYGTQTGKTESVAEIIRDEFGND-VVTLHDVSQAEVTDLNDYQYLIIGCPTWN
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||||||||||| |:::|| |::|||:: :| |:|:::|:::||| |:||||||||||
+FLAV_SYNP7&nbsp;&nbsp;&nbsp;&nbsp; AKIGLFYGTQTGVTQTIAESIQQEFGGESIVDLNDIANADASDLNAYDYLIIGCPTWN
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 20&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 30&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 40&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 50&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 119
+unknown.pep&nbsp; IGELQSDWEGLYSELDDVDFNGKLVAYFGTGDQIGYADNFQDAIGILEEKISQRGGKTVG
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; :|||||||||:|::||:|:|:|| |||||:|||:||:||||||:||||||||: |::|||
+FLAV_SYNP7&nbsp;&nbsp; VGELQSDWEGIYDDLDSVNFQGKKVAYFGAGDQVGYSDNFQDAMGILEEKISSLGSQTVG
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 60&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 70&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 80&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 90&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 100&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 110&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 120&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 140&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 170&nbsp;
+unknown.pep&nbsp; YWSTDGYDFNDSKALRNGKFVGLALDEDNQSDLTDDRIKSWVAQLKSEFGLX
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp; :|||||:|||:||::|||||:||||| ||| :|||:||:||||||||&nbsp;
+FLAV_SYNP7&nbsp;&nbsp; YWPIEGYDFNESKAVRNNQFVGLAIDEDNQPDLTKNRIKTWVSQLKSEFGL&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 120&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 130&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 140&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 150&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 160&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+.
+.(Removed bunch of simmilar lines)
+.
+! CPU time used:
+!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Database scan:&nbsp; 0:01:35.3
+! Post-scan processing:&nbsp; 0:00:02.2
+!&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Total CPU time:&nbsp; 0:01:37.6
+! Output File: /people/tdeboer/aap/unknown_49.fasta<a NAME="_Toc415911220"></a><a NAME="_Toc416084212"></a><a NAME="_Toc425907894"></a><a NAME="_Toc445633596"></a><a NAME="_Toc448034836"></a><a NAME="_Toc448039495"></a><a NAME="_Toc448039617"></a><a NAME="_Toc448300540"></a><a NAME="_Toc448315078"></a><a NAME="_Toc448315382"></a><a NAME="_Toc451227799"></a></pre>
+<a NAME="Heading120"></a>
+<h3>
+6.3.3 A faster alternative (BLAST)</h3>
+<font face="Garamond">BLAST (Basic Local Alignment Search Tool) is a heuristic
+method to find the highest scoring locally optimal alignments between a
+query sequence and a database. Previous versions of BLAST did not allow
+gapped alignments, but BLAST2 (from the HGMP-RC telnet and www menus) does.
+A gapped BLAST search allows gaps (deletions and insertions) to be introduced
+into the alignments that are returned. Allowing gaps means that similar
+regions are not broken into several segments. The scoring of these gapped
+alignments tends to reflect biological relationships more closely.</font><font face="Garamond">The
+BLAST algorithm and family of programs rely on work on the statistics of
+ungapped sequence alignments by Karlin and Altschul. The statistics allow
+us to estimate the probability of obtaining an alignment (MSP - Maximal
+Segment Pair) with a particular score. The BLAST algorithm permits nearly
+all MSP's above a cutoff to be located efficiently in a database.</font><font face="Garamond">The
+algorithm operates in three steps:</font>
+<ol>
+<li>
+For a given word length w (usually 3 for proteins) and score matrix, a
+list is created of all words (w-mers) that can score greater than T.</li>
+
+<li>
+The database is searched, using the list of w-mers to find the corresponding
+w-mers in the database (hits).</li>
+
+<li>
+Each hit is extended to determine if an MSP that includes the w-mer, scores
+greater than S (S is the preset threshold score for an MSP). Since pair
+score matrices typically include negative values, extension of the initial
+w-mer hit may increase or decrease the score. Accordingly, a parameter
+X defines how great an extension will be tried in an attempt to raise the
+score above S.</li>
+</ol>
+A low value for T reduces the possibility of missing MSPs with the required
+S score, however lower T values also increase the size of the hit list
+generated in step 2 and hence the execution time and memory required. In
+practice, the BLASTP program used for protein searches sets compromise
+values of T and X to balance the processor requirements and sensitivity.<img SRC="Bioinformatics-Intro-Course05.gif" height=576 width=451><i><font face="Garamond">Figure
+2 Schematic view of the blast search algorithm</font></i><font face="Garamond">BLAST
+is unlikely to be as sensitive for all protein searches as a full dynamic
+programming algorithm. However, the underlying statistics provide a direct
+estimate of the significance of any match found. The program was developed
+at the NCBI and benefits from strong technical support and continuing refinement.
+For example, filters have recently been developed to automatically exclude
+regions of the query sequence that have low compositional complexity or
+short periodicity internal repeats. The presence of such sequences can
+yield extremely large numbers of statistically significant but biologically
+uninteresting MSPs. For example, searching with a sequence that contains
+a long section of hydrophobic residues will find many proteins with transmembrane
+helices.</font><a NAME="_Toc415911221"></a><a NAME="_Toc416084213"></a><a NAME="Heading121"></a>
+<h4>
+Blast Family of Programs</h4>
+<font face="Garamond">The BLAST family of programs allows all combinations
+of DNA or protein query sequences with searches against DNA or protein
+databases. (Most of the time use of these is transparent, behind an interface.)</font>
+<ul>
+<li>
+<font face="Garamond"><b>blastp</b>: compares an amino acid query sequence
+against a protein sequence database.</font></li>
+
+<li>
+<b>blastn</b>: compares a nucleotide query sequence against a nucleotide
+sequence database.</li>
+
+<li>
+<b>blastx</b>: compares the six-frame conceptual translation products of
+a nucleotide query sequence (both strands) against a protein sequence database.</li>
+
+<li>
+<b>tblastn</b>: compares a protein query sequence against a nucleotide
+sequence database dynamically translated in all six reading frames (both
+strands).</li>
+
+<li>
+<b>tblastx</b>: compares the six-frame translations of a nucleotide query
+sequence against the six-frame translations of a nucleotide sequence database.</li>
+
+<li>
+<b>psi-blast</b>: Position-Specific Iterated BLAST. This is a potentially
+very sensitive method to pull out significant hits in a protein-protein
+database search. This first performs a gapped BLAST database search.</li>
+</ul>
+<font face="Garamond">The PSI-BLAST program uses the information from any
+significant alignments returned to construct a position-specific score
+matrix, which replaces the query sequence for the next round of database
+searching. PSI-BLAST may be iterated until no new significant alignments
+are found.</font><font face="Garamond">The default matrix for all protein-protein
+comparisons is BLOSUM62.</font><font face="Garamond">For more information
+on the BLAST algorithm, read our BLAST FAQ, or the preprint from the "Protein
+Sequence Alignment and Database Scanning" chapter in: Protein Structure
+prediction - a practical approach, edited by M. J. E. Sternberg, IRL Press
+at Oxford University Press, 1996, ISBN 0 19 963496 3. Please see the book
+for the final version! You could also find further reading on BLAST at
+the NCBI www site.</font><a NAME="_Toc415911222"></a><a NAME="_Toc416084214"></a><a NAME="Heading122"></a>
+<h4>
+How do I Interpret Blast Results?</h4>
+<font face="Garamond">The BLAST report consists of a number of sections.
+The descriptions below are for a BLASTP comparison, but the format for
+the other programs is analogous.</font><a NAME="Heading123"></a>
+<h4>
+Header</h4>
+<font face="Garamond">The BLAST report starts with some header information
+that lists the type of program (here BLASTP), the version (here 2.0.1),
+and a release date. Also listed are a reference to the BLAST program, the
+query definition line, and summary of the database used.</font>
+<pre>BLASTP 2.0.1 [Aug-20-1997]
+
+&nbsp;Reference: Altschul, Stephen F., Thomas L. Madden, Alejandro A. Schaffer,
+&nbsp;Jinghui Zhang, Zheng Zhang, Webb Miller, and David J. Lipman (1997), "Gapped
+&nbsp;BLAST and PSI-BLAST: a new generation of protein database search programs",
+&nbsp;Nucleic Acids Res. 25:3389-3402.
+
+&nbsp;Query= gi|129295|sp|P01013|OVAX_CHICK gene X protein - chicken (fragment)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; (232 letters)
+
+&nbsp;Database: Non-redundant SwissProt sequences
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 59,576 sequences; 21,219,450 total letters</pre>
+<a NAME="Heading124"></a>
+<h4>
+List</h4>
+<font face="Garamond">One-line descriptions of the database matches found
+are presented next. These include a database sequence identifier, the corresponding
+definition line, as well as the score (in bits) and the statistical significance
+('E value') for this match (please see the section on statistics for an
+explanation of bits and significance). Consider the output below, from
+a gapped blastp comparison of SwissProt accession P01013 against the SwissProt
+database.</font>
+<pre>High&nbsp;&nbsp;&nbsp; E
+&nbsp;Sequences producing significant alignments:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Score&nbsp; Value
+
+&nbsp;sp|P01013|OVAX_CHICK GENE X PROTEIN (OVALBUMIN-RELATED)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 442&nbsp; e-124
+&nbsp;sp|P01014|OVAY_CHICK GENE Y PROTEIN (OVALBUMIN-RELATED)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 353&nbsp; 9e-98
+&nbsp;sp|P01012|OVAL_CHICK OVALBUMIN (PLAKALBUMIN) (ALLERGEN GAL D II)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 278&nbsp; 5e-75
+&nbsp;sp|P19104|OVAL_COTJA OVALBUMIN&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 268&nbsp; 5e-72
+&nbsp;sp|P48595|BOMA_HUMAN BOMAPIN (PROTEASE INHIBITOR 10)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 199&nbsp; 2e-51
+&nbsp;sp|P29508|SCC1_HUMAN SQUAMOUS CELL CARCINOMA ANTIGEN 1 (SCCA-1) ...&nbsp;&nbsp; 198&nbsp; 5e-51
+&nbsp;sp|P80229|ILEU_PIG LEUKOCYTE ELASTASE INHIBITOR (LEI) (LEUCOCYTE...&nbsp;&nbsp; 197&nbsp; 1e-50
+&nbsp;sp|P48594|SCC2_HUMAN SQUAMOUS CELL CARCINOMA ANTIGEN 2 (SCCA-2) ...&nbsp;&nbsp; 196&nbsp; 2e-50
+&nbsp;sp|P50453|PTI9_HUMAN CYTOPLASMIC ANTIPROTEINASE 3 (CAP3) (PROTEA...&nbsp;&nbsp; 195&nbsp; 6e-50
+&nbsp;sp|P05619|ILEU_HORSE LEUKOCYTE ELASTASE INHIBITOR (LEI)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 193&nbsp; 2e-49</pre>
+<font face="Garamond">The first match, in this case, is the actual query
+sequence. The identifiers shown here are all from SwissProt, so they all
+have 'sp' in the first field, followed by the accession, and then a Locus
+name. The syntax of these identifiers is discussed in more detail in the
+appendices of&nbsp;<a NAME="_Hlt451680117"></a><a href="ftp://ncbi.nlm.nih.gov/blast/db/README">ftp://ncbi.nlm.nih.gov/blast/db/README</a></font><font face="Garamond">The
+definition lines are taken from the definition line in the database, with
+three dots (...) indicating that the definition line was too long for the
+space available (see entry P29508).</font><font face="Garamond">Ungapped
+alignments and results from blastx and tblastn will have an additional
+column ('N'), displaying the number of different segment pairs used to
+produce the alignment, according to the Karlin-Altschul statistics.</font><a NAME="Heading125"></a>
+<h4>
+Alignments</h4>
+<font face="Garamond">Each alignment is preceded by the sequence identifier,
+the full definition line and the length of the database sequence. The next
+lines display the score (both in bits and the raw score) and the statistical
+significance of the match, followed by the number of identities and positive
+matches according to the scoring system (e.g., BLOSUM62) and, if applicable,
+the number of gaps in the alignment. Finally the actual alignment is shown,
+with the query on top and the database match labelled as 'Sbjct'. Between
+the two sequences the residue is shown if it is identical and a '+' if
+it is a conservative substitution. One or more dashes, “-“, indicate
+insertions or deletions.</font><font face="Garamond">The example below
+is the third sequence listed in the one-line descriptions above.</font>
+<pre>>sp|P01012|OVAL_CHICK OVALBUMIN (PLAKALBUMIN) (ALLERGEN GAL D II)
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Length = 386
+
+&nbsp;Score =&nbsp; 278 bits (744), Expect = 5e-75
+&nbsp;Identities = 149/231 (64%), Positives = 182/231 (78%), Gaps = 2/231 (0%)
+
+&nbsp;Query 2&nbsp;&nbsp; IKDLLVSSSTDLDTTLVLVNAIYFKGMWKTAFNAEDTREMPFHVTKQESKPVQMMCMNNS 61
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I+++L&nbsp; SS D&nbsp; T +VLVNAI FKG+W+ AF&nbsp; EDT+ MPF VT+QESKPVQMM
+&nbsp;Sbjct 158 IRNVLQPSSVDSQTAMVLVNAIVFKGLWEKAFKDEDTQAMPFRVTEQESKPVQMMYQIGL 217
+
+&nbsp;Query 62&nbsp; FNVATLPAEKMKILELPFASGDLSMLVLLPDEVSDLERIEKTINFEKLTEWTNPNTMEKR 121
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; F VA++ +EKMKILELPFASG +SMLVLLPDEVS LE++E&nbsp; INFEKLTEWT+ N ME+R
+&nbsp;Sbjct 218 FRVASMASEKMKILELPFASGTMSMLVLLPDEVSGLEQLESIINFEKLTEWTSSNVMEER 277
+
+&nbsp;Query 122 RVKVYLPQMKIEEKYNLTSVLMALGMTDLFIPSANLTGISSAESLKISQAVHGAFMELSE 181
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ++KVYLP+MK+EEKYNLTSVLMA+G+TD+F&nbsp; SANL+GISSAESLKISQAVH A&nbsp; E++E
+&nbsp;Sbjct 278 KIKVYLPRMKMEEKYNLTSVLMAMGITDVFSSSANLSGISSAESLKISQAVHAAHAEINE 337
+
+&nbsp;Query 182 DGIEMAGSTGVIEDIKHSPESEQFRADHPFLFLIKHNPTNTIVYFGRYWSP 232
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G E+ GS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; +&nbsp; +&nbsp; SE+FRADHPFLF IKH&nbsp; TN +++FGR&nbsp; SP
+&nbsp;Sbjct 338 AGREVVGSAEA--GVDAASVSEEFRADHPFLFCIKHIATNAVLFFGRCVSP 386</pre>
+<a NAME="Heading126"></a>
+<h4>
+Summary</h4>
+<font face="Garamond">The last section lists specifics about the database
+searched as well as statistical and search parameters used:</font>
+<pre>&nbsp;&nbsp; Database: Non-redundant SwissProt sequences
+&nbsp;&nbsp;&nbsp;&nbsp; Posted date:&nbsp; Aug 14, 1997&nbsp; 9:52 AM
+&nbsp;&nbsp; Number of letters in database: 21,219,450
+&nbsp;&nbsp; Number of sequences in database:&nbsp; 59,576
+
+&nbsp;Lambda&nbsp;&nbsp;&nbsp;&nbsp; K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H
+&nbsp;&nbsp;&nbsp; 0.317&nbsp;&nbsp;&nbsp; 0.132&nbsp;&nbsp;&nbsp; 0.377
+
+&nbsp;Gapped
+&nbsp;Lambda&nbsp;&nbsp;&nbsp;&nbsp; K&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; H
+&nbsp;&nbsp;&nbsp; 0.255&nbsp;&nbsp; 0.0350&nbsp;&nbsp;&nbsp; 0.190
+
+
+&nbsp;Matrix: BLOSUM62
+&nbsp;Gap Penalties: Existence: 10, Extension: 1
+&nbsp;Number of Hits to DB: 8938654
+&nbsp;Number of Sequences: 59576
+&nbsp;Number of extensions: 335248
+&nbsp;Number of successful extensions: 1188
+&nbsp;Number of sequences better than 10: 116
+&nbsp;Number of HSP's better than 10.0 without gapping: 106
+&nbsp;Number of HSP's successfully gapped in prelim test: 10
+&nbsp;Number of HSP's that attempted gapping in prelim test: 868
+&nbsp;Number of HSP's gapped (non-prelim): 120
+&nbsp;length of query: 232
+&nbsp;length of database: 21219450
+&nbsp;effective HSP length: 52
+&nbsp;effective length of query: 180
+&nbsp;effective length of database: 18121498
+&nbsp;effective search space: -1033097656
+&nbsp;T: 11
+&nbsp;A: 40
+&nbsp;X1: 16 ( 7.3 bits)
+&nbsp;X2: 40 (14.7 bits)
+&nbsp;X3: 67 (24.6 bits)
+&nbsp;S1: 41 (21.7 bits)
+&nbsp;S2: 64 (28.4 bits)<a NAME="_Toc415911223"></a><a NAME="_Toc416084215"></a></pre>
+<a NAME="Heading127"></a>
+<h4>
+Blast Statistics and Scores</h4>
+<font face="Garamond">We can judge the results of a BLAST search by two
+numbers. One is the 'bit' score, which is defined as:</font><font face="Garamond">S'
+(bits) = [lambda x S (raw) - ln K] / ln 2</font><font face="Garamond">where
+lambda and K are Karlin-Altschul parameters. The expression of the score
+in terms of bits makes it independent of the scoring system used (i.e.,
+the matrix). The Expect value estimates the statistical significance of
+the match, specifying the number of matches with a given score that are
+expected in a search of a database of this size. It decreases exponentially
+with the Score (S) that is assigned to a match between two sequences. Essentially,
+the E value describes the random background noise that exists for matches
+between sequences.</font><font face="Garamond">An Expect value of two would
+indicate that two matches with this score are expected purely by chance.
+The Expect value is the most intuitive way to rank results or compare the
+results of one query run against two different databases. The Expect value
+is used as a convenient way to create a significance threshold for reporting
+results. When the Expect value is increased from the default value of 10,
+a larger list with more low-scoring hits can be reported.</font><a NAME="_Toc416084217"></a><a NAME="Heading128"></a>
+<h4>
+Practical</h4>
+<sup><font face="Arial Black">Submitting a BLAST request</font></sup>
+<ul>
+<li>
+<font face="Garamond">From the HGMP WWW menu, under the Integrated Analysis
+Services heading select: <b><i>BLAST - Fast Database Similarity Search</i></b></font></li>
+
+<li>
+In the HGMP-RC BLAST form, enter <b><i>pax6/new.dna.seq</i></b> in the
+sequence filename box, enter a short description of your sequence in the
+third 'description' box, select a database to search (e.g. tick the human
+subsection of EMBL), in the Output options, choose the <b>File</b> output
+if your WWW browser is capable of using JavaScript, set the <b>E</b> value
+(number of times you would expect an alignment to be reported by chance)
+to 20 (i.e. fairly sensitive), and finally choose 20 maximum number of
+alignments to output.</li>
+
+<li>
+Press on the <b><i>'Do the search'
+</i></b>button to submit your request.
+Results should be deposited in your directory within a few minutes, depending
+on how busy the server is (you will also be emailed the overview when the
+search is completed).</li>
+
+<li>
+When you get your results back, check out the two new files in your directory
+with .blast.human and blast.human.overview file name extensions.</li>
+
+<li>
+What is the sequence with the best score? What is its E value? What does
+it mean? How many orders of magnitude lower are the other matches scores?<a NAME="_Toc415911225"></a><a NAME="_Toc416084218"></a><a NAME="_Toc425907895"></a><a NAME="_Toc445633597"></a><a NAME="_Toc448034837"></a><a NAME="_Toc448039496"></a><a NAME="_Toc448039618"></a><a NAME="_Toc448300541"></a><a NAME="_Toc448315079"></a><a NAME="_Toc448315383"></a><a NAME="_Toc451227800"></a></li>
+</ul>
+<a NAME="Heading129"></a>
+<h2>
+6.4 NIX: AN INTEGRATED AUTOMATED DNA SEQUENCE ANALYSIS TOOL<a NAME="_Toc415911226"></a><a NAME="_Toc416084219"></a><a NAME="_Toc425907896"></a><a NAME="_Toc445633598"></a><a NAME="_Toc448034838"></a><a NAME="_Toc448039497"></a><a NAME="_Toc448039619"></a><a NAME="_Toc448300542"></a><a NAME="_Toc448315080"></a><a NAME="_Toc448315384"></a><a NAME="_Toc451227801"></a></h2>
+<a NAME="Heading130"></a>
+<h3>
+6.4.1 Launching NIX</h3>
+<font face="Garamond">NIX is intended as a tool to aid the identification
+of interesting regions in Genomic or transcribed nucleic acid sequences.
+There are many useful computer tools to help do this, however none of these
+is 100% accurate and so it is useful to be able to compare the results
+of many programs which use different methods and have different strengths
+and weaknesses. Viewing the results of many such programs side by side
+makes it easy to see when programs are in agreement or disagreement about
+a feature.</font><font face="Garamond">Rather than give the user total
+control over how the programs are run by providing them with innumerable
+poorly-understood choices of arguments for all of the programs, the NIX
+system selects reasonable defaults for the programs based on whether the
+sequence was genomic or transcribed, its species of origin and its size.</font><font face="Garamond">This
+makes a vastly simplified interface for running many programs on the specified
+sequence.</font><font face="Garamond">In short, NIX provides a bridge between
+conflicting agendas :</font>&nbsp;
+<table>
+<caption><a NAME="_Toc415911227"></a><a NAME="_Toc416084220"></a></caption>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="125"><b><font face="Arial">What biologists</font></b>
+<br><b><font face="Arial">really want</font></b>
+<br><b><font face="Arial">(noddy stuff)</font></b></td>
+
+<td VALIGN=TOP WIDTH="120">&nbsp;
+<center>
+<br><b><font face="Arial">ç Nix interface è</font></b></center>
+</td>
+
+<td VALIGN=TOP WIDTH="120"><b><font face="Arial">What bioinformaticians</font></b>
+<br><b><font face="Arial">really produce</font></b>
+<br><b><font face="Arial">(nerdy stuff)</font></b></td>
+</tr>
+</table>
+<a NAME="Heading131"></a>
+<h4>
+Problems with this approach</h4>
+<font face="Garamond">There is no way for the users to play around with
+different parameters to programs to adjust them to give results under more
+or less stringent conditions. Of course, if you are dissatisfied with this
+approach, you are welcome to run the analysis programs yourself from their
+www sites or from the options in the HGMP menu, supplying the exact parameters
+you require.</font><font face="Garamond">Many exon-finding programs take
+a species as a parameter. The list of species they can deal with is usually
+very small but sometimes very large. The NIX form has a compromise list
+that covers the taxonomic groups that are most frequently available as
+parameters to the programs. The mapping from the list on the form to the
+species supplied to the program is done as carefully as possible, but there
+are often large mismatches. See the documentation on individual programs
+in the results display for details on this mapping.</font><a NAME="_Toc415911228"></a><a NAME="_Toc416084221"></a><a NAME="Heading132"></a>
+<h4>
+What NIX does For Transcribed Sequences:</h4>
+
+<ol>
+<li>
+<font face="Garamond">The sequence is masked for repeat regions using Washington
+University's repeatmasker program.</font></li>
+
+<li>
+BLAST searches are started using the masked sequence against the databases:
+ecoli, est, embl (minus the sts, est, gss sections) using TBLASTX, trembl,
+swissprot. The Expect value cutoff is set to 0.1. Up to a million alignments
+can be output. The BLAST results files are compressed using <b>gzip</b>
+to save filespace.</li>
+
+<li>
+The following exon-finding program is run using the masked sequence: Grail.<a NAME="_Toc415911229"></a><a NAME="_Toc416084222"></a></li>
+</ol>
+<a NAME="Heading133"></a>
+<h4>
+What NIX does for Genomic Sequences:</h4>
+<font face="Garamond">As for transcribed sequences, plus:</font>
+<ol>
+<li>
+<font face="Garamond">The following exon-finding programs are run using
+the masked sequence: <b>Grail, Genefinder, Genemark, Fex, Hexon, Fgene
+</b>.</font></li>
+
+<li>
+<font face="Arial Black">&nbsp;</font>The
+<b>trnascan</b> program is run
+on the sequence.<a NAME="_Toc415911230"></a><a NAME="_Toc416084223"></a></li>
+</ol>
+<a NAME="Heading134"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">You will first submit a sequence to NIX and let it
+do its analyses for a while... You will come back later and have a look
+at the results.</font><sup><font face="Arial Black">Launching a NIX analysis</font></sup>
+<ul>
+<li>
+<font face="Garamond">From the Main WWW menu, select <b><i>NIX-Nucleotide
+Identification of unknown sequences
+</i></b>.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>An "Introduction
+to NIX" window will open. Click on <b><i>Run NIX Now!.</i></b></li>
+
+<li>
+In the “
+<b>enter the name of the file in your HGMP account”
+</b>box,
+enter the name of the file containing the sequence that you wish to submit
+to NIX. For this practical, type:</li>
+</ul>
+<a NAME="_Toc448315081"></a><a NAME="_Toc448315385"></a><b><tt><font face="Courier New"><font size=-1>pax6/pax6.wild.type.embl</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Enter a description of your choice in the description
+box.</font></li>
+
+<li>
+The rest of the options should be correctly set by default (genomic, human,
+email)</li>
+
+<li>
+Press the <b>START THE ANALYSIS
+</b>button.</li>
+
+<li>
+The results will take anything from half an hour to 1 day to complete,
+depending on the server load and the size of the sequence.</li>
+
+<li>
+In the meantime, please proceed to the next section; <b>Advanced Sequence
+Comparisons
+</b>. You will look at the NIX results later on.<a NAME="_Toc415911231"></a><a NAME="_Toc416084224"></a><a NAME="_Toc425907897"></a><a NAME="_Toc445633599"></a><a NAME="_Toc448034839"></a><a NAME="_Toc448039498"></a><a NAME="_Toc448039620"></a><a NAME="_Toc448300543"></a><a NAME="_Toc448315082"></a><a NAME="_Toc448315386"></a><a NAME="_Toc451227802"></a></li>
+</ul>
+<a NAME="Heading135"></a>
+<h3>
+6.4.2 Interpreting the Nix output</h3>
+<sup><font face="Arial Black">Results of a NIX analysis</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find your way to the HGMP-RC home page and click
+on [NIX] at the bottom of the page.</font></li>
+
+<li>
+Click on <b><i>View your NIX results Now!.</i></b></li>
+
+<li>
+The table presented on this page gives you links to all the NIX sequence
+analysis results available. Click on the Description name of any of the
+sequences.</li>
+
+<li>
+If you get a long list of Warning: The following results are not available
+yet, then you haven't been patient enough. You can still have a look at
+the partial results further down.</li>
+
+<li>
+Have a look at the Nix images of the sequences which show features found
+by the various programs. The features can be clicked on to show details
+of the feature as well as the original output file produced by the program
+(you can verify this by clicking on a GRAIL exon).</li>
+
+<li>
+Use the help pages (available by clicking on the name of the program on
+the left hand side of the display) to understand what the various programs
+have tried to predict. These help pages can also assist you in making the
+most out of the raw outputs.</li>
+
+<li>
+Have a look at some BLAST results which can be displayed using a WWW-based
+blast results viewer.</li>
+
+<li>
+Does a consensus appear for predicted exons in pax6 ?</li>
+
+<li>
+The "globin" sequence analysed by Nix contains several independent genes.
+How well do the programs agree with overall gene structures ?</li>
+
+<li>
+Does a clear gene structure (CpG, promoter, exon, poly-A) come to light
+with the simple intronless ubiquitin gene ?<a NAME="_Toc415911232"></a><a NAME="_Toc416084225"></a><a NAME="_Toc425907898"></a><a NAME="_Toc445633600"></a><a NAME="_Toc448034840"></a><a NAME="_Toc448039499"></a><a NAME="_Toc448039621"></a><a NAME="_Toc448300544"></a><a NAME="_Toc448315083"></a><a NAME="_Toc448315387"></a><a NAME="_Toc451227803"></a></li>
+</ul>
+<a NAME="Heading136"></a>
+<h2>
+6.5 ADVANCED SEQUENCE COMPARISONS<a NAME="_Toc415911233"></a><a NAME="_Toc416084226"></a><a NAME="_Toc425907899"></a><a NAME="_Toc445633601"></a><a NAME="_Toc448034841"></a><a NAME="_Toc448039500"></a><a NAME="_Toc448039622"></a><a NAME="_Toc448300545"></a><a NAME="_Toc448315084"></a><a NAME="_Toc448315388"></a><a NAME="_Toc451227804"></a></h2>
+<a NAME="Heading137"></a>
+<h3>
+6.5.1 Two dimensional matrix dot plots (DOTTER)</h3>
+<font face="Garamond">Most sequence alignment and comparison programs use
+some sort of internal representation of the two dimensional matrix resulting
+from the systematic comparison of two sequences. You get this 2D matrix
+when you put the first sequence on the horizontal axis and the second on
+the vertical axis: for each nucleotide on the vertical axis, a dot can
+be drawn on the matrix where it is identical to a nucleotide on the horizontal
+axis. When comparing proteins, the dots could be of various intensities
+according to the degree of relatedness of the amino acids (more on that
+tomorrow).</font><font face="Garamond">If a sequence is compared to itself,
+there will be a diagonal line crossing the matrix and any other oblique
+lines will correspond to internal repeats.</font><img SRC="Bioinformatics-Intro-Course06.gif" height=261 width=553><i><font face="Garamond">Figure
+3 Patterns to look for in dot plots</font></i><font face="Garamond">When
+comparing two distinct sequences, oblique lines across the matrix point
+to regions of homology. An oblique line at a 90 degree angle represents
+an inverted repeat and discontinuities between diagonals represent gaps,
+or insertions.</font>The two following (short!) string of letters
+<ol>
+<li>
+<font face="Garamond">ABCDEFGHIJKLM</font></li>
+
+<li>
+<font face="Arial Black">&nbsp;</font>NOPABCDEFQRSTGHIJUVWXABCYZNOPGFEDXYZ</li>
+</ol>
+<font face="Garamond">have some local similarities, see how the matrix
+points them out for you:</font>
+<pre>A&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+B&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+C&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+D&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+E&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+F&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+G&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+H&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+J&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; *
+K
+L
+M
+&nbsp;NOPABCDEFQRSTGHIJUVWXABCYZNOPGFEDXYZ</pre>
+<font face="Garamond">When attempting to align two sequences, a program
+will try and find the best diagonal path through the matrix, minimising
+side jumps (representing gaps). It becomes complex when the matrix is too
+big to fit in memory and when calculating this matrix for every sequence
+in the database would take 100 years. Short cuts and optimisations are
+in order (FASTA for instance makes use of these), but they are out of the
+scope of this course!</font><a NAME="_Toc415911234"></a><a NAME="_Toc416084227"></a><a NAME="Heading138"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">Dotter is a graphical 'dot plotter'. It uses a sliding
+window across the sequences and reports dots when the comparison inside
+that window is above a certain threshold. You will compare a segment of
+genomic DNA against a short EST (mRNA) transcribed from it.</font><sup><font face="Arial Black">Dot
+plots using DOTTER</font></sup>
+<ul>
+<li>
+<font face="Garamond">In the HGMP WWW Menu, follow the links
+<b><i>Nucleic
+-> General Sequence Analysis -> Dotter -Interactive DotPlot</i></b></font></li>
+
+<li>
+To the question Name of first input sequence file > , enter pax6/genomic.seq
+and press return</li>
+
+<li>
+To the question Name of second input sequence file > , enter pax6/mrna.seq
+and press return</li>
+
+<li>
+Or enter any other two sequences in FASTA format !</li>
+
+<li>
+Three windows will pop up, arrange them so you can see all three properly.
+Use the scroll bars in the dot plot window to see where the sequences are
+homologous. Use the Greyramp tool (slide the red box left and right) to
+set the threshold of sensitivity. You can use the cross hairs in the dot
+plot (use the mouse and keyboard cursor arrows) to visualize a segment
+of alignment in the Alignment Tool.</li>
+
+<li>
+Does it highlight the positions of exons in the genomic DNA ?</li>
+
+<li>
+Repeat the DOTTER invocation and compare <b><i>pax6/genomic.seq</i></b>
+against itself, or try a protein e.g. <b><i>dotter/caml_human.fasta</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Can you
+see any regions of internal repeats ?<a NAME="_Toc415911235"></a><a NAME="_Toc416084228"></a><a NAME="_Toc425907900"></a><a NAME="_Toc445633602"></a><a NAME="_Toc448034842"></a><a NAME="_Toc448039501"></a><a NAME="_Toc448039623"></a><a NAME="_Toc448300546"></a><a NAME="_Toc448315085"></a><a NAME="_Toc448315389"></a><a NAME="_Toc451227805"></a></li>
+</ul>
+<a NAME="Heading139"></a>
+<h2>
+6.6 GENE IDENTIFICATION SOFTWARE<a NAME="_Toc415911236"></a><a NAME="_Toc416084229"></a><a NAME="_Toc425907901"></a><a NAME="_Toc445633603"></a><a NAME="_Toc448034843"></a><a NAME="_Toc448039502"></a><a NAME="_Toc448039624"></a><a NAME="_Toc448300547"></a><a NAME="_Toc448315086"></a><a NAME="_Toc448315390"></a><a NAME="_Toc451227806"></a></h2>
+<a NAME="Heading140"></a>
+<h3>
+6.6.1 Gene identification in silico</h3>
+<font face="Garamond">A relatively recent advance in bioinformatics has
+been the development of software specialised in gene identification (gene
+ID). These programs are used to recognise and extract the functional genetic
+information encoded in novel DNA sequences. Rather than collecting data
+for use in the "wet lab", gene ID software assists investigators in the
+characterisation of such diverse genetic features as promoters, splice
+sites, coding versus non-coding regions, polyadenylation signals etc.</font><font face="Garamond">The
+individual features of a DNA sequence can be integrated to form a complete
+gene model. One such approach by Dong &amp; Searls (Department of Genetics,
+University of Pennsylvania School of Medicine) uses the surprising homology
+between molecular genetics and linguistics : The higher-order structure
+of genes and other features of biological sequences can be described by
+means of formal grammars. These grammars can then be used by general-purpose
+parsers to detect and assemble such structures by means of syntactic pattern
+recognition (Dong &amp; Searls (1994) Genomics 23, pp 540-551). The application
+derived from this theory is called GenLang and is available on the world
+wide web.</font><img SRC="Bioinformatics-Intro-Course07.gif" height=362 width=479><i><font face="Garamond">Figure
+4 Graphical depiction of the core grammar structure. Solid lines depict
+rule invocations, and dashed lines indicate transmission of costs by other
+means. Dong &amp; Searls (1994) Genomics 23, pp 540-551.</font></i>&nbsp;<font face="Garamond">The
+efficiencies of the various gene ID algorithms are closely tied to our
+current understanding of molecular genetics. Although many different approaches
+are used to pick out specific features in unknown DNA sequences, all rely
+on past experience of the programmer (or program) with the feature under
+study. For example, when looking for splice sites in genomic DNA, some
+programs use the best currently accepted consensus (e.g. AG dinucleotide
+at intron / exon boundary) to scan the unknown sequence, while other programs
+are trained with a set of splice sites in known sequences before they are
+asked to evaluate an unknown sequence (neural network approach). Indeed,
+as with typical biology experiments, gene ID applications often have non
+negligible false positive and false negative rates in their predictions.
+The specific predictions (true positive) rates fluctuate between 50% and
+95%, depending on the programs used and the DNA sequences submitted. Recent
+significant advances in the development of bioinformatics tools for gene
+identification have taken advantage of so called Hidden Markov Models (HMM)
+which are based on sound statistical models (e.g. GENSCAN).</font><a NAME="_Toc415911237"></a><a NAME="_Toc416084230"></a><a NAME="_Toc425907902"></a><a NAME="_Toc445633604"></a><a NAME="_Toc448034844"></a><a NAME="_Toc448039503"></a><a NAME="_Toc448039625"></a><a NAME="_Toc448300548"></a><a NAME="_Toc448315087"></a><a NAME="_Toc448315391"></a><a NAME="_Toc451227807"></a><a NAME="Heading141"></a>
+<h3>
+6.6.2 Practical</h3>
+&nbsp;<font face="Garamond">There are many GeneID programs on the WWW.
+After using programs like NIX to get an overview of what is happening,
+you may then want to look in more detail and start tweaking parameters.
+One of the best single programs for <i>de novo </i>gene prediction is GENSCAN,
+which uses HMM techniques.</font>&nbsp;<font face="Garamond">This practical
+will also demonstrate the use of our GenomeWeb to use an external application
+and how to copy and paste sequence data.</font>&nbsp;<sup><font face="Arial Black">Example
+of gene ID software : GenScan</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find your way to the HGMP-RC WWW Home Page:</font></li>
+
+<li>
+<b><i>GenomeWeb->Nucleic Acid Analysis->Gene Identification->GenScan</i></b></li>
+
+<li>
+Add a sequence name: <b><i>pax6</i></b></li>
+
+<li>
+Copy and paste the <b><i>pax6.wild.type.seq</i></b> into the sequence area.
+To do this, start up a new WWW browser from your existing one and view
+your sequence. From the HGMP WWW menu, click on <b><i>“Files” -> “Run
+file-manager now”</i></b></li>
+</ul>
+Click on the pax6 directory and then on pax6.wild.type.seqUse your left
+mouse button to highlight the start of your sequence and drag down until
+all the sequence is highlighted,Click in the sequence area and press your
+middle mouse button (on PCs click both buttons together).
+<ul>
+<li>
+Print Options
+<b><i>: Predicted CDS and peptides</i></b></li>
+
+<li>
+Select:<b><i> Run GENSCAN</i></b></li>
+
+<li>
+What do you make of the results ?</li>
+
+<li>
+How many exons were predicted ?</li>
+
+<li>
+If you want to see the EMBL annotations again, type at the UNIX % prompt
+: <b><i>more pax6.wild.type.embl
+</i></b>(type "
+<b><i>Q</i></b>" to quit
+the file viewing!)</li>
+
+<li>
+How does the GenScan prediction compare to the known exons in pax6?</li>
+
+<li>
+Don't worry if the output doesn't make much sense ! You'll get a better
+chance to understand GenScan through the Nix interface...&nbsp;<a NAME="_Toc415911238"></a><a NAME="_Toc416084231"></a><a NAME="_Toc425907903"></a><a NAME="_Toc445633605"></a><a NAME="_Toc448034845"></a><a NAME="_Toc448039504"></a><a NAME="_Toc448039626"></a><a NAME="_Toc448300549"></a><a NAME="_Toc448315088"></a><a NAME="_Toc448315392"></a><a NAME="_Toc451227808"></a></li>
+</ul>
+<a NAME="Heading142"></a>
+<h2>
+6.7 CONCLUSION</h2>
+<font face="Garamond">Have you had a look at your NIX results yet ? Now
+is the time !</font><font face="Garamond">We hope you've enjoyed the ride
+with computer assisted nucleic acid analysis. By now, you have an idea
+of what bioinformatics can do for you on your quest for novel genes. Hopefully,
+you will also be aware of the limitations of these methods : at best, consider
+computer analyses as preliminary data that requires confirmation using
+"good old wet lab" technology. It's back to the Gilsons and Eppendorfs.</font>&nbsp;
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-5.html"><img SRC="prev.gif" ALT="6ADVANCED SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-7.html"><img SRC="next.gif" ALT="7PROTEIN ANALYSIS AND IDENTIFICATION" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

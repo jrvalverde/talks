@@ -1,0 +1,206 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<TITLE>Seleccion de primer</TITLE>
+	<META NAME="GENERATOR" CONTENT="Jose Ramon">
+	<META NAME="AUTHOR" CONTENT="Valverde Carrillo">
+	<META NAME="CREATED" CONTENT="19981014;14212700">
+	<META NAME="CHANGEDBY" CONTENT="Valverde Carrillo">
+	<META NAME="CHANGED" CONTENT="19981014;14212700">
+</HEAD>
+<BODY BGCOLOR="white">
+
+<H1><U><B>Selecci&oacute;n de cebador (<I>primer</I>)</B></U></H1>
+
+<BR>
+<H2><I>Utilidad del cebador</I></H2>
+
+<P>El cebador sirve
+de punto de anclaje para la DNA polimerasa y como promotor del
+inicio de la reacci&oacute;n de replicaci&oacute;n del DNA. En el
+laboratorio usamos cebadores para iniciar reacciones de replicaci&oacute;n
+del DNA en los puntos deseados de una muestra, normalmente con el
+f&iacute;n de realizar reacciones de secuencicaci&oacute;n dirigida
+o para amplificar el n&uacute;mero de copias de una muestra de DNA
+(PCR).</P>
+<BR>
+
+<H2><I>Propiedades del cebador</I></H2>
+
+<P>Para que el
+cebador sea &uacute;til debe poseer unas propiedades determinadas: </P>
+<UL>
+	<LI>debe ser
+	espec&iacute;fico de la regi&oacute;n que queremos replicar</LI>
+	<LI>debe unirse con
+	suficiente energ&iacute;a para soportar las condiciones del
+	experimento</LI>
+	<LI>no debe permitir la
+	formaci&oacute;n de estructuras que dificulten la reacci&oacute;n</LI>
+</UL>
+
+<BR>
+
+<H2><I>Selecci&oacute;n de cebador con GCG (</I><TT>prime</TT><I>)</I></H2>
+
+<P>El programa
+<TT>prime</TT> de GCG permite seleccionar
+cebadores indicando condiciones y/o restricciones para guiar la
+decisi&oacute;n.</P>
+
+<UL>
+	<LI>Posici&oacute;n: En
+	el caso de PCR se puede indicar la regi&oacute;n de la secuencia
+	que deseamos amplificar. Para secuenciaci&oacute;n permite indicar
+	la posici&oacute;n aproximada del incio de la reacci&oacute;n.</LI>
+	<LI>Energ&iacute;a de
+	uni&oacute;n: se puede indicar el contenido en GC y las
+	temperaturas de fusi&oacute;n para el cebador y el producto.</LI>
+	<LI>Tama&ntilde;o: es
+	posible indicar un rango de tama&ntilde;os aceptables para el
+	cebador.</LI>
+	<LI>Composici&oacute;n:
+	bases requeridas en el extremo de anclaje 3' (3' clamp).</LI>
+	<LI>Diferencia m&aacute;xima
+	entre las temperaturas de fusi&oacute;n de los cebadores y del
+	producto de PCR.</LI>
+	<LI>Para PCR es posible
+	indicar un rango de tama&ntilde;os para el producto.</LI>
+</UL>
+
+<P>Para que el
+cebador sea eficiente, es conveniente evitar que el cebador tenga
+tramos auto-complementarios extensos para evitar la formaci&oacute;n
+de estructura secundaria. Adem&aacute;s, en PCR es preciso que los
+dos cebadores no sean complementarios entre s&iacute; para evitar la
+formaci&oacute;n de d&iacute;meros. Y, por supuesto, debe ser
+espec&iacute;fico y no unirse con demasiada afinidad a ninguna otra
+regi&oacute;n de la secuencia.</P>
+
+<P>En la siguiente
+figura se muestran algunos ejemplos gr&aacute;ficos de los problemas
+que plantea la selecci&oacute;n de un cebador:</P>
+
+<CENTER><IMG SRC="primer.gif" NAME="Figures-1_4" ></CENTER>
+
+<UL>
+	<LI>En la <U>figura
+	1</U> se muestra la situaci&oacute;n deseada habitualmente: hay una
+	regi&oacute;n del DNA molde que deseamos amplificar, a uno de cuyos
+	extremos se une el cebador. Al par molde-cebador se une una
+	DNA-polimerasa que inicia la reacci&oacute;n de transcripci&oacute;n.</LI>
+	<LI>En la <U>figura 2</U>
+	tenemos el caso en que el cebador es poco espec&iacute;fico: puede
+	unirse a otras regiones del DNA molde con afinidad suficiente para
+	formar d&iacute;meros en las condiciones experimentales de la
+	reacci&oacute;n: en este caso se producen varios sitios de
+	iniciaci&oacute;n y obtenemos m&uacute;ltiple productos
+	heterog&eacute;neos mezclados.</LI>
+	<LI>En la <U>figura 3</U>
+	se observa el caso en que el cebador presenta complementariedad
+	consigo mismo y permite la formaci&oacute;n de estructura
+	secundaria: estas zonas de estructura forman barreras al avance de
+	la polimerasa e impiden un inicio correcto de la replicaci&oacute;n.</LI>
+	<LI>Finalmente, la
+	<U>figura 4</U> muestra el caso en que la afinidad del cebador por
+	el molde es insuficiente para las condiciones experimentales
+	elegidas: el cebador se suelta del molde y/o se une a otras
+	mol&eacute;culas de cebador. La reacci&oacute;n no tiene lugar o lo
+	hace de forma nuy ineficiente debido a que la DNA polimerasa no
+	encuentra d&iacute;meros DNA molde-cebador donde iniciar la
+	reacci&oacute;n.</LI>
+</UL>
+
+<BR>
+
+<CENTER><H2><I>Ejemplo:</I></H2></CENTER>
+
+<OL>
+    <LI>Acceder a la cuenta en el servidor</LI>
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+<B>telnet es.embnet.org</B>
+login: <B>usuario</B>
+password: <B>xxxxxxxx</B>
+...
+
+</TD></TR></TABLE></LI>
+
+    <LI>Activar el paquete de Wisconsin:
+<TABLE WIDTH="75%"><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt;<B> gcg</B>
+</TT></PRE></TD></TR></TABLE></LI>
+	
+    <LI>Elegir una
+    secuencia de prueba. Se puede extraer cualquier secuencia de la base
+    de datos, introducir una nueva o usar una de ejemplo:
+
+<TABLE WIDTH="75%"><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt;<B> fetch ggamma.seq</B>
+</TT></PRE></TD></TR></TABLE></LI>
+
+    <LI>Para ver los
+    resultados en forma gr&aacute;fica es preciso indicar <I>previamente</I>
+    a GCG qu&eacute; tipo de dispositivo gr&aacute;fico deseamos
+    emplear, por ejemplo:
+
+<TABLE WIDTH="75%"><TR><TD BGCOLOR="grey75"><PRE><TT>
+<P>&gt; <B>tektronix tek4105</B>
+</TT></PRE></TD></TR></TABLE></LI>
+
+    <LI>Correr el
+    programa &quot;prime&quot; y probar con diversos par&aacute;metros:
+
+<TABLE WIDTH="75%"><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>prime</B>
+
+Prime of what sequence ? <B>ggamma.seq</B>
+...
+</TT></PRE></TD></TR></TABLE></LI>
+
+    <LI>Por defecto el
+    programa busca cebadores para PCR. Si se desea buscar cebadores para
+    secuenciaci&oacute;n basta con indicar que restrinja la b&uacute;squeda
+    a cebadores directos (<TT>-forward</FONT>) o
+    inversos (<TT>-reverse</FONT>).</LI>
+</OL>
+
+<P>Opcionalmente se
+puede proporcionar un fichero con secuencias de cebadores para que
+el programa seleccione el mejor de entre ellos.</P>
+
+<BR>
+
+<H2><I>Otros programas</I></H2>
+
+<P>Existen otros programas (p. ej. <TT>primer</TT>) m&aacute;s
+completos que funcionan con los mismos principios. En concreto,
+<TT>primer</TT> fu&eacute; desarrollado en el
+Whitehead Institute como un programa sumamente completo de an&aacute;lisis
+de cebadores para PCR. Este programa precisa que las secuencias
+est&eacute;n en un formato especial: para convertir una secuencia de
+GCG a este formato usamos primero el programa <TT>toprimer</TT>:</P>
+
+<TABLE WIDTH="75%"><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>toprimer</B>
+
+ToPrimer converts a GCG format sequence to the native Primer format.
+
+ ToPrimer of what GCG sequence? <B>Ggamma.seq</B>
+
+	          Begin (* 1 *) ? 
+
+ 	         End (* 1700 *) ?  
+
+ How do you want to call the output file? <B>ggamma.pri</B>
+&gt; <B>primer</B>
+...
+File containing template sequence(s): <B>ggamma.pri</B>
+
+Would you like: 1) automatic analysis of this sequence
+or              2) manual testing of primers for this sequence? <B>1</B>
+...
+</TT></PRE></TD></TR></TABLE></LI>
+
+
+</BODY>
+</HTML>

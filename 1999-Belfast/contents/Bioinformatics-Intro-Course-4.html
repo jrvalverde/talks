@@ -1,0 +1,1747 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>4	INTRODUCTORY SEQUENCE ANALYSIS</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:03
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-4.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-3.html"><img SRC="prev.gif" ALT="4INTRODUCTORY SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-5.html"><img SRC="next.gif" ALT="5DATABASES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr>
+<ul>
+<li>
+<a href="#Heading21">4.1 INTRODUCTION</a></li>
+
+<ul>
+<li>
+<a href="#Heading22">4.1.1 How does bioinformatics assist investigators
+in gene discovery ?</a></li>
+</ul>
+
+<li>
+<a href="#Heading23">4.2 PRACTICAL (CASE STUDY)</a></li>
+
+<ul>
+<li>
+<a href="#Heading24">4.2.1 Easy Sequence File Format Conversion (ReadSeq)</a></li>
+
+<ul>
+<li>
+<a href="#Heading25">Why ?</a></li>
+
+<li>
+<a href="#Heading26">How ?</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading27">4.3 COMMAND LINE PROGRAMS FOR DNA SEQUENCE ANALYSIS</a></li>
+
+<ul>
+<li>
+<a href="#Heading28">4.3.1 Aligning and comparing two sequences</a></li>
+
+<ul>
+<li>
+<a href="#Heading29">Why ?</a></li>
+
+<li>
+<a href="#Heading30">How ?</a></li>
+
+<li>
+<a href="#Heading31">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading32">4.3.2 GCG’s Bestfit</a></li>
+
+<li>
+<a href="#Heading33">4.3.3 Gap</a></li>
+</ul>
+
+<li>
+<a href="#Heading34">4.4 SEQUENCE ANALYSIS SOFTWARE WITH GRAPHICAL USER
+INTERFACES</a></li>
+
+<ul>
+<li>
+<a href="#Heading35">4.4.1 Starting the GCG graphical user interface :
+SeqLab</a></li>
+
+<ul>
+<li>
+<a href="#Heading36">Why ?</a></li>
+
+<li>
+<a href="#Heading37">How ?</a></li>
+
+<li>
+<a href="#Heading38">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading39">4.4.2 Running GCG BESTFIT again...</a></li>
+
+<ul>
+<li>
+<a href="#Heading40">Why ?</a></li>
+
+<li>
+<a href="#Heading41">How ?</a></li>
+
+<li>
+<a href="#Heading42">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading43">4.4.3 Graphically Comparing Sequences (dot plots)</a></li>
+
+<li>
+<a href="#Heading44">4.4.4 Restriction mapping (GCG MAP)</a></li>
+
+<ul>
+<li>
+<a href="#Heading45">How do we find suitable restriction sites?</a></li>
+
+<li>
+<a href="#Heading46">Practical</a></li>
+
+<li>
+<a href="#Heading47">Genomic fragment</a></li>
+
+<li>
+<a href="#Heading48">actin.gcg cDNA</a></li>
+</ul>
+
+<li>
+<a href="#Heading49">4.4.5 PCR primer design (GCG PRIMER)</a></li>
+
+<ul>
+<li>
+<a href="#Heading50">Why ?</a></li>
+
+<li>
+<a href="#Heading51">How ?</a></li>
+
+<li>
+<a href="#Heading52">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading53">4.4.6 Scanning a database for a primer (GCG FINDPATTERN)</a></li>
+
+<ul>
+<li>
+<a href="#Heading54">Why ?</a></li>
+
+<li>
+<a href="#Heading55">How ?</a></li>
+
+<li>
+<a href="#Heading56">Practical</a></li>
+</ul>
+
+<li>
+<a href="#Heading57">4.4.7 Other GCG programs</a></li>
+
+<li>
+<a href="#Heading58">4.4.8 The Staden Package.</a></li>
+</ul>
+
+<li>
+<a href="#Heading59">4.5 CONCLUSION</a></li>
+
+<ul>
+<li>
+<a href="#Heading60">4.5.1 Why bother at all with command line ?</a></li>
+
+<ul>
+<li>
+<a href="#Heading61">For</a></li>
+
+<li>
+<a href="#Heading62">Against</a></li>
+
+<li>
+<a href="#Heading63">For</a></li>
+
+<li>
+<a href="#Heading64">Against</a></li>
+</ul>
+</ul>
+</ul>
+<a NAME="_Toc425907851"></a><a NAME="_Toc445633538"></a><a NAME="_Toc415911188"></a><a NAME="_Toc416084164"></a><a NAME="_Toc425907867"></a><a NAME="_Toc448034788"></a><a NAME="_Toc448039447"></a><a NAME="_Toc448039569"></a><a NAME="_Toc448300494"></a><a NAME="_Toc448314976"></a><a NAME="_Toc448315280"></a><a NAME="_Toc451227750"></a><a NAME="Heading20"></a>
+<h1>
+4 INTRODUCTORY SEQUENCE ANALYSIS</h1>
+<font face="Garamond">The aim of this module is to explore some typical
+bioinformatics tools. These will be applied to simple DNA sequence analysis
+procedures. We'll taste some good old fashioned 'command line' programs
+as well as some more user friendly applications running behind 'graphical
+user interfaces'. By the end of this session, you should deplore but appreciate
+why 'user unfriendly' programs are still in use...</font><a NAME="_Toc415911149"></a><a NAME="_Toc416084121"></a><a NAME="_Toc425907852"></a><a NAME="_Toc445633539"></a><a NAME="_Toc448034789"></a><a NAME="_Toc448039448"></a><a NAME="_Toc448039570"></a><a NAME="_Toc448300495"></a><a NAME="_Toc448314977"></a><a NAME="_Toc448315281"></a><a NAME="_Toc451227751"></a><a NAME="Heading21"></a>
+<h2>
+4.1 INTRODUCTION<a NAME="_Toc415911150"></a><a NAME="_Toc416084122"></a><a NAME="_Toc425907853"></a><a NAME="_Toc445633540"></a><a NAME="_Toc448034790"></a><a NAME="_Toc448039449"></a><a NAME="_Toc448039571"></a><a NAME="_Toc448300496"></a><a NAME="_Toc448314978"></a><a NAME="_Toc448315282"></a><a NAME="_Toc451227752"></a></h2>
+<a NAME="Heading22"></a>
+<h3>
+4.1.1 How does bioinformatics assist investigators in gene discovery ?</h3>
+<font face="Garamond">The crucial need in WW2 to 'crack' secret codes led
+to the formidable development of computers and information technology (IT).
+The curious analogy between the computer binary code and the DNA four base
+code is at the heart of the involvement of IT in molecular biology (see
+Richard Dawkins, A river out of Eden). With the exponential amount of genetic
+code becoming available, it comes as no surprise that bioinformatics has
+taken such a predominant role in 'cracking' the code of life: during 1997,
+the combined world human sequencing centres produced on average 8 kilobases
+of genomic sequence per hour, 24 hours a day! For the latest estimates,
+check out the Genome MOT (
+<a href="http://www.ebi.ac.uk/~sterk/genome-MOT/">http://www.ebi.ac.uk/~sterk/genome-MOT/</a>).</font><font face="Garamond">The
+ease with which computers are capable of processing raw indigestible nucleic
+acid sequences into human understandable information (most of the time!),
+has made bioinformatics as indispensable in the lab as the Gilson and the
+Eppendorf. Indeed, there would be little hope of deciphering the 300,000,000
+bases (give or take a few millions) of the human genome without the help
+of computer software.</font><font face="Garamond">There are numerous experimental
+approaches to the identification and analysis of novel nucleic acid sequences.
+These usually fall into one of the two following general categories:</font>
+<ol>
+<li>
+<font face="Garamond"><b>top down </b>strategy : you know the phenotype,
+you're after the encoding gene(s)</font></li>
+
+<li>
+<b>bottom up </b>strategy : you have the gene, you're wondering what's
+its phenotype could be</li>
+</ol>
+<font face="Garamond">Depending on the specific research strategy, bioinformatics
+will be routinely required during experimental research to :</font>
+<ul>
+<li>
+<font face="Garamond">Carry out linkage analysis (e.g. deduce location
+of disease loci from pedigrees)</font></li>
+
+<li>
+Gather raw DNA sequence data (e.g. contig assembly, library analysis)</li>
+
+<li>
+Prepare cloning intensive experiments (e.g. knock-outs, gene therapy)</li>
+
+<li>
+Design diagnosis tools (e.g. sequence alignment, restriction patterns,
+PCR)</li>
+
+<li>
+Extract encoded information (e.g. promoters, responsive elements, exons
+and gene structures)</li>
+</ul>
+<img SRC="Bioinformatics-Intro-Course01.gif" height=663 width=468><font size=-1>Figure:
+An overview chart to show some broad uses of bioinformatics.</font><font face="Garamond">Computational
+tools also intrude into other aspects of biology, namely database searching
+(covered tomorrow morning) and protein analysis (covered Wednesday). You
+can find out more about the bioinformatics tools available in the tutorial
+"I have a sequence...":</font><b><tt><font face="Courier New"><font size=-1><a href="http://www.hgmp.mrc.ac.uk/Courses/I_Have_A_Sequence/">http://www.hgmp.mrc.ac.uk/Courses/I_Have_A_Sequence/</a></font></font></tt></b><font face="Garamond">We
+will skip over the hugely complex linkage analysis and the highly technical
+raw DNA data collection which are well out of the scope of this course
+(both are covered in their own specialised HGMP courses), and look at tools
+that illustrate the last three techniques.</font><font face="Garamond">To
+begin with, let's experiment with a few 'simple' nucleic acid analysis
+tools that are used routinely at the bench to :</font>
+<ul>
+<li>
+<font face="Garamond">look for potential splice sites in a genomic DNA
+sequence (discover computer generated false positives!)</font></li>
+
+<li>
+compare two different DNA sequences to each other (pairwise sequence alignments)</li>
+
+<li>
+detect restriction enzymes cut sites (restriction mapping)</li>
+
+<li>
+help in the judicious design of primers for the polymerase chain reaction
+(PCR)</li>
+</ul>
+<a NAME="Heading23"></a>
+<h2>
+4.2&nbsp;<a NAME="_Toc451227753"></a>PRACTICAL (CASE STUDY)</h2>
+<font face="Garamond">Let’s imagine that ...you are doing research on
+cardiac actin in <i>Xenopus laevis
+</i>(toad). You have screened a cDNA
+library for a clone expressing actin and have sequenced it. You are now
+interested in comparing it to the genomic sequence to find out where the
+splice sites are. To do this, you could align your sequence to to the genomic
+fragment where the gene originated from<a NAME="_Toc415911156"></a><a NAME="_Toc416084128"></a>.
+You know from the literature that the genomic sequence of the actin gene
+is available in the <b>EMBL</b> sequence database under ID ‘
+<b>xlactcag’</b>.
+We will use this information later in the practical.</font><font face="Garamond">Objectives
+of this exercise include:</font>
+<ul>
+<li>
+To demonstrate how the computer can be used to compute meaningful alignments
+between pairs of related sequences.</li>
+
+<li>
+To illustrate the weakness of such methods and to emphasise the need for
+careful interpretation of computer generated alignments.</li>
+
+<li>
+To illustrate the use of graphically previewing the similarities between
+two sequences before computing a textual alignment.</li>
+
+<li>
+To show another instance where a good GUI can make programs far easier
+and quicker to use than from the command line.</li>
+</ul>
+During the course of this afternoon you will carry out several analyses
+on this mock sequence run, first using command line programs and then more
+comfortably behind graphical user interfaces.<a NAME="_Toc425907854"></a><a NAME="_Toc445633541"></a><a NAME="_Toc448034791"></a><a NAME="_Toc448039450"></a><a NAME="_Toc448039572"></a><a NAME="_Toc448300497"></a><a NAME="_Toc448314979"></a><a NAME="_Toc448315283"></a><a NAME="_Toc451227754"></a><a NAME="Heading24"></a>
+<h3>
+4.2.1 Easy Sequence File Format Conversion (ReadSeq)<a NAME="_Toc415911157"></a><a NAME="_Toc416084129"></a></h3>
+<a NAME="Heading25"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">A significant shortcoming of molecular biology software
+is that sequence files - although pivotal in most applications - suffer
+serious incompatibility problems. Indeed, every major biocomputing package
+has its own particular native format that sequences must comply to before
+they can be analysed. Some examples of different sequence formats :</font>&nbsp;
+<table BORDER >
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="40"><b><font face="Arial"><font color="#FFFFFF"><font size=-1>format</font></font></font></b></td>
+
+<td VALIGN=TOP WIDTH="326"><b><font face="Arial"><font color="#FFFFFF"><font size=-1>example</font></font></font></b></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="40">
+<pre>RAW
+/ Staden</pre>
+</td>
+
+<td VALIGN=TOP WIDTH="326">
+<pre>AGTCTGCTAAATGCTCTGCTGCCATGGGCGTGGGGAGGGCAGCAGTGGAG
+GTGCCAAGGTGGGGCTGGGCTCGACGTAGACACAGTGCTAACCTGTCCCA
+CCTGATTTCCAGGTATGGTTTTCTAATTGAAGGGCCAAATGGAGAAGAGA
+AGAAAAACTGAGGAATCAGAGAAGACAGGCCAGCAACACACCTAGTCATA</pre>
+</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="40">
+<pre>FASTA</pre>
+</td>
+
+<td VALIGN=TOP WIDTH="326">
+<pre>>Pax6 mutant sequencing run
+AGTCTGCTAA ATGCTCTGCT GCCATGGGCG TGGGGAGGGC AGCAGTGGAG
+GTGCCAAGGT GGGGCTGGGC TCGACGTAGA CACAGTGCTA ACCTGTCCCA
+CCTGATTTCC AGGTATGGTT TTCTAATTGA AGGGCCAAAT GGAGAAGAGA</pre>
+</td>
+</tr>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="40">
+<pre>GCG</pre>
+</td>
+
+<td VALIGN=TOP WIDTH="326">
+<pre>!!NA_SEQUENCE 1.0
+ABI automated sequencer / Clone #34 / Gel #2 / Long run new.dna.seq
+Length: 405 October 20, 1997 13:16 Type: N Check: 6414 ..
+&nbsp;&nbsp;&nbsp; 1 AGTCTGCTAA ATGCTCTGCT GCCATGGGCG TGGGGAGGGC AGCAGTGGAG
+&nbsp;&nbsp; 51 GTGCCAAGGT GGGGCTGGGC TCGACGTAGA CACAGTGCTA ACCTGTCCCA
+&nbsp; 101 CCTGATTTCC AGGTATGGTT TTCTAATTGA AGGGCCAAAT GGAGAAGAGA
+&nbsp; 151 AGAAAAACTG AGGAATCAGA GAAGACAGGC CAGCAACACA CCTAGTCATA
+&nbsp; 201 TTCCTATCAG CAGTAGTTTC AGCACCAGTG TCTACCAACC AATTCCACAA</pre>
+</td>
+</tr>
+</table>
+&nbsp;&nbsp;
+<table BORDER >
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="40">
+<pre>EMBL</pre>
+</td>
+
+<td VALIGN=TOP WIDTH="326">
+<pre>&nbsp;ID&nbsp;&nbsp; HSA1280 standard; DNA; HUM; 22253 BP.
+&nbsp;AC&nbsp;&nbsp; Z83307;
+&nbsp;NI&nbsp;&nbsp; e1013084
+&nbsp;DT&nbsp;&nbsp; 11-DEC-1996 (Rel. 50, Created)
+&nbsp;DT&nbsp;&nbsp; 28-APR-1997 (Rel. 51, Last updated, Version 6)
+&nbsp;DE&nbsp;&nbsp; Human DNA sequence from cosmid A1280, chr. region 11p13
+&nbsp;KW&nbsp;&nbsp; 11p13; CpG island; paired-box protein; PAX6.
+&nbsp;OS&nbsp;&nbsp; Homo sapiens (human)
+&nbsp;OC&nbsp;&nbsp; Eukaryotae; mitochondrial eukaryotes; Metazoa;&nbsp;
+&nbsp;OC&nbsp;&nbsp; Chordata; Vertebrata; Eutheria; Primates;
+&nbsp;OC&nbsp;&nbsp; Catarrhini; Hominidae; Homo.
+&nbsp;FH&nbsp;&nbsp; Key&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Location/Qualifiers
+&nbsp;FH
+&nbsp;FT&nbsp;&nbsp; source&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1. .22253
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /organism="Homo sapiens"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /chromosome="11"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /map="11"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /clone="A1280"
+&nbsp;FT&nbsp;&nbsp; CDS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; join(&lt;1380. .1510,2438. .2653,3358.&nbsp;
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; .3523,9426. .10182,10412..10562,10661. .
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 10776,13354. .13503,14194. .>14278)
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /product="PAX6"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /note="match: M93650"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /codon_start=3
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /db_xref="PID:e286618"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /db_xref="SPTREMBL:Q99413"
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; /translation="HSGVNQLGGVFVNGRPLPDSTRQKIVEL...
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NGCVSKILGRYYETGSIRPRAIGGSKPRVATPEVVSKIAQYK...
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PPVPSQTSSYSCMLPTSPSVNGRSYDTYTPPHMQTHMNSQPM...
+&nbsp;FT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; PVQVPGSEPDMSQYWPRLQ"
+&nbsp;SQ Sequence 22253 BP; 606 A; 469 C; 488 G; 665 T; 0 other;
+hsa1280.embl Length:253 March 6, 98 11:20 Type: N Check:424..
+&nbsp;&nbsp;&nbsp;&nbsp; 1 GATCCGGAGC GACTTCCGCC TATTTCCAGA AATTAAGCTC AAACTTGACG
+&nbsp;&nbsp;&nbsp; 51 TGCAGCTAGT TTTATTTTAA AGACAAATGT CAGAGAGGCT CATCATATTT
+&nbsp;&nbsp; 101 TCCCCCCTCT TCTATATTTG GAGCTTATTT ATTGCTAAGA AGCTCAGGCT
+&nbsp;&nbsp; 151 CCTGGCGTCA ATTTATCAGT AGGCTCCAAG GAGAAGAGAG GAGAGGAGAG
+&nbsp;&nbsp; 201 GAGAGCTGAA CAGGGAGCCA CGTCTTTTCC TGGGAGGGCT GCTATCTAAG</pre>
+</td>
+</tr>
+</table>
+&nbsp;<font face="Garamond">We will now analyse our 'hot-off-the-sequencer"
+<b>actin.fasta</b> test sequence with one of the most well known molecular
+biology software packages : <b>GCG</b> version 9.1 (also known as the Wisconsin
+Package) produced by the Genetics Computer Group (hence GCG). With respect
+to sequence formats, GCG is extremely stubborn and will not automatically
+recognise your format from other software packages. Some of the GCG conventions
+for sequence symbols are attached in appendix I.</font><a NAME="_Toc415911158"></a><a NAME="_Toc416084130"></a><a NAME="Heading26"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">There are a number of ways to make a sequence file
+compatible for GCG analysis (c.f. appendices). One such method involves
+using a 'third party' program devoted to format switching : <b>ReadSeq</b>.
+It takes as input a sequence in any format and converts the same sequence
+to any of a choice of 18 output format flavours. This is a very useful
+program and one well worth noting.</font><sup><font face="Arial Black">Switching
+file formats using ReadSeq</font></sup>
+<ul>
+<li>
+<font face="Garamond">To convert <b><i>actin.fasta</i></b> to GCG format,
+do the following:</font></li>
+
+<li>
+From the WWW Main menu, prepare the environment for running ReadSeq:</li>
+
+<li>
+Select:
+<b><i>Nucleic</i></b></li>
+
+<li>
+Then:
+<b><i>Sequence Editors and Formats</i></b></li>
+
+<li>
+Then:
+<b><i>READSEQ</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Then:<b><i>
+Run READSEQ now!</i></b></li>
+
+<li>
+Your HGMP sequence is:
+<b><i>chapter4/actin.fasta </i></b>(i.e. in your
+<b>chapter4</b> directory there is a sequence file called <b>actin.fasta</b>)</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Choose
+<b><i>GCG</i></b>
+as your output format.</li>
+
+<li>
+Output file name: <b><i>chapter4/actin.gcg</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Finally
+click on <b><i>REFORMAT</i></b>, your sequence will be reformatted and
+you will automatically see how the output file looks.</li>
+
+<li>
+To see that the file is indeed created and converted, go to a UNIX window
+and type the following:<a NAME="_Toc448314980"></a><a NAME="_Toc448315284"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % cd chapter4 </font></font></tt></b><font face="Arial">(if
+you are in your home directory)</font><a NAME="_Toc448314981"></a><a NAME="_Toc448315285"></a><b><tt><font face="Courier New"><font size=-1>Unix
+% more actin.gcg </font></font></tt></b><font face="Arial">(This is the
+gcg format file)</font>
+<ul>
+<li>
+<font face="Garamond">Refer back to Chapter 3 if you have trouble with
+the UNIX system</font></li>
+
+<li>
+You're ready to use the GCG package...<a NAME="_Toc415911151"></a><a NAME="_Toc416084123"></a><a NAME="_Toc425907855"></a><a NAME="_Toc445633542"></a><a NAME="_Toc415911160"></a><a NAME="_Toc416084132"></a><a NAME="_Toc448034792"></a><a NAME="_Toc448039451"></a><a NAME="_Toc448039573"></a><a NAME="_Toc448300498"></a><a NAME="_Toc448314982"></a><a NAME="_Toc448315286"></a><a NAME="_Toc451227755"></a></li>
+</ul>
+<a NAME="Heading27"></a>
+<h2>
+4.3 COMMAND LINE PROGRAMS FOR DNA SEQUENCE ANALYSIS<a NAME="_Toc425907856"></a><a NAME="_Toc445633543"></a><a NAME="_Toc448034793"></a><a NAME="_Toc448039452"></a><a NAME="_Toc448039574"></a><a NAME="_Toc448300499"></a><a NAME="_Toc448314983"></a><a NAME="_Toc448315287"></a><a NAME="_Toc451227756"></a></h2>
+<a NAME="Heading28"></a>
+<h3>
+4.3.1 Aligning and comparing two sequences<a NAME="_Toc415911161"></a><a NAME="_Toc416084133"></a></h3>
+<a NAME="Heading29"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">Nucleic acid sequences of more than a few tens of
+bases long are, in their raw form, unintelligible to (ordinary) humans.
+For instance, wishing to determine whether your latest laboratory sequencing
+read matches a known EMBL database entry, you would be confronted with
+the following task:</font>&nbsp;&nbsp;
+<table BORDER >
+<caption><a NAME="_Toc415911162"></a><a NAME="_Toc416084134"></a></caption>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="180"><b><font face="Arial"><font color="#FFFFFF">actin
+genomic sequence</font></font></b></td>
+
+<td VALIGN=TOP WIDTH="184"><b><font face="Arial"><font color="#FFFFFF">cDNA
+sequence read</font></font></b></td>
+</tr>
+
+<tr VALIGN=TOP>
+<td VALIGN=TOP WIDTH="180">
+<pre>GGATCCAATTACAGAAAGACTCCTTATCTAGAAAACACCAGGTCCCAAGCATTCTGCATACCAGGTCCCATACCAGTACAATGCAATACTATAAAAGGACACCCTTAGATAATGTACAGATGTCACCTTGGATGCTCGTATAGTGTTGCACTGTGCCCAGATTAACACAATTACCCACACACATCCTGGGAGAAGGGGGAATTCTGCACATTGGCTGTTTCCCAACAGAGTGCAAGCTCTGAGAGCAAATCTTGCCCGTCATTACTGTTTGATATAAGGTATTCCCATGCCTGACGCACATAATATTTTTGTTACATTCGTGTTTACAGCACTGAAGGCAGGCAGCTATTTGTGCAGTCAGTACTTTATGTATTTCTAAACCCAGTGCTGGAGAGGCCAATAGGCAGGATGCCCCCCCCGCGTTAGTCCCCCTGCACAATTGTGCTGCACCTGTCTACTCCATTTGCAGACCCCTGTGTCTGTGCAAACTATTTCTTTCATTGTGCTGTTTTTTTTGTCACCCAGCATTACAGACATGCTTTTTTGGGAATCCCTATTTGGCCATCCCTAGTAGTGCTCCCCCCACCTCCATACTTTCCATACATGGGCTAAGGGGTCCAAAGACCCTGCCCTCCCCCCTCACCTACTCCATTAATGGCTTCTTTGCTTTTCAATGGCCCAGAAGCTACCAAATAAGGGCAGGCTGCCTGCCTTTCCCTGCGGAGCTCCCACTGACTCCTCAACTCCAGGCAGCGTATAAATTGACAGCTCAGTCCCCAGGCAGCACCCAGCCAATTCAATCACAGCACCAGCTCTCCTGTGCTAACCAGGTGAGTACTCTGTGGGACATACAGGTTGGTTCTTTGCTGCTGGACGGATGTCTGCCATTTCACTTTTGGGACAAACCAAGATTCCACTGGTGTTTCAGCCATCATTCCTTTAGGATTACCTTTGATTTCCAAATAGTTCCTGGCTCCTATGGCACAGAAAGAGCTATTTAGGATTTCCTCTCTAAACAGTAGCAACTAGTCTCAGAAATGGCTTCAACCATTGGCAGCCTAACTGCTAGTGGATTAAAGGACCCTACAGTTGGTTTCTTGTTTTGCAGAGGAATCTACAATTTCCACTTTAATATGAGGGGGCAGTGTGACCAGTGCACTGTATATAGGGGAGCAGTATATTCCATGTTTATGTACCTGTGTAAGGAGCAACAGCCCCTGGGTGCTACATGGCTCCTATGTATAGACATGTCATGGTCACAAGTACCTACCTGTATGCTACTAAGGCGCACACACAATTCCTAAAACTGTATTAGAACTTTGAGGCCTACTAAAAATGTGGGTCCCAGTGATACATGGCGTTACTATACAGTAGTACTCACAGGCACGTGCTGGTTATATGATCAGTAATGTGGAACTTGTTGAAGCCCATAGTACACTCCCAATATGTGTTCTGCAGGCTCCTCTGGCAGCAATTTACTTAATGGCAACTCCAACAAATCAACCCTTACCCCTGTCATTCCTCCAACAG.
+. (removed ~5000 bases)
+.
+TTTTTAAAATGTCCTTTTTCTCTGCAGTAATAAAATAATACCTTGTACTTGATCCAAATTAGGATAAATGAATCCTTATTGGAGGGAAAACCAACCTATTGAGTTTACTCAATGTTTACATGATTTTCTATGAAGATCAAAAGAGAGATTCGATTTCTGAAAAAATCCCAAGTCCCGAGCATTCTGGATAAAAGTTCCCATACCTGTATATTTGCCTAAACATATTAGATTTGGAGGCTATGATGACAAATATGTGAGTGCGAGCATTTCCCAGAACACTAATATTCCTTTGAAGAACCTCAACACCATGAATCCAAAATAAATAATGAGAACACTCATCTTGTTAACAACAGCCATGCAAAATAGAACAGGTGGTTAAATGCACATACACATACTAAAGCTAAGGAGTGCCAAACAAGAAAGGGTTCGACAAACAAAGGGAACAATTAACCTTCTAGGATCAAATACCCTACAAACATGAAGTTGTCAGCTCAAACAGTAAAAGAGCAATAATCAACTACATTAATTTGCACCAATTGAGTCACACTTAGGGACAGATTTACATATGGTGGAATATCAAGGGTTAATTAACCCTCGATATTCGACTTCCGAAGTCGAAGGATTTACCACAATTCGTTCAATCGAACGGTTAAATCCATTTTAATCCATCGATCGAACGATTTTTCTTCGACAAAAAAAGATTGCAAAGCCTATGGGGACCTTCCCCATAGGCTAAGATTGACTTCGGTAGGTTTTAGGTGGCGAACTAGGGGGTCGAAGTTTTTTTAAAGAGACAGTACTTAGACTATGGTCAGTACTTAGACGAATGGTCGAATAGTCGAACGATTTTTCGTTCGAATCGTTCGATTCGAAGTCGAAGTCGTAGTGGAAGGTTGAAATAGCCCATTCGATGGTCGAAGTAGCCAAAAAAAATTCGAAGTTTTTTTTATTCTATTCCTTCACTCGAGCTAAGTAAATGGGCCCCTCTCTGTATAATGATGCAGTTCATATAGCACCAATATATTCTGCAGAATTGTACAGAAATGATACA</pre>
+</td>
+
+<td VALIGN=TOP WIDTH="184">
+<pre>AATTCAATCACAGCACCAGCTCTCCTGTGCTAACCAGAACATAACCTGCCACTATGTGTGACGACGAGGAGACTACCGCCTTGGTGTGCGACAATGGCTCCGGGCTGGTGAAGGCTGGGTTCGCTGGGGATGATGCCCCACGTGCTGTGTTCCCCTCCATCGTTGGTCGCCCCCGTCATCAGGGTGTCATGGTGGGTATGGGTCAAAAAGATTCCTACGTAGGTGATGAAGCTCAAAGCAAGAGAGGTATCCTGACCCTGAAGTACCCCATTGAGCACGGTATCATCACTAACTGGGATGATATGGAGAAGATCTGGCACCACACCTTCTACAATGAGCTGCGTGTGGCCCCTGAAGAGCACCCCACCCTGCTCACTGAGGCCCCACTGAACCCCAAGGCCAACCGTGAAAAGATGACACAGATCATGTTTGAGACCTTCAACGTCCCAGCCATGTATGTTGCCATCCAGGCTGTGCTGTCCCTGTACGCTTCTGGTCGTACCACAGGTATCGTTCTTGACTCTGGTGATGGTGTCACCCACAATGTCCCCATCTATGAAGGTTATGCTCTGCCCCATGCCATCCAGCGTCTGGACCTAGCTGGTAGAGACCTCACAGATTACCTCATGAAGATCCTGACTGAACGTGGCTACTCCTTTGTGACAACAGCTGAAAGGGAAATTGTCCGTGACATCAAGGAAAAGCTGTGCTATGTGGCTTTGGACTTTGAGAATGAAATGGCCACCGCTGCCTCATCCTCCTCCCTGGAGAAGAGCTATGAGCTTCCCGACGGTCAGGTCATCACCATTGGAAATGAACGTTTCCGTTGCCCTGAGACCCTCTTCCAGCCTTCCTTCATTGGTATGGAATCTGCCGGTATCCATGAAACTACCTACAACAGCATCATGAAATGCGACATTGATATCCGCAAGGACCTGTACGCCAACAACGTCCTCTCTGGTGGTACCACCATGTACCCTGGTATTGCTGACAGAATGCAGAAGGAGATCACTGCCCTAGCCCCCAGCACCATGAAGATCAAGATCATTGCCCCACCTGAGCGTAAATACTCCGTCTGGATCGGTGGCTCCATCTTGGCCTCTCTGTCCACCTTCCAACAGATGTGGATCAGCAAACAGGAATACGATGAGGCAGGACCCTCCATTGTGCACAGGAAGTGCTTCTAAACATTACACACACTCCTCCAAGCAACATATACAGAGTACCTCAAAGTCAAAGAAAACAAGACCTGGACAGTCACTGTACAGTTTGTTTACACGCCATCATATTTATTACTTTCTAAATAAAACACATGCGGTTAAGTTC</pre>
+</td>
+</tr>
+</table>
+<a NAME="Heading30"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">The theory behind DNA sequence alignments is based
+on a matrix analysis first described by Smith and Waterman (1981, Advances
+in Applied Mathematics 2; 482-489) and, although fascinating, would take
+up all afternoon to explore. You will hear more about sequence alignments
+later in this course.</font><a NAME="_Toc415911163"></a><a NAME="_Toc416084135"></a><a NAME="Heading31"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">The two programs we are going to be using are GCG’s
+<b>bestfit</b> and <b>gap</b>.
+<b>Bestfit</b> finds and aligns the best
+matching regions between two sequences and <b>gap</b> does a global alignment
+between two sequences.</font><font face="Garamond">This exercise is a particularly
+good one for demonstrating some of the advantages of using the GCG GUI
+interface <b>SeqLab</b>, so I will encourage you to do the whole exercise
+twice, once from the command line and then through <b>SeqLab</b>. You may
+find running from the command line is quite tedious and takes a considerable
+time, but stick with it. The <b>SeqLab</b> rerun should take only a fraction
+of the time and effort.</font><sup><font face="Arial Black">Starting GCG</font></sup>
+<ul>
+<li>
+<font face="Garamond">Select the following, under “
+<b>Common Options
+</b>”
+on the WWW Menu page on the HGMP site: <b><i>GCG</i></b></font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Then:
+<b><i>Run
+GCG Now!</i></b></li>
+
+<li>
+If you haven’t run a service requiring logging into the HGMP before (since
+you started netscape or another browser), you will be asked to give your
+username and password. Use the mrna?? And password that you have been given
+earlier.</li>
+
+<li>
+Since this is the first time you use GCG (and GCG are now introducing charges),
+you may then be asked in which user category you fall. Enter <b>M</b> for
+MRC employee (since you are logged in an MRC course temporary account).</li>
+
+<li>
+GCG welcome messages will scroll along your screen, including database
+versions in use in GCG.</li>
+</ul>
+<font face="Garamond">We are now ready to align the two sequences. We’ll
+use <b>bestfit</b> first</font><a NAME="_Toc445633544"></a><a NAME="_Toc448034794"></a><a NAME="_Toc448039453"></a><a NAME="_Toc448039575"></a><a NAME="_Toc448300500"></a><a NAME="_Toc448314984"></a><a NAME="_Toc448315288"></a><a NAME="_Toc451227757"></a><a NAME="Heading32"></a>
+<h3>
+4.3.2 GCG’s Bestfit</h3>
+<sup><font face="Arial Black">Command line BESTFIT (Default settings)</font></sup>
+<ul>
+<li>
+<font face="Garamond">To get GCG help on the <b>BESTFIT</b> program, type:</font><a NAME="_Toc448314985"></a><a NAME="_Toc448315289"></a></li>
+</ul>
+<b><tt><font face="Courier New">Unix % genhelp bestfit</font></tt></b>
+<ul>
+<li>
+<font face="Garamond">This is in fact your first GCG program invocation!
+You are now inside a typical GCG program description. Navigate round following
+the instructions and then Quit genhelp. GCG also offers thematic help in
+its <b>GENMANUAL</b> program:</font></li>
+
+<li>
+You can best access this from the “
+<b><i>Further Help
+</i></b>” on
+our WWW menu on this GCG page, alternatively you could enter “
+<b>genman</b>”
+at the GCG UNIX prompt.</li>
+
+<li>
+Try and find information on comparing two sequences, note that there are
+other programs for comparing sequences.</li>
+
+<li>
+You can run <b>BESTFIT</b> interactively (i.e. answering questions the
+program asks about what you want to do) :</li>
+
+<li>
+Change directory to <b>chapter4</b> where the sequences are (if you didn’t
+already do it for the <b>ReadSeq</b> practical)<a NAME="fnB1" HREF="#fn1"></a><a href="#fn1" NAME="fnB1">[1]</a>.<a NAME="_Toc448314986"></a><a NAME="_Toc448315290"></a></li>
+</ul>
+<b><i><tt><font face="Courier New">Unix % cd chapter4</font></tt></i></b>
+<ul>
+<li>
+<font face="Garamond">Now we are ready to use the GCG program. First start
+<b>bestfit</b> going by typing in:</font></li>
+</ul>
+<a NAME="_Toc448314987"></a><a NAME="_Toc448315291"></a><b><tt><font face="Courier New"><font size=-1>Unix
+% bestfit -check</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">bestfit leaps into life and talks about itself at
+some length. Without the -check switch, <b>bestfit</b> would have contented
+itself with just a brief introduction and immediately asking you for the
+name of the first sequence your wished it to compare. The -check switch
+excited bestfit into displaying for you a part of its help information
+. In particular, bestfit informs you of all the parameters you may set
+to customise its behaviour and how you may set these parameters from the
+command line . When it has finished, bestfit generously, if a trifle ungrammatically,
+offers you the opportunity to:</font></li>
+</ul>
+<a NAME="_Toc448314988"></a><a NAME="_Toc448315292"></a><b><tt><font face="Courier New"><font size=-1>Add
+what to the command line ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Well, we could add some things to the command line,
+but in this instance, I suggest you do not. Instead, wait for <b>bestfit</b>
+to prompt you for the essential parameter values. The default settings
+for all other parameters are fine for this exercise. So just gently caress
+the Enter key and let bestfit proceed along its merry default way.</font></li>
+
+<li>
+The point of using the -check switch here was merely to make you aware
+of its existence. The -check switch works with nearly all the GCG package
+programs and it is the easiest way to get an overview of the ways in which
+you may customise the performance of the various programs . I strongly
+recommend that, especially when using a GCG program for the first time,
+you use the -check switch.</li>
+
+<li>
+Only mildly disappointed at your refusal to "add some what to its command
+line", <b>bestfit</b> now asks:</li>
+</ul>
+<a NAME="_Toc448314989"></a><a NAME="_Toc448315293"></a><b><tt><font face="Courier New"><font size=-1>BESTFIT
+of what sequence 1 ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">to which the required reply is:</font></li>
+</ul>
+<a NAME="_Toc448314990"></a><a NAME="_Toc448315294"></a><b><tt><font face="Courier New"><font size=-1>actin.gcg</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">That is, the sequence that you reformatted using
+readseq.</font></li>
+
+<li>
+<b>bestfit</b> continues by asking:</li>
+</ul>
+<a NAME="_Toc448314991"></a><a NAME="_Toc448315295"></a><b><tt><font face="Courier New"><font size=-1>Begin
+(* 1 *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">You are being asked to specify the start of the region
+of your selected sequence that you wish to be aligned. The default 1 is
+fine, since we want to align everything:</font></li>
+</ul>
+<a NAME="_Toc448314992"></a><a NAME="_Toc448315296"></a><b><tt><font face="Courier New"><font size=-1>&lt;ENTER></font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond"><b>bestfit</b> next asks:</font></li>
+</ul>
+<a NAME="_Toc448314993"></a><a NAME="_Toc448315297"></a><b><tt><font face="Courier New"><font size=-1>End
+(* 1326*)</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">1326 (the default response) being the last base position
+of the sequence you have selected. Again, this is fine:</font></li>
+</ul>
+<a NAME="_Toc448314994"></a><a NAME="_Toc448315298"></a><b><tt><font face="Courier New"><font size=-1>&lt;ENTER></font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond"><b>bestfit</b>, as always bubbling over with curiosity,
+then enquires:</font></li>
+</ul>
+<a NAME="_Toc448314995"></a><a NAME="_Toc448315299"></a><b><tt><font face="Courier New"><font size=-1>Reverse
+(* No *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">You do not want to reverse and complement the sequence
+before alignment, so just press the &lt;Enter> key to accept the default
+choice of </font><tt><font face="Courier New">No</font></tt><font face="Garamond">.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font><b>Bestfit</b>
+will now go through an entirely similar sequence of questions concerning
+the sequence you wish to align with <b>actin.gcg</b>.</li>
+</ul>
+The genomic sequence which we want to use to align our sequence against,
+is not in a separate file, but resides in the EMBL database. We can tell
+GCG that we want to use an entry from the database EMBL with ID ‘xlactcag’
+(we got this from the literature, remember ?) by simply prefixing the ID
+name with the database name. So embl:xlactcag refers to the genomic sequence
+entry of the actin gene in the EMBL database.
+<ul>
+<li>
+The questions and the required responses are as follows:<a NAME="_Toc448314996"></a><a NAME="_Toc448315300"></a></li>
+</ul>
+<tt><font face="Courier New"><font size=-1><b>BESTFIT of what sequence
+2 (* actin.gcg *)? </b>embl:xlactcag</font></font></tt><a NAME="_Toc448314997"></a><a NAME="_Toc448315301"></a><tt><font face="Courier New"><font size=-1><b>Begin
+(* 1 *) ? </b>&lt;ENTER></font></font></tt><a NAME="_Toc448314998"></a><a NAME="_Toc448315302"></a><tt><font face="Courier New"><font size=-1><b>End
+(* 8908*) </b>&lt;ENTER></font></font></tt><a NAME="_Toc448314999"></a><a NAME="_Toc448315303"></a><tt><font face="Courier New"><font size=-1><b>Reverse
+(* No *) ? </b>&lt;ENTER></font></font></tt>
+<ul>
+<li>
+<font face="Garamond">Having ascertained which portions of which two sequences
+you wish to align, bestfit will ask:</font></li>
+</ul>
+<a NAME="_Toc448315000"></a><a NAME="_Toc448315304"></a><b><tt><font face="Courier New"><font size=-1>What
+is the gap creation penalty (* 50 *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">That is, what reduction in the alignment score should
+occur when a new gap in either aligned sequence is introduced. 50 is fine
+for now , so just press the <b>&lt;ENTER></b> key to accept the default.
+bestfit continues politely:</font></li>
+</ul>
+<a NAME="_Toc448315001"></a><a NAME="_Toc448315305"></a><b><tt><font face="Courier New"><font size=-1>What
+is the gap extension penalty (* 3 *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">That is, what reduction in the alignment score should
+occur when an existing gap is extended by one residue. 3 is a fine choice
+for now, so just press the <b>&lt;ENTER></b> key to accept the default.
+Ever inquisitive, bestfit next asks:</font></li>
+</ul>
+<a NAME="_Toc448315002"></a><a NAME="_Toc448315306"></a><b><tt><font face="Courier New"><font size=-1>What
+should I call the paired output display file (* actin.pair *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">The default is a bit unimaginative, so I suggest
+you type in:</font></li>
+</ul>
+<a NAME="_Toc448315003"></a><a NAME="_Toc448315307"></a><b><tt><font face="Courier New"><font size=-1>actin.bestfit1</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">which really says it all. bestfit pauses briefly,
+desperately searching for a further inane question. Fails, and in frustration
+declares that it is Aligning and then, inarticulately dribbles some little
+dots onto the screen. After a bit, having recovered it composure, bestfit
+speaks some numbers and dies.</font></li>
+
+<li>
+If we wanted to, we could run the program entirely from the command line,
+<b>(but
+don’t) </b>(there are no line breaks in this command line, it just doesn’t
+fit in the page!):<a NAME="_Toc448315004"></a><a NAME="_Toc448315308"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % bestfit -OUT=actin.bestfit
+-BEG1=1 -END1=1326 -BEG2=1 -END2=8908 -GAP=50 -LEN=3 -NOREV1 -NOREV2 -IN1=actin.fasta
+-IN2=embl:xlacctag</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">If you are just selecting all the defaults, you can
+also run programs e.g. BESTFIT with the -Default switch (far easier than
+the first example!) :</font><a NAME="_Toc448315005"></a><a NAME="_Toc448315309"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % bestfit -Default -OUT=actin.bestfit1
+actin.gcg embl:xlactcag</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Notice how in this instance (also called 'batch mode'
+because you can include such commands in special automation scripts), you
+have no little dots telling you that GCG is thinking...</font></li>
+</ul>
+<font face="Garamond">Now bestfit has finished, have a look at the content
+of the <b>actin.bestfit1</b> output file using the <b><i>more</i></b> command:</font><b>Unix
+% more actin.bestfit1</b>Was it worth waiting for? Are the sequences well
+aligned? Notice that the <b>actin.gcg</b> sequence was 1326 nucleotides
+long. Have they all been aligned to the genomic sequence ? Hmmm.....We
+seem to be missing some (more then half !) of the data.....It looks like
+it didn’t align the complete sequence.....Although BESTFIT uses a very
+thorough algorithm (it uses an extensive Smith &amp; Waterman approach)
+it will only display the single best match between the two query sequences.
+‘Single best match’ is defined as having the highest score. Every matching
+base in the alignment will get a score set by the comparison matrix and
+for every mismatch the score will be lowered. Scoring is also highly dependent
+on the introduction of gaps in the alignment. The default setting of bestfit
+that we used, has a rather high penalty for introducing gaps and extending
+gaps. Apparently, bestfit decided that not aligning some of the bits on
+the side of the sequence, gave a better score then aligning all the sequence
+!To see if we get a better score we are going to alter some of the parameters
+of bestfit. We can’t change the scoring matrix (easily) but we can change
+the gap penalties.<sup><font face="Arial Black">Command line BESTFIT (Changed
+settings)</font></sup>
+<ul>
+<li>
+<font face="Garamond">Run the <b>BESTFIT</b> program again, type:</font><a NAME="_Toc448315006"></a><a NAME="_Toc448315310"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % bestfit</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Use the same files <b>actin.gcg</b> and <b>embl:xlactcag</b>
+and default settings, except for the gap creation and extension penalties.</font></li>
+
+<li>
+For the gap creation penalty question:<a NAME="_Toc448315007"></a><a NAME="_Toc448315311"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>What is the gap creation
+penalty (* 50 *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Enter:</font><a NAME="_Toc448315008"></a><a NAME="_Toc448315312"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>10</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">For the question</font><a NAME="_Toc448315009"></a><a NAME="_Toc448315313"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>What is the gap extension
+penalty (* 3 *) ?</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Enter:</font><a NAME="_Toc448315010"></a><a NAME="_Toc448315314"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>0</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Use
+<b>actin.bestfit2</b> as the output filename.</font></li>
+</ul>
+<font face="Garamond">Look at the output file actin.bestfit2 and compare
+it to the results of actin.bestfit1. Is it any better ? Has the complete
+actin.gcg sequence been aligned now?</font><a NAME="_Toc445633545"></a><a NAME="_Toc448034795"></a><a NAME="_Toc448039454"></a><a NAME="_Toc448039576"></a><a NAME="_Toc448300501"></a><a NAME="_Toc448315011"></a><a NAME="_Toc448315315"></a><a NAME="_Toc451227758"></a><a NAME="Heading33"></a>
+<h3>
+4.3.3 Gap</h3>
+<font face="Garamond">Now you have seen how parameters can influence the
+results you get, let’s take a look at another program that does alignments
+and uses a slightly different algorithm.</font><font face="Garamond">The
+GCG program <b>gap</b> will try to align two sequences by introducing gaps
+(hence the name :-] ) to get the best alignment between the complete sequences.
+<b>Gap</b> will do a so called global alignment as compared to the local
+alignment of <b>bestfit</b>.</font><sup><font face="Arial Black">Command
+line GAP (Default settings)</font></sup>
+<ul>
+<li>
+<font face="Garamond">Run the <b>gap</b> program, type:</font></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % gap</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond"><b>Gap</b> will ask the same questions as <b>bestfit</b>,
+and we will give the same answers. (Check back with the <b>bestfit</b>
+exercise for the answers). Accept all defaults and use <b>actin.gap1</b>
+as the output file.</font></li>
+</ul>
+<tt><font face="Courier New"><font size=-1><b>GAP of what sequence 1 ?
+</b>actin.gcg</font></font></tt><tt><font face="Courier New"><font size=-1><b>Begin
+(* 1 *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>End
+(* 1326*) </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>Reverse
+(* No *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>to
+what sequence 2 (* actin.gcg *)? </b>embl:xlactcag</font></font></tt><tt><font face="Courier New"><font size=-1><b>Begin
+(* 1 *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>End
+(* 8908*) </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>Reverse
+(* No *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>What
+is the gap creation penalty (* 50 *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>What
+is the gap extension penalty (* 3 *) ? </b>&lt;ENTER></font></font></tt><tt><font face="Courier New"><font size=-1><b>What
+should I call the paired output display file (* actin.pair *) ? </b>actin.gap1</font></font></tt><font face="Garamond">Again,
+look at the output file with the unix <b>more</b> command. How does it
+look? Has <b>gap</b> aligned all the (1326) nucleotides of actin.gcg? How
+does this compare to the alignment you got with <b>bestfit</b> (with the
+changed settings,
+<b>actin.bestfit2
+</b>)?</font><font face="Garamond">Hmmm....It
+doesn’t look like <b>gap</b> understood what we wanted to do. It hasn’t
+really lived up to it’s name, now has it? It has aligned all the nucleotides
+of <b>actin.gcg</b> in almost one big stretch, without hardly any gaps!
+This definitely calls for some more tweaking of the parameters.</font><sup><font face="Arial Black">Command
+line GAP (Changed settings)</font></sup>
+<ul>
+<li>
+<font face="Garamond">Run the <b>gap</b> program again , type:</font><a NAME="_Toc448315012"></a><a NAME="_Toc448315316"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % gap</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">By now you have become experts and know exactly what
+I mean when I say that you use the same data and defaults as the first
+exercise with <b>gap</b>, except for the gap creation and extension penalty.
+Use the a gap creation of <b>10</b> and an extension penalty<a NAME="fnB2" HREF="#fn2"></a></font><a href="#fn2" NAME="fnB2">[2]</a><font face="Garamond">
+of <b>0</b> and use <b>actin.gap2</b> as the output filename.</font></li>
+</ul>
+<font face="Garamond">If everything went well, you should end up with the
+correct alignment. How does it compare to the alignment you got with <b>bestfit</b>?</font><font face="Garamond">Because
+I know you can’t get enough of alignments, we are going to do the same
+exercise again, but now using the Graphical user interface to GCG called
+SeqLab.</font><a NAME="_Toc415911164"></a><a NAME="_Toc416084136"></a><a NAME="_Toc425907857"></a><a NAME="_Toc445633546"></a><a NAME="_Toc448034796"></a><a NAME="_Toc448039455"></a><a NAME="_Toc448039577"></a><a NAME="_Toc448300502"></a><a NAME="_Toc448315013"></a><a NAME="_Toc448315317"></a><a NAME="_Toc451227759"></a><a NAME="Heading34"></a>
+<h2>
+4.4 SEQUENCE ANALYSIS SOFTWARE WITH GRAPHICAL USER INTERFACES<a NAME="_Toc415911165"></a><a NAME="_Toc416084137"></a><a NAME="_Toc425907858"></a><a NAME="_Toc445633547"></a><a NAME="_Toc448034797"></a><a NAME="_Toc448039456"></a><a NAME="_Toc448039578"></a><a NAME="_Toc448300503"></a><a NAME="_Toc448315014"></a><a NAME="_Toc448315318"></a><a NAME="_Toc451227760"></a></h2>
+<a NAME="Heading35"></a>
+<h3>
+4.4.1 Starting the GCG graphical user interface : SeqLab<a NAME="_Toc415911166"></a><a NAME="_Toc416084138"></a></h3>
+<a NAME="Heading36"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">As you have just experienced, using GCG through command
+line is a little dated and cumbersome. You are not the only ones to think
+so, so a number of graphical user interfaces (GUI's in computer speak)
+have been developed to make GCG a little more user friendly. SeqLab is
+one such GUI which is available on X-windows platforms (such as the HGMP
+computers). As is often the case with GUI's, there is a very slight loss
+of functionality when using GCG behind SeqLab. However, you would probably
+only notice this when doing really complex analyses and pushing the programs
+to their limits.</font><a NAME="_Toc415911167"></a><a NAME="_Toc416084139"></a><a NAME="Heading37"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">Having started SeqLab, you fill out forms, click
+buttons for help etc., but in the background, it are the very same GCG
+programs that are called and run through your GUI. In fact, when launching
+a GCG analysis in SeqLab, you can actually see the command line building
+up automatically as you joyfully select and click the options on offer.</font><a NAME="_Toc415911168"></a><a NAME="_Toc416084140"></a><a NAME="Heading38"></a>
+<h4>
+Practical</h4>
+<sup><font face="Arial Black">Accessing SeqLab</font></sup>
+<ul>
+<li>
+<font face="Garamond">This is started from a GCG Unix prompt. To use it
+you either need to have an X-windows server or VNC on your own computer.
+(The Java option is for those users without an X-windows server and who
+also don’t have VNC installed, but you will not be able to use SeqLab)</font></li>
+
+<li>
+enter the SeqLab graphical user interface by typing the following command
+at the UNIX % prompt :<a NAME="_Toc448315015"></a><a NAME="_Toc448315319"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>UNIX % <i>seqlab &amp;</i></font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Notice how that particular hue of blue is unhealthy!
+The <b><i>&amp;</i></b> after a Unix command, simply means run the program
+in the background so that you can still run Unix commands from the prompt.</font></li>
+
+<li>
+Enter: "
+<b><i>OK</i></b>" in the "About SeqLab" window</li>
+
+<li>
+If you're in "Editor" mode, switch to "Main List" mode by pulling down
+the "Mode" menu.</li>
+
+<li>
+In the "Options" menu, select <b><i>Preferences</i></b>. Change the "Working
+Directory” to <b><i>/people/mrna##/chapter4</i></b> and close the "User
+Preferences" window by clicking "
+<b>OK</b>"<a NAME="fnB3" HREF="#fn3"></a><a href="#fn3" NAME="fnB3">[3]</a>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>In the
+"
+<b>File</b>" menu, select <b><i>New List
+</i></b>. In the "
+<b>Name of
+new list file
+</b>" field, type <b><i>actin.list</i></b> and click <b><i>OK</i></b>.
+This list will allow you to manage the sequences in your actin analysis
+project.</li>
+
+<li>
+Select menu <b><i>File -> Add Sequences From -> Database
+</i></b>A dialogue
+box will open in which you can specify which sequences to get from the
+database. In the "Database specification" field, enter <b><i>EMBL:xlactcag</i></b>
+(this is the entry in the EMBL database of the genomic sequence of the
+actin gene that we used in the command line examples), click on <b><i>Add
+to Main Window
+</i></b>, and click on <b><i>Close</i></b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>You will
+see that you have added the genomic actin sequence to your main list from
+the EMBL database :<a NAME="_Toc448315016"></a><a NAME="_Toc448315320"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>N|+| 1| 8908| em_ov1:xlactcag</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">If you double click on the sequence, you will open
+a window containing the full description of this sequence. Notice the origin
+and size of the sequence. Close the window by clicking "
+<b>OK</b>" (or
+"
+<b>Cancel</b>" if you modified any of the fields).</font></li>
+
+<li>
+Add your latest laboratory sequencing sequence by selecting the menu
+<b><i>File
+-> Add Sequences From -> Sequence Files
+</i></b>. Add the <b>actin.gcg</b>
+sequence that you reformatted to GCG format earlier on from your
+<b>/people/mrnaXY/chapter4/
+</b>directory
+to the main list (double click the sequence name or select by clicking
+once and click <b><i>Add</i></b>) Close the "Add Sequences" window. You
+now have a second sequence in the main list. Double click it to check it
+out.</li>
+
+<li>
+You are ready to carry out a GCG analysis behind SeqLab...<a NAME="_Toc415911169"></a><a NAME="_Toc416084141"></a><a NAME="_Toc425907859"></a><a NAME="_Toc445633548"></a><a NAME="_Toc448034798"></a><a NAME="_Toc448039457"></a><a NAME="_Toc448039579"></a><a NAME="_Toc448300504"></a><a NAME="_Toc448315017"></a><a NAME="_Toc448315321"></a><a NAME="_Toc451227761"></a></li>
+</ul>
+<a NAME="Heading39"></a>
+<h3>
+4.4.2 Running GCG BESTFIT again...<a NAME="_Toc415911170"></a><a NAME="_Toc416084142"></a></h3>
+<a NAME="Heading40"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">To see what a GUI is all about...</font><a NAME="_Toc415911171"></a><a NAME="_Toc416084143"></a><a NAME="Heading41"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">Piece of cake !</font><a NAME="_Toc415911172"></a><a NAME="_Toc416084144"></a><a NAME="Heading42"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">In order to feel the improvement offered by SeqLab,
+run exactly the same BESTFIT analysis.</font><sup><font face="Arial Black">Running
+BESTFIT in SeqLab (Default)</font></sup>
+<ul>
+<li>
+<font face="Garamond">Inside SeqLab, select both sequences in the main
+list (keep the "Shift" key (or the “Ctrl” key if they’re not consecutive)
+down while selecting,: they should both appear in inverse video) and choose
+menu
+<b>Functions -> Pairwise Comparisons -> BestFit
+</b>. Make sure your
+two sequences appear in the boxes provided and have a look at the options
+provided. The default options will work fine in our simple case, so click
+<b>Run</b> in the "
+<b>BestFit</b>" window.</font></li>
+
+<li>
+The results of the <b>bestfit</b> program's attempt to find the best alignment
+between the two sequences can be found in window spawned when you select
+<b>Windows -> Output Manager
+</b>. The Output Manager Window will contain
+all the output that the GCG programs will produce.</li>
+
+<li>
+Seqlab has been setup to automatically show the output of the program that
+has just finished, without having to go to the Output Manager. This setting
+can be changed if you like in the preference settings.</li>
+
+<li>
+A “T” (text) file called <b>bestfit_##.pair<a NAME="fnB4" HREF="#fn4"></a></b><a href="#fn4" NAME="fnB4">[4]</a>
+will be listed as soon as the analysis is completed. Double click it (or
+click <b>Display</b>) to see the best alignment <b>BestFit</b> could come
+up with.</li>
+</ul>
+<font face="Garamond">This output should look familiar to you, because
+it’s the same (wrong!) alignment as you got using bestfit from the command
+line.</font><font face="Garamond">As before we are not content with this
+result, and we will change some of the parameters for <b>bestfit</b>.</font><sup><font face="Arial Black">Running
+BESTFIT in SeqLab (Changed settings)</font></sup>
+<ul>
+<li>
+<font face="Garamond">Inside SeqLab, select both sequences in the main
+list (keep the "Shift" key (or the “Ctrl” key if they’re not consecutive)
+down while selecting,: they should both appear in inverse video) and choose
+<b>Functions
+-> Pairwise Comparisons -> BestFit
+</b>. Make sure your two sequences appear
+in the boxes provided and have a look at the options provided.</font></li>
+
+<li>
+The default options will now <b>NOT</b> be sufficient, so we need to change
+some options. We can change the options to <b>bestfit</b> by clicking on
+the <b>Options...</b> button.</li>
+
+<li>
+A new window will appear with a lot of check- and textboxes.</li>
+
+<li>
+On the second row, there is a checkbox next to the text:<a NAME="_Toc448315018"></a><a NAME="_Toc448315322"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Set gap creation penalty</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Click on the checkbox and then click on the textbox
+to activate it and type in <b>10</b>. This will set the creation gap penalty
+to the same value as we used in the command line version of <b>bestfit</b>
+(second exercise).</font></li>
+
+<li>
+Change the gap extension penalty by clicking next to the text<a NAME="_Toc448315019"></a><a NAME="_Toc448315323"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Set gap extension penalty</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">and using <b>0</b> as the gap extension penalty.</font></li>
+
+<li>
+Get rid of the window by clicking the <b>Close</b> button at the bottom.</li>
+
+<li>
+Click the <b>Run</b> button to let <b>bestfit</b> rip again and patiently
+wait for the results to appear in the <b>Output Manager Window
+</b>.</li>
+</ul>
+<font face="Garamond">Again this output should look familiar to you.</font><font face="Garamond">Many
+of the GCG programs work in a similar way with SeqLab. The program will
+perform with all default values set. If any of the parameters needs changing,
+it can be done by clicking the <b>Options...</b> button.</font><font face="Garamond">It
+is left as an extra exercise to the reader to align the two sequences using
+the program <b>gap</b> both with the default settings and with the changed
+settings. <b>Gap</b> can be found in the same menu as <b>bestfit</b>.</font><font face="Garamond">Now
+we have the graphical user interface up and running, we can do some other
+type of alignment, the graphical alignment or dot plots.</font><a NAME="_Toc425907860"></a><a NAME="_Toc445633549"></a><a NAME="_Toc448034799"></a><a NAME="_Toc448039458"></a><a NAME="_Toc448039580"></a><a NAME="_Toc448300505"></a><a NAME="_Toc448315020"></a><a NAME="_Toc448315324"></a><a NAME="_Toc451227762"></a><a NAME="Heading43"></a>
+<h3>
+4.4.3 Graphically Comparing Sequences (dot plots)</h3>
+<font face="Garamond">An excellent way of comparing two sequences is to
+do this graphically, using dot plots. Dot plots are diagonals of dots represent
+regions of alignment. We will discuss them in more detail tomorrow. For
+now we are just going to produce them.</font><sup><font face="Arial Black">Producing
+a dot plot in SeqLab</font></sup>
+<ul>
+<li>
+<font face="Garamond">In GCG, two programs are used to create dot plots:
+<b>compare</b> creates a point (dot) file which <b>dotplot</b> displays.
+In SeqLab these are by default run together for you.</font></li>
+
+<li>
+Choose menu
+<b><i>Functions -> Pairwise Comparisons -> compare
+</i></b>.
+Make sure your two sequences appear in the boxes provided (if not, go back
+to the Main SeqLab window and select the two sequences) and have a look
+at the options provided. The default options will work fine in our simple
+case, so click <b><i>Run</i></b> in the "compare" window.</li>
+
+<li>
+Look at the graphical dot plot output. There will be two files created
+by compare: The <b>.pnt</b> file is the text version of the dot file and
+is of no interest of us now. The <b>dotplot_##.figure</b> file is the graphical
+alignment and we want to see this one.</li>
+
+<li>
+Look at the <b>dotplot_##.figure</b> file by clicking on <b>Display</b>.</li>
+</ul>
+<font face="Garamond">In the graphical alignment, the two sequences are
+represented on either of the axes. A dot in the plot will represent a match
+between the two sequences. The X co-ordinate will indicate where the match
+is in the first sequence, the Y co-ordinate will indicate where the match
+is in the second sequence. Dotplots are a very fast and efficient way to
+get an insight in the relationship of the two sequences.</font><font face="Garamond">Can
+you relate the dotplot output with the <b>bestfit</b> and <b>gap</b> alignment
+you got ? We will look at some better dotplot programs later on in the
+course.</font><a NAME="_Toc415911173"></a><a NAME="_Toc416084145"></a><a NAME="_Toc425907861"></a><a NAME="_Toc445633550"></a><a NAME="_Toc448034800"></a><a NAME="_Toc448039459"></a><a NAME="_Toc448039581"></a><a NAME="_Toc448300506"></a><a NAME="_Toc448315021"></a><a NAME="_Toc448315325"></a><a NAME="_Toc451227763"></a><a NAME="Heading44"></a>
+<h3>
+4.4.4 Restriction mapping (GCG MAP)<a NAME="_Toc415911174"></a><a NAME="_Toc416084146"></a></h3>
+<font face="Garamond">If you look closely at the alignment produced by
+<b>bestfit<a NAME="fnB5" HREF="#fn5"></a></b></font><a href="#fn5" NAME="fnB5">[5]</a><font face="Garamond">
+or <b>gap
+</b>you can see that the alignment is not perfect. Between bases
+861 and 1041 there is a mismatch of two bases with the genomic fragment.
+You could have known that the match was not exact from some other part
+of the information on alignment also....Do you know what? (Hint....Percentage).</font><font face="Garamond">It
+is possible that you made a sequencing error (can you think of any other
+reasons ? How sure are we that the genomic fragment is the source of the
+cDNA clone ?) and to investigate this, you choose not to sequence the cDNA
+again, but use two different methods. First we are going to try restriction
+mapping and then we will amplify the region and sequence the PCR product,
+to check which of the sequences is incorrect (or if both are correct, we
+might have found a mutant/variant).</font><a NAME="_Toc415911175"></a><a NAME="_Toc416084147"></a><a NAME="Heading45"></a>
+<h4>
+How do we find suitable restriction sites?</h4>
+<font face="Garamond">Several hundred restriction enzymes (RE) have been
+isolated (mostly from bacteria) and their nucleotide recognition site characterised.
+The motifs recognised by RE are mostly palindromes and vary in length from
+DNA tetramers (frequent cutters) to 26-mers (BaeI). An updated public database
+of the current available RE (Rebase) is used to scan the DNA sequence under
+examination. The restriction map thus produced can be used to design a
+"digest" pattern.</font><a NAME="_Toc415911176"></a><a NAME="_Toc416084148"></a><a NAME="Heading46"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">We will use GCG's MAP to make a restriction map of
+the actin gene in the area where the difference is seen in the alignment.
+Comparison of the restriction map of the cDNA clone with the map of the
+genomic fragment will indicate whether RE digestion would be suitable for
+investigating the discrepancy between the two sequences.</font><sup><font face="Arial Black">Restriction
+mapping : GCG's MAP</font></sup>
+<ul>
+<li>
+<font face="Garamond">Your main list should still contain (at least) two
+sequences :</font><a NAME="_Toc448315022"></a><a NAME="_Toc448315326"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>N|+| 1| 405| actin.gcg</font></font></tt></b><a NAME="_Toc448315023"></a><a NAME="_Toc448315327"></a><b><tt><font face="Courier New"><font size=-1>N|+|
+1| 8908| em_ov:xlactcag</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Because we don’t want to make a map of the complete
+sequences (they will mostly be the same) we are going to restrict the map
+to a small region. We will do this by changing the sequence attributes.</font></li>
+
+<li>
+Select the <b>actin.gcg</b> sequence and open the sequence attributes (menu
+<b>Edit->Sequence Attributes...
+</b>).</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Change
+the 1 In the <b>Begin:</b> textbox to <b>861</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Change
+the 1326 in the <b>End:</b> textbox to <b>1041</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+on the OK button.</li>
+
+<li>
+Set the attributes of <b>em_ov:xlactcag</b> to <b>Begin: 6278
+</b>and <b>End:
+6458
+</b>in a similar fashion.</li>
+
+<li>
+Now the main window will show something like:<a NAME="_Toc448315024"></a><a NAME="_Toc448315328"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>N|+| 861| 1041| actin.gcg</font></font></tt></b>
+<br><b><tt><font face="Courier New"><font size=-1>N|+| 6278| 6458| em_ov:xlactcag</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Select the <b>actin.gcg</b> sequence and select menu
+<b>Functions->Mapping->Map</b>. We'll blindly accept the default options
+and directly click <b>Run</b>.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Do the
+same for the <b>em_ov:xlactcag</b> sequence.</li>
+
+<li>
+In the <b>Output Manager Window
+</b>we should now have two .map files,
+with a map of the sequence. It shows the translation in six frames below
+the sequence and the restriction sites above it.</li>
+</ul>
+<font face="Garamond">Can you see a difference in the two sequences ? (Hint:
+the discrepancy starts at base 1017 in <b>actin.gcg</b>). Could you device
+an restriction experiment to check if your cDNA contains the sequence you
+think it does? (i.e. which restriction site is it supposed to have if the
+sequence of your cDNA clone is correct and which if it is not?).</font><font face="Garamond">Because
+it is a bit difficult to see two output files at the same time we have
+provided an example output below (But if you go to the Unix prompt you
+could take a look at both files at the same time....). This example only
+shows the first three frames of the translation. Can you do this ? Hint:
+Try the options in <b>map</b>.).</font><a NAME="Heading47"></a>
+<h4>
+Genomic fragment</h4>
+
+<pre>(Linear) MAP of: em_ov:xlactcag&nbsp; check: 6862&nbsp; from: 6278&nbsp; to: 6458
+
+ID&nbsp;&nbsp; XLACTCAG&nbsp;&nbsp; standard; DNA; VRT; 8908 BP.
+AC&nbsp;&nbsp; X04669;
+NI&nbsp;&nbsp; g64528
+DT&nbsp;&nbsp; 19-SEP-1987 (Rel. 13, Created)
+DT&nbsp;&nbsp; 19-MAR-1993 (Rel. 35, Last updated, Version 3)
+DE&nbsp;&nbsp; Xenopus laevis cardiac actin gene . . .&nbsp;
+
+&nbsp;With 230 enzymes: *&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; March 5, 1999 15:25&nbsp; ..&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SfaNI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIII |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HinfI&nbsp;&nbsp; MspI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BciVI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hpy178III&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TfiI BsrFI|&nbsp;&nbsp;&nbsp;&nbsp; NlaIII&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RcaI|&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GGTATGGAATCTGCCGGTATCCATGAAACTACCTACAACAGCATCATGAAATGCGACATT
+&nbsp;&nbsp;&nbsp; 6278 --+---------+---------+---------+---------+---------+------- 6337
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CCATACCTTAGACGGCCATAGGTACTTTGATGGATGTTGTCGTAGTACTTTACGCTGTAA
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G&nbsp; M&nbsp; E&nbsp; S&nbsp; A&nbsp; G&nbsp; I&nbsp; H&nbsp; E&nbsp; T&nbsp; T&nbsp; Y&nbsp; N&nbsp; S&nbsp; I&nbsp; M&nbsp; K&nbsp; C&nbsp; D&nbsp; I&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp; W&nbsp; N&nbsp; L&nbsp; P&nbsp; V&nbsp; S&nbsp; M&nbsp; K&nbsp; L&nbsp; P&nbsp; T&nbsp; T&nbsp; A&nbsp; S&nbsp; *&nbsp; N&nbsp; A&nbsp; T&nbsp; L&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; G&nbsp; I&nbsp; C&nbsp; R&nbsp; Y&nbsp; P&nbsp; *&nbsp; N&nbsp; Y&nbsp; L&nbsp; Q&nbsp; Q&nbsp; H&nbsp; H&nbsp; E&nbsp; M&nbsp; R&nbsp; H&nbsp; * -
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AvaII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EcoO109I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Psp5II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KpnI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrFI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sau96I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIV |&nbsp;&nbsp;&nbsp;&nbsp; BsaJI |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sse8647I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RsaI |&nbsp;&nbsp;&nbsp; EcoRII |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AciI&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BanI | |&nbsp;&nbsp;&nbsp; RsaI | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EcoRV&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; RsaI&nbsp;&nbsp;&nbsp;&nbsp; MaeII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MnlI | | NlaIII| | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; || | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GATATCCGCAAGGACCTGTACGCCAACAACGTCCTCTCTGGTGGTACCACCATGTACCCT
+&nbsp;&nbsp;&nbsp; 6338 --+---------+---------+---------+---------+---------+------- 6397
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CTATAGGCGTTCCTGGACATGCGGTTGTTGCAGGAGAGACCACCATGGTGGTACATGGGA
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; I&nbsp; R&nbsp; K&nbsp; D&nbsp; L&nbsp; Y&nbsp; A&nbsp; N&nbsp; N&nbsp; V&nbsp; L&nbsp; S&nbsp; G&nbsp; G&nbsp; T&nbsp; T&nbsp; M&nbsp; Y&nbsp; P&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp; S&nbsp; A&nbsp; R&nbsp; T&nbsp; C&nbsp; T&nbsp; P&nbsp; T&nbsp; T&nbsp; S&nbsp; S&nbsp; L&nbsp; V&nbsp; V&nbsp; P&nbsp; P&nbsp; C&nbsp; T&nbsp; L&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; P&nbsp; Q&nbsp; G&nbsp; P&nbsp; V&nbsp; R&nbsp; Q&nbsp; Q&nbsp; R&nbsp; P&nbsp; L&nbsp; W&nbsp; W&nbsp; Y&nbsp; H&nbsp; H&nbsp; V&nbsp; P&nbsp; W -
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CviJI|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HaeIII|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sau96I||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrFI |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TspRI| |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BsaJI|| |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DpnI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BsmI&nbsp;&nbsp;&nbsp; DpnI EcoRII|| |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sau3AI |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CviRI |Sau3AI |BtsI&nbsp; ||| |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIII | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | |&nbsp;&nbsp;&nbsp;&nbsp; | |&nbsp;&nbsp; |&nbsp; ||| |||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; GGTATTGCTGACAGAATGCAGAAGGAGATCACTGCCCTGGCCCCCAGCACCATGAAGATC
+&nbsp;&nbsp;&nbsp; 6398 --+---------+---------+---------+---------+---------+------- 6457
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CCATAACGACTGTCTTACGTCTTCCTCTAGTGACGGGACCGGGGGTCGTGGTACTTCTAG
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G&nbsp; I&nbsp; A&nbsp; D&nbsp; R&nbsp; M&nbsp; Q&nbsp; K&nbsp; E&nbsp; I&nbsp; T&nbsp; A&nbsp; L&nbsp; A&nbsp; P&nbsp; S&nbsp; T&nbsp; M&nbsp; K&nbsp; I&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp; L&nbsp; L&nbsp; T&nbsp; E&nbsp; C&nbsp; R&nbsp; R&nbsp; R&nbsp; S&nbsp; L&nbsp; P&nbsp; W&nbsp; P&nbsp; P&nbsp; A&nbsp; P&nbsp; *&nbsp; R&nbsp; S&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; C&nbsp; *&nbsp; Q&nbsp; N&nbsp; A&nbsp; E&nbsp; G&nbsp; D&nbsp; H&nbsp; C&nbsp; P&nbsp; G&nbsp; P&nbsp; Q&nbsp; H&nbsp; H&nbsp; E&nbsp; D&nbsp;&nbsp;&nbsp; -
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; A
+&nbsp;&nbsp;&nbsp; 6458 - 6458
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; T</pre>
+<a NAME="Heading48"></a>
+<h4>
+actin.gcg cDNA</h4>
+
+<pre>(Linear) MAP of: actin.gcg&nbsp; check: 1544&nbsp; from: 861&nbsp; to: 1041
+
+ACTIN sequenced from cDNA clone XLACACR.
+&nbsp;With 230 enzymes: *&nbsp;
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; March 5, 1999 16:36&nbsp; ..
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; SfaNI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIII |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; HinfI&nbsp;&nbsp; MspI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BciVI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Hpy178III&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; TfiI BsrFI|&nbsp;&nbsp;&nbsp;&nbsp; NlaIII&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RcaI|&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ||&nbsp; | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ggtatggaatctgccggtatccatgaaactacctacaacagcatcatgaaatgcgacatt
+&nbsp;&nbsp;&nbsp;&nbsp; 861 ---------+---------+---------+---------+---------+---------+ 920
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ccataccttagacggccataggtactttgatggatgttgtcgtagtactttacgctgtaa
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G&nbsp; M&nbsp; E&nbsp; S&nbsp; A&nbsp; G&nbsp; I&nbsp; H&nbsp; E&nbsp; T&nbsp; T&nbsp; Y&nbsp; N&nbsp; S&nbsp; I&nbsp; M&nbsp; K&nbsp; C&nbsp; D&nbsp; I&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp; W&nbsp; N&nbsp; L&nbsp; P&nbsp; V&nbsp; S&nbsp; M&nbsp; K&nbsp; L&nbsp; P&nbsp; T&nbsp; T&nbsp; A&nbsp; S&nbsp; *&nbsp; N&nbsp; A&nbsp; T&nbsp; L&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; G&nbsp; I&nbsp; C&nbsp; R&nbsp; Y&nbsp; P&nbsp; *&nbsp; N&nbsp; Y&nbsp; L&nbsp; Q&nbsp; Q&nbsp; H&nbsp; H&nbsp; E&nbsp; M&nbsp; R&nbsp; H&nbsp; * -
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AvaII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EcoO109I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Psp5II&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; KpnI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ScrFI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sau96I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIV |&nbsp;&nbsp;&nbsp;&nbsp; BsaJI |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sse8647I&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; RsaI |&nbsp;&nbsp;&nbsp; EcoRII |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; AciI&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BanI | |&nbsp;&nbsp;&nbsp; RsaI | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; EcoRV&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp; RsaI&nbsp;&nbsp;&nbsp;&nbsp; MaeII&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; MnlI | | NlaIII| | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | | |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; || | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; gatatccgcaaggacctgtacgccaacaacgtcctctctggtggtaccaccatgtaccct
+&nbsp;&nbsp;&nbsp;&nbsp; 921 ---------+---------+---------+---------+---------+---------+ 980
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ctataggcgttcctggacatgcggttgttgcaggagagaccaccatggtggtacatggga
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; D&nbsp; I&nbsp; R&nbsp; K&nbsp; D&nbsp; L&nbsp; Y&nbsp; A&nbsp; N&nbsp; N&nbsp; V&nbsp; L&nbsp; S&nbsp; G&nbsp; G&nbsp; T&nbsp; T&nbsp; M&nbsp; Y&nbsp; P&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; I&nbsp; S&nbsp; A&nbsp; R&nbsp; T&nbsp; C&nbsp; T&nbsp; P&nbsp; T&nbsp; T&nbsp; S&nbsp; S&nbsp; L&nbsp; V&nbsp; V&nbsp; P&nbsp; P&nbsp; C&nbsp; T&nbsp; L&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; P&nbsp; Q&nbsp; G&nbsp; P&nbsp; V&nbsp; R&nbsp; Q&nbsp; Q&nbsp; R&nbsp; P&nbsp; L&nbsp; W&nbsp; W&nbsp; Y&nbsp; H&nbsp; H&nbsp; V&nbsp; P&nbsp; W -
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; DpnI
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; BsmI&nbsp;&nbsp;&nbsp; DpnI&nbsp;&nbsp; TspRI&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Sau3AI |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; CviRI |Sau3AI |BtsI&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; NlaIII | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | |&nbsp;&nbsp;&nbsp;&nbsp; | |&nbsp;&nbsp; |&nbsp;&nbsp; |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; | | |
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ggtattgctgacagaatgcagaaggagatcactgcctttgcccccagcaccatgaagatc
+&nbsp;&nbsp;&nbsp;&nbsp; 981 ---------+---------+---------+---------+---------+---------+ 1040
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ccataacgactgtcttacgtcttcctctagtgacggaaacgggggtcgtggtacttctag
+&nbsp;
+a&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; G&nbsp; I&nbsp; A&nbsp; D&nbsp; R&nbsp; M&nbsp; Q&nbsp; K&nbsp; E&nbsp; I&nbsp; T&nbsp; A&nbsp; F&nbsp; A&nbsp; P&nbsp; S&nbsp; T&nbsp; M&nbsp; K&nbsp; I&nbsp;&nbsp; -
+b&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp; L&nbsp; L&nbsp; T&nbsp; E&nbsp; C&nbsp; R&nbsp; R&nbsp; R&nbsp; S&nbsp; L&nbsp; P&nbsp; L&nbsp; P&nbsp; P&nbsp; A&nbsp; P&nbsp; *&nbsp; R&nbsp; S&nbsp; -
+c&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Y&nbsp; C&nbsp; *&nbsp; Q&nbsp; N&nbsp; A&nbsp; E&nbsp; G&nbsp; D&nbsp; H&nbsp; C&nbsp; L&nbsp; C&nbsp; P&nbsp; Q&nbsp; H&nbsp; H&nbsp; E&nbsp; D&nbsp;&nbsp;&nbsp; -
+&nbsp;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; a
+&nbsp;&nbsp;&nbsp; 1041 - 1041
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; t</pre>
+&nbsp;<font face="Garamond">Another approach to screening the discrepancy
+would take advantage of DNA amplification using PCR (polymerase chain reaction).</font><a NAME="_Toc415911177"></a><a NAME="_Toc416084149"></a><a NAME="_Toc425907862"></a><a NAME="_Toc445633551"></a><a NAME="_Toc448034801"></a><a NAME="_Toc448039460"></a><a NAME="_Toc448039582"></a><a NAME="_Toc448300507"></a><a NAME="_Toc448315025"></a><a NAME="_Toc448315329"></a><a NAME="_Toc451227764"></a><a NAME="Heading49"></a>
+<h3>
+4.4.5 PCR primer design (GCG PRIMER)<a NAME="_Toc415911178"></a><a NAME="_Toc416084150"></a></h3>
+<a NAME="Heading50"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">The polymerase chain reaction (PCR) has been to molecular
+biology what the invention of the motor engine was to terrestrial travel
+: it's made things a lot faster (but a bit more dirty too...). Designing
+oligos for PCR can be done by hand, but experience shows that you can save
+time, aggravation &amp; funds by using a computer to avoid bad primers.
+Bad primers pairs have melting temperatures that are too different, are
+not specific enough to your target, hybridise together or form internal
+hairpin loops, amongst other things.</font><font face="Garamond">One further
+advantage of using bioinformatics to help in designing PCR primers, is
+that algorithms usually use more accurate methods for T
+<sub>m</sub> calculations
+than the rule of thumb used at the bench : (A+T) = 2 and (G+C) = 4 degrees
+centigrade.</font><a NAME="_Toc415911179"></a><a NAME="_Toc416084151"></a><a NAME="Heading51"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">If you wish to find out more about the way computers
+approach primer design, look through the "Help" offered in the <b>Prime</b>
+program of the GCG package that we will use for the practical. You will
+find such riveting information as thermodynamic calculations of the T
+<sub>m</sub>p
+= delta H / (delta S + R x ln(c/4)) - 273.15 + 16.6 x log[K(+)] where delta
+H is the enthalpy of helix formation...</font><a NAME="_Toc415911180"></a><a NAME="_Toc416084152"></a><a NAME="Heading52"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">You would like to amplify the region containing the
+discrepancy and then directly sequence the PCR product to resolve the matter
+once and for all.</font><sup><font face="Arial Black">Primer design : GCG’s
+PRIME</font></sup>
+<ul>
+<li>
+<font face="Garamond">Find your way to the SeqLab window and select <b>actin.gcg</b>.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Select
+the <b>Functions->Primer Selection->Prime
+</b>menu item.</li>
+
+<li>
+Because the discrepancy we are investigating is quite near the 3’ end
+of the exon, we won’t get any primer pair that will amplify the region
+1017-1019 if we use the default settings. So we will force <b>prime</b>
+to include our region.</li>
+
+<li>
+Go to the <b>Options...</b> by clicking on the button.</li>
+
+<li>
+Click the <b>Specify target range
+</b>radiobutton.</li>
+
+<li>
+Use
+<b>1017</b> as the <b>PCR target starting position
+</b>and <b>1019</b>
+as the <b>PCR target ending position
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>The
+<b>Minimum
+%
+</b>... should default to <b>100</b>, if not, make it so.</li>
+
+<li>
+Close the <b>Options</b> window and then click <b>Run</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>You can
+view the overall figure map of the primers pairs by opening the <b>Output
+Manager Window
+</b>and displaying the file : <b>actin_##.figure</b>. A
+detailed text list of the best 25 primer pairs is given in the file <b>actin_##.prime</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>To detect
+the mutation, you would then have to sequence the PCR product. Can you
+think of an other way to detect the discrepancy using PCR ?</li>
+</ul>
+<font face="Garamond">There are other PCR design software packages available
+that are more powerful and versatile than the relatively primitive GCG
+prime. In the HGMP 'Primer design menu', you will find links to local PrimeGen,
+Primer and OSP programs, as well as links to other sites offering computer
+assisted primer design software. We also hold a 'primer FAQ' (Frequently
+Asked Questions, with answers thrown in as well!).</font><a NAME="_Toc415911181"></a><a NAME="_Toc416084153"></a><a NAME="_Toc425907863"></a><a NAME="_Toc445633552"></a><a NAME="_Toc448034802"></a><a NAME="_Toc448039461"></a><a NAME="_Toc448039583"></a><a NAME="_Toc448300508"></a><a NAME="_Toc448315026"></a><a NAME="_Toc448315330"></a><a NAME="_Toc451227765"></a><a NAME="Heading53"></a>
+<h3>
+4.4.6 Scanning a database for a primer (GCG FINDPATTERN)<a NAME="_Toc415911182"></a><a NAME="_Toc416084154"></a></h3>
+<a NAME="Heading54"></a>
+<h4>
+Why ?</h4>
+<font face="Garamond">It is handy to check your prospective oligos to be
+used in PCR's against currently known sequences in databases in order to
+avoid potential non specific hybridisation and possible amplification of
+the wrong fragment. Some www servers are starting to experiment with 'virtual
+PCR', but it is still too slow to carry out here.</font><a NAME="_Toc415911183"></a><a NAME="_Toc416084155"></a><a NAME="Heading55"></a>
+<h4>
+How ?</h4>
+<font face="Garamond">The GCG program <b>findpatterns</b> simply slides
+a short sequence pattern (in this case your input oligo) against a list
+of sequences (here the sequences in a subset of the GenBank and EMBL databases).
+You can define the patterns ambiguously and allow mismatches. It is this
+little program that is also used internally by GCG's MAP to locate restriction
+enzyme sites.</font><a NAME="_Toc415911184"></a><a NAME="_Toc416084156"></a><a NAME="Heading56"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">The primer pair No. 11 in the previous practical
+would amplify a region encompassing the mutation. In this practical, you
+will check those primers against the synthetic DNA database (containing
+many plasmids and vectors sequences) to guard against non specific amplification
+of vector sequence. You could also screen your oligos against repetitive
+sequences (ALU's etc.) or even against the whole of EMBL (please allow
+some time for this analysis to complete!).</font><sup><font face="Arial Black">Checking
+primers with GCG’s FINDPATTERNS</font></sup>
+<ul>
+<li>
+<font face="Garamond">In the SeqLab window, choose menu <b><i>Functions
+-> Database Sequence Searching -> FindPatterns</i></b></font></li>
+
+<li>
+Click on <b>Search Set
+</b>to select the sequences to search for the oligos.
+In the <b>Build FindPatterns's Search Set
+</b>window, press <b>Add Database
+Sequences
+</b>and in the SeqLab Database Browser, choose the <b>GenEMBL
+-> Synthetic
+</b>subset and press on <b>Add to Search Set
+</b>before clicking
+on <b>Close</b>. You should now see <b>Synthetic:*</b> in the Search Set
+window (meaning : search against all synthetic DNA sequences in the GenBank
+and EMBL databases). Close the Search Set window.</li>
+
+<li>
+Click on <b>Patterns</b> and choose <b>Create New...
+</b>In <b>the Create
+or Modify Item
+</b>window, enter the first primer of set No.11 from the
+previous practical. To do this, you could type it in or open the SeqLab
+<b>Output Manager Window
+</b>and <b>Display</b> the result of your prime
+analysis. Arrange your windows so that you have both the prime output and
+the <b>Create or Modify Item
+</b>windows side by side, then select the
+first primer of product 11 with the left hand mouse button. Click with
+the mouse middle button in the <b>Pattern</b> box to paste the primer sequence!
+Set its name to something like F11 (no white space allowed!). Press <b>Add</b>
+and <b>Close</b> to see your new oligo pattern appear in the <b>Chosen
+Patterns list
+</b>. Repeat this operation for the reverse oligo and call
+it R11. Then press on the <b>Close</b> button of the <b>Pattern Chooser
+</b>window.</li>
+
+<li>
+Click on the FindPatterns <b>Options</b> button and set the allowed mismatches
+to <b>2,</b>.
+<b>Close</b> the Options window.</li>
+
+<li>
+Finally click on <b>Run</b> and relax for a few minutes while GCG does
+its number crunching. Keep an eye on the <b>Job Manager
+</b>and take a
+look at the output from FindPatterns when it becomes available.</li>
+
+<li>
+What are the risks of getting a non specific amplification using a pBR322
+based vector ?<a NAME="_Toc445633553"></a><a NAME="_Toc448034803"></a><a NAME="_Toc448039462"></a><a NAME="_Toc448039584"></a><a NAME="_Toc448300509"></a><a NAME="_Toc448315027"></a><a NAME="_Toc448315331"></a><a NAME="_Toc451227766"></a></li>
+</ul>
+<a NAME="Heading57"></a>
+<h3>
+4.4.7 Other GCG programs</h3>
+<font face="Garamond">Some of the other GCG programs we could have run
+are listed below :</font>
+<ul>
+<li>
+<font face="Garamond"><font size=-1>assemble gap</font></font></li>
+
+<br><font face="Garamond"><font size=-1>backtranslate gapshow plottest</font></font>
+<br><font face="Garamond"><font size=-1>bestfit gcgtoblast pretty</font></font>
+<br><font face="Garamond"><font size=-1>blast gelassemble prime</font></font>
+<br><font face="Garamond"><font size=-1>breakup geldisassemble profileanalysis</font></font>
+<br><font face="Garamond"><font size=-1>chopup gelenter profilegap</font></font>
+<br><font face="Garamond"><font size=-1>circles gelintroduction profilemake</font></font>
+<br><font face="Garamond"><font size=-1>codonfrequency gelmerge profilescan</font></font>
+<br><font face="Garamond"><font size=-1>codonpreference gelstart profilesearch</font></font>
+<br><font face="Garamond"><font size=-1>compare gelview profilesegments</font></font>
+<br><font face="Garamond"><font size=-1>composition getseq publish</font></font>
+<br><font face="Garamond"><font size=-1>compresstext growtree red</font></font>
+<br><font face="Garamond"><font size=-1>comptable helicalwheel reformat</font></font>
+<br><font face="Garamond"><font size=-1>consensus isoelectric repeat</font></font>
+<br><font face="Garamond"><font size=-1>correspond lineup replace</font></font>
+<br><font face="Garamond"><font size=-1>corrupt listfile reverse</font></font>
+<br><font face="Garamond"><font size=-1>dataset lookup sample</font></font>
+<br><font face="Garamond"><font size=-1>detab lprint seg</font></font>
+<br><font face="Garamond"><font size=-1>distances map segments</font></font>
+<br><font face="Garamond"><font size=-1>diverge mapplot seqed</font></font>
+<br><font face="Garamond"><font size=-1>domes mapsort seqlab</font></font>
+<br><font face="Garamond"><font size=-1>dotplot mfold setkeys</font></font>
+<br><font face="Garamond"><font size=-1>extractpeptide moment setplot</font></font>
+<br><font face="Garamond"><font size=-1>fasta motifs shiftover</font></font>
+<br><font face="Garamond"><font size=-1>translate name simplify</font></font>
+<br><font face="Garamond"><font size=-1>fetch names spew</font></font>
+<br><font face="Garamond"><font size=-1>figure nooverlap squiggles</font></font>
+<br><font face="Garamond"><font size=-1>findpatterns olddistances statplot</font></font>
+<br><font face="Garamond"><font size=-1>fingerprint onecase stemloop</font></font>
+<br><font face="Garamond"><font size=-1>fitconsensus overlap stringsearch</font></font>
+<br><font face="Garamond"><font size=-1>foldrna pepdata symbol</font></font>
+<br><font face="Garamond"><font size=-1>framealign pepplot terminator</font></font>
+<br><font face="Garamond"><font size=-1>frames peptidemap testcode</font></font>
+<br><font face="Garamond"><font size=-1>framesearch peptidesort tfasta</font></font>
+<br><font face="Garamond"><font size=-1>fromembl peptidestructure tofasta</font></font>
+<br><font face="Garamond"><font size=-1>fromfasta pileup toig</font></font>
+<br><font face="Garamond"><font size=-1>fromgenbank plasmidmap topir</font></font>
+<br><font face="Garamond"><font size=-1>fromig plotfold tostaden</font></font>
+<br><font face="Garamond"><font size=-1>frompir plotsimilarity</font></font>
+<br><font face="Garamond"><font size=-1>fromstaden plotstructure</font></font><a NAME="_Toc415911185"></a><a NAME="_Toc416084157"></a><a NAME="_Toc425907864"></a><a NAME="_Toc445633554"></a><a NAME="_Toc448034804"></a><a NAME="_Toc448039463"></a><a NAME="_Toc448039585"></a><a NAME="_Toc448300510"></a><a NAME="_Toc448315028"></a><a NAME="_Toc448315332"></a><a NAME="_Toc451227767"></a></ul>
+<a NAME="Heading58"></a>
+<h3>
+4.4.8 The Staden Package.</h3>
+<font face="Garamond">There are alternative sequence analysis packages
+to GCG (this may become particularly relevant now that GCG is privately
+owned and no longer freely available). Roger Staden has developed over
+many years a solid software suite. It does things that GCG can’t do,
+some things GCG do Staden doesn’t do, and some things both packages do,
+they do differently!</font><font face="Garamond">One of the recognised
+major strong points of the Staden package are its integrated set of programs
+for the management of large sequencing projects. This is sufficiently complex
+(albeit popular) that it is the subject of its very own specialised HGMP
+course.</font><a NAME="_Toc415911186"></a><a NAME="_Toc416084158"></a><a NAME="_Toc425907865"></a><a NAME="_Toc445633555"></a><a NAME="_Toc448034805"></a><a NAME="_Toc448039464"></a><a NAME="_Toc448039586"></a><a NAME="_Toc448300511"></a><a NAME="_Toc448315029"></a><a NAME="_Toc448315333"></a><a NAME="_Toc451227768"></a><a NAME="Heading59"></a>
+<h2>
+4.5 CONCLUSION<a NAME="_Toc415911187"></a><a NAME="_Toc416084159"></a><a NAME="_Toc425907866"></a><a NAME="_Toc445633556"></a><a NAME="_Toc448034806"></a><a NAME="_Toc448039465"></a><a NAME="_Toc448039587"></a><a NAME="_Toc448300512"></a><a NAME="_Toc448315030"></a><a NAME="_Toc448315334"></a><a NAME="_Toc451227769"></a></h2>
+<a NAME="Heading60"></a>
+<h3>
+4.5.1 Why bother at all with command line ?</h3>
+<font face="Garamond">All the arguments for and against command line should
+have become apparent in the previous practicals. Summarised, they look
+like this :</font><b>Command Line</b><a NAME="_Toc416084160"></a><a NAME="Heading61"></a>
+<h4>
+For</h4>
+
+<ul>
+<li>
+<font face="Garamond">Can be accessed through non graphical terminals (hopefully
+a rare occurrence today) or slow networks (not so rare !)</font></li>
+
+<li>
+Can be quicker for simple jobs or when you become an experienced user</li>
+
+<li>
+Consistent interface (often several GUI's are created for the same program,
+each GUI will look completely different to each other)</li>
+
+<li>
+Programs can be called from inside scripts (i.e. very simple programs that
+call other programs to automate tedious repetitive tasks, such as periodically
+searching a database, or dealing with large sequencing projects with lots
+of sequence files)</li>
+
+<li>
+Full functionality<a NAME="_Toc416084161"></a></li>
+</ul>
+<a NAME="Heading62"></a>
+<h4>
+Against</h4>
+
+<ul>
+<li>
+<font face="Garamond">Slow learning curve !</font></li>
+
+<li>
+Where's the help ?</li>
+
+<li>
+What is the syntax?</li>
+
+<li>
+What does the output mean?</li>
+
+<li>
+Output in text format limits the readability of results</li>
+</ul>
+&nbsp;<b>Graphical (GUI)</b><a NAME="_Toc416084162"></a><a NAME="Heading63"></a>
+<h4>
+For</h4>
+
+<ul>
+<li>
+<font face="Garamond">Intuitive ! Fast learning curve!</font></li>
+
+<li>
+Online help</li>
+
+<li>
+Visible options (check boxes, forms etc.)</li>
+
+<li>
+Less typing</li>
+
+<li>
+Sometimes graphical output can help interpret results (e.g. graph vs list
+of numbers)</li>
+
+<li>
+Project input / output files management<a NAME="_Toc416084163"></a></li>
+</ul>
+<a NAME="Heading64"></a>
+<h4>
+Against</h4>
+
+<ul>
+<li>
+<font face="Garamond">Sometimes limited functionality</font></li>
+
+<li>
+Inconsistent look and feel for the same underlying programs</li>
+</ul>
+<font face="Garamond">In a word, it is still worth learning to master command
+line program invocation. This might change when there is enough left-over
+time and funding from core algorithm development to be channelled into
+improving scientific software interfaces... Already the world wide web
+is offering 'form' interfaces to many bioinformatics programs: fill out
+&amp; submit.</font>&nbsp;
+<hr><a NAME="fn1" HREF="#fnB1"></a><a href="#fnB1" NAME="fn1">[1]</a><font face="Garamond"><font size=-1>
+You can check where you are by the pwd (
+<b>p</b>rint
+<b>w</b>orking
+<b>d</b>irectory)
+command.</font></font><a NAME="fn2" HREF="#fnB2"></a><a href="#fnB2" NAME="fn2">[2]</a><font face="Garamond"><font size=-1>
+Notice that this are the same values as used in the <b>bestfit</b> example.</font></font><a NAME="fn3" HREF="#fnB3"></a><a href="#fnB3" NAME="fn3">[3]</a><font face="Garamond"><font size=-1>
+The ## represent the number of your account. They should not be used literally
+(or they will produce and error).</font></font><a NAME="fn4" HREF="#fnB4"></a><a href="#fnB4" NAME="fn4">[4]</a><font face="Garamond"><font size=-1>
+The ## in this example represents the ‘experiment’ number. Everytime
+an analysis is performed, this number is increased.</font></font><a NAME="fn5" HREF="#fnB5"></a><a href="#fnB5" NAME="fn5">[5]</a><font face="Garamond"><font size=-1>
+Go to the <b>Output Manager Window
+</b>and look at the <b>bestfit_##.pair</b>
+files. Make sure you know which one had the changed settings. You can see
+the settings in the output file.</font></font>
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-3.html"><img SRC="prev.gif" ALT="4INTRODUCTORY SEQUENCE ANALYSIS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-5.html"><img SRC="next.gif" ALT="5DATABASES" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

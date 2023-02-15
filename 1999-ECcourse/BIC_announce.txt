@@ -1,0 +1,48 @@
+          EMBnet
+
+          International course on
+ [EMBnet]
+          Bioinformatics
+
+          EMBnet/CNB 09-13 November 1999
+
+Location: The course will be held at the Spanish EMBnet node in CNB-CSIC and
+at the School of Computer Engineering of the U. Autónoma de Madrid in
+Cantoblanco, Madrid, SPAIN.
+
+Contents: A general introduction to Bioinformatics for Molecular Biologists
+including theoretical lectures and practical sessions.
+
+Speakers:
+
+   * Rob Harper (EBI - EMBL)
+   * Rodrigo López (EBI - EMBL)
+   * Graziano Pesole (Università degli Studi di Milano)
+   * José R. Valverde (EMBnet/CNB)
+
+Assistance: A limited number students will be accepted. Selection will be
+based on curriculum, research interests and motivation of applicants.
+
+Cost:
+
+   * 120.2 Euro (20000 ESP) for current EMBnet/CNB subscribers
+   * 240.4 Euro (40000 ESP) for academic students
+   * 480.8 Euro (80000 ESP) for commercial students
+
+Price includes one year subscription to EMBnet/CNB services.
+
+Application: Send a sort curriculum, a short description of your interests
+and motivation for attending the course to the contact address below before
+31-August-1999.
+
+Contact address: For details on the course, submitting applications, or any
+other queries, please use any of these addresses:
+
+   * Mail: EMBnet/CNB. Campus UAM. Cantoblanco, 28049. Madrid - SPAIN
+   * e-mail: training@es.embnet.org
+   * Fax: +34 91 585 45 06 (addressed to EMBnet/CNB)
+   * WWW: http://www.es.embnet.org/Services/training/bic99/
+
+         Details: are available on our WWW server and upon request.
+
+ [EMBnet/CNB] [CNB] [CSIC] [II-UAM (ES)] [EBI (EMBL)]  [U. Milano (IT)]

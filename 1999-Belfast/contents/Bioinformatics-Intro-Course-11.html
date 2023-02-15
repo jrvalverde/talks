@@ -1,0 +1,88 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>11	APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:42
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-11.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-10.html"><img SRC="prev.gif" ALT="11APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr><a NAME="_Toc416084264"></a><a NAME="_Toc425907931"></a><a NAME="_Toc445633649"></a><a NAME="_Toc448034891"></a><a NAME="_Toc448039535"></a><a NAME="_Toc448039657"></a><a NAME="_Toc448300577"></a><a NAME="_Toc448315178"></a><a NAME="_Toc448315482"></a><a NAME="_Toc451227836"></a><a NAME="Heading189"></a>
+<h1>
+11 APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT</h1>
+<font face="Garamond">There's more than one way to do this!</font><font face="Garamond">First,
+make a backup copy (e.g. </font><tt><font face="Courier New">cp myseq.seq
+myseq.backup
+</font></tt><font face="Garamond">). If your sequence file
+is in a "standard" recognised format, e.g. fasta or staden : use a specialised
+GCG conversion program: </font><tt><font face="Courier New">fromfasta,
+fromstaden
+</font></tt><font face="Garamond">etc.</font><font face="Garamond">Alternatively,
+you can use the readseq program available from the HGMP telnet or www menus.
+The readseq is very smart and can handle virtually any sequence format.</font><font face="Garamond">Or
+is it a pure text file with some useful comments (recommended to identify
+your sequence in a few months time)?</font><a NAME="_Toc448315179"></a><a NAME="_Toc448315483"></a><b><tt><font face="Courier New"><font size=-1>You
+can have some useful some comments here</font></font></tt></b><a NAME="_Toc448315180"></a><a NAME="_Toc448315484"></a><b><tt><font face="Courier New"><font size=-1>such
+as where's this sequence from, date, clone</font></font></tt></b><a NAME="_Toc448315181"></a><a NAME="_Toc448315485"></a><b><tt><font face="Courier New"><font size=-1>acgtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><a NAME="_Toc448315182"></a><a NAME="_Toc448315486"></a><b><tt><font face="Courier New"><font size=-1>gggaaatttcgtcgactaggctatgctatgctaggcgggatctagtatatg</font></font></tt></b><a NAME="_Toc448315183"></a><a NAME="_Toc448315487"></a><b><tt><font face="Courier New"><font size=-1>gtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><font face="Garamond">Edit
+the seqence with a unix text editor, e.g. pico and put a space and two
+fullstops after the last comment, i.e. on the last line before the sequence
+starts :</font><a NAME="_Toc448315184"></a><a NAME="_Toc448315488"></a><b><tt><font face="Courier New"><font size=-1>You
+can have some useful some comments here&nbsp;</font></font></tt></b><a NAME="_Toc448315185"></a><a NAME="_Toc448315489"></a><b><tt><font face="Courier New"><font size=-1>such
+as where's this sequence from, date, clone..</font></font></tt></b><a NAME="_Toc448315186"></a><a NAME="_Toc448315490"></a><b><tt><font face="Courier New"><font size=-1>acgtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><a NAME="_Toc448315187"></a><a NAME="_Toc448315491"></a><b><tt><font face="Courier New"><font size=-1>gggaaatttcgtcgactaggctatgctatgctaggcgggatctagtatatg</font></font></tt></b><a NAME="_Toc448315188"></a><a NAME="_Toc448315492"></a><b><tt><font face="Courier New"><font size=-1>gtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><font face="Garamond">Save
+the modified file, exit pico and now run the GCG reformat program which
+will mess around in your file to make it GCG compliant :</font>
+<ul>
+<li>
+<font face="Garamond">reformat myseq.seq</font></li>
+</ul>
+<font face="Garamond">Or is it a pure text file that looks like this?</font><a NAME="_Toc448315189"></a><a NAME="_Toc448315493"></a><b><tt><font face="Courier New"><font size=-1>acgtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><a NAME="_Toc448315190"></a><a NAME="_Toc448315494"></a><b><tt><font face="Courier New"><font size=-1>gggaaatttcgtcgactaggctatgctatgctaggcgggatctagtatatg</font></font></tt></b><a NAME="_Toc448315191"></a><a NAME="_Toc448315495"></a><b><tt><font face="Courier New"><font size=-1>gtcgactaggctatgctatgctaggcgggatctagtatatgctagacta</font></font></tt></b><font face="Garamond">You
+can use the HGMP txttogcg program (not a GCG program!) which will convert
+plain text files to gcg format (it uses readseq behind the scenes).</font>At
+the Unix % prompt, type
+<ul>
+<li>
+<font face="Garamond">txttogcg filename</font></li>
+</ul>
+<font face="Garamond">or</font>
+<ul>
+<li>
+<font face="Garamond">txttogcg *.seq</font></li>
+</ul>
+<font face="Garamond">to convert all your files with a .seq extension in
+the current directory to GCG format.</font><font face="Garamond">You can
+also use pico to add a line with two dots before the sequence (might as
+well add a comment while you're at it!) and use the GCG reformat command
+to convert your sequence (see above).</font>&nbsp;
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-10.html"><img SRC="prev.gif" ALT="11APPENDIX III: CONVERTING SEQUENCES TO GCG FORMAT" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

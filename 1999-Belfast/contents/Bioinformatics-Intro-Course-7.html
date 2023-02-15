@@ -1,0 +1,1596 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <meta name="GENERATOR" content="Mozilla/4.51 [en] (X11; I; Linux 2.0.35 i686) [Netscape]">
+   <title>7	PROTEIN ANALYSIS AND IDENTIFICATION</title>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:27
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-7.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+</head>
+<body bgcolor="#FFFFFF">
+
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-6.html"><img SRC="prev.gif" ALT="7PROTEIN ANALYSIS AND IDENTIFICATION" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-8.html"><img SRC="next.gif" ALT="8FURTHER PROJECTS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+<hr>
+<ul>
+<li>
+<a href="#Heading144">7.1 INTRODUCTION</a></li>
+
+<ul>
+<li>
+<a href="#Heading145">7.1.1 Computational Protein Analysis</a></li>
+
+<ul>
+<li>
+<a href="#Heading146">Check your Predictions with Wet Biology!</a></li>
+</ul>
+</ul>
+
+<li>
+<a href="#Heading147">7.2 PROTEIN SEQUENCE ANALYSIS</a></li>
+
+<ul>
+<li>
+<a href="#Heading148">7.2.1 Steps in Protein Sequence Analysis</a></li>
+</ul>
+
+<li>
+<a href="#Heading149">7.3 PRACTICAL IN PROTEIN SEQUENCE ANALYSIS</a></li>
+
+<ul>
+<li>
+<a href="#Heading150">Objectives</a></li>
+
+<li>
+<a href="#Heading151">Practical</a></li>
+
+<li>
+<a href="#Heading152">Motifs</a></li>
+
+<li>
+<a href="#Heading153">BLAST IT !</a></li>
+</ul>
+
+<li>
+<a href="#Heading154">7.4 MULTIPLE SEQUENCE ALIGNMENT</a></li>
+
+<ul>
+<li>
+<a href="#Heading155">7.4.1 Why?</a></li>
+
+<li>
+<a href="#Heading156">7.4.2 Multiple Alignment Methods</a></li>
+
+<li>
+<a href="#Heading157">7.4.3 How do I get a better alignment?</a></li>
+
+<li>
+<a href="#Heading158">7.4.4 Practical: Creating a Multiple Sequence Alignment</a></li>
+</ul>
+
+<li>
+<a href="#Heading159">7.5 PROFILES</a></li>
+
+<ul>
+<li>
+<a href="#Heading160">7.5.1 Profile Searching</a></li>
+
+<ul>
+<li>
+<a href="#Heading161">Background</a></li>
+
+<li>
+<a href="#Heading162">Example part of a profile</a></li>
+
+<li>
+<a href="#Heading163">GCG's Protein Sequence Profiling</a></li>
+
+<li>
+<a href="#Heading164">Hidden Markov Models (HMMs)</a></li>
+
+<li>
+<a href="#Heading165">Practical: Protein Sequence Profiling</a></li>
+</ul>
+
+<li>
+<a href="#Heading166">7.5.2 Secondary structure prediction</a></li>
+
+<li>
+<a href="#Heading167">7.5.3 Tertiary structure</a></li>
+</ul>
+
+<li>
+<a href="#Heading168">7.6 PHYLOGENY</a></li>
+
+<ul>
+<li>
+<a href="#Heading169">7.6.1 Why</a></li>
+
+<li>
+<a href="#Heading170">7.6.2 Phylogenetic Methods</a></li>
+
+<ul>
+<li>
+<a href="#Heading171">Clustering</a></li>
+
+<li>
+<a href="#Heading172">Generate and evaluate alternative trees</a></li>
+</ul>
+
+<li>
+<a href="#Heading173">7.6.3 Improving the Reliability of the Tree</a></li>
+
+<ul>
+<li>
+<a href="#Heading174">Significance of the tree</a></li>
+
+<li>
+<a href="#Heading175">Domain Problems</a></li>
+
+<li>
+<a href="#Heading176">Use other Information</a></li>
+</ul>
+
+<li>
+<a href="#Heading177">7.6.4 Phylogeny Practical</a></li>
+
+<li>
+<a href="#Heading178">7.6.5 Using Pie for a more reliable tree.</a></li>
+
+<ul>
+<li>
+<a href="#Heading179">Running a Pie analysis</a></li>
+
+<li>
+<a href="#Heading180">Select Process Parameters</a></li>
+
+<li>
+<a href="#Heading181">Viewing Pie Results</a></li>
+</ul>
+</ul>
+</ul>
+<a NAME="_Toc415911239"></a><a NAME="_Toc416084232"></a><a NAME="_Toc425907904"></a><a NAME="_Toc445633606"></a><a NAME="_Toc448034847"></a><a NAME="_Toc448039505"></a><a NAME="_Toc448039627"></a><a NAME="_Toc448300550"></a><a NAME="_Toc448315089"></a><a NAME="_Toc448315393"></a><a NAME="_Toc451227809"></a><a NAME="Heading143"></a>
+<h1>
+7 PROTEIN ANALYSIS AND IDENTIFICATION<a NAME="_Toc416084233"></a><a NAME="_Toc425907905"></a><a NAME="_Toc445633607"></a><a NAME="_Toc448034848"></a><a NAME="_Toc448039506"></a><a NAME="_Toc448039628"></a><a NAME="_Toc448300551"></a><a NAME="_Toc448315090"></a><a NAME="_Toc448315394"></a><a NAME="_Toc451227810"></a></h1>
+<a NAME="Heading144"></a>
+<h2>
+7.1 INTRODUCTION<a NAME="_Toc416084234"></a><a NAME="_Toc425907906"></a><a NAME="_Toc445633608"></a><a NAME="_Toc448034849"></a><a NAME="_Toc448039507"></a><a NAME="_Toc448039629"></a><a NAME="_Toc448300552"></a><a NAME="_Toc448315091"></a><a NAME="_Toc448315395"></a><a NAME="_Toc451227811"></a></h2>
+<a NAME="Heading145"></a>
+<h3>
+7.1.1 Computational Protein Analysis</h3>
+<font face="Garamond">A protein sequence can come from gene predictions,
+papers, database matches or even peptide sequencing. Once we have a protein
+sequence we want to try to identify it and find out something about its
+function. You may already have ideas about the physiological function,
+so you could use bioinformatics methods to support or refute these. It
+is important to use and critically evaluate information from different
+sources (including the nucleotide analysis), all of which will aid the
+determination of possible function.</font><font face="Garamond">To do this
+we can look for:</font>
+<ul>
+<li>
+<font face="Garamond">Similar sequences in the sequence databases.</font></li>
+
+<li>
+Distinctive patterns/domains associated with protein function.</li>
+
+<li>
+Functionally important residues.</li>
+
+<li>
+Secondary and tertiary structure which provides more insights than the
+primary structure.</li>
+
+<li>
+Look at some physical properties e.g. potential hydrophobicity or hydrophilicity
+and isoelectric point (to aid isolating the protein).</li>
+</ul>
+&nbsp;
+<br><font face="Garamond">Protein sequence analysis is often more useful
+than nucleotide sequence analysis for a number of reasons:</font>
+<ul>
+<li>
+<font face="Garamond">Protein sequences usually contain a higher signal
+to "junk" ratio.</font></li>
+
+<li>
+Database similarity searches are about five times more sensitive.</li>
+
+<li>
+It is often closer to the actual biological function.</li>
+
+<li>
+The 3-D structure of similar proteins may be known.</li>
+
+<li>
+Evolutionary relationships are sometimes more visible.</li>
+
+<li>
+Annotation of protein sequence and related databases is often comprehensive.<a NAME="_Toc416084237"></a><a NAME="_Toc425907908"></a><a NAME="_Toc445633610"></a><a NAME="_Toc448034851"></a><a NAME="_Toc448039509"></a><a NAME="_Toc448039631"></a></li>
+</ul>
+<a NAME="Heading146"></a>
+<h4>
+Check your Predictions with Wet Biology!</h4>
+
+<ul>
+<li>
+<font face="Garamond">Don't be overly trusting of computers and databases!</font></li>
+
+<li>
+Check literature.</li>
+
+<li>
+Do some appropriate lab work.</li>
+</ul>
+e.g. Enzyme inhibitors, crystallography, expression profiling, functional
+analysis with model organisms, protein fingerprinting etc.<img SRC="Bioinformatics-Intro-Course08.gif" height=542 width=479><a NAME="_Toc416084238"></a><i><font face="Garamond">Figure:
+Structure Prediction Flow chart by Robert Russell</font></i><a NAME="_Toc425907909"></a><a NAME="_Toc445633611"></a><a NAME="_Toc448034852"></a><a NAME="_Toc448039510"></a><a NAME="_Toc448039632"></a><a NAME="_Toc448300553"></a><a NAME="_Toc448315092"></a><a NAME="_Toc448315396"></a><a NAME="_Toc451227812"></a><a NAME="Heading147"></a>
+<h2>
+7.2 PROTEIN SEQUENCE ANALYSIS<a NAME="_Toc416084239"></a><a NAME="_Toc425907910"></a><a NAME="_Toc445633612"></a><a NAME="_Toc448034853"></a><a NAME="_Toc448039511"></a><a NAME="_Toc448039633"></a><a NAME="_Toc448300554"></a><a NAME="_Toc448315093"></a><a NAME="_Toc448315397"></a><a NAME="_Toc451227813"></a></h2>
+<a NAME="Heading148"></a>
+<h3>
+7.2.1 Steps in Protein Sequence Analysis</h3>
+
+<ol>
+<li>
+<font face="Garamond">Look for known distinctive patterns.</font></li>
+</ol>
+
+<ul>
+<li>
+<font face="Garamond">Conserved protein domains or regions can be very
+useful in trying to determine which protein family a sequence belongs to
+or where possible catalytic sites are located.</font></li>
+</ul>
+Patterns can be analysed using motifs (regular expressions) or profiles
+(statistical models). The PROSITE database is an example of such a pattern
+database.
+<ol>
+<li>
+<font face="Garamond">Find homologous (paralogous and orthologous) sequences
+using a database similarity search.</font></li>
+</ol>
+
+<ul>
+<li>
+<font face="Garamond">Homologues may be well annotated and their function
+documented in the literature.</font></li>
+
+<li>
+Phylogenetic analysis may reveal evolutionary relationships between proteins
+and help you decide which family or super family a protein belongs to.</li>
+</ul>
+N.B. Be aware of convergent evolution.
+<ol>
+<li>
+<font face="Garamond">Identify structural features.</font></li>
+</ol>
+<font face="Garamond">Having some idea of structure would help you predict
+possible functions: knowing the protein fold along with conserved domains
+(or even residues) may tell you what type of function this protein is likely
+to have.</font>
+<ul>
+<li>
+See the structure prediction flow chart figure.</li>
+
+<li>
+Search against sequences or structures in tertiary structure databases(e.g.
+PDB). If a homologue exists in the PDB database, it is very likely that
+they have similar folds. (But there are examples of proteins with similar
+sequences, but different folds. The prion involved in the BSE related disease
+is an example of this).</li>
+
+<li>
+If there are no clear homologues in the PDB database, secondary structure
+prediction is an option. Secondary structure predictions can give some
+information about the location of helix or beta sheets in the protein.</li>
+
+<li>
+Tertiary structure prediction is another option, but a very difficult one
+if only the primary structure is know.<a NAME="_Toc416084240"></a><a NAME="_Toc425907911"></a><a NAME="_Toc445633613"></a><a NAME="_Toc448034854"></a><a NAME="_Toc448039512"></a><a NAME="_Toc448039634"></a><a NAME="_Toc448300555"></a><a NAME="_Toc448315094"></a><a NAME="_Toc448315398"></a><a NAME="_Toc451227814"></a></li>
+</ul>
+<a NAME="Heading149"></a>
+<h2>
+7.3 PRACTICAL IN PROTEIN SEQUENCE ANALYSIS</h2>
+<a NAME="Heading150"></a>
+<h4>
+Objectives</h4>
+<font face="Garamond">The purpose of this practical is to search for known
+motifs, find homologues, do a multiple alignment, predict secondary structure
+and look at a 3D structure of a protein. We will mainly use the GCG SeqLab
+interface and a web browser.</font><a NAME="Heading151"></a>
+<h4>
+Practical</h4>
+<font face="Garamond">We will use a sequence of a small peptide that we
+imaginatively called ‘unknown’. The protein sequence was derived from
+a genomic fragment that came from a small green algae species, but that’s
+about all we know about it. The file is in FASTA format, but since we will
+be using GCG for most of the exercise, we need to reformat the sequence
+first.</font><sup><font face="Arial Black">Reformat a fasta format sequence
+into GCG format</font></sup>
+<ul>
+<li>
+<font face="Garamond">Start GCG from the HGMP-RC Menu, if you have not
+already done so.</font></li>
+
+<li>
+Move into the directory called ‘chapter7’ with the cd command<a NAME="_Toc448315095"></a><a NAME="_Toc448315399"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % cd chapter7</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">The "unknown" peptide sequence will be in a file
+called unknown.fasta. If this file does not exist, then you will need to
+create one with this sequence:</font><a NAME="_Toc448315096"></a><a NAME="_Toc448315400"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>>unknown</font></font></tt></b>
+<br><b><tt><font face="Courier New"><font size=-1>MTKKIGLFYGTQTGKTESVAEIIRDEFGNDVVTLHDVSQAEVTDLNDYQYLIIGCPTWNI</font></font></tt></b><a NAME="_Toc448315097"></a><a NAME="_Toc448315401"></a><b><tt><font face="Courier New"><font size=-1>GELQSDWEGLYSELDDVDFNGKLVAYFGTGDQIGYADNFQDAIGILEEKISQRGGKTVGY</font></font></tt></b><a NAME="_Toc448315098"></a><a NAME="_Toc448315402"></a><b><tt><font face="Courier New"><font size=-1>WSTDGYDFNDSKALRNGKFVGLALDEDNQSDLTDDRIKSWVAQLKSEFGL</font></font></tt></b>&nbsp;
+<ul>
+<li>
+<font face="Garamond">Convert this fasta format file to GCG format e.g.:</font><a NAME="_Toc448315099"></a><a NAME="_Toc448315403"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % fromfasta unknown.fasta</font></font></tt></b><a NAME="_Toc448315100"></a><a NAME="_Toc448315404"></a><b><tt><font face="Courier New"><font size=-1>Using
+unknown.pep as output file.</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Just to check the output:</font><a NAME="_Toc448315101"></a><a NAME="_Toc448315405"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % more unknown.pep</font></font></tt></b><font face="Garamond">Now
+we have the GCG format file, we can start up SeqLab.</font><sup><font face="Arial Black">Starting
+SeqLab and Selecting a Sequence</font></sup>
+<ul>
+<li>
+<font face="Garamond">To start up SeqLab as a separate process enter</font><a NAME="_Toc448315102"></a><a NAME="_Toc448315406"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % seqlab &amp;</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Two windows of imposing blueness emerge. Click the
+OK button on the less than useful one.</font></li>
+
+<li>
+If you find yourself in Editor mode (bright white stuff in the middle),
+click and hold on the Mode: pull down menu (left hand side, about and inch
+down) and select the Main List option.</li>
+
+<li>
+Deal once more with the SeqLab nonsense defaults. Elect to create a new
+working list by selecting the New List option from the SeqLab Main window
+File pull-down menu . This done, a new stunted little window labelled New
+List File will stumble bluely forth. It will enquire abruptly of you:</li>
+
+<li>
+Name of new list file:</li>
+
+<li>
+To which you should firmly reply:</li>
+
+<li>
+./working.list</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>meaning
+that you want you new working list to be stored in a file called working.list
+which should reside in the current directory (".") . Once you have entered
+the name of your new working list, click on the OK button of your New List
+File window , which will then, with all the satisfaction of a job well
+done, fade away. Note that the setting of the List section of your SeqLab
+Main window has been updated appropriately .</li>
+
+<li>
+Next, you should think about the SeqLab "working directory". That is the
+directory into which SeqLab will store all its output. This is preserved
+between runs, so it will be the "working directory" that was appropriate
+last time you used SeqLab , which could be just about anywhere. Select
+Preferences from the Options pull down menu. A new blue Preferences window
+will appear. Make sure you are looking at the General preferences, if not,
+select General from the Preferences window Preference pull down menu .
+If the Working Dir ... section of the Preferences window is not already
+set to the current directory, click on the Working Dir ... button. A Change
+Working Directory window (blue, as it happens) will appear. Select an appropriate
+directory using your left hand mouse and then click on the OK button in
+all blue windows other than your SeqLab Main Window.</li>
+
+<li>
+We now want to add our peptide sequence to our main list:
+<b><i>File →
+Add Sequences from → Sequence Files</i></b></li>
+
+<li>
+In the Filter field, change the <b>*.seq</b> to <b>*.pep</b> and click
+on <b><i>Filter</i></b>, so that the programs searches your directory for
+<b>*.pep
+</b>files!</li>
+
+<li>
+Left click on your <b><i>unknown.pep</i></b> file to select it. Finally
+left-click on <b><i>Add</i></b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>You should
+now have a single highlighted entry in your Main List window</li>
+
+<li>
+A rapid Double-Left-mouse-click on this and you will see the entry.</li>
+</ul>
+<font face="Garamond">We now are ready to do some research on the unknown
+protein. The first thing we are going to do, is to find out if there are
+any known motifs in the protein. We are going to use the GCG program Motifs
+and if we have time enough we are going to explore a web based system that
+looks at protein domains in a different way (using Hidden Markov Models).</font><a NAME="Heading152"></a>
+<h4>
+Motifs</h4>
+<font face="Garamond">The GCG program Motifs uses the Prosite database
+of known protein domains. In Prosite, the domains are (mostly) described
+as patterns. For instance, it will describe the heme <i>c</i> binding domain
+in cytochromes as C-X{2}-C-H, which means that the domain consist of a
+cystein amino acid residue, followed by any two amino acids, followed by
+a cystein and a histidine residue<a NAME="fnB6" HREF="#fn6"></a></font><a href="#fn6" NAME="fnB6">[6]</a><font face="Garamond">.
+If you want to know more about Prosite you can take a look at the Prosite
+web page (http://www.expasy.ch/sprot/prosite.html).</font><sup><font face="Arial Black">Looking
+for Motifs</font></sup><a NAME="_Toc448315103"></a><a NAME="_Toc448315407"></a><b><font face="Arial">1
+. In GCG using the Prosite Database</font></b>
+<ul>
+<li>
+<font face="Garamond">Motifs is GCG's program for searching for known prosite
+motifs.</font></li>
+
+<li>
+Highlight your_source_sequence (unknown.pep) with the left mouse button.
+<b><i>Select Functions->Protein Analysis->Motifs</i></b></li>
+
+<li>
+Click on <b><i>Run</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Select
+<b><i>Windows->Job
+Manager
+</i></b>and wait a few seconds for it to complete.</li>
+
+<li>
+Select
+<b><i>Windows->Output Manager</i></b></li>
+
+<li>
+Select Display and examine the output from this Motifs search. The peptide
+sequence should contain a few motifs. Note that some motifs will be found
+by chance and will be biologically irrelevant.<a NAME="_Toc448315104"></a><a NAME="_Toc448315408"></a></li>
+</ul>
+<b><font face="Arial">2 . Using Pfam (if there is enough time)</font></b><b><tt><font face="Courier New"><font size=-1>Go
+to the pfam page <a href="http://www.sanger.ac.uk/Software/Pfam/">http://www.sanger.ac.uk/Software/Pfam/</a></font></font></tt></b><tt><font face="Courier New"><font size=-1>(Follow
+the link from the HGMP Home page <b>The Genome Web -> Protein Database
+-> Pattern and Domain Databases -> Pfam)</b></font></font></tt>
+<ul>
+<li>
+<font face="Garamond">Choose
+<b><i>Protein HMM Search</i></b></font></li>
+
+<li>
+You need your sequence in FASTA format. So you should use the <b><i>unknown.fasta</i></b>
+file that you used earlier.</li>
+
+<li>
+Now paste this FASTA format file into the Protein Sequence box<a NAME="fnB7" HREF="#fn7"></a><a href="#fn7" NAME="fnB7">[7]</a></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Set this
+searching by clicking <b>Submit Query
+</b>and carry on with the exercises
+whilst it runs.</li>
+</ul>
+<font face="Garamond">The output of the GCG Motif program, shows which
+patterns were found and where they match in the sequence. It also contains
+some information about the pattern. The third pattern in your list should
+receive some special attention !</font><font face="Garamond">The other
+patterns could also be important, but it is left to the reader to determine
+why they are not, in this case.</font><font face="Garamond">The third pattern
+should be a Flavodoxin motif.<a NAME="fnB8" HREF="#fn8"></a></font><a href="#fn8" NAME="fnB8">[8]</a><font face="Garamond">
+Read the information that comes with the patterns to see if this tells
+you anything about the function of your protein. The top of the entry shows
+three lines. The first line is the complete pattern as it is recorded in
+the Prosite database. The second line is the pattern which matches the
+query sequence, which is a subset of the complete pattern. The third line
+shows the actual query sequence. The gap is just there to distinguish the
+pattern sequence from the surrounding sequence.</font><font face="Garamond">If
+performed, the results of the Pfam exercise should confirm the results
+of the Motifs search.</font><a NAME="Heading153"></a>
+<h4>
+BLAST IT !</h4>
+<font face="Garamond">Now we have a fairly good idea what special domain
+our protein has, we might want to find out if there are proteins in the
+sequence databases that are similar to ours. Similar proteins are often
+(but not always !) homologues of each other, so this might gives us an
+idea of the function of our protein. But beware: sequence similarity and
+homology are not necessarily the same, as it could just be evolutionary
+convergence or chance.</font><font face="Garamond">We will use our sequence
+in a BLAST search against the SwissProt database. The SwissProt database
+does not contain ALL known protein sequences, but it is very thoroughly
+annotated. For many proteins in the database the function is known, so
+this will help us in our search for the function of our unknown protein.</font><sup><font face="Arial Black">Look
+for Homologues using BLAST</font></sup>
+<ul>
+<li>
+<font face="Garamond">Highlight your source sequence with your left mouse
+button. Select <b><i>Functions->Database Sequence Searching->Blast</i></b></font></li>
+
+<li>
+Search a protein database. For the “Search Set”, “local SwissProt”
+is grand (it searches sw_new automatically)</li>
+
+<li>
+Click on Run</li>
+
+<li>
+Please continue with next exercise, while this runs.</li>
+
+<li>
+Select
+<b><i>Windows->Job Manager
+</i></b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Select
+<b><i>Windows->Output
+Manager</i></b></li>
+
+<li>
+Select Display and examine the output from this analysis using the information
+in section 6.3.3. Note the probability values and how unlikely it is that
+the flavodoxin matches could have occurred by chance!</li>
+</ul>
+<font face="Garamond">We now have mounting evidence that our protein is
+a flavodoxin. Both the Motifs search (and Pfam) and the BLAST data are
+in agreement on this. We will now assume (although without any other knowledge
+about the protein, this is a bit tricky...) that our protein is a flavodoxin
+and we are interested in comparing our protein to other members of the
+flavodoxin group.</font><font face="Garamond">We will do this using multiple
+sequence alignments.</font><a NAME="_Toc416084241"></a><a NAME="_Toc425907912"></a><a NAME="_Toc445633614"></a><a NAME="_Toc448034855"></a><a NAME="_Toc448039513"></a><a NAME="_Toc448039635"></a><a NAME="_Toc448300556"></a><a NAME="_Toc448315105"></a><a NAME="_Toc448315409"></a><a NAME="_Toc451227815"></a><a NAME="Heading154"></a>
+<h2>
+7.4 MULTIPLE SEQUENCE ALIGNMENT<a NAME="_Toc416084242"></a></h2>
+<a NAME="_Toc425907913"></a><a NAME="_Toc445633615"></a><a NAME="_Toc448034856"></a><a NAME="_Toc448039514"></a><a NAME="_Toc448039636"></a><a NAME="_Toc448300557"></a><a NAME="_Toc448315106"></a><a NAME="_Toc448315410"></a><a NAME="_Toc451227816"></a><a NAME="Heading155"></a>
+<h3>
+7.4.1 Why?</h3>
+
+<ul>
+<li>
+<font face="Garamond">Highlights regions of similarity, divergence and
+mutations.</font></li>
+
+<li>
+Provides more information than a single sequence. (e.g. use for creating
+a profile for an even more sensitive search to find other more distant
+family members.)</li>
+
+<li>
+Creating a consensus will highlight functionally important domains or residues.</li>
+
+<li>
+Could reveal errors in protein sequence prediction.</li>
+
+<li>
+Secondary structure and other predictions improve.</li>
+
+<li>
+Evolutionary analysis (phylogeny).</li>
+
+<li>
+Find novel motifs ( e.g. using Hidden Markov Model techniques).</li>
+
+<li>
+Selection of appropriate primers for a gene family.<a NAME="_Toc421603531"></a><a NAME="_Toc425907914"></a><a NAME="_Toc445633616"></a><a NAME="_Toc448034857"></a><a NAME="_Toc448039515"></a><a NAME="_Toc448039637"></a><a NAME="_Toc448300558"></a><a NAME="_Toc448315107"></a><a NAME="_Toc448315411"></a><a NAME="_Toc451227817"></a></li>
+</ul>
+<a NAME="Heading156"></a>
+<h3>
+7.4.2 Multiple Alignment Methods</h3>
+
+<ul>
+<li>
+<font face="Garamond">Automatic: Clustalw, pileup, HMMer and AMPS. Good
+when more than 50% identity.</font></li>
+
+<li>
+Semi-automatic: HMM’s (hand craft the first alignments, then automatic)</li>
+
+<li>
+Fully hand crafted: Cinema, lineup etc. Slow!<a NAME="_Toc421603533"></a><a NAME="_Toc425907916"></a><a NAME="_Toc445633618"></a><a NAME="_Toc448034859"></a><a NAME="_Toc448039517"></a><a NAME="_Toc448039639"></a><a NAME="_Toc448300559"></a><a NAME="_Toc448315108"></a><a NAME="_Toc448315412"></a><a NAME="_Toc451227818"></a></li>
+</ul>
+<a NAME="Heading157"></a>
+<h3>
+7.4.3 How do I get a better alignment?</h3>
+
+<ul>
+<li>
+<font face="Garamond">Are your sequences actually homologous?</font></li>
+
+<li>
+Alignments should be done on appropriate sequences. The sequences you choose
+to align will depend upon what you wish to achieve; you may wish to analyse
+a representative spread of a gene family or compare a specific gene in
+various organisms etc.</li>
+
+<li>
+The sequences may have errors, insertions, deletions etc.</li>
+
+<li>
+Once you have an approximate alignment, it is then best to edit this using
+your knowledge about the proteins.</li>
+
+<li>
+Choosing only sequence fragments which share a common region may give a
+better alignment than full length sequences.</li>
+
+<li>
+<b>Structural</b> information is often more conserved than sequence, so
+use this.</li>
+
+<li>
+Additionally you should also try altering program parameters.<a NAME="_Toc416084246"></a><a NAME="_Toc425907917"></a><a NAME="_Toc445633619"></a><a NAME="_Toc448034860"></a><a NAME="_Toc448039518"></a><a NAME="_Toc448039640"></a><a NAME="_Toc448300560"></a><a NAME="_Toc448315109"></a><a NAME="_Toc448315413"></a><a NAME="_Toc451227819"></a></li>
+</ul>
+<a NAME="Heading158"></a>
+<h3>
+7.4.4 Practical: Creating a Multiple Sequence Alignment</h3>
+<font face="Garamond">We will align a small number of flavodoxin proteins
+with our now-not-so unknown protein. We will first use <b>lookup</b> to
+retrieve some of the flavodoxin proteins from the database and do a multiple
+alignment using both <b>pileup</b> and <b>clustalx</b>.</font><sup><font face="Arial Black">Getting
+sequence from the database using lookup</font></sup>
+<ul>
+<li>
+<font face="Garamond">From the GCG SeqLab main window choose the lookup
+program: <b><i>Select Functions->Database reference searching ->Lookup</i></b></font></li>
+
+<li>
+In the new Lookup window, check that the SwissProt and SwissProt New databases
+are checked. This will make sure that the search will be carried out only
+on the SwissProt database.</li>
+
+<li>
+In the <b>Definitions</b> field fill in<a NAME="_Toc448315110"></a><a NAME="_Toc448315414"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>flavodoxin</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">We will only do the alignment on a small set of flavodoxins,
+to keep this example manageable, so we are going to restrict our search
+a bit. Click the <b>Options...</b> button to get to the options window.</font></li>
+
+<li>
+We will restrict the search to proteins that were entered in the database
+before 30-Jun-90, have a minimum length of 130 and a maximum length of
+180.</li>
+
+<li>
+Enter
+<b>180</b> in the field <b>Longest sequence length</b></li>
+
+<li>
+Enter
+<b>130</b> in the field <b>Shortest sequence lengt
+</b>h</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Enter
+<b>30-jun-90</b>
+in the field <b>Sequence dated on or before dd-mon-yy</b></li>
+
+<li>
+Click on the <b>Close</b> button to make this window go away and then click
+on the <b>Run</b> button to start the search.</li>
+
+<li>
+If everything worked out fine, you will have the results of the search
+appear in the SeqLab <b>Output Manager window
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>The result
+of the search will be called something like</li>
+</ul>
+<b>lookup-??.list</b>where ?? is a number. This list file is a file that
+we will use in our further research, so we are going to give it a bit more
+sensible name. Click on the Save As... button of the Output Manager window
+and save it under the name flavodoxin.list.
+<ul>
+<li>
+Take a look at the file by clicking the <b>Display</b> button.</li>
+</ul>
+<font face="Garamond">Now we have a so-called GCG list file. A list file
+is a file that contains references to sequence files; it does not contain
+the actual sequences. It usually contains references to more then one sequence
+and this file can be used in many of the GCG programs, like <b>pileup</b>.
+The format of the list file is very simple. Every line after the double
+dot (..) contains one reference to a sequence. Everything after an exclamation
+mark (!) is considered to be a comment and is ignored. See the appendix
+for more information on GCG list files.</font><font face="Garamond">The
+list file we have just created contains 8 lines that do not start with
+an exclamation mark and a lot of lines that do. These comment lines show
+some of the first lines of the entries in the databases, and although they
+make the list file look a bit complicated they can be ignored. The sequences
+that are listed in the list file are in the standard GCG format which is:
+<b>databasename:entryname.
+</b>The 8 sequences all come from the SwissProt
+database so start with SW_RELEASE: followed by the entry name of the sequence
+in the database. A sequence reference in a list file doesn’t have to
+be a database reference but can also be a filename of a file containing
+a sequence (in GCG format).</font><font face="Garamond">In order for us
+to be able to use our unknown protein together with the 8 database entries,
+we are going to add the filename of our unknown protein file to the list
+file<a NAME="fnB9" HREF="#fn9"></a></font><a href="#fn9" NAME="fnB9">[9]</a><font face="Garamond">.</font><sup><font face="Arial Black">Adding
+filename to list file</font></sup>
+<ul>
+<li>
+<font face="Garamond">We will edit the list file from within Unix, so find
+the Unix window and edit the list file <b>flavodoxin.list</b>, using your
+favourite editor. If you haven’t got a favourite editor yet, use the
+simplest editor, <b>pico</b>. Thus enter :</font><a NAME="_Toc448315111"></a><a NAME="_Toc448315415"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % pico flavodoxin.list</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">If you want you can remove the comment lines (&lt;CTRL>
+K), but this is not needed.</font></li>
+
+<li>
+Go the last blank line and type<a NAME="_Toc448315112"></a><a NAME="_Toc448315416"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>unknown.pep</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Save the file and exit from the editor. In <b>pico</b>
+that is :</font><a NAME="_Toc448315113"></a><a NAME="_Toc448315417"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>&lt;CTRL> X<a NAME="fnB10" HREF="#fn10"></a></font></font></tt></b><a href="#fn10" NAME="fnB10">[10]</a>
+<ul>
+<li>
+<font face="Garamond">and presto! You have added our protein filename to
+the list file.</font></li>
+
+<li>
+Now we have changed our list file, we need to tell GCG that it can use
+this list file in further analysis. We need to add the list file to the
+main SeqLab window.</li>
+
+<li>
+Go to the <b>Output Manager Window
+</b>of SeqLab and click on the flavodoxin.list
+entry.</li>
+
+<li>
+Click on the button <b>Add to Main List ...</b></li>
+
+<li>
+Move to the SeqLab Main Window and check that the flavodoxin.list is there.</li>
+
+<li>
+The list file will have a at sign ‘
+<b>@</b>’ in front of its name.
+This is the indication that the file is in fact a list file. Double clicking
+on the list file will expand the list file, to reveal the sequences it
+hid inside. Double clicking on it again will collapse the list.</li>
+</ul>
+<font face="Garamond">Now we are ready to use the list file in our multiple
+sequence alignment. We are going to use the GCG program <b>pileup</b> for
+our first attempt.</font><sup><font face="Arial Black">Using Pileup with
+default settings</font></sup>
+<ul>
+<li>
+<font face="Garamond">Select the <b>flavodoxin.list</b> from the SeqLab
+main window (make sure it is highlighted).</font></li>
+
+<li>
+Select the <b>pileup</b> program from the menu
+<b>Functions->Multiple Comparison->Pileup</b></li>
+
+<li>
+As the heading implies we are going to run <b>pileup</b> with the default
+settings, so to make sure we actually do that (somebody might have already
+run <b>pileup</b> with some non standard settings) we click on the <b>GCG
+Default
+</b>button.</li>
+
+<li>
+To start the alignment simply click on the <b>Run</b> button.</li>
+
+<li>
+Wait a few moments and then check if you got results in the <b>Output Manager
+Window
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Two files
+will appear. Something called <b>pileup_??.figure</b> and a file called
+<b>pileup_??.msf</b>, where ?? is a number. Take a look at them by selecting
+them (one at the time) and pressing the <b>Display</b> button.</li>
+
+<li>
+The first file is a graphical representation of how similar each of the
+aligned sequences is to every other sequence<a NAME="fnB11" HREF="#fn11"></a><a href="#fn11" NAME="fnB11">[11]</a>,
+this information is used to guide the order in which sequences are added
+into the multiple alignment<a NAME="fnB12" HREF="#fn12"></a><a href="#fn12" NAME="fnB12">[12]</a>.
+To get the best view of this output, make the display window as big as
+possible. Note that the graphic does not grow with the size of the window;
+you can make it do so by clicking on the <b>Fit</b> button.</li>
+
+<li>
+The second file is a text file showing the final multiple alignment as
+a MSF (Multiple Sequence Format) file.</li>
+
+<li>
+Take a good look at this file, and look if the alignment makes any sense
+to you.</li>
+</ul>
+<font face="Garamond">The first residue of a protein is usually a methionine
+amino acid, but in the case of the first 6 sequnces it is not. The last
+three sequneces do have the methionine residue, but they are not ligned
+up. Apparently the score was higher by not aligning them up and to begin
+the alignment with some initial gaps. This does actually make some biological
+sense, since it is knows that the extreme N-terminus is usually not very
+important in the function of the protein (although there are offcourse
+exceptions to this rule. At the C-terminus of the alignment the gap is
+more pronounced and much longer. It’s not entirely certain that this
+makes biological sense.</font><font face="Garamond">The main problem is
+that the default choice of <b>pileup</b> is not to penalise gaps at the
+end of sequences (i.e. bits of longer sequences overlapping the main alignment
+do not count as gaps and so do not reduce the alignment score). Here, <b>pileup</b>
+has found it can arrive at a better score by not overlapping the end of
+the six topmost sequences with the ends of the lower three sequences.</font><font face="Garamond">At
+this point, one might consider changing several parameter settings before
+recomputing the alignment. For example, it might be worth considering a
+scoring matrix that assumes a greater evolutionary distance between the
+sequences it is aligning. For now, just make the most obvious parameter
+adjustment (i.e. tell <b>pileup</b> to penalise end gaps in the same way
+it penalises internal gaps) and try again.</font><sup><font face="Arial Black">Using
+Pileup with NON-default settings</font></sup>
+<ul>
+<li>
+<font face="Garamond">Select the flavodoxin.list from the SeqLab main window
+(make sure it is highlited).</font></li>
+
+<li>
+Select the Pileup program from the menu
+<b>Functions->Multiple Comparison->Pileup</b></li>
+
+<li>
+Click the <b>Options...</b> button to open the window showing the options.</li>
+
+<li>
+Click the radio button labeled <b>Penalize end gaps like other gaps</b></li>
+
+<li>
+Close the options window by clicking the <b>Close</b> button.</li>
+
+<li>
+To start the alignment simply click on the <b>Run</b> button.</li>
+
+<li>
+Wait a few moments and then check whether you got results in the Output
+Manager Window.</li>
+
+<li>
+Two files will apear. Something called <b>pileup_??.figure</b> and a file
+called <b>pileup_??.msf</b>, where ?? is a number. Take a look at them
+by selecting them (one at the time) and pressing the <b>Display</b> button.</li>
+</ul>
+<font face="Garamond">The output now looks a bit different, especially
+at the C-terminus. Now the end gaps are treated as normal gaps, <b>pileup</b>
+has found that it can arrive at a higher score by introducing an internal
+gap and moving the ends of the lower three sequences more to the C-terminus.
+So by changing one parameter we end up with a considerably different alignment.
+It’s now up to you to decide which is better. Using only the sequence
+information makes this a difficult task, not to say impossible. We need
+more information about the proteins to decide which of the alignments is
+‘better’. We could, for example, use structure information to determine
+if the gaps that are created are located in the middle of some structural
+important feature or active site. It is for instance much more likely that
+a mutation (deletion/insertion) would occur in an relatively unimportant
+part of the sequence. Structural features like aplha-helix and beta-sheet
+structures are usually more preserved then unstructured sequences, so if
+we could determine where the gaps are located, we could make a much more
+informed decision on the quality of each of the alignments.</font><font face="Garamond">This
+exercise shows that one should never blindly trust computer programs (or
+more accurately, algorithms) to be correct at least when using the default
+settings. You should always make sure that you are aware of the parameters
+and how they could influence the result.</font><sup><font face="Arial Black">Extra
+exercise: Using Clustalx</font></sup>
+<ul>
+<li>
+<font face="Garamond">If there is enough time you could try a different
+multiple alignment program, called <b>clustalx</b>. Clustalx is the graphical
+frontend to the program clustalw.</font></li>
+
+<li>
+Clustalx needs the sequences all to be in one file, so use the GCG program
+<b>topir</b> to make a PIR multiple sequence file from the <b>flavodoxin.list</b>
+list file:<a NAME="_Toc448315114"></a><a NAME="_Toc448315418"></a></li>
+</ul>
+<b><tt><font face="Courier New"><font size=-1>Unix % topir @flavodoxin.list</font></font></tt></b><a NAME="_Toc448315115"></a><a NAME="_Toc448315419"></a><b><tt><font face="Courier New"><font size=-1>using
+something like flavodoxin.pir as output file.</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">Start clustalx using the WWW menu.</font></li>
+
+<li>
+Load
+<b>flavodoxin.pir</b> into <b>clustalx</b> and do a full alignment</li>
+
+<li>
+Clustalx gives a nice graph of the alignment quality, making it easy to
+asses regions of high similarity.</li>
+</ul>
+<font face="Garamond">Even if a program/algorithm produces an alignment
+that looks good, it may be necessary to edit it manually. You may have
+some information about the proteins that isn’t correctly accounted for
+in the alignment. The alignment program might not have aligned all the
+functional sites or motifs correctly (Question: did <b>pileup</b> align
+the flavodoxin motifs in our alignment ? Check the Motifs output). To correct
+the alignment in GCG you can edit your alignment manually in the SeqLab
+editor.</font><sup><font face="Arial Black">Viewing and Editing Your Alignment</font></sup>
+<ul>
+<li>
+<font face="Garamond">The output of the <b>Pileup</b> program is most likely
+still lurking in the <b>Output Manager Window
+</b>somewhere, and in order
+to edit it, we need to move it to the Main list first and while we’re
+at it, we had better change the name to something more meaningful.</font></li>
+
+<li>
+Select the MSF file in the <b>Output Manager Window
+</b>(
+<b>pileup_??.msf</b>)
+and select the Save As ... button.</li>
+
+<li>
+Choose a sensible name for the file, like <b>flavodoxin.msf</b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Select
+the new MSF file,
+<b>flavodoxin.msf
+</b>, in the <b>Output Manager Window
+</b>and
+click the
+<b>Add to Main List </b>button. The MSF file should now have
+appeared in the Main list.</li>
+
+<li>
+Highlight
+<b>flavodoxin.msf</b> on the Main List.</li>
+
+<li>
+Change the <b>Mode</b> into <b><i>Editor</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>In real
+life you would need to edit the alignment, or even just select a representative
+domain, so experiment:</li>
+
+<li>
+insert/delete gaps (Space key/Back Space)</li>
+
+<li>
+Find patterns by highlighting the sequences and choose find from the Edit
+pulldown menu (find the flavodoxin pattern for instance...Look in the Motifs
+output to get the pattern).</li>
+
+<li>
+Sort the aligned sequences by name</li>
+
+<li>
+Create a consensus (highlight the sequences and choose Consensus from the
+Edit pulldown menu).</li>
+</ul>
+<a NAME="Heading159"></a>
+<h2>
+7.5 PROFILES</h2>
+<font face="Garamond">An alignment can be used to search for other proteins
+that are similar to the ones used in the alignment. This can be used to
+refine the family of proteins used in the multiple alignment. From the
+multiple alignment a profile can be constructed that can be used to search
+the sequence databases.</font><a NAME="_Toc416084247"></a><a NAME="_Toc425907918"></a><a NAME="_Toc445633620"></a><a NAME="_Toc448034861"></a><a NAME="_Toc448039519"></a><a NAME="_Toc448039641"></a><a NAME="_Toc448300561"></a><a NAME="_Toc448315116"></a><a NAME="_Toc448315420"></a><a NAME="_Toc451227820"></a><a NAME="Heading160"></a>
+<h3>
+7.5.1 Profile Searching<a NAME="_Toc416084248"></a></h3>
+<a NAME="Heading161"></a>
+<h4>
+Background</h4>
+
+<ul>
+<li>
+<font face="Garamond">A profile is a table that contains all of the comparison
+information for a group of aligned sequences.</font></li>
+
+<li>
+Profiles are used to find sequences similar to those of the alignment as
+a whole, so database searching can be more sensitive and selective.</li>
+
+<li>
+It contains as many rows as there are positions in the aligned sequences.</li>
+
+<li>
+Each row contains a score for the alignment of the corresponding position
+of the aligned sequences with each possible residue.</li>
+
+<li>
+Match values are higher at conserved positions.</li>
+
+<li>
+Care must be taken that the profile is balanced. (i.e. not skewed by too
+many very similar sequences).<a NAME="_Toc416084249"></a></li>
+</ul>
+
+<h4>
+<br>
+Example part of a profile</h4>
+<a NAME="Heading162"></a>
+<pre>&nbsp;<a NAME="_Toc448315117"></a><a NAME="_Toc448315421"></a>(17&nbsp;&nbsp;&nbsp; Cons A&nbsp;&nbsp;&nbsp; B&nbsp;&nbsp;&nbsp; C&nbsp;&nbsp;&nbsp; D&nbsp;&nbsp;&nbsp; E&nbsp;&nbsp;&nbsp; F&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp;&nbsp; H&nbsp;&nbsp;&nbsp; I&nbsp;&nbsp;&nbsp; K&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp; N&nbsp;&nbsp;&nbsp; P&nbsp;&nbsp;&nbsp; Q&nbsp;&nbsp;&nbsp; R&nbsp;&nbsp;&nbsp; S&nbsp;&nbsp;&nbsp; T&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp;&nbsp; W&nbsp;&nbsp;&nbsp; Y&nbsp;&nbsp;&nbsp; Z&nbsp;&nbsp; Gap&nbsp; Len ..) s
+&nbsp;<a NAME="_Toc448315118"></a><a NAME="_Toc448315422"></a>(18&nbsp;&nbsp;&nbsp;&nbsp; M&nbsp;&nbsp;&nbsp; 0&nbsp; -30&nbsp; -60&nbsp; -40&nbsp; -20&nbsp;&nbsp; 50&nbsp; -30&nbsp; -30&nbsp;&nbsp; 60&nbsp;&nbsp; 20&nbsp; 130&nbsp; 150&nbsp; -30&nbsp; -20&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 20&nbsp; -30&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 60&nbsp; -30&nbsp; -10&nbsp; -10&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315119"></a><a NAME="_Toc448315423"></a>(19&nbsp;&nbsp;&nbsp;&nbsp; G&nbsp;&nbsp; 43&nbsp;&nbsp; 34&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp; 39&nbsp;&nbsp; 29&nbsp; -32&nbsp;&nbsp; 89&nbsp; -15&nbsp; -12&nbsp;&nbsp; -4&nbsp; -17&nbsp;&nbsp; -3&nbsp;&nbsp; 22&nbsp;&nbsp; 16&nbsp;&nbsp; 12&nbsp; -16&nbsp;&nbsp; 34&nbsp;&nbsp; 25&nbsp;&nbsp; 18&nbsp; -65&nbsp; -44&nbsp;&nbsp; 18&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315120"></a><a NAME="_Toc448315424"></a>(20&nbsp;&nbsp;&nbsp;&nbsp; P&nbsp;&nbsp; 34&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp; 16&nbsp;&nbsp; 21&nbsp; -50&nbsp;&nbsp; 24&nbsp;&nbsp; 16&nbsp; -14&nbsp;&nbsp;&nbsp; 9&nbsp; -21&nbsp; -14&nbsp;&nbsp;&nbsp; 5&nbsp;&nbsp; 93&nbsp;&nbsp; 26&nbsp;&nbsp; 18&nbsp;&nbsp; 27&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; 4&nbsp; -60&nbsp; -54&nbsp;&nbsp; 24&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315121"></a><a NAME="_Toc448315425"></a>(21&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp; -10&nbsp;&nbsp;&nbsp; 4&nbsp; -26&nbsp;&nbsp;&nbsp; 2&nbsp;&nbsp;&nbsp; 4&nbsp; -15&nbsp; -15&nbsp;&nbsp; 25&nbsp;&nbsp; -6&nbsp;&nbsp; 32&nbsp;&nbsp; -1&nbsp;&nbsp; 21&nbsp;&nbsp;&nbsp; 4&nbsp;&nbsp; 12&nbsp;&nbsp; 30&nbsp;&nbsp; 58&nbsp;&nbsp; -1&nbsp;&nbsp; -6&nbsp;&nbsp; -5&nbsp;&nbsp; 54&nbsp; -26&nbsp;&nbsp; 17&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315122"></a><a NAME="_Toc448315426"></a>(22&nbsp;&nbsp;&nbsp;&nbsp; R&nbsp; -30&nbsp;&nbsp; 10&nbsp; -30&nbsp;&nbsp;&nbsp; 0&nbsp;&nbsp;&nbsp; 0&nbsp; -50&nbsp; -30&nbsp;&nbsp; 50&nbsp; -30&nbsp;&nbsp; 80&nbsp; -40&nbsp;&nbsp; 20&nbsp;&nbsp; 10&nbsp;&nbsp; 30&nbsp;&nbsp; 40&nbsp; 150&nbsp;&nbsp; 10&nbsp; -10&nbsp; -30&nbsp; 140&nbsp; -60&nbsp;&nbsp; 20&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315123"></a><a NAME="_Toc448315427"></a>(23&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; -4&nbsp; -32&nbsp; -47&nbsp; -32&nbsp; -20&nbsp;&nbsp; 75&nbsp; -28&nbsp; -15&nbsp;&nbsp; 60&nbsp; -20&nbsp; 100&nbsp;&nbsp; 86&nbsp; -27&nbsp; -17&nbsp;&nbsp; -8&nbsp; -27&nbsp; -25&nbsp;&nbsp; -4&nbsp;&nbsp; 64&nbsp;&nbsp; 22&nbsp;&nbsp; 17&nbsp; -14&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315124"></a><a NAME="_Toc448315428"></a>(24&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp; -10&nbsp; -50&nbsp; -80&nbsp; -50&nbsp; -30&nbsp; 120&nbsp; -50&nbsp; -20&nbsp;&nbsp; 80&nbsp; -30&nbsp; 150&nbsp; 130&nbsp; -40&nbsp; -30&nbsp; -10&nbsp; -40&nbsp; -40&nbsp; -10&nbsp;&nbsp; 80&nbsp;&nbsp; 50&nbsp;&nbsp; 30&nbsp; -20&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315125"></a><a NAME="_Toc448315429"></a>(25&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; -6&nbsp; -32&nbsp; -47&nbsp; -32&nbsp; -20&nbsp;&nbsp; 81&nbsp; -34&nbsp; -15&nbsp;&nbsp; 64&nbsp; -20&nbsp; 100&nbsp;&nbsp; 86&nbsp; -27&nbsp; -20&nbsp;&nbsp; -9&nbsp; -27&nbsp; -25&nbsp;&nbsp; -4&nbsp;&nbsp; 60&nbsp;&nbsp; 25&nbsp;&nbsp; 19&nbsp; -14&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315126"></a><a NAME="_Toc448315430"></a>(26&nbsp;&nbsp;&nbsp;&nbsp; V&nbsp;&nbsp; 11&nbsp; -17&nbsp;&nbsp;&nbsp; 4&nbsp; -17&nbsp; -15&nbsp;&nbsp; 24&nbsp;&nbsp;&nbsp; 7&nbsp; -20&nbsp;&nbsp; 76&nbsp; -15&nbsp;&nbsp; 64&nbsp;&nbsp; 50&nbsp; -22&nbsp;&nbsp;&nbsp; 3&nbsp; -13&nbsp; -22&nbsp; -10&nbsp;&nbsp; 11&nbsp; 100&nbsp; -44&nbsp;&nbsp; -3&nbsp; -14&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315127"></a><a NAME="_Toc448315431"></a>(27&nbsp;&nbsp;&nbsp;&nbsp; A&nbsp;&nbsp; 91&nbsp;&nbsp;&nbsp; 7&nbsp;&nbsp; 10&nbsp;&nbsp; 13&nbsp;&nbsp; 16&nbsp; -19&nbsp;&nbsp; 38&nbsp;&nbsp; -8&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp; -3&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 13&nbsp;&nbsp;&nbsp; 8&nbsp;&nbsp; 28&nbsp;&nbsp; 11&nbsp; -22&nbsp;&nbsp; 21&nbsp;&nbsp; 24&nbsp;&nbsp; 20&nbsp; -44&nbsp; -15&nbsp;&nbsp; 10&nbsp; 100&nbsp; 100) s
+&nbsp;<a NAME="_Toc448315128"></a><a NAME="_Toc448315432"></a>(28&nbsp;&nbsp;&nbsp; ! 11) s
+&nbsp;<a NAME="_Toc448315129"></a><a NAME="_Toc448315433"></a>(29&nbsp;&nbsp;&nbsp;&nbsp; L&nbsp;&nbsp; 34&nbsp;&nbsp; -9&nbsp;&nbsp; -9&nbsp;&nbsp; -6&nbsp;&nbsp; -2&nbsp;&nbsp; 18&nbsp;&nbsp;&nbsp; 7&nbsp; -10&nbsp;&nbsp; 29&nbsp;&nbsp; -9&nbsp;&nbsp; 40&nbsp;&nbsp; 36&nbsp;&nbsp; -7&nbsp;&nbsp;&nbsp; 6&nbsp;&nbsp;&nbsp; 0&nbsp; -19&nbsp;&nbsp; -1&nbsp;&nbsp;&nbsp; 9&nbsp;&nbsp; 38&nbsp; -15&nbsp;&nbsp; -1&nbsp;&nbsp; -2&nbsp; 100&nbsp; 100) s</pre>
+<a NAME="Heading163"></a>
+<h4>
+<a NAME="_Toc416084250"></a>GCG's Protein Sequence Profiling</h4>
+
+<ul>
+<li>
+<font face="Garamond"><b>profilemake</b>, makes a profile from a multiple
+sequence alignment.</font></li>
+
+<li>
+<b>profilesearch</b>, uses this profile to search databases.</li>
+
+<li>
+<b>profilesegments</b>, creates alignments showing similarity found by
+<b>profilesearch</b>.</li>
+
+<li>
+<font face="Symbol"><font size=+1>&nbsp;</font></font><b>profilegap</b>,
+aligns a sequence with the profile.</li>
+
+<li>
+<b>profilescan</b>, finds structural and sequence motifs in protein sequences.<a NAME="_Toc416084251"></a></li>
+</ul>
+<a NAME="Heading164"></a>
+<h4>
+Hidden Markov Models (HMMs)</h4>
+
+<ul>
+<li>
+<font face="Garamond">HMMs can be used to do multiple sequence alignment
+and database searching, using statistical descriptions of a sequence family's
+consensus.</font></li>
+
+<li>
+They can align very large numbers of sequences (thousands).</li>
+
+<li>
+Database search sensitivity is, in many cases, as sensitive as structure-based
+"inverse folding" methods such as threading.</li>
+
+<li>
+We expect that over the next few years, programs will increasingly use
+these rather than table profiles.<a NAME="_Toc416084252"></a></li>
+</ul>
+<a NAME="Heading165"></a>
+<h4>
+Practical: Protein Sequence Profiling</h4>
+<font face="Garamond">In this practical we are going to use a multiple
+sequence alignment file and search this against a subset of the SwissProt
+database. The major problems with profiles is the computational time required
+and choosing a representative group of sequences.</font><sup><font face="Arial Black">Create
+a GCG Profile</font></sup>
+<ul>
+<li>
+<font face="Garamond">Select the <b><i>flavodoxin.msf</i></b> file from
+GCG’s <b>Main Window
+</b>main list.</font></li>
+
+<li>
+Select
+<b><i>profilemake</i></b> from the <b>Multiple Comparison
+</b>menu
+(on the <b>Functions</b> menu) and run this with the default settings.</li>
+
+<li>
+When it has finished, the output will be in the <b>Output Manager Window
+</b>under
+a name like <b>profilesearch_??.prf</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Give the
+<b>.prf</b> output file a sensible name, like <b>flavodoxin.prf</b> (Use
+<b>Save As...
+</b>).</li>
+</ul>
+<font face="Garamond">Now we have a profile, we can use this to search
+for sequences that are similar to this profile. We will use the SwissProt
+New database to cut down on the computing time needed, since searching
+by profile is quite CPU intensive. In real life you should use all the
+databases that are available and contain the information that you want
+to use.</font><sup><font face="Arial Black">Search for Sequences Similar
+to this Profile</font></sup>
+<ul>
+<li>
+<font face="Garamond">Select
+<b><i>profilesearch</i></b> from the <b>Database
+Sequence Searching </b>menu in
+the<b> Functions </b>menu.</font></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+the <b>Search set ...
+</b>button to select a database to search against.
+In the new <b>Search set window
+</b>, select the <b>Add Database Sequences
+...
+</b>button.</li>
+
+<li>
+Select the <b>SwissProt New
+</b>database and click the <b>Add to Search
+Set
+</b>button, followed by the <b>Close</b> button.</li>
+
+<li>
+The
+<b>SwissProt_New:*</b> database should now be listed in the <b>Search
+Set window
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+on <b>Query profile
+</b>and select the profile you created earlier (
+<b>flavodoxin.prf</b>)</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Click
+on run and open your <b><i>Job Manager</i></b></li>
+
+<li>
+This will take a few minutes, even on this reduced set. A useful thing
+to do would be have a browse through the help on the GCG(SeqLab) package
+and Protein Profiling in particular.</li>
+
+<li>
+When your job completes analyse the output and compare it to the BLAST
+results from just your source protein.</li>
+</ul>
+<font face="Garamond">The output of <b>profilesearch</b> would allow you
+to refine your sequence set, adding other members of the flavodoxin family
+of proteins and doing another multiple alignment. You could go through
+several rounds of refining and searching, until you are satisfied that
+that the set you have is a good representation of the family.</font><a NAME="_Toc445633621"></a><a NAME="_Toc448034862"></a><a NAME="_Toc448039520"></a><a NAME="_Toc448039642"></a><a NAME="_Toc448300562"></a><a NAME="_Toc448315130"></a><a NAME="_Toc448315434"></a><a NAME="_Toc451227821"></a><a NAME="Heading166"></a>
+<h3>
+7.5.2 Secondary structure prediction</h3>
+<font face="Garamond">Now it’s time to try to predict some structural
+aspects of your protein, like secondary and maybe even tertiary structure.
+This is a difficult but fast growing area. The early programs for predicting
+secondary structure, like those found in GCG, relied on relatively simple
+algorithms to predict secondary structure, using probability matrices derived
+from known structures. They could usually be tried on single sequences.
+More recent programs use more intricate algorithms using aligned sequences
+and neural network-like algorithms such as Hidden Markov Models.</font><font face="Garamond">It
+is best to view the results from different algorithms and critically evaluate
+the results. On its own, secondary structure prediction is probably not
+greatly helpful, but you should review this output when you could then
+try and explain features of the multiple sequence alignment. There are
+many excellent programs for attempting to predict 3-D structure, but this
+area is beyond the scope of this introductory course.</font>&nbsp;<sup><font face="Arial Black">Predicting
+Secondary Structure using GCG’s Pepplot</font></sup>
+<ul>
+<li>
+<font face="Garamond">Highlight
+<b>unknown.pep</b> with your left mouse
+button. Select <b><i>Functions->Protein Analysis->PepPlot</i></b></font></li>
+
+<li>
+Click on <b><i>Run</i></b></li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Select
+<b><i>Windows->Job
+Manager
+</i></b>and wait a few seconds for it to complete.</li>
+
+<li>
+Select
+<b><i>Windows->Output Manager</i></b></li>
+
+<li>
+Select
+<b><i>Display</i></b> and examine the output from this analysis.
+This plots various measures of protein secondary structure and hydrophobicity.</li>
+</ul>
+<font face="Garamond">Note: These algorithms are old and (therefore ?!)
+not very good; try some of the WWW resources like <b>jpred</b>. This runs
+lots of programs together and tries to produce a consensus.</font><sup><font face="Arial Black">Predicting
+Secondary Structure using jpred</font></sup><b><tt><font face="Courier New"><font size=-1>Go
+to the main page of jpred at </font></font></tt></b><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/">http://circinus.ebi.ac.uk:8081/</a><b><tt><font face="Courier New"><font size=-1>
+or follow the link from the WWW menu </font></font></tt></b><tt><font face="Courier New"><font size=-1>Protein->Secondary
+structure->Protein Sequence Analysis resources elsewhere on the Web->Jpred</font></font></tt>
+<ul>
+<li>
+<font face="Garamond">Click on <b>Submit sequence</b></font></li>
+
+<li>
+Enter your eMail address (use <a href="mailto:mrna??@hgmp.mrc.ac.uk">mrna??@hgmp.mrc.ac.uk</a>
+where ?? is a number) in the eMail box</li>
+
+<li>
+Paste in your sequence (
+<b>unknown.fasta</b>) like you did for the Motifs
+exercise.</li>
+
+<li>
+Choose the <b>Single sequence – aa codes only
+</b>option for the input
+file.</li>
+
+<li>
+Run the prediction by pressing <b>Submit</b> and wait for the results.</li>
+</ul>
+<font face="Garamond">Compare the results of the Peplot and the jpred program.
+Do they agree ?</font><font face="Garamond">You could also use your MSF
+file in jpred. Try to do this if you feel confident and compare the results
+to the single sequence entry you made.</font><font face="Garamond">At the
+HGMP we offer a few more programs and links to other pages, that can do
+secondary structure predictions. They can be found at http://www.hgmp.mrc.ac.uk/Registered/Menu/prot-2-struct.html
+or follow the links from the WWW menu Protein->Secondary structure.</font><a NAME="_Toc445633622"></a><a NAME="_Toc448034863"></a><a NAME="_Toc448039521"></a><a NAME="_Toc448039643"></a><a NAME="_Toc448300563"></a><a NAME="_Toc448315131"></a><a NAME="_Toc448315435"></a><a NAME="_Toc451227822"></a><a NAME="Heading167"></a>
+<h3>
+7.5.3 Tertiary structure</h3>
+<font face="Garamond">Knowing the 3D structure of a protein is a very important
+step (but don’t forget the wet biology !) towards fully understanding
+the function of a protein. To get information about the structure of a
+protein, one should start to investigate whether the structure of a closely
+related protein is known. Two proteins that are closely related may have
+similar structures although this isn’t necessarily true. To investigate
+whether our unknown protein has a close relative whose 3D structure is
+known, we could do a BLAST search against all sequences of which the 3D
+structure is known. At the moment we can’t do this at the HGMP but other
+sites do offer this possibility, and it is left as an extra exercise for
+the reader the find out where and how. (Hint: try the EBI at <a href="http://www.ebi.ac.uk/">http://www.ebi.ac.uk/</a>).</font><font face="Garamond">An
+alternative is to make use of the cross-references in the sequence databases.
+The database entries of many sequences contain references to entries in
+other databases. For example, for a protein entry in the SwissProt database
+there is a reference to the nucleotide sequence that encodes this protein.
+If the 3D structure of a protein is known, there is a reference to the
+entry in the PDB database of known 3D structures and so on.</font><font face="Garamond">For
+our unknown protein we should look at the entries for proteins that show
+high similarity to our protein, but since the suspense is probably killing
+you by now we will tell you that indeed for a number of sequences that
+are very similar to our unknown protein, the 3D structure is indeed known.
+We are going to take a look at one of them.</font><sup><font face="Arial Black">3D
+structure of our unknown protein</font></sup>
+<ul>
+<li>
+<font face="Garamond">Our unknown protein has a VERY high similarity to
+the flavodoxin protein of an <i>Anabaena</i> species. You may have already
+noticed this before. In the BLAST search against the SwissProt database
+the entry FLAV_ANASP was almost identical to our unknown protein.</font></li>
+
+<li>
+Go back to the <b>GCGMain window
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>If we
+look at the entry of FLAV_ANASP by double clicking on the flavodoxin.list
+list file, and subsequently on the entry SW_RELEASE:FLAV_ANASP, we see
+two frames.</li>
+
+<li>
+The lower frame contains the sequence and the upper frame contains a lot
+of lines, describing the entry in the SwissProt database.</li>
+
+<li>
+If we scroll down to a line starting with DR we see a line saying :</li>
+
+<li>
+DR PDB; 1FLV; 31-OCT-93</li>
+
+<li>
+This lines tell us that there is an entry for this FLAV_ANASP protein in
+the PDB database (the database containing all the 3D structures) under
+the name of 1FLV. This means there is a 3D structure for this protein</li>
+
+<li>
+To view the 3D structure we have to type in a long and strangely formatted
+web address:</li>
+
+<li>
+Go to a netscape (or other browser) window and find the <b>location</b>
+field at the top of the page or, if it is not showing, choose the <b>Open
+page
+</b>menu item in the <b>File</b> menu and type in the following HTTP
+address:<a NAME="_Toc448315132"></a><a NAME="_Toc448315436"></a></li>
+</ul>
+<a href="http://www.imb-jena.de/cgi-bin/ImgLib.pl?CODE=1flv">http://www.imb-jena.de/cgi-bin/ImgLib.pl?CODE=1flv</a><a NAME="_Toc448315133"></a><a NAME="_Toc448315437"></a><b><tt><font face="Courier New"><font size=-1>(taking
+great care to get the case right)</font></font></tt></b>
+<ul>
+<li>
+<font face="Garamond">This will take us directly to a page about 1FLV.</font></li>
+
+<li>
+When we click on the <b>WebMol</b> link we get a chance to play around
+with the structure (It will take a while before the structure will actually
+show; WebMol is written as an JAVA Applet and these are notoriously slow).</li>
+
+<li>
+Try rotating the structure by holding down the left mouse button and dragging
+it around. Use some of the options on the right of the screen to make a
+space filling object or to see where the FMN ligand is (Hint: click the
+Hetero atoms button).</li>
+</ul>
+<font face="Garamond">So.....Now we know what our unknown protein is !
+It’s a flavodoxin, involved in electron transfer and we even saw it’s
+picture...Not bad for a few hours work.</font><font face="Garamond">Now
+we know that our flavodoxin is part of a family of flavodoxins, we might
+want to know how our protein is related to the others. For that we need
+to go into an area called Phylogeny.</font><a NAME="_Toc416084255"></a><a NAME="_Toc445633623"></a><a NAME="_Toc448034864"></a><a NAME="_Toc448039522"></a><a NAME="_Toc448039644"></a><a NAME="_Toc448300564"></a><a NAME="_Toc448315134"></a><a NAME="_Toc448315438"></a><a NAME="_Toc451227823"></a><a NAME="Heading168"></a>
+<h2>
+7.6 PHYLOGENY<a NAME="_Toc421603539"></a><a NAME="_Toc425907921"></a><a NAME="_Toc445633624"></a><a NAME="_Toc448034865"></a><a NAME="_Toc448039523"></a><a NAME="_Toc448039645"></a><a NAME="_Toc448300565"></a><a NAME="_Toc448315135"></a><a NAME="_Toc448315439"></a><a NAME="_Toc451227824"></a></h2>
+<a NAME="Heading169"></a>
+<h3>
+7.6.1 Why</h3>
+<font face="Garamond">Phylogeny is the relationship of things. Phylogenetic
+trees can show us how sequences are related.</font><font face="Garamond">Phylogeny
+is a very complicated business and we won’t go into much detail in this
+introductory course. There is a completely separate course just for phylogeny
+if you are interested.</font>
+<center><img SRC="Bioinformatics-Intro-Course09.gif" height=523 width=291></center>
+<a NAME="_Toc421603540"></a><a NAME="_Toc425907922"></a><a NAME="_Toc445633625"></a><a NAME="_Toc448034866"></a><a NAME="_Toc448039524"></a><a NAME="_Toc448039646"></a><a NAME="_Toc448300566"></a><a NAME="_Toc448315136"></a><a NAME="_Toc448315440"></a><a NAME="_Toc451227825"></a><a NAME="Heading170"></a>
+<h3>
+7.6.2 Phylogenetic Methods</h3>
+<font face="Garamond">Phylogeny relies heavily upon statistics which it
+uses to predict evolutionary trees. Trees can be rooted or unrooted.</font>&nbsp;<font face="Garamond">There
+are several well used ways of predicting these trees.</font><a NAME="Heading171"></a>
+<h4>
+Clustering</h4>
+<font face="Garamond">A distance matrix is made with the pairwise distances
+between the sequences. The sequences are then progressively clustered until
+a tree is created. (This is the method of clustalw and pileup) The simplest
+method assumes that evolution is constant over the tree (
+<b>unweighted-pair
+group method
+</b>(UPGMA)), whereas <b>Neighbour-Joining</b>(NJ) does not
+make this assumption, instead it searches for a pair of sequences/clusters
+that can be joined in a node that has the least sum of distances.</font><a NAME="Heading172"></a>
+<h4>
+Generate and evaluate alternative trees</h4>
+
+<ul>
+<li>
+<font face="Garamond"><b>parsimony</b>: searching the tree with the smallest
+number of point mutations.</font></li>
+
+<li>
+<b>maximum likelihood
+</b>: computing the probability of observing the
+alignment, for a certain model of evolution and a given tree; the “best”
+tree has the highest probability.</li>
+</ul>
+&nbsp;<font face="Garamond">If one assumes that branch length is proportional
+to evolutionary distance and that the evolutionary clock is constant it
+is possible to search for a common root. Some of the phylogenetic programs
+will produce rooted trees(e.g. phylip’s dnamlk).</font><font face="Garamond">N.B.
+There are different models of evolution and some programs allow you to
+specify different rates of evolution in different parts of the sequence.</font><font face="Garamond">In
+an inverse order of likely accuracy and also computational time:</font>
+<ol>
+<li>
+<font face="Garamond">Parsimony methods</font></li>
+
+<li>
+Distance methods</li>
+
+<li>
+Maximum likelihood methods.<a NAME="_Toc421603541"></a><a NAME="_Toc425907923"></a><a NAME="_Toc445633626"></a><a NAME="_Toc448034867"></a><a NAME="_Toc448039525"></a><a NAME="_Toc448039647"></a><a NAME="_Toc448300567"></a><a NAME="_Toc448315137"></a><a NAME="_Toc448315441"></a><a NAME="_Toc451227826"></a></li>
+</ol>
+<a NAME="Heading173"></a>
+<h3>
+7.6.3 Improving the Reliability of the Tree</h3>
+<a NAME="Heading174"></a>
+<h4>
+Significance of the tree</h4>
+<font face="Garamond">Bootstrapping is a common method for assessing the
+reproducibility of the model, but perhaps not biological reality. The use
+of bootstrapping in phylogeny:</font>
+<ul>
+<li>
+<font face="Garamond">Randomly picks columns in the alignment, duplicates
+some and removes others.</font></li>
+
+<li>
+Repeats hundreds of times.</li>
+
+<li>
+You can then get a percentage for each node of the tree, for how often
+the sequences below this node cluster together.</li>
+</ul>
+<a NAME="Heading175"></a>
+<h4>
+Domain Problems</h4>
+<font face="Garamond">Be aware of domain shuffling and fusion by recombination,
+horizontal gene transfer between organisms etc. It may thus be best to
+use single conserved domains.</font><a NAME="Heading176"></a>
+<h4>
+Use other Information</h4>
+<font face="Garamond">Supporting information from your tree may be in domain
+order, conserved introns etc., you do not have to just stick with the protein
+multiple sequence alignment.</font><b><i><font face="Garamond">Acknowledgements:
+The above notes were largely based upon some superb articles in the Winter
+1996, Belgium EMBnet Node Newsletter, Frank Wright’s notes and Sarah
+Teichmann’s lectures for the Protein Domain Workshop 1998.</font></i></b><a NAME="_Toc425907924"></a><a NAME="_Toc445633627"></a><a NAME="_Toc448034868"></a><a NAME="_Toc448039526"></a><a NAME="_Toc448039648"></a><a NAME="_Toc448300568"></a><a NAME="_Toc448315138"></a><a NAME="_Toc448315442"></a><a NAME="_Toc451227827"></a><a NAME="Heading177"></a>
+<h3>
+7.6.4 Phylogeny Practical</h3>
+<sup><font face="Arial Black">Produce a simple phylogenetic tree.</font></sup>
+<ul>
+<li>
+<font face="Garamond">Go to the main GCG window.</font></li>
+
+<li>
+Select the <b>flavodoxin.msf</b> file.</li>
+
+<li>
+Select
+<b>paupsearch</b> to produce a phylogenetic tree of your sequences;
+<b>Functions->Phylogeny->Paupsearch</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>Choose
+the <b>parsimony method
+</b>.</li>
+
+<li>
+<font face="Wingdings"><font color="#808080">&nbsp;</font></font>You should
+soon have a tree in your results output. We can do a lot better than this
+e.g. getting the alignment far better initially and using <b>paupsearch</b>
+more intelligently, e.g. the distance method and bootstrap for confidence.<a NAME="_Toc425907925"></a><a NAME="_Toc445633628"></a><a NAME="_Toc448034869"></a><a NAME="_Toc448039527"></a><a NAME="_Toc448039649"></a><a NAME="_Toc448300569"></a><a NAME="_Toc448315139"></a><a NAME="_Toc448315443"></a><a NAME="_Toc451227828"></a></li>
+</ul>
+<a NAME="Heading178"></a>
+<h3>
+7.6.5 Using Pie for a more reliable tree.</h3>
+<font face="Garamond">At the HGMP there is a WWW interface called PIE.
+This is an interface to many programs, particularly those from the PHYLIP
+package. A great deal of effort has gone into providing relevant online
+help and PIE leads you through with hopefully sensible defaults. This should
+reliably allow you to do some reasonable complex analysis. If you really
+want to get down to complex detail then you should read lots of papers
+and books, learn Unix scripting and run the programs yourself.</font><font face="Garamond">Below
+is an example you could use, but since a PIE job could take a whole night
+to run, you better just take our word for it that it works ;-)</font><a NAME="Heading179"></a>
+<h4>
+Running a Pie analysis</h4>
+
+<ul>
+<li>
+<font face="Garamond">Select
+<b><i>PIE</i></b> from the WWW menu and then
+<b><i>Run Now!</i></b></font></li>
+
+<li>
+Enter
+<b>chapter7/flavodoxin.msf
+</b>in the Enter the name of a file in
+your HGMP account box. (This program will also accept fasta and phylip
+format files).</li>
+
+<li>
+Your msf sequences are protein and interleaved.</li>
+
+<li>
+Enter a project name: e.g. <b><i>flavodoxin</i></b></li>
+
+<li>
+<font face="Symbol">&nbsp;</font>Lets select the <b><i>distance</i></b>
+analysis method</li>
+
+<li>
+Change the Run options to: <b><i>default with bootstrap
+</i></b>(100 replicates)</li>
+</ul>
+<a NAME="Heading180"></a>
+<h4>
+Select Process Parameters</h4>
+<font face="Garamond">You will now get a <b>Pie: submit an analysis
+</b>page.</font>
+<ul>
+<li>
+Enter the Analysis Name: <b>protdist</b></li>
+
+<li>
+Click on <b>Check choices</b></li>
+
+<li>
+and Finally, click on <b>Perform Analysis</b></li>
+</ul>
+<a NAME="Heading181"></a>
+<h4>
+Viewing Pie Results</h4>
+<font face="Garamond">Whilst you are waiting for the processing, it would
+be good idea to go back and look at the on line help for Pie and learn
+more about the options you selected.</font><font face="Garamond">When you
+get an email saying that you results are complete:</font>
+<ul>
+<li>
+Click on <b>View your PIE Results now!</b></li>
+
+<li>
+Click on your <b>Project name</b></li>
+
+<li>
+Click on your <b>Analysis name</b></li>
+
+<li>
+You will hopefully now have the desired unrooted tree and output files.
+You should look at the output to get an idea of the reliability of the
+tree.</li>
+</ul>
+You could repeat this with Maximum Likelihood, but please don’t as it
+is computationally intensive. Note that there are many models and search
+strategies with these programs.&nbsp;
+<hr><a NAME="fn6" HREF="#fnB6"></a><a href="#fnB6" NAME="fn6">[6]</a><font face="Garamond"><font size=-1>
+A quick definition of the Prosite syntax: 1) Any amino acid matches it
+self, unless preceded by the ~ sign, in which case any amino acid BUT the
+one stated matches. 2) Any amino acids in parenthesis, means that any of
+these amino acids will match, on this position. 3) Numbers between curly
+brackets mean that the preceding pattern should be matched (between) this
+number of times.</font></font><a NAME="fn7" HREF="#fnB7"></a><a href="#fnB7" NAME="fn7">[7]</a><font face="Garamond"><font size=-1>
+Display the FASTA file from the unix prompt using the command: <b>more
+unknown.fasta
+</b>, selecting the complete text with your mouse and pasting
+it into the box using the center mouse button. If you are using a PC workstation,
+you may need to find out first how to Copy and Paste something, since you
+probably can’t use the center mouse button (since you have none ;-).</font></font><a NAME="fn8" HREF="#fnB8"></a><a href="#fnB8" NAME="fn8">[8]</a><font face="Garamond"><font size=-1>
+It is possible that it’s not the third motif on the list, since Prosite
+may have changed.</font></font><a NAME="fn9" HREF="#fnB9"></a><a href="#fnB9" NAME="fn9">[9]</a><font face="Garamond"><font size=-1>
+It is not strictly speaking necessary to do this, because we can simply
+select both the list file and the unknown protein file together and do
+the alignment, but it is easier to keep related sequences together.</font></font><a NAME="fn10" HREF="#fnB10"></a><a href="#fnB10" NAME="fn10">[10]</a><font face="Garamond"><font size=-1>
+Hold down the Control key followed by the ‘x’ key.</font></font><a NAME="fn11" HREF="#fnB11"></a><a href="#fnB11" NAME="fn11">[11]</a><font size=-1>
+Although this graphic looks very much like a phylogenetic tree, it is important
+to remember that it represents only how similar each sequence is to all
+the other sequences.</font><a NAME="fn12" HREF="#fnB12"></a><a href="#fnB12" NAME="fn12">[12]</a><font size=-1>
+Broadly speaking, the multiple sequence alignment is built up by a series
+of pairwise alignments. In a number of stages, pairs of sequences (and
+sequence alignments) are aligned (merged or clustered) to form the final
+multiple sequence alignment. At each stage, the two most similar entities
+(as defined by the tree you are viewing), not yet aligned are aligned.</font>
+<hr>
+<center><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-6.html"><img SRC="prev.gif" ALT="7PROTEIN ANALYSIS AND IDENTIFICATION" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-8.html"><img SRC="next.gif" ALT="8FURTHER PROJECTS" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Title.html"><img SRC="first.gif" ALT="Title Page" BORDER=0 ></a><a href="http://www.hgmp.mrc.ac.uk/Courses/Intro_3day/Bioinformatics-Intro-Course-Contents.html"><img SRC="contents.gif" ALT="Contents" BORDER=0 ></a></center>
+
+</body>
+</html>

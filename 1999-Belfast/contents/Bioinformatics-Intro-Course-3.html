@@ -1,0 +1,887 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<!--
+This document was converted from RTF source: 
+By rtftohtml 4.17
+See http://www.sunpack.com/RTF
+Filename:Bioinformatics-Intro-Course.rtf
+Application Directory:/people/tdeboer/bin/r2h/
+Subject:
+Author:hgmp-rc
+Operator:Thon de Boer
+Document Comments:
+Version Comments:
+Comments:
+Keywords:
+Translation Date:05/19/1999
+Translation Time:14:43:00
+Translation Platform:Unix
+Number of Output files:12
+This File:Bioinformatics-Intro-Course-3.html
+SplitDepth=1
+SkipNavPanel=0
+SkipLeadingToc=0
+SkipTrailingToc=1
+GenContents=1
+GenFrames=1
+GenIndex=0
+-->
+<HEAD lang="en"><META http-equiv="Content-Type" content="text/html; charset=utf-8">
+<TITLE>3	THE UNIX OPERATING SYSTEM</TITLE>
+</HEAD>
+
+<BODY BGCOLOR="#FFFFFF"><DIV ALIGN="CENTER"><A HREF="Bioinformatics-Intro-Course-2.html" ><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/prev.gif" ALT="3	THE UNIX OPERATING SYSTEM " border=0></A>
+<A HREF="Bioinformatics-Intro-Course-4.html" ><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/next.gif" ALT="4	INTRODUCTORY SEQUENCE ANALYSIS " border=0></A>
+
+<A HREF="Bioinformatics-Intro-Course-Title.html"><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/first.gif" ALT="Title Page " border=0></A>
+<A HREF="Bioinformatics-Intro-Course-Contents.html"><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/contents.gif" ALT="Contents " border=0></A>
+</DIV>
+<HR>
+
+<UL>
+<LI><A HREF="#Heading13">3.1	THE UNIX OPERATING SYSTEM GENERALITIES</A>
+<LI><A HREF="#Heading14">3.2	FILES AND SUBDIRECTORIES</A>
+<LI><A HREF="#Heading15">3.3	EXTRA TRICKS IN UNIX</A>
+<LI><A HREF="#Heading16">3.4	GETTING HELP ON UNIX</A>
+<LI><A HREF="#Heading17">3.5	FILES AND THE FILE MANAGER</A>
+<LI><A HREF="#Heading18">3.6	EDITORS</A>
+<LI><A HREF="#Heading19">3.7	FILE TRANSFER PROTOCOL (FTP)</A>
+</UL>
+
+<a name="_Toc448034776"></a><a name="_Toc422641275"></a><a name="_Toc425907839"></a><a name="_Toc445633526"></a><a name="_Toc448039435"></a><a name="_Toc448039557"></a><a name="_Toc448300482"></a><a name="_Toc448314899"></a><a name="_Toc448315203"></a><a name="_Toc451227742"></a><A NAME="Heading12"></A><H1 ALIGN="LEFT">
+3	THE
+UNIX OPERATING SYSTEM
+<a name="_Toc415911138"></a><a name="_Toc416084105"></a><a name="_Toc422641276"></a><a name="_Toc425907840"></a><a name="_Toc445633527"></a><a name="_Toc448034777"></a><a name="_Toc448039436"></a><a name="_Toc448039558"></a><a name="_Toc448300483"></a><a name="_Toc448314900"></a><a name="_Toc448315204"></a><a name="_Toc451227743"></a></H1>
+<A NAME="Heading13"></A><H2 ALIGN="LEFT">
+3.1	THE
+UNIX OPERATING SYSTE
+<a name="_Toc415911139"></a><a name="_Toc416084106"></a>M
+GENERALITIES
+</H2>
+<DIV ALIGN="LEFT"><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">Unix
+is an operating system, Windows NT is another example of an operating system
+(OS). The job of the operating system is to sit between the user(s) and the
+computer hardware, so that the computer hardware details are shielded from the
+user. Other software on the computer communicates to the hardware using the
+operating system as an interface. This makes program writing much easier.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">Unix
+is a well established, very widespread operating system. It is command line
+driven, with a huge number of often terse, but powerful commands. It is used on
+many of the powerful computers at bioinformatics centres  and also on many
+workstations. In contrast to Windows, it is designed to allow many users to run
+their programs simultaneously on the same computer. Another advantage is that
+it is designed to work in networks (for example, most of the Internet is Unix
+based).
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">The
+purpose of this practical is to teach you the few Unix commands you will need
+to know to:
+</FONT><BR></DIV>
+<UL>
+<LI><FONT FACE="Symbol" SIZE=4>	</FONT><FONT FACE="Garamond">Run
+the many bioinformatics programs which require the Unix command line.
+</FONT><LI><FONT FACE="Symbol" SIZE=4>	</FONT>View
+and manipulate your input and output files.
+</UL><DIV ALIGN="LEFT"><FONT FACE="Garamond">Spending
+a couple of hours learning a few Unix concepts and commands, will certainly
+make your use of our and other facilities more productive. The only commands
+that you really need to know in UNIX are:
+</FONT><BR></DIV>
+<OL>
+<LI><FONT FACE="Arial Black">	</FONT><FONT FACE="Garamond">
+ls
+	list
+files
+</FONT><LI><FONT FACE="Arial Black">	</FONT>
+more
+	display
+contents of file on screen
+<LI><FONT FACE="Arial Black">	</FONT>
+cp
+	make
+a new copy of a file
+<LI><FONT FACE="Arial Black">	</FONT>
+rm 
+	remove
+(delete) a file
+<LI><FONT FACE="Arial Black">	</FONT>
+mv 
+	rename
+(move) a file
+</OL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Starting</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">In
+this manual, the theory is printed in normal text and the practicals are
+printed in grey boxes (like this one).
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Before
+we can start with the practicals we need to setup our computing environment.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>For
+most of the practicals we start with a web page, so  a browser like Netscape or
+Internet explorer is needed on your local computer.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>The
+start page for virtually all the practicals is the HGMP home page at:
+http://www.hgmp.mrc.ac.uk
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>From
+this point you can jump to the Biological Services page, Research page and the
+Bioinformatics page.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Most
+of the services of the Bioinformatics department can be reached from a menu
+systems, that can either be text based (Telnet Menu) or Web based. For most
+people the Web based menu is the preferred way of accessing the HGMP programs.
+The Web menu or WWW menu can be reached by clicking the option
+</UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>WWW
+Menu
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">One
+the main HGMP homepage.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>In
+order to be able to use some of the Graphical User Interfaces (GUI&#8217;s)
+like SeqLab for GCG, you need a X-WINDOWS system. UNIX systems usually have a
+X-WINDOWS system installed and there is no further need to set it up. ON
+PC&#8217;s and MAC&#8217;s you usually need a special program to run X-WINDOWS.
+On the PC there are programs like EXCEED that can be a X-WINDOWS system.
+It&#8217;s up to your local computer support people to set these things up.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>In
+the course we will guide you through this.
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Setting
+up a UNIX session
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Go
+to the main WWW menu page from the HGMP homepage, using your favorite web
+browser.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Select
+&#8220;Unix&#8221; from the left-hand side (Tools menu), and then &#8220;Run
+Unix Now&#8221;. 
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Most
+of the services at the HGMP are only accessible for registered users. The first
+time you start up such a service, you will be presented with a dialog window,
+asking you to fill in your username and password.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>On
+the next page you can choose which version of the service you want to run. On
+UNIX systems or PC&#8217;s with a X-WINDOWS client, you can choose the
+X-WINDOWS service, by filling in the X-WINDOWS DISPLAY box, with the correct
+display name. The correct display name should be provided to you by your local
+computer person, but is usually something in the style of:
+<a name="_Toc448314901"></a><a name="_Toc448315205"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>machine_name:0.0</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Where
+machine_name is the name of your local computer.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Click
+on the START UNIX button of the type of service you want to use. If you
+don&#8217;t have a X-WINDOWS client, there are alternatives like VNC and even
+JAVA, but they are quite slow.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>A
+window running a simple Unix session will start. You will see the UNIX prompt:
+<a name="_Toc448314902"></a><a name="_Toc448315206"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+%
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">After
+this prompt you can start typing your UNIX commands. In the rest of the course,
+whenever you see the 
+</FONT><a name="_Toc448314903"></a><a name="_Toc448315207"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+%
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">prompt,
+you can type in a UNIX command. Don&#8217;t type in the Unix % itself; only the
+command after the prompt needs to be typed.
+</FONT></UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Listing
+files
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Give
+the command 'ls' to see the files that are currently in your directory:
+</FONT><a name="_Toc448314904"></a><a name="_Toc448315208"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">lots
+of filenames are shown, sorted on name and shown as 4 columns on a row.
+</FONT><a name="_Toc448314905"></a><a name="_Toc448315209"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls acwords
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">the
+filename 'acwords' is displayed, showing you that the file exists
+</FONT><a name="_Toc448314906"></a><a name="_Toc448315210"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls -l
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">the
+files are listed in much more detail, one file per line, showing the
+permissions , ownership, date of alteration, and name of the files
+</FONT><a name="_Toc448314907"></a><a name="_Toc448315211"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls -l acwords
+</B></FONT></TT><a name="_Toc448314908"></a><a name="_Toc448315212"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>-rw-r-----
+1 mrna11 1123 Mar 21 8:34 acwords
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">(permissions
+/ owner / size(bytes) / alter-date / name)
+</FONT></UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Displaying
+content of files
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Now
+try displaying the contents of files:
+</FONT><a name="_Toc448314909"></a><a name="_Toc448315213"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% more seqn.seq
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>
+<a name="_Toc448314910"></a><a name="_Toc448315214"></a>seqn.seq
+..
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>
+<a name="_Toc448314911"></a><a name="_Toc448315215"></a>cggagacggtagc.................tttgattcctgc</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">That
+was a small file. Now try displaying the contents of a larger file, like
+'acwords':
+</FONT><a name="_Toc448314912"></a><a name="_Toc448315216"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% more acwords
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">When
+a file is longer than a single page in length, the command 
+<B>more</B>
+will stop at the end of each page and ask if you want to see more of it. It
+waits for one of several keys to be pressed:
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>To
+display the next page, press the space-bar.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>To
+go back, press the 'b' key.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>To
+see other commands you can give, press the '?' key.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>DO
+NOT PRESS THE 'v' KEY - it gets you into a editor. (If you did get into the
+editor, press the colon &#8216;:&#8217;, &#8216;q&#8217; and &lt;ENTER&gt; to
+get out)
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>To
+get out of 
+<B>more</B>,
+press the 'q' key.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>When
+you are tired of looking at words starting with 'ac', press 'q'
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Copying
+Files
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Now
+list the files with the command 'ls'. Note that there is no file with the name
+'seqbn.seq'
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Make
+a copy of the existing file 'seqn.seq' into the new file 'seqbn.seq'
+<a name="_Toc448314913"></a><a name="_Toc448315217"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% 
+<I>cp
+seqn.seq seqbn.seq
+</I></B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">List
+the files again. Note that the new file 'seqbn.seq' is now there.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Use
+'more' to see the contents of the file 'seqbn.seq'. Note that it is identical
+to the contents of the original file 'seqn.seq'.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Copy
+the file 'seqn.seq' to a file 'seqcn.seq'.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>List
+the files. See that you now have a collection of files starting with the name
+'seq'
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Renaming
+Files
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Now
+rename the file 'seqn.seq' to the new name of 'seqan.seq'
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Unix
+% 
+<B><I>mv
+seqn.seq seqan.seq
+</I></B><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>List
+the files. You will see that there is now no file called 'seqn.seq'. You were
+probably getting sick of this file anyway.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>You
+will see that there is a new file called 'seqan.seq'. Display its contents
+using more. It is the same contents as 'seqn.seq' but known by a new name.
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Deleting
+Files
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Get
+rid of 'seqan.seq'. Remove it. Delete it. You do not want it anymore. You never
+want to see it again!
+</FONT><a name="_Toc448314914"></a><a name="_Toc448315218"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% rm seqan.seq
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">List
+the files. There is no file called 'seqan.seq'!
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Cautiously
+delete the file 'seqbn.seq' Use the command-line -i switch for the 'rm' command
+which causes 'rm' to ask if you are sure you want to delete the file:
+<a name="_Toc448314915"></a><a name="_Toc448315219"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% rm -i seqbn.seq
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>
+<a name="_Toc448314916"></a><a name="_Toc448315220"></a>rm:
+remove seqbn.seq (y/n)? y
+</B></FONT></TT><a name="_Toc415911140"></a><a name="_Toc416084107"></a><a name="_Toc422641277"></a><a name="_Toc425907841"></a><a name="_Toc445633528"></a><a name="_Toc448034778"></a><a name="_Toc448039437"></a><a name="_Toc448039559"></a><a name="_Toc448300484"></a><a name="_Toc448314917"></a><a name="_Toc448315221"></a><a name="_Toc451227744"></a><BR></DIV>
+<A NAME="Heading14"></A><H2 ALIGN="LEFT">
+3.2	FILES
+AND SUBDIRECTORIES
+</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">Directories
+are groups of files. They are organised in a hierarchy, so directories can have
+sub-directories and so on. You can think of directories as rooms in a house.
+You can only be in one room (directory) at a time. When you are in a room you
+can see everything in that room easily. To see things in other rooms, you have
+to go to the appropriate door and crane your head around.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">To
+separate the names of directories and files, a slash '/' is used. If you have a
+set of directories:
+</FONT><BR></DIV>
+
+<PRE>           HOME
+            / \
+           /   \
+         prot  mysub</PRE><DIV ALIGN="LEFT"><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">then
+you can be in your "HOME' directory and copy a file 'fred.dat' from the 'prot'
+directory to the 'mysub' directory:
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cp prot/fred.txt mysub
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">You
+can be in the 'prot' directory and do the same thing:
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cd prot
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cp fred.txt ../mysub
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">Or
+you can be in the 'mysub' directory and do the same thing:
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cd
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cd mysub
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><B>Unix
+%
+</B>
+cp ../prot/fred.txt .
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">In
+each case, you have to follow the path from the directory you are in to the
+file you want to copy and follow the path from the directory you are in to the
+directory you want to copy the file into. The directory you are currently in is
+indicated by a dot '.' in the last example.
+</FONT><BR></DIV>
+<UL>
+<LI><FONT FACE="Symbol" SIZE=4>	</FONT><FONT FACE="Garamond">Directories
+can be created, deleted and renamed.
+</FONT><LI><FONT FACE="Symbol" SIZE=4>	</FONT>Files
+can be moved or copied into specified directories.
+</UL><DIV ALIGN="LEFT"><FONT FACE="Garamond">You
+can only work in one directory at a time. This is known as your 'current
+working directory'. The directory that you start off in when you login is your
+'home' directory. You can easily return to your home directory by giving the
+command 'cd'.
+</FONT><BR></DIV><DIV ALIGN="LEFT">SOME
+MORE COMMANDS:
+<BR></DIV>
+<OL>
+<LI><FONT FACE="Arial Black">	</FONT><FONT FACE="Garamond">mkdir
+		make
+a new subdirectory
+</FONT><LI><FONT FACE="Arial Black">	</FONT>cd
+		change
+current directory (default is to home) 
+<LI><FONT FACE="Arial Black">	</FONT>cd
+  .. 
+		move
+back up to the directory above this one 
+<LI><FONT FACE="Arial Black">	</FONT>pwd
+		print
+current (working) directory 
+<LI><FONT FACE="Arial Black">	</FONT>mv
+file dir 
+	move
+a file into a directory 
+<LI><FONT FACE="Arial Black">	</FONT>rmdir
+		remove
+(delete) directory (that is empty)
+</OL><DIV ALIGN="LEFT"><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Making
+a Subdirectory
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Make
+a new subdirectory called 'genome'
+</FONT><a name="_Toc448314918"></a><a name="_Toc448315222"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% mkdir genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">List
+the files in your home directory, you will notice that there is a file called
+'genome' there. A directory is a special sort of file. To see the difference,
+use the '-F' switch on 'ls', i.e. 'ls -F'. Directories have '/' after them.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Copy
+a file into the subdirectory 'genome'
+<a name="_Toc448314919"></a><a name="_Toc448315223"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cp acwords genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">List
+the files in the subdirectory 'genome'
+</FONT><a name="_Toc448314920"></a><a name="_Toc448315224"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Display
+the file in the subdirectory 'genome' from the home directory above it
+</FONT><a name="_Toc448314921"></a><a name="_Toc448315225"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% more genome/acwords
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Deleting
+a Subdirectory
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Attempt
+to remove the subdirectory 'genome'
+</FONT><a name="_Toc448314922"></a><a name="_Toc448315226"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% rmdir genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">and
+you get the message:
+</FONT><a name="_Toc448314923"></a><a name="_Toc448315227"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>rmdir:
+genome: Directory not empty
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">To
+remove a directory, you need to empty it of all its files first...
+</FONT></UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Changing
+Directories
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Change
+directory - go down into the subdirectory 'genome'
+</FONT><a name="_Toc448314924"></a><a name="_Toc448315228"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cd genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">List
+the files in this directory. You will not see any of the files in the home
+directory above this one.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Check
+to see which directory you are in
+<a name="_Toc448314925"></a><a name="_Toc448315229"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% pwd
+</B></FONT></TT><a name="_Toc448314926"></a><a name="_Toc448315230"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>/people/mrna11/genome</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Change
+directory back to your home directory
+</FONT><a name="_Toc448314927"></a><a name="_Toc448315231"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cd
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Double-check
+that you are in your home directory by giving the 'pwd' command and the 'ls'
+command. Do you recognise some of these files?
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>The
+directory above this one is indicated by two dots '..' So to list the files in
+the directory above the one you are in, give the command:
+<a name="_Toc448314928"></a><a name="_Toc448315232"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls ..
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Referring
+to files in directories
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">A
+file in a directory can be indicated by giving the directory name, then a slash
+'/' then the file name.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>You
+already know how to copy the file 'acwords' into the directory genome:
+<a name="_Toc448314929"></a><a name="_Toc448315233"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cp acwords genome
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">But
+you can also copy 'acwords' into the directory 'genome' with a name other than
+'acwords":
+</FONT><a name="_Toc448314930"></a><a name="_Toc448315234"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cp acwords genome/acw
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">A
+&#8220;thought&#8221; experiment (THINK...Don&#8217;t type!)
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">You
+can now combine several ideas. If you think you have followed things up until
+now, see if you can work out (without typing at your terminal) what is being
+done here. (It is a bit contrived...)
+</FONT><a name="_Toc448314931"></a><a name="_Toc448315235"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cd
+</B></FONT></TT><a name="_Toc448314932"></a><a name="_Toc448315236"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% mkdir genome/project
+</B></FONT></TT><a name="_Toc448314933"></a><a name="_Toc448315237"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cd genome/project
+</B></FONT></TT><a name="_Toc448314934"></a><a name="_Toc448315238"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cp ../../acwords thisac
+</B></FONT></TT><a name="_Toc448314935"></a><a name="_Toc448315239"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% cd ..
+</B></FONT></TT><a name="_Toc448314936"></a><a name="_Toc448315240"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls -l project
+</B></FONT></TT><a name="_Toc448314937"></a><a name="_Toc448315241"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% mv project/this* ..
+</B></FONT></TT><a name="_Toc415911141"></a><a name="_Toc416084108"></a><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond"><IMG HEIGHT=326 WIDTH=522 SRC="Bioinformatics-Intro-Course00.gif"></FONT><a name="_Toc415911142"></a><a name="_Toc416084109"></a><a name="_Toc422641279"></a><a name="_Toc425907843"></a><a name="_Toc445633530"></a><a name="_Toc448034780"></a><a name="_Toc448039439"></a><a name="_Toc448039561"></a><a name="_Toc448300486"></a><a name="_Toc448314945"></a><a name="_Toc448315249"></a><a name="_Toc451227745"></a><BR></DIV>
+<A NAME="Heading15"></A><H2 ALIGN="LEFT">
+3.3	EXTRA
+TRICKS IN UNIX
+</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">Here
+are some extra tricks with UNIX. You do not have to do these if you got left
+behind in this practical, but you may wish to know them.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Extra
+Unix short cuts
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">You
+can reduce the amount of typing of filenames with judicious use of the
+&lt;TAB&gt; key
+</FONT><a name="_Toc448314946"></a><a name="_Toc448315250"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls geno&lt;TAB&gt;
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">The
+rest of the filename is filled in for you (if the filename exists, if not it
+beeps at you ). If the part of the file you typed in is not unique, it will
+beep at you and you can see the files that match what you typed in with &lt;
+<B>CTRL-D</B>&gt;</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Also
+note that you can use the &lt;
+<B>UP</B>&gt;
+and &lt;
+<B>DOWN</B>&gt;
+arrow keys to recall previous commands, and the &lt;
+<B>LEFT</B>&gt;
+and &lt;
+<B>RIGHT</B>&gt;
+arrows to edit commands.. This is 
+<B>very</B>
+useful!
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Wildcards</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Filenames
+can be wildcarded - you can use an asterisk '*' to replace part of a filename
+</FONT><a name="_Toc448314947"></a><a name="_Toc448315251"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ls alu*
+</B></FONT></TT><a name="_Toc448314948"></a><a name="_Toc448315252"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% more *.seq
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">UNIX
+aliases at the HGMP:
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">We
+have been teaching you the formal UNIX names of commands, but we have created
+friendly aliases for these commands (only available at the HGMP!) - enjoy:
+</FONT></UL><DIV ALIGN="LEFT">Original		HGMP
+Alias
+<BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>ls			dir
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>rm		del,
+delete 
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>cp		copy
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>mv		ren,
+rename 
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>more		ty,
+type 
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>emacs		ed,
+edit 
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>pwd		.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>ls
+ -alF
+		v
+(verbose listing)
+<a name="_Toc415911143"></a><a name="_Toc416084110"></a><a name="_Toc422641280"></a><a name="_Toc425907844"></a><a name="_Toc445633531"></a><a name="_Toc448034781"></a><a name="_Toc448039440"></a><a name="_Toc448039562"></a><a name="_Toc448300487"></a><a name="_Toc448314949"></a><a name="_Toc448315253"></a><a name="_Toc451227746"></a></UL><A NAME="Heading16"></A><H2 ALIGN="LEFT">
+3.4	GETTING
+HELP ON UNIX
+</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">When
+you select the UNIX button on the HGMP-RC WWW Menu, selecting the Help option
+will give you help on using UNIX.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">If
+you are already in unix, you can get more information about a command by using
+the 
+<B>man</B>
+command.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New">Unix
+% 
+<B>man
+ls
+</B></FONT></TT><BR></DIV><DIV ALIGN="LEFT">Will
+give you more information about the ls command. Beware...the information man
+provides is not for the fainthearted and might be more then you want to know!
+<a name="_Toc416084111"></a><a name="_Toc422641281"></a><a name="_Toc425907845"></a><a name="_Toc445633532"></a><a name="_Toc448034782"></a><a name="_Toc448039441"></a><a name="_Toc448039563"></a><a name="_Toc448300488"></a><a name="_Toc448314950"></a><a name="_Toc448315254"></a><a name="_Toc451227747"></a><BR></DIV>
+<A NAME="Heading17"></A><H2 ALIGN="LEFT">
+3.5	FILES
+AND THE FILE MANAGER
+</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">You
+can select the &#8220;Files&#8221; button on the left of the HGMP-RC WWW Menu.
+This gives access to some utilities for doing most of the things that you have
+just been doing with UNIX commands.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">The
+FILES button gives you a list of the files in your current working directory.
+Clicking on a text file will display it. If you click on the www browser
+&#8216;file&#8217; button at the top left of your browser you then have the
+option of saving this file to a local file on your system, or printing it
+locally.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">Clicking
+on a directory will show the files available in that directory. The magnifying
+glass icon gives access to simple file management forms.
+</FONT><a name="_Toc415911144"></a><a name="_Toc416084112"></a><a name="_Toc422641282"></a><a name="_Toc425907846"></a><a name="_Toc445633533"></a><a name="_Toc448034783"></a><a name="_Toc448039442"></a><a name="_Toc448039564"></a><a name="_Toc448300489"></a><a name="_Toc448314951"></a><a name="_Toc448315255"></a><a name="_Toc451227748"></a><BR></DIV>
+<A NAME="Heading18"></A><H2 ALIGN="LEFT">
+3.6	EDITORS</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">We
+use emacs (really MicroEmacs) and pico by default. You may prefer using any
+other editors on the HGMP system, for example:
+</FONT><BR></DIV>
+<UL>
+<LI><FONT FACE="Symbol" SIZE=4>	</FONT><FONT FACE="Garamond">vi
+- the old traditional UNIX editor, do not try this unless you know it already.
+</FONT><LI><FONT FACE="Symbol" SIZE=4>	</FONT>xedit
+- simple point-and-click editor for X-Windows users.
+<LI><FONT FACE="Symbol" SIZE=4>	</FONT>nedit
+&#8211; a very powerful point-and-click editor for X-Windows users.
+<LI><FONT FACE="Symbol" SIZE=4>	</FONT>pico
+- the editor used in the pine mail program. Lots of help in this editor.
+</UL><DIV ALIGN="LEFT"><FONT FACE="Garamond">Pico
+is a simple editor that always displays the available commands on the screen.
+It is the editor used inside the Pine mail program when editing a message, so
+you may prefer to use this. Whatever it would be useful for you to learn the
+basics of either Pico or emacs.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Editing
+a file with Pico
+</FONT></SUP><a name="_Toc448314952"></a><a name="_Toc448315256"></a><BR></DIV><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% pico junk.txt
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">The
+editing commands are listed in the program.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>e.g.
+To save a file and get out of pico, type &lt;CTRL-X&gt;.
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Editing
+a file with Emacs
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Start
+editing a file - the name of the file can be anything you like, e.g.:
+</FONT><a name="_Toc448314953"></a><a name="_Toc448315257"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% emacs junk.txt
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Start
+typing your life history. When you get to the end of a line, notice that it
+doesn't start a new line. You can type a line as long as you like.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>When
+you press &lt;RETURN&gt; you will start a new line.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Save
+what you have typed with &lt;ESC&gt; Z. That is two key-presses, the
+&lt;ESC&gt; key and the 'Z' key.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>You
+will be using the emacs editor later on in the course so if nothing else,
+remember how to save your file.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Start
+editing the file again.
+<a name="_Toc448314954"></a><a name="_Toc448315258"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% emacs junk.txt
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">This
+time you will see that it has the contents that you have just typed in, instead
+of a blank screen.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Move
+the cursor around with the arrow keys. Where the cursor is placed, you can
+insert new characters - try this. You can also delete characters with the
+&lt;DELETE&gt; key - try this.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><I>IF
+YOU EVER GET INTO TROUBLE WHEN USING EMACS, YOU CAN ABORT THE CURRENT COMMAND
+WITH &lt;CTRL-G&gt;
+</I><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Some
+of the more interesting commands are:
+</UL><DIV ALIGN="LEFT">&lt;ESC&gt;
+Q Reformat the current paragraph
+<BR></DIV><DIV ALIGN="LEFT">&lt;ESC&gt;
+S something &lt;ESC&gt; Search forwards for 'something' in the text
+<BR></DIV><DIV ALIGN="LEFT">&lt;CTRL-K&gt;
+Kill a line (delete) it
+<BR></DIV><DIV ALIGN="LEFT">&lt;CTRL-Y&gt;
+Yank back the thing you just deleted (undelete it)
+<a name="_Toc415911145"></a><a name="_Toc416084113"></a><a name="_Toc422641283"></a><a name="_Toc425907847"></a><a name="_Toc445633534"></a><a name="_Toc448034784"></a><a name="_Toc448039443"></a><a name="_Toc448039565"></a><a name="_Toc448300490"></a><a name="_Toc448314955"></a><a name="_Toc448315259"></a><a name="_Toc451227749"></a><BR></DIV>
+<A NAME="Heading19"></A><H2 ALIGN="LEFT">
+3.7	FILE
+TRANSFER PROTOCOL (FTP)
+</H2>
+<DIV ALIGN="LEFT"><FONT FACE="Garamond">The
+files on the HGMP account are fysically located in Hinxton, UK and this is
+usually not where you yourself are located. More important, this is not where
+your printers are located. So if you wanted to print the contents of one of the
+files at your HGMP account, you could not just say print, or something
+equivalent, since then the file would be printed at the HGMP in Hinxton.
+Similarly, if you want to use the content of one of your files at the HGMP in
+the paper you are writing on your local PC, you need to transfer the files to
+your local computer. It also feasible that you have a data file on your local
+computer, that you wanted to do some analysis on using your HGMP account. In
+that case the file needs to be transfered from your local machine to the HGMP
+account.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">Files
+can be transfered from one computer to the next in several ways, but all of
+them use the File Transfer Protocol or FTP. On unix machines transfering files
+can be done with the program FTP. It&#8217;s a command line program with a few
+simple commands. There are also graphical versions of FTP.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><FONT FACE="Garamond">On
+PC&#8217;s and Mac&#8217;s there are several FTP programs, like FTP, Anarchy
+and Fetch. At the HGMP we also provide FTP access using the WWW.
+</FONT><BR></DIV><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Information:
+ftp from the Command Line
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">From
+a Unix command line you could enter: 
+</FONT><a name="_Toc448314956"></a><a name="_Toc448315260"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B>Unix
+% ftp ftp.hgmp.mrc.ac.uk
+</B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Publicly
+available files can be accessed by using the user name 
+<B><I>anonymous</I></B>,
+and entering your 
+<B><I>email</I></B>
+as the password
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>To
+access your own files you would need to use your own user name and password.
+Commands available from the ftp &gt; prompt can be obtained by typing
+&#8220;?&#8221;. The most commonly used commands are:
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>cd</B>	change
+directory
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>dir</B>	show
+files in directory
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>get</B>	transfer
+file from remote ftp site to local disk
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>put</B>	transfer
+file from local disk to remote ftp site
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>bye</B>	close
+connection and quit ftp
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>ascii</B>	switch
+to ascii (text) file transfer mode
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><B>binary</B>	switch
+to binary (executable) file transfer mode
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">ftp
+using a www Browser
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">It
+is usually easiest to use a www browser for retrieving files, e.g. type the
+following in the browser&#8217;s location window
+</FONT><a name="_Toc448314957"></a><a name="_Toc448315261"></a></UL><DIV ALIGN="LEFT"><TT><FONT FACE="Courier New" SIZE=2><B><a name="_Hlt451155528"></a><A HREF="ftp://ftp.ebi.ac.uk/pub/databases/">ftp://ftp.ebi.ac.uk/pub/databases/</A></B></FONT></TT><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">You
+get a list of the available files. Click a file name to save it to your local
+disk.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Note
+that this form of transfer only works to copy files by ftp from a remote
+computer running an ftp server.
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Downloading
+a file using the Filemanager
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">Another
+way of using the www browser to display and download files is by using the WWW
+Filemanager.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>From
+the main WWW Menu page click on the 
+<B>Files</B>
+link, on the left side of the menu, under the heading 
+<B>Tools</B>.<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Click
+on 
+<B>Run
+Filemanager Now!
+</B>
+to run the filemanager.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>A
+browser window will appear, with a listing of the files and directories in your
+homedirectory. You can click on a file to show it contents.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Click
+on 
+<B>acwords</B>
+to see the acwords file again.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>If
+you want to save a file that is on the HGMP account, to your local computer
+(the one you are physically looking at), you can save the file, by using the 
+<B>Save
+as..
+</B>
+option in the 
+<B>File</B>
+menu of the browser (NOT on the page, but in the menubar of your browser).
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Save
+the file as a 
+<B>Text</B>
+file (as opposed to the HTML option) to the local directory of your choice.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>If
+you click on a directory name (like 
+<B>chapter4</B>),
+you will go to a new page showing you the contents of that directory.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>There
+are several other options you can try, like looking at the permissions and
+making a new directory. You can even delete files using the Filemanager!
+Clinking on the magnifying glass will give you those extra options.
+</UL><DIV ALIGN="LEFT"><SUP><FONT FACE="Arial Black">Uploading
+a file using a www Browser
+</FONT></SUP><BR></DIV>
+<UL>
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT><FONT FACE="Garamond">If
+you have a file on your local machine that you want to work with on your HGMP
+account, you have to transfer it to the HGMP, or UPLOAD it, in compu-jargon.
+</FONT><LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>At
+the HGMP we have a few methods of uploading a file.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>You
+can directly transfer a file from your local machine to your HGMP account, by
+using the program UPLOAD. It can be reached by choosing from the HGMP WWW menu, 
+<B>Utilities-&gt;Transfer
+Files-&gt;Easy file transfer by WWW upload. 
+</B>In
+the first field you can type in the name of the file on your local machine, or
+choose it by clicking the BROWSE button. If you want to keep the same name at
+your HGMP account, you can leave the second box blank, otherwise type in a
+different name. By clicking the UPLOAD FILE button, the file will be transfered.
+<LI><FONT FACE="Wingdings" COLOR="Gray">	</FONT>Another
+way of getting a file uploaded to your HGMP account, is to paste it into a
+web-form. From the HGMP WWW menu choose, 
+<B>Utilities-&gt;Transfer
+Files-&gt;Cut &amp; Paste data to transfer it to the HGMP, 
+</B>after
+clicking 
+<B>Run
+CUTPASTE NOW
+</B>,
+copy your file content to the clipboard, using your local editor (MS-WORD for
+instance), and paste it into the box on the web-form. Type in a name under
+which this file is to be known at your HGMP account in the second box and click 
+<B>TRANSFER
+DATA
+</B>.</UL><DIV ALIGN="LEFT"><BR></DIV>
+
+<HR>
+
+<DIV ALIGN="CENTER"><A HREF="Bioinformatics-Intro-Course-2.html" ><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/prev.gif" ALT="3	THE UNIX OPERATING SYSTEM " border=0></A>
+<A HREF="Bioinformatics-Intro-Course-4.html" ><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/next.gif" ALT="4	INTRODUCTORY SEQUENCE ANALYSIS " border=0></A>
+
+<A HREF="Bioinformatics-Intro-Course-Title.html"><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/first.gif" ALT="Title Page " border=0></A>
+<A HREF="Bioinformatics-Intro-Course-Contents.html"><IMG SRC="file:////people/tdeboer/bin/r2h//docs/images/granite/contents.gif" ALT="Contents " border=0></A>
+</DIV>
+</BODY>
+
+</HTML>

@@ -1,0 +1,85 @@
+Bioinformatics for System Managers
+==================================
+
+    	Program: 
+    	======== 
+    	Day 1:
+	
+	    - Practice:     	    	    	    	    	3h
+	    	Become root
+		Configure a WWW server -> (ports)     	    	1h
+		    add secure web -> test
+		    protect a directory -> htaccess/htgroup
+		Set up "cfs" -> startup - use	    	    	30'
+		Set up Netatalk -> test     	    	    	30'
+		Set Up SAMBA -> test	    	    	    	30'
+		Set up an skel account -> privileges     	    	
+		Set up quotas on disk	    	    	    	30'
+		VNC 	    	    	    	    	    	30'
+
+    	    Introduction to Bioinformatics 
+	    	Stringology, evolution, molecular modelling.	1h
+		
+	    Sources of help and documentation	    	    	1h
+	    	Existing user docs. EMBnet tutorials. 
+
+
+    	    System Maintenance issues in Bioinformatics    	1h
+	    	Disk layout. Multidisk file systems. RAID. Logical volumes.
+		Disk quotas. Security. WWW access control.
+		
+	    Common Molecular Biology packages	    	    	1h
+	    	GCG. Staden. Phylip. ACeDB. SRS. CLustal. Other common 
+		packages.
+		
+		
+	Day 2:
+	
+	    Install Staden/GCG 	    	    	15'
+	    Install EMBOSS. 	    	    	15'
+	    Install Clustal/Clustalx/PHYLIP.	15'
+    	    Install AceDB.  	    	    	15' -- 1st h
+    	    Adding databases to Staden/GCG    	1h
+	    Adding databases to ACeDB - input data  1h
+	    Access Control to applications    	20' (recursive find)
+	    Access Control to databases     	10'
+
+    	    MolBio packages: EMBOSS/GCG/Staden	    	2h
+	    Genomics/Evolution   	    	    	2h
+	    
+
+    	Day 3:
+    	    Practice: 
+	    	Install W2H (access control)	    	    30'
+		Install WW2GCG	    	    	    	    30'
+		Install SRS 	    	    	    	    2h
+		Install mirror	    	    	    	    15'
+		Update databases on GCG     	    	    45'
+
+
+	    WWW interfaces  	    	    	    	1h
+	    	W2H. WWW2GCG. What they are. Installation. Usage basics.
+		
+	    Databases: Which databases exist.	    	1h
+	    	Mirroring databases: full, updates  	1h
+		
+	    Indexing with SRS	    	    	    	2h
+
+
+    	Day 4:
+	    Practice:
+	    	install blast - run    	    	    	30'
+		Writing a CGI for a simple program  	1h
+		Writing a CGI for FASTA/BLAST	    	1h
+	    	Defining MIME types: SRS - Sequence/PDB/... 30'
+		
+	
+    	    Similarity searches     	    	    	1h
+	    	Blast/FASTA: what they are, how are they used and interpreted.
+		Installation. WWW interfaces. Queues.
+
+	    Writing CGIs and web services   	    	2h
+	    	General concepts on writing WWW forms and CGIs. MIME types.
+
+	    Questions.	    	    	    	    	1h
+

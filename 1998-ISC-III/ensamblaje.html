@@ -1,0 +1,254 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<TITLE>Ensamblaje GCG</TITLE>
+	<META NAME="GENERATOR" CONTENT="Jose Ramon">
+	<META NAME="AUTHOR" CONTENT="Valverde Carrillo">
+	<META NAME="CREATED" CONTENT="19981014;13030300">
+	<META NAME="CHANGEDBY" CONTENT="Valverde Carrillo">
+	<META NAME="CHANGED" CONTENT="19981014;13030300">
+</HEAD>
+<BODY BGCOLOR="white">
+
+<H1><U><B>Ensamblaje de fragmentos</B></U></H1>
+<BR>
+
+<P>El ensamblaje de
+fragmentos consiste en la uni&oacute;n de fragmentos de secuencia
+solapantes obtenidos en un proyecto de secuenciaci&oacute;n.</P>
+
+<P>La calidad de la
+lectura requiere que cada posici&oacute;n haya sido confirmada
+mediante la lectura de varios fragmentos independientes y solapantes
+con orientaciones en ambos sentidos de lectura, ensamblados y
+ordenados correctamente. Adem&aacute;s es preciso comprobar que los
+fragmentos le&iacute;dos realmente corresponden a la secuencia que
+est&aacute; siendo estudiada, y no al vector o al sitio de uni&oacute;n
+m&uacute;ltiple empleados en el experimento ni a contaminantes
+externos.</P>
+
+<P>Todo ello puede
+facilitarse con la utilizaci&oacute;n de aplicaciones inform&aacute;ticas
+que realicen de forma autom&aacute;tica la mayor&iacute;a de las
+tareas repetitivas en el proceso de lectura, verificaci&oacute;n y
+ensamblado de fragmentos.</P>
+
+<BR>
+
+<H2><I>Ensamblaje de fragmentos con GCG</I></H2>
+
+<P>El paquete de
+programas del GCG posee una serie de programas dedicados a la
+gesti&oacute;n de proyectos de secuenciaci&oacute;n. Con ellos se
+puede almacenar las lecturas de geles en una base de datos,
+localizar las regiones solapantes y unir lecturas por ellas en
+fragmentos mayores llamados <I>contigs</I> que pueden ser analizados
+y corregidos seg&uacute;n necesidad:</P>
+
+<P>El proceso se
+inicia con la decisi&oacute;n de abordar un nuevo proyecto de
+secuenciaci&oacute;n: una vez tomada se usa el programa <TT>gelstart</TT>
+que crea toda la infrastructura necesaria en el ordenador para
+gestionar el nuevo proyecto. Entre otras cosas solicita informaci&oacute;n
+sobre patrones de secuencia (vectores y enzimas de restricci&oacute;n)
+que deben detectarse en cada secuencia introducida.</P>
+
+<P>El trabajo de
+secuenciaci&oacute;n consiste en la obtenci&oacute;n y lectura de
+geles de secuenciaci&oacute;n, que deben de incorporarse al proyecto
+y situarse en el lugar y orientaci&oacute;n apropiados como si se
+tratara de un puzzle en que las piezas encajan por los solapamientos
+de los extremos. El proceso consiste en la iteraci&oacute;n
+repetitiva, para cada gel le&iacute;do, de los siguientes pasos:</P>
+
+<UL>
+    <LI>introducci&oacute;n de la lectura con el programa 
+    <TT>gelenter.</TT></LI>
+    <LI>contraste de la lectura contra los fragmentos existentes en 
+    la base de datos para ensamblarla (a&ntilde;adirla) en el fragmento 
+    apropiado mediante el programa <TT>gelmerge.</TT></LI>
+</UL>
+
+<P>Aunque
+generalmente el ordenador ensambla los fragmentos correctamente, en
+ocasiones no logra acertar con la mejor ordenaci&oacute;n posible.
+Por ello es conveniente revisar los <I>contigs</I> que crea
+manualmente y aplicar las correcciones precisas cuando sea necesario
+empleando los programas <TT>gelassemble</TT> y
+<TT>geldissassemble</TT>
+
+<P>En cualquier
+momento se puede visualizar el estado general del proyecto de
+secuenciaci&oacute;n usando el programa <TT>gelview</TT>
+para seguir su progreso y tomar decisiones estrat&eacute;gicas sobre
+el desarrollo del proyecto.</P>
+<BR>
+
+<CENTER><H2><I>Ejemplo pr&aacute;ctico</I></H2></CENTER>
+
+<OL>
+    <LI>Iniciar un nuevo proyecto de secuenciaci&oacute;n:</LI>
+    <UL>
+    	<LI>1.1 Acceder al
+    	servidor y activar el paquete de programas del GCG
+	
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+<B>telnet es.embnet.org</B>
+login: <B>usuario</B>
+password: <B>xxxxxxxx</B>
+...
+&gt; <B>gcg</B>
+
+</TD></TR></TABLE></LI>
+
+    	<LI>1.2. Crear un
+    	nuevo proyecto de secuenciaci&oacute;n
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelstart</B>
+
+GelStart begins a fragment assembly session by creating a new
+fragment assembly project or by identifying an existing project.
+
+ What is the name of your fragment assembly project?  <B>BichoCrX</B>
+
+ GELSTART cannot find this project.  Is it a new one (* No *) ?  <B>Yes</B>
+ 
+ You have a new project named &quot;BichoCrX&quot;.
+
+ Which vector sequence(s) would you like highlighted?  <B>GB:M13mp18,GB:SynpBR322</B>
+
+ Which restriction site(s) would you like highlighted ?  <B>BamHI,EcoRI</B>
+ 
+ Project BICHOCRX has 0 fragments in 0 contigs.
+
+You are ready to run the other fragment assembly programs.
+
+</TD></TR></TABLE></LI>
+    </UL>
+
+<BR>
+
+    <LI>2. A&ntilde;adir lecturas de geles a un proyecto de 
+    secuenciaci&oacute;n
+    <UL>
+    	<LI>2.1. Indicar con qu&eacute; proyecto deseamos trabajar
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelstart</B>
+...
+What is the name of your fragment assembly project?  <B>BichoCrX</B>
+...
+
+</TD></TR></TABLE></LI>
+
+    	<LI>2.2. Introducir lectura del gel en la base de datos
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelenter</B>
+gelenter of what sequence ? <B>bichocrx-001.seq</B>
+... introducir la secuencia y pulsar <B>[Ctrl]+[D]</B>...
+: <B>exit</B> (para salir guardando los datos)
+: <B>quit</B> (para salir abandonando todo)
+
+</TD></TR></TABLE>
+<BR>
+
+    	<P>Podemos probar a introducir alguno de los patrones de 
+	secuencia indicados en <TT>gelstart</TT> y ver c&oacute;mo 
+	destacan: el ordenador los detecta autom&aacute;ticasmente 
+	y los marca para avisarnos. Tambi&eacute;n podemos introducir 
+	un fragmento de secuencia del vector y ver c&oacute;mo la 
+	detecta autom&aacute;ticamente y nos avisa.</P>
+
+    	<P>En el siguiente paso simulamos una lectura de secuencia 
+	contaminada por un trozo de vector: para facilitarlo primero 
+	copiamos (con <TT>fetch</TT>) la secuencia de <I>m13mp18</I> 
+	a nuestro espacio y le cambiamos el nombre, luego la modificamos 
+	(con <TT>seqed</TT>) para borrar todo menos los 50 primeros 
+	nucle&oacute;tidos (el &quot;fragmento contaminante&quot;) y 
+	a&ntilde;adimos una secuencia arbitraria a continuaci&oacute;n 
+	(la supuesta &quot;secuencia v&aacute;lida&quot;); finalmente 
+	intentamos introducir de forma interactiva esa secuencia en 
+	la base de datos con <TT>gelenter</TT>.
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>fetch gb:m13mp18</B>
+...
+&gt; <B>mv m13mp18.gb_sy bichocrx-002.seq</B>
+&gt; <B>seqed bichocrx-002.seq</B>
+<B>[Ctrl]+[D]</B>
+<B>50,7249 Delete</B>
+<B>Insert [CR][CR]</B>
+... a&ntilde;adir secuencia y salvar (<B>[Ctrl]+[D]</B> y poner 
+<B>exit</B> para guardar los cambios, o 
+<B>quit</B> para abandonarlos)...
+&gt; <B>gelenter bichocrx-002.seq</B>
+... 
+
+</TD></TR></TABLE>
+
+    	<P><FONT>Se pueden a&ntilde;adir tambi&eacute;n en bloque 
+	datos procedentes de muchos ficheros: en &eacute;ste caso 
+	no se chequean los patrones de vector/restricci&oacute;n. A 
+	menudo no introducimos las secuencias a mano, sino que las hemos
+    	obtenido ya en forma electr&oacute;nica y s&oacute;lo queremos
+    	a&ntilde;adirlas al proyecto. Hay un conjunto de secuencias de
+    	ejemplo que podemos utilizar para verlo: primero las copiamos a
+    	nuestra &aacute;rea de trabajo con <TT>fetch</TT>
+    	y luego las a&ntilde;adimos.</P>
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>fetch mu*.seq</B>
+...
+&gt; <B>gelenter -enter=mu*.seq
+...
+
+</TD></TR></TABLE>
+
+    	<LI>2.3. Ordenar el fragmento en la base de datos: podemos 
+	hacer la mezcla directamente, pero si  no hemos introducido 
+	las secuencias a mano -o no hemos sido cuidadosos al hacerlo- 
+	pueden contener restos de contaminaciones o lecturas procedentes 
+	del vector que podr&iacute;an tergiversar el proceso de 
+	ensamblado. Podemos pedir a gelmerge que localize estas
+    	regiones y las escinda autom&aacute;ticamente. En el ejemplo 
+	primero excindimos sin mezclar y analizamos el informe para 
+	comprobar lo que ha hecho, y luego ya ensamblamos los fragmentos 
+	limpios:</P>
+	
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelmerge -excise -nomerge</B>
+&gt; <B>more BichoCrX.report</B>
+...
+&gt; <B>gelmerge -excise</B>
+...
+
+</TD></TR></TABLE></LI>
+    </UL>
+    
+    <LI><FONT>Modificar un <I>contig</I>.
+
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelassemble</B>
+...
+... seleccionar el contig n&uacute;mero 5 con las flechas del cursor...
+<B>[Ctrl]+[k]</B>
+... hacer modificaciones y salir ([<B>Ctrl]+[D]</B> e indicar 
+<B>exit</B> para guardar los cambios o
+<B>quit</B> para abandonarlos)...
+
+</TD></TR></TABLE></LI>
+
+    <LI><FONT>Analizar el estado del proyecto de secuenciaci&oacute;n
+    
+<TABLE WIDTH=75%><TR><TD BGCOLOR="grey75"><PRE><TT>
+&gt; <B>gelview</B>
+...
+&gt; <B>more BichoCrX.view</B>
+
+</TD></TR></TABLE></LI>
+</UL>
+
+</BODY>
+</HTML>

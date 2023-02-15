@@ -1,0 +1,282 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+<HTML>
+<HEAD>
+	<TITLE>Estructura</TITLE>
+	<META NAME="AUTHOR" CONTENT="Valverde Carrillo">
+</HEAD>
+<BODY BGCOLOR="white">
+
+<CENTER><H1>An&aacute;lisis de estructura</H1></CENTER>
+
+<BLOCKQUOTE>
+<P>La funci&oacute;n
+y actividad de las mol&eacute;culas biol&oacute;gicas depende en
+gran manera de su estructura e interacciones con el entorno. Una
+comprensi&oacute;n detallada de la estructura puede permitir un
+conocimiento m&aacute;s profundo de las caracter&iacute;sticas de
+una mol&eacute;cula y los sistemas biol&oacute;gicos en que
+participa.</P>
+</BLOCKQUOTE>
+
+<H2>Problemas generales</H2>
+
+<P>Los organismos
+biol&oacute;gicos son sistemas <I>complejos</I>. Muy pocas
+propiedades de un componente son independientes del resto de
+componentes del sistema. La estructura, en concreto, depende mucho
+del entorno (sal, pH, T&ordf;, carga, etc...), de interacciones con
+otras macromol&eacute;culas y, a menudo, de modificaciones
+posteriores a la fabricaci&oacute;n de la mol&eacute;cula
+(fosforilaci&oacute;n, glucosilaci&oacute;n, metilaci&oacute;n,
+etc...).</P>
+
+<P>Las
+macromol&eacute;culas biol&oacute;gicas se componen, obviamente, de
+muchos elementos. El estudio de las interacciones <I>dentro</I> de
+la misma macromol&eacute;cula se vuelve m&aacute;s complicado a
+medida que la mol&eacute;cula estudiada es m&aacute;s grande.</P>
+
+<H2>Prote&iacute;nas</H2>
+
+<H3><U>Propiedades f&iacute;sicas:</U></H3>
+
+<P><B><TT>isoelectric</TT></B>:
+calcula el punto isoel&eacute;ctrico de una prote&iacute;na en
+funci&oacute;n del pH</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+isoelectric pir:kihua
+</PRE></TT></TD></TR></TABLE>
+
+<CENTER><IMG SRC="isoelectric_1.gif"></CENTER>
+
+<H3><U>Identificaci&oacute;n de dominios</U></H3>
+
+<P>Corte con proteasas:
+se utiliza para localizar regiones expuestas y protegidas de la
+secuencia. Las regiones expuestas al exterior son accesibles a
+proteasas y se cortan, las regiones del interior quedan protegidas.
+Habitualmente las proteasas suelen cortar entre dominios
+estructurales.</P>
+
+<P><TT><B>peptidesort</B></TT>:
+calcula los fragmentos que producir&iacute;a el corte con una
+proteasa y produce una lista ordenada de fragmentos</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+peptidesort gzeinaa.pep
+</PRE></TT></TD></TR></TABLE>
+
+<P><TT><B>peptidemap</B></TT>:
+construye un mapa pept&iacute;dico de la secuencia de una prote&iacute;na,
+esto es, localiza los punos de corte y los marca sobre la secuencia.</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+peptidemap gzeinaa.pep
+</PRE></TT></TD></TR></TABLE>
+
+<H3><TT><U>Estructura secundaria:</U></TT></H3>
+
+<P>Las predicciones se
+basan en el an&aacute;lisis promediado de estructuras y propiedades
+conocidas, tanto de los amino&aacute;cidos como de prote&iacute;nas
+previamente refinadas. Se parte de la secuencia y no se toma en
+consideraci&oacute;n factores externos o modificaciones a la misma.
+La fiabilidad en general no es muy alta a no ser que se busquen
+motivos espec&iacute;ficos bien caracterizados. Sin embargo
+proporciona informaci&oacute;n &uacute;til sobre las propiedades de
+la mol&eacute;cula y sobre posibles caracter&iacute;sticas
+estructurales y/o funcionales.</P>
+
+<P><TT><B>Pepplot</B></TT>:
+muestra gr&aacute;ficamente una serie de predicciones sobre
+propiedades estructurales de una secuencia de prote&iacute;na</UL>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+pepplot pir:kihua
+</PRE></TT></TD></TR></TABLE>
+
+<CENTER><IMG SRC="pepplot_1.gif"></CENTER>
+
+<P><TT><B>peptidestructure/plotstructure</B></TT>:
+este par de programas realiza
+una predicci&oacute;n de varios par&aacute;metros estructurales
+(<TT>peptidestructure</TT>) y luego permite
+visualizarlos de forma gr&aacute;fica en en varias formas
+alternativas (<TT>plotstructure</TT>).</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+peptidestructure pir:mmecf
+plotstrucure mmecf.p2s
+</PRE></TT></TD></TR></TABLE>
+
+
+<CENTER><IMG SRC="plotstructure_1.gif"></CENTER>
+
+<CENTER><IMG SRC="plotstructure_2.gif"></CENTER>
+
+<H3><U>B&uacute;squedas de motivos espec&iacute;ficos</U></H3> 
+
+<P>Se puede mejorar
+las predicciones estructurales derivadas de la secuencia si se
+utilizan m&eacute;todos espec&iacute;ficos desarrollados y ajustados
+para la b&uacute;squeda de un motivo o propiedad concreto en lugar
+de m&eacute;todos m&aacute;s generales. Estos m&eacute;todos pueden
+basarse en propiedades conservadas de la secuencia (motivos) o en
+caracter&iacute;sticas f&iacute;sico-qu&iacute;micas (momento de
+hidrofobicidad), propiedades repetitivas, etc...</P>
+
+<P><B>ProSite/Blocks</B>:
+permiten obtener informaci&oacute;n sobre posibles centros activos,
+sitios de modificaci&oacute;n y algunos motivos de estructura que
+poseen un motivo de secuencia com&uacute;n bien definido.</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+motifs sw:kad1_human
+</PRE></TT></TD></TR></TABLE>
+
+<P><TT><B>coilscan</B></TT>:
+busca regiones <I>coiled-coil</I> (bucles superenrrollados)</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+coilscan sw:gcn4_yeast
+</PRE></TT></TD></TR></TABLE>
+
+
+<CENTER><IMG SRC="coilscan_1.gif"></CENTER>
+
+<P><TT><B>hthscan</B></TT>:
+busca fragmentos <I>helix-turn-helix</I> (alfa-giro-alfa)</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+hthscan sw:arac_ecoli
+</PRE></TT></TD></TR></TABLE>
+
+
+<P><TT><B>spscan</B></TT>:
+intenta predecir la presencia de un p&eacute;ptido se&ntilde;al</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+spscan sw:apa1_salsa
+</PRE></TT></TD></TR></TABLE>
+
+
+<P><TT><B>helicalwheel</B></TT>:
+dibuja un trozo de secuencia como si fuera una regi&oacute;n de
+estructura alfa-h&eacute;lice o beta-hoja plegada. Permite
+identificar la posible localizaci&oacute;n de los amino&aacute;cidos
+dentro de un dominio determinado de la prote&iacute;na.</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+helicalwheel sw:mel_apido
+</PRE></TT></TD></TR></TABLE>
+
+<CENTER><IMG SRC="helicalwheel_1.gif"></CENTER>
+
+
+<P><TT><B>moment</B></TT>:
+predice el momento de hidrofobicidad de una secuencia de prote&iacute;na
+para diferentes &aacute;ngulos de rotaci&oacute;n, lo cual permite
+localizar regiones <I>anfif&iacute;licas</I> de la prote&iacute;na.
+Estas son regiones que probablemente poseen un lado expuesto al
+solvente acuoso y otro protegido, bien en contacto con otros
+dominios dentro de la misma prote&iacute;na, bien con l&iacute;pidos
+o bien con otras prote&iacute;nas. Los &aacute;ngulos m&aacute;s
+interesantes son 95-105 grados (<I>alfa h&eacute;lice</I>) y 159-161
+grados (<I>beta hoja plegada</I>).</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+moment pir:kihua
+</PRE></TT></TD></TR></TABLE>
+
+<CENTER><IMG SRC="moment_1.gif"></CENTER>
+
+<H3><U>Estructura terciaria/cuaternaria:</U></H3>
+
+<P>Una predicci&oacute;n
+fiable de la estructura tridimensional requiere un an&aacute;lisis
+f&iacute;sico de la prote&iacute;na. Para trabajar a partir de
+secuencia es preciso hallar la configuraci&oacute;n de menor energ&iacute;a
+considerando todos los par&aacute;metros qu&iacute;micos,
+el&eacute;ctricos, enlaces covalentes y de Van der Waals, y en
+general incluyendo c&aacute;lculos mec&aacute;nico-cu&aacute;nticos.
+Este tipo de c&aacute;lculos es muy costoso en tiempo, y es
+irrealizable para una mol&eacute;cula del tama&ntilde;o de una
+prote&iacute;na a menos que se pueda partir de una configuraci&oacute;n
+previa cercana a la configuraci&oacute;n real.</P>
+
+<P>Es decir: s&oacute;lo
+con datos de secuencia es inviable. Hoy por hoy es preciso refinar
+la estructura con m&eacute;todos f&iacute;sicos (Rayos X, NMR,
+microscop&iacute;a electr&oacute;nica) -que tambi&eacute;n requieren
+ayuda del ordenador- para poder calcular las coordenadas reales de
+los &aacute;tomos y las interacciones existentes. Sin embargo, si se
+dispone de una secuencia suficientemente similar a la nuestra, cuya
+estructura ya ha sido refinada, cabe esperar que la estructura sea
+tambi&eacute;n similar: se puede asignar a nuestra prote&iacute;na
+como configuraci&oacute;n inicial la de la otra prote&iacute;na y a
+partir de ella iniciar el proceso de c&aacute;lculo de minimizaci&oacute;n
+de energ&iacute;a.</P>
+
+<P>Con todo, es
+preciso a&ntilde;adir la influencia del solvente y de otras posibles
+macromol&eacute;culas en movimiento y activas para poder simular el
+comportamiento real <I>in vivo</I>, lo que a&uacute;n complica m&aacute;s
+los c&aacute;lculos.</P>
+
+<P>Sin embargo, a&uacute;n
+con predicciones limitadas es posible extraer conclusiones muy
+&uacute;tiles para el laboratorio.</P>
+
+<TABLE BGCOLOR="LightGrey" WIDTH="90%"><TR><TD><TT><PRE>
+
+ftp.es.embnet.org
+&gt; cd pub/databases/pdb
+&gt; get pdb2hbd.ent
+&gt; bye
+rasmol pdb2hbd.ent
+</PRE></TT></TD></TR></TABLE>
+
+<H2>&Aacute;cidos nucl&eacute;icos</H2>
+
+<P>La predicci&oacute;n
+de estructura secundaria de &aacute;cidos nucl&eacute;icos presenta
+problemas generales similares. Ello implica que la aplicaci&oacute;n
+de los m&eacute;todos disponibles a secuencias demasiado largas debe
+tomarse siempre con mucha cautela y sentido com&uacute;n.</P>
+
+<P>Los siguientes
+programas ayudan a analizar y visualizar las posibles estructuras de
+secuencias de &aacute;cidos nucl&eacute;icos con el paquete de
+programas de GCG.</P>
+
+
+<P><TT><B>dotplot:</B></TT>
+dibuja en un diagrama las regiones complementarias como puntos: las
+secciones de complementariedad entre secuencias se ven como
+diagonales.<P>
+
+<P><TT><B>mfold</B>:</TT>
+predice la posible estructura secundaria de una secuencia de &aacute;cidos
+nucl&eacute;icos.<P>
+
+<P><TT><B>plotfold</B>:</TT>
+muestra gr&aacute;ficamente la estructura secundaria de un &aacute;cido
+nucl&eacute;ico.<P>
+
+<P><TT><B>stemloop:</B></TT>
+localiza regiones auto complementarias en una secuencia.<P>
+
+</BODY>
+</HTML>
