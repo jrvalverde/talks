@@ -1,0 +1,306 @@
+Dr. Oscar Grau
+IBBM
+Facultad de Ciencias Exactas
+Universidad Nacional de La Plata
+115 entre 49 y 50
+1900 La Plata
+Argentina
+
+
+Carolyn Bucholtz <bucholtz@angis.org.au>
+Australian National Genomic Information Service
+Electrical Engineering Department
+University of Sydney
+RMC Gunn Bldg J03
+Sydney, NSW 2006
+Australia
+
+
+Martin Grabner
+Vienna Bio Center
+Zentraler Informatikdienst der Universität Wien
+Dr. Bohrgasse 9
+A-1030 Vienna
+Austria
+
+
+Robert Herzog
+BEN CP 257
+ULB, Campus de la Plaine, Batiment NO
+Boulevard du Triomphe
+1050 Bruxelles
+Bélgica
+
+
+Christoph W. Sensen
+1411 Oxford Street
+Halifax, Nova Scotia, B3H 3Z1
+Canada
+
+
+Ricardo Baeza-Yates
+Nodo EMBnet de Chile
+Dept. de Informática Científica
+Blanco Encalada 2120
+Santiago
+Chile
+
+
+Jingchu Luo
+Centre of Bioinformatics
+Peking University
+China
+
+
+Ricardo Bringas
+Centro de Ingeniería Genética y Biotecnología
+Ave. 31 y calle 158, Cubanacan
+Playa, La Habana
+Cuba
+
+
+Hans Ullitz-Moeller
+BioBase - The Danish EMBnet Node
+Institute for Medical Biochemistry
+Ole Worms Alle, Building 170
+University of Aarhus
+DK-8000 Aarhus C
+Dinamarca
+
+
+Kimmo Mattila
+Center for Scientific Computing
+Tekniikantie 15 a D
+PO Box 405
+Otaniemi, 02100 Espoo
+Finlandia
+
+
+Jean-Marc Plaza
+Centre des Ressources Infobiogen
+523, place des terrasses de l'agora
+91034 Evry CEDEX
+Francia
+
+
+Rüdiger Bräuning
+EMBnet node at the German Cancer Research Center
+Department of Molecular Biophysics (H0200)
+Im Neuenheimer Feld 280
+D-69120 Heidelberg
+Alemania
+
+
+Bavis Savakis
+Institute of Molecular Biology and Biotechnology
+FORTH, Vassilika Vouton
+P.O.Box 1527
+GR 711 10 Heraklion, Crete
+Grecia
+
+
+Endre Barta
+Agricultural Biotechnology Center
+H-2100 Gödöllö
+Szent-Györgyi Albert út 4.
+P.O.Box 411
+Hungría
+
+
+Kunchur Guruprassad
+EMBnet
+Center for DNA fingerprinting and Diagnostics
+Nacharam
+Hydebarad - 500 076
+India
+
+
+Andrew T. Lloyd
+Irish National Center for Bioinformatics.
+Department of Genetics
+Trinity College
+Dublin 2
+Irlanda
+
+
+Leon Esterman
+Weizmann Institute of Science
+Department of Biological Services
+Levine Building, room #105
+Rehovot - 76100
+Israel
+
+Marcella Attimonelli
+C.N.R. Area di Ricerca Bari
+Via G. Amendola 166/A
+70126 BARI
+Italia
+
+
+Nodo nacional EMBnet
+Centro de Investigación sobre Fijación del Nitrógeno
+Av. Universidad s/n
+Col. Chamilpa
+62210 Cuernavaca, Morelos
+México
+
+
+Jack A. M. Leunissen
+Centre for Molecular and Biomolecular Informatics
+University of Nijmegen
+Toernooiveld, 1
+6525 ED Nijmegen
+Holanda
+
+
+David Martin
+The Biotechnology Centre of Oslo
+P. O. Box 1125 Blindern
+N-0316 Oslo 3
+Noruega
+
+
+Piotr Zielenkiwicz
+Institute of Biochemistry and Biophysics
+Pawinskiego 5A 02-106
+Warszawa
+Polonia
+
+
+Pedro Fernandes
+Gulbenkian Institute
+APT 14
+2781-901 Oeiras
+Portugal
+
+
+Sergei Spirin
+Belozersky Institute, Corpus A
+Moscow State University
+Vorobyevy Gory
+Moscow 119899
+Rusia
+
+
+Lubos Klucar
+EMBnet Slovakia
+Dubravska cesta 21
+842 51 Bratislava
+República Eslovaca
+
+
+Janet Kelso
+South African National Bioinformatics Institute
+University of Western Cape
+Private Bag X 17
+Modderdam Road
+7535 Bellville
+Sudáfrica
+
+
+Nils-Einar Eriksson
+Uppsala Biomedical Centre
+Computing Department
+Box 570 S
+75123 Uppsala
+Suecia
+
+
+Claude Bonnard
+Swiss Institute of Bioinformatics
+Ch. des Boveresses 155
+CH-1066 Epalinges/Lausanne
+Suiza
+
+
+Zehra Sayers
+National Bioinformatics Node
+RIGEB, Tübitak
+Marmara Research Center
+P. K. 21
+Gebze-Kocaeli
+41470 Turquía
+
+
+Alan Bleasby
+HGMP-RC
+Hinxton
+Cambridge CB10 1SB
+Reino Unido
+
+
+Rodrigo López
+European Bioinformatics Institute
+Wellcome Trust Genome Campus
+Hinxton
+Cambridge CB10 1SD
+Reino Unido
+
+
+Peter H. Schalk
+Expert Centre for Taxonomic Identification
+Mauritskade 61
+1092 AD Amsterdam
+Holanda
+
+
+Martin Ebeling
+Hoffmann-La Roche
+PRPZ Building 65/303
+CH-4070 Basel
+Suiza
+
+
+Sándor Pongor
+ICGEB Area Science Park
+Padriciano 99
+34012 Trieste
+Italia
+
+
+Terri Attwood
+School of Biological Sciences 2.19
+Stopford Building
+Oxford Road
+Manchester M13 9PT
+Reino Unido
+
+
+H. Werner Mewes
+MIPS/GSF - Max Planck Institute für Biochemie
+Am Klopferspitz 18 A
+82152 Martinsried
+Alemania
+
+
+Staffan Bergh
+Pharmacia
+Strandbergsgatan 47
+SE-112 87 Stockholm
+Suecia
+
+
+Michele Clamp
+Sanger Centre
+Wellcome Trust Genome Campus
+Hinxton Hall
+Cambridge CB10 1SA
+Reino Unido
+
+
+Peter Rice
+Lion Bioscience Ltd.
+Compass House, 
+80-82 Newmarket Road
+Cambridge CB5 8DZ
+Reino Unido
+
+
+Tim Littlejohn
+Ebioinformatics
+Bay 16, Suite 104
+Australian Technology Park
+Eveleigh, NSW 1430
+Australia
+
+
